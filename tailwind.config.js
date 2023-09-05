@@ -28,7 +28,18 @@ module.exports = {
       backgroundColor: theme => ({
         ...theme('colors'),
       }),
-      backgroundImage: {},
+      backgroundImage: {
+        grad_100:
+          'linear-gradient(90deg, #ff057c 0%, #8d0b93 50%, #321575 100%)',
+        grad_200:
+          'linear-gradient(90deg, #ff81bd 0%, #934397 50%, #4e3d75 100%)',
+        grad_300:
+          'linear-gradient(90deg, #1f1f1f 0%, #562758 50%, #261351 100%)',
+        grad_400:
+          'linear-gradient(270deg, rgba(117, 103, 140, 0.53) 0%, rgba(117, 103, 140, 0) 100%)',
+        grad_500:
+          'linear-gradient(270deg, rgba(22, 20, 28, 0) 0%, #16141c 100%)',
+      },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
         raleway: ['var(--font-raleway)'],
@@ -46,6 +57,34 @@ module.exports = {
           DEFAULT: '#ffffff',
           light: '#F3F3F3',
           dark: '#AEAEAE',
+        },
+        gray: {
+          DEFAULT: '#737373',
+          light: '#73737380',
+        },
+        primary: {
+          light: {
+            100: '#CABBE954',
+            200: '#7E5A8F',
+            300: '#AC88C9',
+            400: '#D98ADE',
+            500: '#D01DE1',
+            600: '#8D0B93',
+            700: '#6A206B',
+            800: '#3E325F',
+          },
+          dark: {
+            100: '#16141CB2',
+            200: '#16141C66',
+            300: '#19081A',
+            400: '#141318',
+            500: '#130813',
+          },
+        },
+        notify: {
+          DEFAULT: '#ffffff',
+          error: '#FC1132',
+          success: '#0AA02B',
         },
       },
       // CONTAINER
