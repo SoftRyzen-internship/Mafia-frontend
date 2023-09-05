@@ -133,6 +133,14 @@ This is example of API for component `Title` and `Paragraph`
 | `color`     | `black`     | choose the color you'd need: `black` or `white`                   |
 | `className` | `undefined` | add custom or additional css class you'd need                     |
 
+- ### Logo
+
+| Prop           | Default  | Description                                                                                        |
+| -------------- | -------- | -------------------------------------------------------------------------------------------------- |
+| `href`         | `/`      | section id or path                                                                                 |
+| `position`     | `header` | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile` |
+| `customStyles` | ``       | add any custom styles                                                                              |
+
 ```
 
 ```
