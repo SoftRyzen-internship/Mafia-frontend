@@ -135,11 +135,11 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### Logo
 
-| Prop           | Default  | Description                                                                                        |
-| -------------- | -------- | -------------------------------------------------------------------------------------------------- |
-| `href`         | `/`      | section id or path                                                                                 |
-| `position`     | `header` | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile` |
-| `customStyles` | ``       | add any custom styles                                                                              |
+| Prop        | Default     | Description                                                                                             |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------- |
+| `href`      | `/`         | section id or path                                                                                      |
+| `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
+| `className` | `undefined` | add any custom styles                                                                                   |
 
 ```
 
