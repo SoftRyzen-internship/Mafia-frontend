@@ -55,3 +55,8 @@ export interface ButtonSecondaryProps {
 export interface LearnListProps {
   className?: string;
 }
+
+export interface SectionProps {
+  children: React.ReactNode;
+  className?: string;
+}
