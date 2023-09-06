@@ -163,6 +163,13 @@ the site when pressed.
 | `loading`    | `false`     | choose the loading state: `false` or `true` |
 | `children`   | `undefined` | a necessary prop. any text content          |
 
+- ### NavigationRow
+
+| Prop        | Default     | Description                                               |
+| ----------- | ----------- | --------------------------------------------------------- |
+| `position`  | `header `   | Choose the position you'd need: `header` or `mobile-menu` |
+| `className` | `undefined` | add custom or additional css class you'd need             |
+
 ```
 
 ```

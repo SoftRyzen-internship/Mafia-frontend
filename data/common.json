@@ -4,5 +4,11 @@
   "mainPage": {
     "title": "Hello world",
     "description": "This is a test page"
-  }
+  },
+  "navigationRowLinks": [
+    { "title": "Турніри", "href": "tournaments" },
+    { "title": "Корпоративи", "href": "corporate-parties" },
+    { "title": "Дитяча мафія", "href": "mafia-kids" },
+    { "title": "Зал слави", "href": "glory-hall" }
+  ]
 }
