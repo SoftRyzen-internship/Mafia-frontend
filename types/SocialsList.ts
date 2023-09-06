@@ -1,3 +1,3 @@
 export type SocialsListProps = {
-    className: string
-}
+  className: string;
+};

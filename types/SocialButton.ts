@@ -1,6 +1,7 @@
-import { SocialContact } from "./commonData"
+import { SocialContact } from './commonData';
 
 export type SocialButtonProps = {
-    social: SocialContact,
-    className: string
-}
+  social: SocialContact;
+  btnClassName?: string;
+  iconClassName?: string;
+};
