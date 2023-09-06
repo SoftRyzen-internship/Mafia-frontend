@@ -32,7 +32,9 @@ export const ButtonPrimary: React.FC<Props> = ({
       type="button"
       disabled={disabled}
       onClick={actionHandler}
-      className="outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold text-white-light hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300 active:text-[#C964C2] disabled:bg-gray-disabledBg disabled:bg-none disabled:text-gray-disabledText"
+      className="outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold
+               text-white-light hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300 
+               active:text-primary-light-900 disabled:bg-gray-dark disabled:bg-none disabled:text-gray-medium"
       style={{
         width: isScreenMobile
           ? sizesMobile[buttonsize].width

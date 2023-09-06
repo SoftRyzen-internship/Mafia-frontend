@@ -45,12 +45,18 @@ module.exports = {
         raleway: ['var(--font-raleway)'],
       },
       fontSize: {},
+      // BORDER
+      borderRadius: {
+        DEFAULT: '6px',
+        normal: '6px',
+      },
       // ALL COLORS
       colors: {
         body: '#040404',
         black: {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           dark: '#171717', // class="bg-black-light text-black-light border-black-light"
+          medium: '#1C1C1C',
           light: '#303030',
         },
         white: {
@@ -61,8 +67,8 @@ module.exports = {
         gray: {
           DEFAULT: '#737373',
           light: '#73737380',
-          disabledBg: '#474747',
-          disabledText: '#676767',
+          medium: '#676767',
+          dark: '#474747',
         },
         primary: {
           light: {

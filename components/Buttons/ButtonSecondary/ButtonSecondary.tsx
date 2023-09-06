@@ -30,7 +30,11 @@ export const ButtonSecondary: React.FC<Props> = ({
   return (
     <Link
       href={linkto}
-      className="btn-secondary outline-without flex items-center justify-center gap-5 rounded-md border-[2px] border-primary-light-600 bg-body px-3 text-base font-semibold text-white-light hover:border-primary-light-400 hover:bg-[#1C1C1C] focus:border-primary-light-500 active:border-primary-light-400 active:bg-[#1C1C1C] active:text-[#C964C2] disabled:bg-gray-disabledBg disabled:bg-none disabled:text-gray-disabledText"
+      className="btn-secondary outline-without flex items-center justify-center gap-5 
+                 rounded-md border-[2px] border-primary-light-600 bg-body px-3 text-base font-semibold 
+                 text-white-light hover:border-primary-light-400 hover:bg-black-medium focus:border-primary-light-500
+                 active:border-primary-light-400 active:bg-black-medium active:text-primary-light-900
+                 disabled:bg-gray-dark disabled:bg-none disabled:text-gray-medium"
       style={{
         width: isScreenMobile
           ? sizesMobile[buttonsize].width
