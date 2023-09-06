@@ -23,7 +23,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1",
@@ -33,11 +34,11 @@
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "autoprefixer": "^10.4.13",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-react": "^7.32.2",
     "eslint": "^8.35.0",
     "eslint-config-next": "13.4.19",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",

@@ -24,23 +24,22 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
 
   const primaryBtnClass = cn(
     {
-      'text-xs leading-[1.33]': buttonsize === 'small',
-      'text-base leading-[1.5]': buttonsize !== 'small',
       'pointer-events-none': loading,
+      'text-xs leading-[1.33] w-[88px] h-8 md:w-[88px] md:h-10 xl:w-[148px] xl:h-10':
+        buttonsize === 'small',
 
-      'w-[88px] h-8': buttonsize === 'small' && isScreenMobile,
       'w-[200px] h-12': buttonsize === 'medium' && isScreenMobile,
       'w-full h-12': buttonsize === 'large' && isScreenMobile,
 
-      'w-[88px] h-10': buttonsize === 'small' && isScreenTablet,
       'w-[236px] h-12': buttonsize === 'medium' && isScreenTablet,
       'w-[288px] h-14': buttonsize === 'large' && isScreenTablet,
 
-      'w-[148px] h-10': buttonsize === 'small' && isScreenDesktop,
       'w-[301px] h-12':
         buttonsize === 'medium' && isScreenDesktop && !isLargeScreenDesktop,
 
       'w-[336px] h-12': buttonsize === 'medium' && isLargeScreenDesktop,
+
+      'text-base leading-[1.5]': buttonsize !== 'small',
     },
     'outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold text-white-light',
     'hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300',
