@@ -148,6 +148,7 @@ The Primary Button has `button` tag and performs an action when clicked.
 | `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
 | `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
 | `loading`       | `false`     | choose the loading state: `false` or `true`   |
+| `className`     | `undefined` | add any custom styles                         |
 | `children`      | `undefined` | a necessary prop. any text content            |
 | `actionHandler` | `black`     | a function that is executed when clicked      |
 
@@ -161,6 +162,7 @@ the site when pressed.
 | `linkto `    | `undefined` | a necessary prop. the address of the link   |
 | `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
 | `loading`    | `false`     | choose the loading state: `false` or `true` |
+| `className`  | `undefined` | add any custom styles                       |
 | `children`   | `undefined` | a necessary prop. any text content          |
 
 - ### NavigationRow
