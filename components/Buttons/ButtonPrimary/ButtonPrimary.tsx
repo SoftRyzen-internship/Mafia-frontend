@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { ButtonPrimaryProps } from '@/types';
 import { useWindowWidth } from '@/hooks';
 import {
   sizesMobile,
@@ -10,21 +11,13 @@ import {
 } from '../buttonsSizes';
 import SvgButtonLoader from '@/public/icons/buttons-loading.svg';
 
-interface Props {
-  buttonsize?: 'small' | 'medium' | 'large' | undefined;
-  disabled?: boolean;
-  loading?: boolean;
-  children: string;
-  actionHandler?: () => void;
-}
-
-export const ButtonPrimary: React.FC<Props> = ({
+export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   buttonsize = 'small',
   disabled = false,
   loading = false,
   children,
   actionHandler = () => console.log('click!'),
-}: Props) => {
+}: ButtonPrimaryProps) => {
   const { isScreenMobile, isScreenTablet, isScreenDesktop } = useWindowWidth();
 
   return (

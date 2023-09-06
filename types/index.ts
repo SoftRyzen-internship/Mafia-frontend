@@ -23,3 +23,18 @@ export interface ParagraphProps {
   content: string;
   className?: string;
 }
+
+export interface ButtonPrimaryProps {
+  buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  disabled?: boolean;
+  loading?: boolean;
+  children: string;
+  actionHandler?: () => void;
+}
+
+export interface ButtonSecondaryProps {
+  linkto: string;
+  buttonsize?: 'medium' | 'large' | undefined;
+  loading?: boolean;
+  children: string;
+}

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { ButtonSecondaryProps } from '@/types';
 import { useWindowWidth } from '@/hooks';
 import {
   sizesMobile,
@@ -12,19 +13,12 @@ import {
 import SvgButtonLoader from '@/public/icons/buttons-loading.svg';
 import SvgArrowRight from '@/public/icons/arrow-right.svg';
 
-interface Props {
-  linkto: string;
-  buttonsize?: 'medium' | 'large' | undefined;
-  loading?: boolean;
-  children: string;
-}
-
-export const ButtonSecondary: React.FC<Props> = ({
+export const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   linkto,
   buttonsize = 'medium',
   loading = false,
   children,
-}: Props) => {
+}: ButtonSecondaryProps) => {
   const { isScreenMobile, isScreenTablet, isScreenDesktop } = useWindowWidth();
 
   return (
