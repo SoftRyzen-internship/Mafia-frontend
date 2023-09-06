@@ -2,9 +2,9 @@
 import classNames from 'classnames';
 
 import React, { FC } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import NavigationRowLink from '../NavigationRowLink/NavigationRowLink';
 import data from '@/data/common.json';
 import { NavigationRowProps } from '@/types';
 
@@ -16,6 +16,7 @@ const NavigationRow: FC<NavigationRowProps> = ({
   const NavigationRowClasses = classNames('flex', {
     'flex-col gap-7 xl:hidden': position === 'mobile-menu',
     'ml-16 gap-20 xxl:gap-40 notXl:hidden': position === 'header',
+    'flex-col gap-5': position === 'footer',
   });
 
   return (
@@ -26,22 +27,14 @@ const NavigationRow: FC<NavigationRowProps> = ({
             currentPath === href && position === 'header',
         });
 
-        const navLinkClasses = classNames(
-          'font-raleway text-base hover:text-primary-light-900 focus:text-primary-light-500 transition-colors duration-300 ',
-          {
-            'text-primary-light-500':
-              currentPath === href && position === 'mobile-menu',
-            'text-white-light ':
-              currentPath !== href && position === 'mobile-menu',
-            'text-white-light  ': position === 'header',
-          },
-        );
-
         return (
           <li key={idx} className={navLinkItemClasses}>
-            <Link href={href} className={navLinkClasses}>
-              {title}
-            </Link>
+            <NavigationRowLink
+              currentPath={currentPath}
+              href={href}
+              title={title}
+              position={position}
+            />
           </li>
         );
       })}

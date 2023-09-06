@@ -31,7 +31,7 @@ export interface ParagraphProps {
 }
 
 export interface NavigationRowProps {
-  position: 'header' | 'mobile-menu';
+  position: 'header' | 'footer' | 'mobile-menu';
   className?: string;
 }
 
@@ -56,7 +56,15 @@ export interface LearnListProps {
   className?: string;
 }
 
+export interface NavigationRowLinkProps {
+  currentPath: string;
+  href: string;
+  position: string;
+  title: string;
+}
+
 export interface SectionProps {
   children: React.ReactNode;
   className?: string;
+
 }
