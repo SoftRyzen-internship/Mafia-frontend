@@ -27,7 +27,7 @@ const NavigationRow: FC<NavigationRowProps> = ({
         });
 
         const navLinkClasses = classNames(
-          'font-raleway text-base hover:text-[#C964C2] focus:text-primary-light-500 transition-colors duration-300 ',
+          'font-raleway text-base hover:text-primary-light-900 focus:text-primary-light-500 transition-colors duration-300 ',
           {
             'text-primary-light-500':
               currentPath === href && position === 'mobile-menu',
