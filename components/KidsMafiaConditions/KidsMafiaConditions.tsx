@@ -1,16 +1,7 @@
 import React, { FC } from 'react';
 import ClubKidsMafiaCard from '../ClubKidsMafiaCard/ClubKidsMafiaCard';
-
-interface IKidsMafiaCard {
-  iconDescr: string;
-  subtitle: string;
-  text: string;
-}
-
-interface KidsMafiaConditionsProps {
-  conditions: { title: string; cards: IKidsMafiaCard[] };
-  btn: string;
-}
+import { ButtonPrimary } from '../Buttons';
+import { KidsMafiaConditionsProps } from '@/types';
 
 const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
   conditions,
@@ -33,7 +24,8 @@ const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
           />
         ))}
       </div>
-      <button type="button">{btn}</button>
+      {/* <button type="button">{btn}</button> */}
+      <ButtonPrimary className="m-auto smOnly:w-full">{btn}</ButtonPrimary>
     </div>
   );
 };

@@ -1,15 +1,11 @@
 import React, { FC } from 'react';
 
+import { ClubKidsMafiaCardProps } from '@/types';
+
 import IconText from '../../public/icons/kidsMafia/text.svg';
 import IconRule from '../../public/icons/kidsMafia/rule.svg';
 import IconBehavior from '../../public/icons/kidsMafia/behavior.svg';
 import IconWallet from '../../public/icons/kidsMafia/wallet.svg';
-
-interface ClubKidsMafiaCardProps {
-  subtitle: string;
-  text: string;
-  iconDescr: string;
-}
 
 const ClubKidsMafiaCard: FC<ClubKidsMafiaCardProps> = ({
   subtitle,
