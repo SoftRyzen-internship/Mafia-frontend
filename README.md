@@ -117,22 +117,88 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### Heading
 
-| Prop        | Default     | Description                                            |
-| ----------- | ----------- | ------------------------------------------------------ |
-| `content`   | `undefined` | any content from WP                                    |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1`, `h2` or `h3` |
-| `color`     | `black`     | choose the color you'd need: `black` or `white`        |
-| `className` | `undefined` | add custom or additional css class you'd need          |
+| Prop        | Default     | Description                                     |
+| ----------- | ----------- | ----------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h4` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
+| `children`  | `undefined` | required, any content                           |
+| `className` | `undefined` | add custom or additional css class you'd need   |
+| `shadow`    | `undefined` | add text as a shadow decoration of the element  |
 
 - ### Paragraph
 
-| Prop        | Default     | Description                                                       |
-| ----------- | ----------- | ----------------------------------------------------------------- |
-| `content`   | `undefined` | any content from WP                                               |
-| `size`      | `base`      | choose the size you'd need:`xs`, `sm`, `md`, `base`, `lg` or `xl` |
-| `color`     | `black`     | choose the color you'd need: `black` or `white`                   |
-| `className` | `undefined` | add custom or additional css class you'd need                     |
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `variant`   | `md`        | `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `children`  | `undefined` | required, any content                         |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
+- ### Logo
+
+| Prop        | Default     | Description                                                                                             |
+| ----------- | ----------- | ------------------------------------------------------------------------------------------------------- |
+| `href`      | `/`         | section id or path                                                                                      |
+| `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
+| `className` | `undefined` | add any custom styles                                                                                   |
+
+- ### ButtonPrimary
+
+The Primary Button has `button` tag and performs an action when clicked.
+
+| Prop            | Default     | Description                                   |
+| --------------- | ----------- | --------------------------------------------- |
+| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
+| `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
+| `loading`       | `false`     | choose the loading state: `false` or `true`   |
+| `className`     | `undefined` | add any custom styles                         |
+| `children`      | `undefined` | a necessary prop. any text content            |
+| `actionHandler` | `black`     | a function that is executed when clicked      |
+
+- ### ButtonSecondary
+
+The Secondary Button has `a` tag and performs a transition to another part of
+the site when pressed.
+
+| Prop         | Default     | Description                                 |
+| ------------ | ----------- | ------------------------------------------- |
+| `linkto `    | `undefined` | a necessary prop. the address of the link   |
+| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
+| `loading`    | `false`     | choose the loading state: `false` or `true` |
+| `className`  | `undefined` | add any custom styles                       |
+| `children`   | `undefined` | a necessary prop. any text content          |
+
+- ### NavigationRow
+
+| Prop        | Default     | Description                                                         |
+| ----------- | ----------- | ------------------------------------------------------------------- |
+| `position`  | `header `   | Choose the position you'd need: `header`, `footer` or `mobile-menu` |
+| `className` | `undefined` | add custom or additional css class you'd need                       |
+
+- ### learnList
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
 
 ```
 
 ```
+
+- ### IconBtn
+
+Props CANNOT be changed dynamically! To avoid hydration issues finish all prop
+setups before you start the server. Before making any changes to props it is
+better to stop the local server then start again.
+
+| Prop      | Type          | Description                                           |
+| --------- | ------------- | ----------------------------------------------------- |
+| `icon`    | ('cross'      | - Close btn,                                          |
+|           | / 'arrow'     | - Navigation btn with arrow to the right,             |
+|           | / scroll')    | - Scroll-to-Top btn                                   |
+|           |               |                                                       |
+| `onClick` | void function | Click handler                                         |
+|           |               |                                                       |
+| `reverse` | boolean       | Optional, false by default, turns icon by 180 degrees |
+|           |               |                                                       |
+| `classes` | string        | Optional, add additional tailwind classes,            |
+|           |               | e.g. to position component                            |
