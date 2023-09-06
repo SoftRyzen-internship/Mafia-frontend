@@ -36,8 +36,10 @@ module.exports = {
         grad_300:
           'linear-gradient(90deg, #1f1f1f 0%, #562758 50%, #261351 100%)',
         grad_400:
-          'linear-gradient(270deg, rgba(117, 103, 140, 0.53) 0%, rgba(117, 103, 140, 0) 100%)',
+          'linear-gradient(90deg, rgba(141, 11, 147, 0.33) 0%, rgba(255, 5, 124, 0) 100%)',
         grad_500:
+          'linear-gradient(270deg, rgba(117, 103, 140, 0.53) 0%, rgba(117, 103, 140, 0) 100%)',
+        grad_600:
           'linear-gradient(270deg, rgba(22, 20, 28, 0) 0%, #16141c 100%)',
       },
       fontFamily: {
@@ -47,7 +49,6 @@ module.exports = {
       fontSize: {},
       // BORDER
       borderRadius: {
-        DEFAULT: '6px',
         normal: '6px',
       },
       // ALL COLORS
