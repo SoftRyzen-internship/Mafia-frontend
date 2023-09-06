@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { SocialButtonProps } from '@/types/SocialButton';
+import { SocialButtonProps } from '@/types';
 
 import Facebook from '@/public/icons/icon_facebook.svg';
 import Instagram from '@/public/icons/icon_instagram.svg';
@@ -30,7 +30,6 @@ const SocialButton: React.FC<SocialButtonProps> = ({
     >
       {social.icon === 'Facebook' && (
         <Facebook
-          style={{ color: 'currentcolor' }}
           className={socialIconStyles}
           width={32}
           height={32}
@@ -40,7 +39,6 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 
       {social.icon === 'Instagram' && (
         <Instagram
-          style={{ color: 'currentcolor' }}
           className={socialIconStyles}
           width={32}
           height={32}
@@ -50,7 +48,6 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 
       {social.icon === 'Telegram' && (
         <Telegram
-          style={{ color: 'currentcolor' }}
           className={socialIconStyles}
           width={32}
           height={32}

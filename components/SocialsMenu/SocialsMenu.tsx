@@ -1,21 +1,10 @@
-import classNames from 'classnames';
-
 import SocialButton from '@/components/SocialButton/SocialButton';
 
-import { SocialContact } from '@/types/commonData';
+import { SocialContact } from '@/types';
 
 import data from '@/data/socials.json';
 
-import styles from './SocialsMenu.module.css';
-
 const SocialsMenu = () => {
-  const listStyles = classNames(
-    {
-      'smOnly:hidden fixed right-0 bottom-[80px] z-10 rounded-l': true,
-    },
-    styles.socials,
-  );
-
   // Sort the array with Telegram first
   const shuffleSocials = (arr: SocialContact[]): SocialContact[] => {
     const sortedArray = arr.slice(); // Create a new copy of the array
@@ -35,13 +24,14 @@ const SocialsMenu = () => {
   const menuSocials = shuffleSocials(data);
 
   return (
-    <ul className={listStyles}>
+    <ul className="shadow-xs fixed bottom-[80px] right-0 z-10 rounded-l-normal smOnly:hidden">
       {menuSocials.map(social => (
         <SocialButton
           key={social.name}
           social={social}
-          btnClassName="w-[72px] h-[72px] text-white-light bg-primary-light-100 
-                    first-of-type:rounded-tl last-of-type:rounded-bl"
+          btnClassName="w-[72px] h-[72px] text-white-light bg-primary-light-100
+                    first-of-type:rounded-tl-normal last-of-type:rounded-bl-normal
+                    hover:bg-grad_600"
         />
       ))}
     </ul>

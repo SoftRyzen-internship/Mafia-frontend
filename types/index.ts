@@ -28,3 +28,19 @@ export interface NavigationRowProps {
   position: 'header' | 'mobile-menu';
   className?: string;
 }
+
+export type SocialContact = {
+  name: string;
+  link: string;
+  icon: string;
+};
+
+export interface SocialButtonProps {
+  social: SocialContact;
+  btnClassName?: string;
+  iconClassName?: string;
+}
+
+export interface SocialsListProps {
+  className: string;
+}

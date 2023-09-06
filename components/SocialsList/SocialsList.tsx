@@ -2,8 +2,7 @@ import classNames from 'classnames';
 
 import SocialButton from '@/components/SocialButton/SocialButton';
 
-import { SocialsListProps } from '@/types/SocialsList';
-import { SocialContact } from '@/types/commonData';
+import { SocialsListProps, SocialContact } from '@/types';
 
 import data from '@/data/socials.json';
 
@@ -21,9 +20,10 @@ const SocialsList: React.FC<SocialsListProps> = ({ className = 'gap-5' }) => {
         <SocialButton
           key={social.name}
           social={social}
-          // change bg-color class when it is available in tailwind.config
-          btnClassName={'w-8 h-8 text-body bg-[#D4C8F0] rounded'}
-          iconClassName={'w-[26px] h-[26px]'}
+          btnClassName="w-8 h-8 text-body bg-primary-light-1000 rounded-normal 
+            hover:text-primary-light-900 focus:text-primary-light-500 focus:outline-none
+            active:text-primary-light-600"
+          iconClassName="w-[26px] h-[26px]"
         />
       ))}
     </ul>
