@@ -18,10 +18,13 @@ module.exports = {
       mdOnly: { min: '768px', max: '1279.98px' },
       notXl: { max: '1279.98px' },
     },
-
-    // SHADOW
+    //BOX SHADOW
     boxShadow: {
-      example: '0px 0px 40px 0px rgba(172, 136, 201, 0.19)',
+      xxs: '3px 3px 4px 0px rgba(19,8,19,0.16)',
+      xs: '-2px 0px 8px 0px rgba(172, 136, 201, 0.13)',
+      sm: '-2px 0px 12px 0px rgba(62, 50, 95, 0.12)',
+      md: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+      lg: '0px 0px 14px 0px rgba(159, 127, 199, 0.11)',
     },
     // THEME
     extend: {
@@ -54,14 +57,6 @@ module.exports = {
       // BORDER
       borderRadius: {
         normal: '6px',
-      },
-      // SHADOW
-      boxShadow: {
-        xxs: '3px 3px 4px 0px rgba(19,8,19,0.16)',
-        xs: '-2px 0px 8px 0px rgba(172, 136, 201, 0.13)',
-        sm: '-2px 0px 12px 0px rgba(62, 50, 95, 0.12)',
-        md: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-        lg: '0px 0px 14px 0px rgba(159, 127, 199, 0.11)',
       },
       // ALL COLORS
       colors: {
