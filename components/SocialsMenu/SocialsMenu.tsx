@@ -24,14 +24,14 @@ const SocialsMenu = () => {
   const menuSocials = shuffleSocials(data);
 
   return (
-    <ul className="shadow-xs fixed bottom-[80px] right-0 z-10 rounded-l-normal smOnly:hidden">
+    <ul className="fixed bottom-[80px] right-0 z-10 rounded-l-normal shadow-xs smOnly:hidden">
       {menuSocials.map(social => (
         <SocialButton
           key={social.name}
           social={social}
           btnClassName="w-[72px] h-[72px] text-white-light bg-primary-light-100
                     first-of-type:rounded-tl-normal last-of-type:rounded-bl-normal
-                    hover:bg-grad_600"
+                    hover:bg-grad_600 focus:bg-grad_600 focus:outline-none"
         />
       ))}
     </ul>
