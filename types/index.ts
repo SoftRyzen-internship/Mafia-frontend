@@ -51,3 +51,12 @@ export interface ButtonSecondaryProps {
   className?: string;
   children: string;
 }
+
+export type IconBtnName = 'cross' | 'arrow' | 'scroll';
+
+export interface IconBtnProps {
+  icon: IconBtnName;
+  reverse?: boolean;
+  onClick: () => void;
+  classes?: string;
+}

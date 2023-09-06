@@ -68,3 +68,33 @@ body {
 .btn-secondary:active svg > path {
   stroke: #c964c2;
 }
+
+/* Functional Icon Buttons */
+
+.iconBtn {
+  @apply flex items-center justify-center rounded-normal border-2 border-gray transition-colors duration-300 hover:border-primary-light-900 focus:border-primary-light-900 active:border-primary-light-600;
+}
+
+.iconBtn--cross {
+  @apply h-[28px] w-[28px] rounded-[5px];
+}
+
+.iconBtn--arrow {
+  @apply h-[26px] w-[50px] sm:w-[64px];
+}
+
+.iconBtn--scroll {
+  @apply h-[48px] w-[48px] bg-[#262626];
+}
+
+.functionIcon {
+  @apply h-[16px] w-[24px];
+}
+
+.functionIcon--cross {
+  @apply w-[16px];
+}
+
+.functionIcon--scroll {
+  @apply h-[24px];
+}
