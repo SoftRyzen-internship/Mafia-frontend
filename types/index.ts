@@ -23,3 +23,8 @@ export interface ParagraphProps {
   content: string;
   className?: string;
 }
+
+export interface NavigationRowProps {
+  position: 'header' | 'mobile-menu';
+  className?: string;
+}
