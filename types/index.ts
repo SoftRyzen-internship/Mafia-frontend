@@ -51,3 +51,7 @@ export interface ButtonSecondaryProps {
   className?: string;
   children: string;
 }
+
+export interface LearnListProps {
+  className?: string;
+}

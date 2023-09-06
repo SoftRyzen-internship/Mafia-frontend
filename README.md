@@ -174,6 +174,12 @@ the site when pressed.
 | `position`  | `header `   | Choose the position you'd need: `header` or `mobile-menu` |
 | `className` | `undefined` | add custom or additional css class you'd need             |
 
+- ### learnList
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
 ```
 
 ```
