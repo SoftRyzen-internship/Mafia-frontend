@@ -41,6 +41,11 @@ export type SocialContact = {
   icon: string;
 };
 
+export interface SocialIconProps {
+  icon: string;
+  styles: string;
+}
+
 export interface SocialButtonProps {
   social: SocialContact;
   btnClassName?: string;

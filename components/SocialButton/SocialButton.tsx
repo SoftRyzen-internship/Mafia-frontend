@@ -1,10 +1,8 @@
 import classNames from 'classnames';
 
-import { SocialButtonProps } from '@/types';
+import SocialIcon from '../SocialIcon/SocialIcon';
 
-import Facebook from '@/public/icons/icon_facebook.svg';
-import Instagram from '@/public/icons/icon_instagram.svg';
-import Telegram from '@/public/icons/icon_telegram.svg';
+import { SocialButtonProps } from '@/types';
 
 const SocialButton: React.FC<SocialButtonProps> = ({
   social,
@@ -26,34 +24,9 @@ const SocialButton: React.FC<SocialButtonProps> = ({
       rel="noopener noreferrer"
       target="_blank"
       className={socialButtonStyles}
-      aria-label="посилання на соцмережу"
+      aria-label="social media"
     >
-      {social.icon === 'Facebook' && (
-        <Facebook
-          className={socialIconStyles}
-          width={32}
-          height={32}
-          aria-label="іконка фейсбук"
-        />
-      )}
-
-      {social.icon === 'Instagram' && (
-        <Instagram
-          className={socialIconStyles}
-          width={32}
-          height={32}
-          aria-label="іконка інстаграм"
-        />
-      )}
-
-      {social.icon === 'Telegram' && (
-        <Telegram
-          className={socialIconStyles}
-          width={32}
-          height={32}
-          aria-label="іконка телеграм"
-        />
-      )}
+      <SocialIcon icon={social.icon} styles={socialIconStyles} />
     </a>
   );
 };
