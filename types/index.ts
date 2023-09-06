@@ -6,7 +6,7 @@ export interface LogoProps {
   className?: string;
 }
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4';
+type HeadingTag = 'h1' | 'h2' | 'h3';
 
 type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
 
@@ -22,7 +22,7 @@ export interface HeadingComponentProps extends HeadingElementProps {
   children: React.ReactNode;
 }
 
-type ParagraphVariant = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+type ParagraphVariant = 'normal' | 'large' | 'small';
 
 export interface ParagraphProps {
   children: React.ReactNode;

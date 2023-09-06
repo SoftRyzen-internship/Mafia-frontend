@@ -119,7 +119,7 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                     |
 | ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h4` |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
 | `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`  | `undefined` | required, any content                           |
 | `className` | `undefined` | add custom or additional css class you'd need   |
@@ -129,7 +129,7 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                   |
 | ----------- | ----------- | --------------------------------------------- |
-| `variant`   | `md`        | `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `variant`   | `normal`    | `normal`, `large`, `small`                    |
 | `children`  | `undefined` | required, any content                         |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
