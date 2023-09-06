@@ -119,7 +119,8 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                     |
 | ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h1`        | choose the tag of title you'd need: `h1` - `h6` |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h4` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`  | `undefined` | required, any content                           |
 | `className` | `undefined` | add custom or additional css class you'd need   |
 | `shadow`    | `undefined` | add text as a shadow decoration of the element  |
@@ -128,7 +129,8 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                   |
 | ----------- | ----------- | --------------------------------------------- |
-| `content`   | `undefined` | any content                                   |
+| `variant`   | `md`        | `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `children`  | `undefined` | required, any content                         |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
 - ### Logo
