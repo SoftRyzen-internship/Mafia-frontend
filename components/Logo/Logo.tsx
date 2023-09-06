@@ -19,8 +19,12 @@ const Logo: FC<LogoProps> = ({
     ' h-[42px] w-[57px] xl:hidden': position === 'mobile-menu',
   });
   return (
-    <Link href={href} className={` ${logoClasses}  ${className}`}>
-      <LogoImg />
+    <Link
+      href={href}
+      className={` ${logoClasses}  ${className}`}
+      aria-label="Company logo link"
+    >
+      <LogoImg aria-label="Company logo image" />
     </Link>
   );
 };
