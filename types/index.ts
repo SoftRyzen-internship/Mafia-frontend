@@ -62,3 +62,9 @@ export interface NavigationRowLinkProps {
   position: string;
   title: string;
 }
+
+export interface SectionProps {
+  children: React.ReactNode;
+  className?: string;
+
+}
