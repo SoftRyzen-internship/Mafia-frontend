@@ -4,6 +4,10 @@ import Title from '@/components/Title/Title';
 import SocialsList from '@/components/SocialsList/SocialsList';
 import SocialsMenu from '@/components/SocialsMenu/SocialsMenu';
 
+// temp for testing
+import SocialsList from '@/components/SocialsList/SocialsList';
+import SocialsMenu from '@/components/SocialsMenu/SocialsMenu';
+
 import data from '@/data/common.json';
 import { ButtonSecondary } from '@/components/Buttons';
 
