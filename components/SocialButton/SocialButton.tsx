@@ -1,32 +1,52 @@
-import Image from "next/image";
+import classNames from 'classnames';
 
-import classNames from "classnames";
+import { SocialButtonProps } from '@/types';
 
-import { SocialButtonProps } from "@/types/SocialButton";
+import Facebook from '@/public/icons/icon_facebook.svg';
+import Instagram from '@/public/icons/icon_instagram.svg';
+import Telegram from '@/public/icons/icon_telegram.svg';
 
 const SocialButton: React.FC<SocialButtonProps> = ({ social, className }) => {
     const socialButtonStyles = classNames({
         'flex items-center justify-center': true,
     }, className)
 
-    return (
-        <a 
-            href={social.link}
-            rel="noopener noreferrer" 
-            target="_blank"
-            className={socialButtonStyles}
-            // temp while we don't have colors in talwind.config
-            style={{backgroundColor: "#CABBE9"}}
-        >
-            <Image 
-                width={32}
-                height={32}
-                src={social.icon}
-                alt={`${social.name} icon`}
-                className="w-[26px] h-[26px] text-current"
-            />
-        </a>
-    )
-}
+  return (
+    <a
+      href={social.link}
+      rel="noopener noreferrer"
+      target="_blank"
+      className={socialButtonStyles}
+      aria-label="посилання на соцмережу"
+    >
+      {social.icon === 'Facebook' && (
+        <Facebook
+          className={socialIconStyles}
+          width={32}
+          height={32}
+          aria-label="іконка фейсбук"
+        />
+      )}
+
+      {social.icon === 'Instagram' && (
+        <Instagram
+          className={socialIconStyles}
+          width={32}
+          height={32}
+          aria-label="іконка інстаграм"
+        />
+      )}
+
+      {social.icon === 'Telegram' && (
+        <Telegram
+          className={socialIconStyles}
+          width={32}
+          height={32}
+          aria-label="іконка телеграм"
+        />
+      )}
+    </a>
+  );
+};
 
 export default SocialButton;

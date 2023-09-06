@@ -1,42 +1,41 @@
 import SocialButton from "@/components/SocialButton/SocialButton";
 
-import { SocialContact } from "@/types/commonData";
+import { SocialContact } from "@/types";
 
 import data from "@/data/socials.json";
 
 const SocialsMenu = () => {
+  // Sort the array with Telegram first
+  const shuffleSocials = (arr: SocialContact[]): SocialContact[] => {
+    const sortedArray = arr.slice(); // Create a new copy of the array
+    const telegramIndex = sortedArray.findIndex(
+      item => item.name === 'telegram',
+    );
 
-    // Sort the array with Telegram first
-    const shuffleSocials = (arr: SocialContact[]) : SocialContact[] => {
-        const sortedArray = arr.slice(); // Create a new copy of the array
-        const telegramIndex = sortedArray.findIndex(item => item.name === "telegram")
-    
-        if (telegramIndex !== -1) {
-            const firstItem = sortedArray[telegramIndex];
-            sortedArray.splice(telegramIndex, 1); // Remove "telegram" from its original position
-            sortedArray.unshift(firstItem); // Add "telegram" to the beginning
-        }
-    
-        return sortedArray;
+    if (telegramIndex !== -1) {
+      const firstItem = sortedArray[telegramIndex];
+      sortedArray.splice(telegramIndex, 1);
+      sortedArray.unshift(firstItem);
     }
-    
-    const menuSocials = shuffleSocials(data);
 
-    // border-radius: 6px 0px 0px 6px;
-    // background: rgba(202, 187, 233, 0.33);
-    // box-shadow: -2px 0px 8px 0px rgba(172, 136, 201, 0.13);
-    
-    return (
-        <ul>
-            {menuSocials.map(social => 
-                <SocialButton 
-                    key={social.name}
-                    social={social}
-                    className="w-8 h-8 text-black rounded"
-                />
-            )}
-        </ul>
-    )
-}
+    return sortedArray;
+  };
+
+  const menuSocials = shuffleSocials(data);
+
+  return (
+    <ul className="shadow-xs fixed bottom-[80px] right-0 z-10 rounded-l-normal smOnly:hidden">
+      {menuSocials.map(social => (
+        <SocialButton
+          key={social.name}
+          social={social}
+          btnClassName="w-[72px] h-[72px] text-white-light bg-primary-light-100
+                    first-of-type:rounded-tl-normal last-of-type:rounded-bl-normal
+                    hover:bg-grad_600"
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default SocialsMenu;
