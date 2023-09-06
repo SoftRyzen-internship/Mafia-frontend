@@ -18,7 +18,7 @@ const HallFameList: React.FC = () => {
 
   return (
     <div
-      className={`${s.hallFameListContainer} shadow-sm rounded-lg bg-cover bg-center p-5`}
+      className={`${s.hallFameListContainer} rounded-lg bg-cover bg-center p-5 shadow-sm`}
     >
       <h1 className="mb-[-10px] text-[32px] font-extrabold text-[rgba(243,243,243,0.06)] md:mb-[-30px] md:px-[84px] md:text-[40px] md:leading-[56px] xl:mb-[-40px] xl:px-[112px] xl:text-[52px] xl:leading-[80px]">
         Зал слави
