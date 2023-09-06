@@ -117,21 +117,19 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### Heading
 
-| Prop        | Default     | Description                                            |
-| ----------- | ----------- | ------------------------------------------------------ |
-| `content`   | `undefined` | any content from WP                                    |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1`, `h2` or `h3` |
-| `color`     | `black`     | choose the color you'd need: `black` or `white`        |
-| `className` | `undefined` | add custom or additional css class you'd need          |
+| Prop        | Default     | Description                                     |
+| ----------- | ----------- | ----------------------------------------------- |
+| `tag`       | `h1`        | choose the tag of title you'd need: `h1` - `h6` |
+| `children`  | `undefined` | required, any content                           |
+| `className` | `undefined` | add custom or additional css class you'd need   |
+| `shadow`    | `undefined` | add text as a shadow decoration of the element  |
 
 - ### Paragraph
 
-| Prop        | Default     | Description                                                       |
-| ----------- | ----------- | ----------------------------------------------------------------- |
-| `content`   | `undefined` | any content from WP                                               |
-| `size`      | `base`      | choose the size you'd need:`xs`, `sm`, `md`, `base`, `lg` or `xl` |
-| `color`     | `black`     | choose the color you'd need: `black` or `white`                   |
-| `className` | `undefined` | add custom or additional css class you'd need                     |
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `content`   | `undefined` | any content                                   |
+| `className` | `undefined` | add custom or additional css class you'd need |
 
 - ### Logo
 
