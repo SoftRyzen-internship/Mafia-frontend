@@ -119,7 +119,8 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                     |
 | ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h1`        | choose the tag of title you'd need: `h1` - `h6` |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h4` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`  | `undefined` | required, any content                           |
 | `className` | `undefined` | add custom or additional css class you'd need   |
 | `shadow`    | `undefined` | add text as a shadow decoration of the element  |
@@ -128,7 +129,8 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                   |
 | ----------- | ----------- | --------------------------------------------- |
-| `content`   | `undefined` | any content                                   |
+| `variant`   | `md`        | `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `children`  | `undefined` | required, any content                         |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
 - ### Logo
@@ -148,6 +150,7 @@ The Primary Button has `button` tag and performs an action when clicked.
 | `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
 | `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
 | `loading`       | `false`     | choose the loading state: `false` or `true`   |
+| `className`     | `undefined` | add any custom styles                         |
 | `children`      | `undefined` | a necessary prop. any text content            |
 | `actionHandler` | `black`     | a function that is executed when clicked      |
 
@@ -161,7 +164,15 @@ the site when pressed.
 | `linkto `    | `undefined` | a necessary prop. the address of the link   |
 | `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
 | `loading`    | `false`     | choose the loading state: `false` or `true` |
+| `className`  | `undefined` | add any custom styles                       |
 | `children`   | `undefined` | a necessary prop. any text content          |
+
+- ### NavigationRow
+
+| Prop        | Default     | Description                                               |
+| ----------- | ----------- | --------------------------------------------------------- |
+| `position`  | `header `   | Choose the position you'd need: `header` or `mobile-menu` |
+| `className` | `undefined` | add custom or additional css class you'd need             |
 
 ```
 

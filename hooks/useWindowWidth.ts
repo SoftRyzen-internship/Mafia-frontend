@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
-// const SCREEN_MOBILE = 320;
-const LARGE_SCREEN_MOBILE = 480;
-const SCREEN_TABLET = 768;
-const SCREEN_DESKTOP = 1280;
-const LARGE_SCREEN_DESKTOP = 1440;
+import {
+  LARGE_SCREEN_MOBILE,
+  SCREEN_TABLET,
+  SCREEN_DESKTOP,
+  LARGE_SCREEN_DESKTOP,
+} from '@/constants';
 
 export const useWindowWidth = () => {
   const [width, setWidth] = useState<number | null>(null);

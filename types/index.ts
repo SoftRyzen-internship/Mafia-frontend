@@ -6,7 +6,9 @@ export interface LogoProps {
   className?: string;
 }
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4';
+
+type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
 
 export interface HeadingElementProps {
   className?: string;
@@ -16,11 +18,20 @@ export interface HeadingElementProps {
 
 export interface HeadingComponentProps extends HeadingElementProps {
   tag?: HeadingTag;
+  variant?: HeadingVariant;
   children: React.ReactNode;
 }
 
+type ParagraphVariant = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+
 export interface ParagraphProps {
-  content: string;
+  children: React.ReactNode;
+  variant?: ParagraphVariant;
+  className?: string;
+}
+
+export interface NavigationRowProps {
+  position: 'header' | 'mobile-menu';
   className?: string;
 }
 
@@ -28,6 +39,7 @@ export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
   disabled?: boolean;
   loading?: boolean;
+  className?: string;
   children: string;
   actionHandler?: () => void;
 }
@@ -36,5 +48,6 @@ export interface ButtonSecondaryProps {
   linkto: string;
   buttonsize?: 'medium' | 'large' | undefined;
   loading?: boolean;
+  className?: string;
   children: string;
 }

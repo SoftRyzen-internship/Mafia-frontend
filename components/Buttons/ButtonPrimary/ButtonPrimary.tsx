@@ -1,50 +1,59 @@
 'use client';
 
 import React from 'react';
+import cn from 'classnames';
+
 import { ButtonPrimaryProps } from '@/types';
 import { useWindowWidth } from '@/hooks';
-import {
-  sizesMobile,
-  sizesTablet,
-  sizesDesktop,
-  sizesLargeDesktop,
-} from '../buttonsSizes';
 import SvgButtonLoader from '@/public/icons/buttons-loading.svg';
 
 export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
-  buttonsize = 'small',
+  buttonsize = 'medium',
   disabled = false,
   loading = false,
+  className = '',
   children,
   actionHandler = () => console.log('click!'),
 }: ButtonPrimaryProps) => {
-  const { isScreenMobile, isScreenTablet, isScreenDesktop } = useWindowWidth();
+  const {
+    isScreenMobile,
+    isScreenTablet,
+    isScreenDesktop,
+    isLargeScreenDesktop,
+  } = useWindowWidth();
+
+  const primaryBtnClass = cn(
+    {
+      'text-xs leading-[1.33]': buttonsize === 'small',
+      'text-base leading-[1.5]': buttonsize !== 'small',
+      'pointer-events-none': loading,
+
+      'w-[88px] h-8': buttonsize === 'small' && isScreenMobile,
+      'w-[200px] h-12': buttonsize === 'medium' && isScreenMobile,
+      'w-full h-12': buttonsize === 'large' && isScreenMobile,
+
+      'w-[88px] h-10': buttonsize === 'small' && isScreenTablet,
+      'w-[236px] h-12': buttonsize === 'medium' && isScreenTablet,
+      'w-[288px] h-14': buttonsize === 'large' && isScreenTablet,
+
+      'w-[148px] h-10': buttonsize === 'small' && isScreenDesktop,
+      'w-[301px] h-12':
+        buttonsize === 'medium' && isScreenDesktop && !isLargeScreenDesktop,
+
+      'w-[336px] h-12': buttonsize === 'medium' && isLargeScreenDesktop,
+    },
+    'outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold text-white-light',
+    'hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300',
+    'active:text-primary-light-900 disabled:bg-gray-dark disabled:bg-none disabled:text-gray-medium',
+    className,
+  );
 
   return (
     <button
       type="button"
       disabled={disabled}
       onClick={actionHandler}
-      className="outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold text-white-light hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300 active:text-[#C964C2] disabled:bg-gray-disabledBg disabled:bg-none disabled:text-gray-disabledText"
-      style={{
-        width: isScreenMobile
-          ? sizesMobile[buttonsize].width
-          : isScreenTablet
-          ? sizesTablet[buttonsize].width
-          : isScreenDesktop
-          ? sizesDesktop[buttonsize].width
-          : sizesLargeDesktop[buttonsize].width,
-        height: isScreenMobile
-          ? sizesMobile[buttonsize].height
-          : isScreenTablet
-          ? sizesTablet[buttonsize].height
-          : isScreenDesktop
-          ? sizesDesktop[buttonsize].height
-          : sizesLargeDesktop[buttonsize].height,
-        fontSize: buttonsize === 'small' ? '12px' : '16px',
-        lineHeight: buttonsize === 'small' ? 1.33 : 1.5,
-        pointerEvents: loading ? 'none' : 'auto',
-      }}
+      className={primaryBtnClass}
     >
       {children}
       {loading && (
