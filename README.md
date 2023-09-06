@@ -143,9 +143,17 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### SocialsList
 
-| Prop        | Default     | Description                                                       |
-| ----------- | ----------- | ----------------------------------------------------------------- |
-| `className` | `undefined` | add custom or additional css class you'd need                     |
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
+- ### SocialButton
+
+| Prop            | Default     | Description                                              |
+| --------------- | ----------- | -------------------------------------------------------- |
+| `social`        | `undefined` | social media contact info                                |
+| `btnClassName`  | `undefined` | custom or additional css class you'd need for the button |
+| `iconClassName` | `undefined` | custom or additional css class you'd need for the icon   |
 
 - ### ButtonPrimary
 

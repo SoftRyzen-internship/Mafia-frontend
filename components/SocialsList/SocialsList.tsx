@@ -1,16 +1,18 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 
-import SocialButton from "@/components/SocialButton/SocialButton";
+import SocialButton from '@/components/SocialButton/SocialButton';
 
 import { SocialsListProps, SocialContact } from '@/types';
 
-import data from "@/data/socials.json"
+import data from '@/data/socials.json';
 
-const SocialsList: React.FC<SocialsListProps> = ({ className = "gap-5" }) => {
-
-    const listStyles = classNames({
-        'flex': true,
-    }, className)
+const SocialsList: React.FC<SocialsListProps> = ({ className = 'gap-5' }) => {
+  const listStyles = classNames(
+    {
+      flex: true,
+    },
+    className,
+  );
 
   return (
     <ul className={listStyles}>

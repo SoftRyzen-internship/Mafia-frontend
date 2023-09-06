@@ -6,10 +6,19 @@ import Facebook from '@/public/icons/icon_facebook.svg';
 import Instagram from '@/public/icons/icon_instagram.svg';
 import Telegram from '@/public/icons/icon_telegram.svg';
 
-const SocialButton: React.FC<SocialButtonProps> = ({ social, className }) => {
-    const socialButtonStyles = classNames({
-        'flex items-center justify-center': true,
-    }, className)
+const SocialButton: React.FC<SocialButtonProps> = ({
+  social,
+  btnClassName,
+  iconClassName,
+}) => {
+  const socialButtonStyles = classNames(
+    {
+      'flex items-center justify-center': true,
+    },
+    btnClassName,
+  );
+
+  const socialIconStyles = classNames(iconClassName);
 
   return (
     <a

@@ -1,17 +1,17 @@
 [
-    {
-        "name": "facebook",
-        "link": "https://www.facebook.com/mafclubod",
-        "icon": "/icons/icon_facebook.svg"
-    },
-    {
-        "name": "instagram",
-        "link": "https://www.instagram.com/mafia_club_odesa/",
-        "icon": "/icons/icon_instagram.svg"
-    },
-    {
-        "name": "telegram",
-        "link": "",
-        "icon": "/icons/icon_telegram.svg"
-    }
+  {
+    "name": "facebook",
+    "link": "https://www.facebook.com/mafclubod",
+    "icon": "Facebook"
+  },
+  {
+    "name": "instagram",
+    "link": "https://www.instagram.com/mafia_club_odesa/",
+    "icon": "Instagram"
+  },
+  {
+    "name": "telegram",
+    "link": "",
+    "icon": "Telegram"
+  }
 ]

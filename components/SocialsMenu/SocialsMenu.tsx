@@ -1,8 +1,8 @@
-import SocialButton from "@/components/SocialButton/SocialButton";
+import SocialButton from '@/components/SocialButton/SocialButton';
 
-import { SocialContact } from "@/types";
+import { SocialContact } from '@/types';
 
-import data from "@/data/socials.json";
+import data from '@/data/socials.json';
 
 const SocialsMenu = () => {
   // Sort the array with Telegram first
