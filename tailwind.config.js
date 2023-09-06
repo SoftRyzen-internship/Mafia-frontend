@@ -61,7 +61,8 @@ module.exports = {
         gray: {
           DEFAULT: '#737373',
           light: '#73737380',
-          dark: '#474747',
+          disabledBg: '#474747',
+          disabledText: '#676767',
         },
         primary: {
           light: {
