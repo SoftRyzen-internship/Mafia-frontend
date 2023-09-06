@@ -22,9 +22,9 @@ const Logo: FC<LogoProps> = ({
     <Link
       href={href}
       className={` ${logoClasses}  ${className}`}
-      aria-label="Company logo link"
+      aria-label="Посилання із логотипом компанії"
     >
-      <LogoImg aria-label="Company logo image" />
+      <LogoImg aria-label="Зображення із логотипом компанії" />
     </Link>
   );
 };
