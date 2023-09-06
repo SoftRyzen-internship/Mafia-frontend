@@ -141,6 +141,20 @@ This is example of API for component `Title` and `Paragraph`
 | `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
 | `className` | `undefined` | add any custom styles                                                                                   |
 
+- ### SocialsList
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
+- ### SocialButton
+
+| Prop            | Default     | Description                                              |
+| --------------- | ----------- | -------------------------------------------------------- |
+| `social`        | `undefined` | social media contact info                                |
+| `btnClassName`  | `undefined` | custom or additional css class you'd need for the button |
+| `iconClassName` | `undefined` | custom or additional css class you'd need for the icon   |
+
 - ### ButtonPrimary
 
 The Primary Button has `button` tag and performs an action when clicked.

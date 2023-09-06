@@ -35,6 +35,27 @@ export interface NavigationRowProps {
   className?: string;
 }
 
+export type SocialContact = {
+  name: string;
+  link: string;
+  icon: string;
+};
+
+export interface SocialIconProps {
+  icon: string;
+  styles: string;
+}
+
+export interface SocialButtonProps {
+  social: SocialContact;
+  btnClassName?: string;
+  iconClassName?: string;
+}
+
+export interface SocialsListProps {
+  className?: string;
+}
+
 export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
   disabled?: boolean;

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "facebook",
+    "link": "https://www.facebook.com/mafclubod",
+    "icon": "Facebook"
+  },
+  {
+    "name": "instagram",
+    "link": "https://www.instagram.com/mafia_club_odesa/",
+    "icon": "Instagram"
+  },
+  {
+    "name": "telegram",
+    "link": "",
+    "icon": "Telegram"
+  }
+]
