@@ -76,3 +76,19 @@ export interface SectionProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface ClubKidsMafiaCardProps {
+  subtitle: string;
+  text: string;
+  iconDescr: string;
+}
+interface IKidsMafiaCard {
+  iconDescr: string;
+  subtitle: string;
+  text: string;
+}
+
+export interface KidsMafiaConditionsProps {
+  conditions: { title: string; cards: IKidsMafiaCard[] };
+  btn: string;
+}
