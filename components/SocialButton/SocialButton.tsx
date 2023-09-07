@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 
-import SocialIcon from '../SocialIcon/SocialIcon';
+import { SocialIcon } from '@/components/SocialIcon';
 
 import { SocialButtonProps } from '@/types';
 
-const SocialButton: React.FC<SocialButtonProps> = ({
+export const SocialButton: React.FC<SocialButtonProps> = ({
   social,
   btnClassName,
   iconClassName,
@@ -30,5 +30,3 @@ const SocialButton: React.FC<SocialButtonProps> = ({
     </a>
   );
 };
-
-export default SocialButton;

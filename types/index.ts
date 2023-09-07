@@ -88,3 +88,7 @@ export interface SectionProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface ContactsProps {
+  styles: 'basic' | 'footer-mob' | 'mob-menu';
+}

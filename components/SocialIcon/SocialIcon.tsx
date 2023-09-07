@@ -4,7 +4,7 @@ import Telegram from '@/public/icons/icon_telegram.svg';
 
 import { SocialIconProps } from '@/types';
 
-const SocialIcon: React.FC<SocialIconProps> = ({ icon, styles }) => {
+export const SocialIcon: React.FC<SocialIconProps> = ({ icon, styles }) => {
   switch (icon) {
     case 'Facebook':
       return (
@@ -22,5 +22,3 @@ const SocialIcon: React.FC<SocialIconProps> = ({ icon, styles }) => {
       return <></>;
   }
 };
-
-export default SocialIcon;

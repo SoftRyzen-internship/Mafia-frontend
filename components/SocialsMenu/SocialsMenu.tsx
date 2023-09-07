@@ -1,10 +1,10 @@
-import SocialButton from '@/components/SocialButton/SocialButton';
+import { SocialButton } from '@/components/SocialButton';
 
 import { SocialContact } from '@/types';
 
 import data from '@/data/socials.json';
 
-const SocialsMenu = () => {
+export const SocialsMenu = () => {
   // Sort the array with Telegram first
   const shuffleSocials = (arr: SocialContact[]): SocialContact[] => {
     const sortedArray = arr.slice(); // Create a new copy of the array
@@ -37,5 +37,3 @@ const SocialsMenu = () => {
     </ul>
   );
 };
-
-export default SocialsMenu;
