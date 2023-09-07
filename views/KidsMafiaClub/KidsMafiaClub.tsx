@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import KidsMafiaConditions from '../../components/KidsMafiaConditions/KidsMafiaConditions';
+import { KidsMafiaConditions } from '@/components/KidsMafiaConditions';
 import Heading from '@/components/Heading/Heading';
 import Paragraph from '@/components/Parapgaph/Paragraph';
-import data from '../../data/kidsMafia.json';
-import { kidsMafiaGallery } from '../../data/kidsMafiaClub';
+import data from '@/data/kidsMafia.json';
+import { kidsMafiaGallery } from '@/data/kidsMafiaClub';
 
-const KidsMafiaClub: FC = () => {
+export const KidsMafiaClub: FC = () => {
   const { title, text, buttons, conditions } = data.kidsMafiaClub;
   return (
     <section className="kids-mafia-club-mob md:kids-mafia-club-tab xl:kids-mafia-club-xl xxl:kids-mafia-club-2xl  py-20">
@@ -18,7 +18,7 @@ const KidsMafiaClub: FC = () => {
 
         <div className="mb-[174px] flex flex-wrap gap-x-6 xl:mb-[105px] xxl:mb-[142px]">
           {kidsMafiaGallery.map(({ src, alt }, index) => (
-            <div key={index} className="club-kids-gallery-card ">
+            <div key={index} className="club-kids-gallery-card boxShadow-sm">
               <Image src={src} alt={alt} className="h-full object-cover" />
             </div>
           ))}
@@ -31,5 +31,3 @@ const KidsMafiaClub: FC = () => {
     </section>
   );
 };
-
-export default KidsMafiaClub;
