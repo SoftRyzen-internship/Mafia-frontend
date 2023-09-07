@@ -183,3 +183,22 @@ the site when pressed.
 ```
 
 ```
+
+- ### IconBtn
+
+Props CANNOT be changed dynamically! To avoid hydration issues finish all prop
+setups before you start the server. Before making any changes to props it is
+better to stop the local server then start again.
+
+| Prop      | Type          | Description                                           |
+| --------- | ------------- | ----------------------------------------------------- |
+| `icon`    | ('cross'      | - Close btn,                                          |
+|           | / 'arrow'     | - Navigation btn with arrow to the right,             |
+|           | / scroll')    | - Scroll-to-Top btn                                   |
+|           |               |                                                       |
+| `onClick` | void function | Click handler                                         |
+|           |               |                                                       |
+| `reverse` | boolean       | Optional, false by default, turns icon by 180 degrees |
+|           |               |                                                       |
+| `classes` | string        | Optional, add additional tailwind classes,            |
+|           |               | e.g. to position component                            |
