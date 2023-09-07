@@ -1,18 +1,16 @@
 import classNames from 'classnames';
 
-import SocialIcon from '../SocialIcon/SocialIcon';
+import { SocialIcon } from '@/components/SocialIcon';
 
 import { SocialButtonProps } from '@/types';
 
-const SocialButton: React.FC<SocialButtonProps> = ({
+export const SocialButton: React.FC<SocialButtonProps> = ({
   social,
   btnClassName,
   iconClassName,
 }) => {
   const socialButtonStyles = classNames(
-    {
-      'flex items-center justify-center': true,
-    },
+    'flex items-center justify-center',
     btnClassName,
   );
 
@@ -30,5 +28,3 @@ const SocialButton: React.FC<SocialButtonProps> = ({
     </a>
   );
 };
-
-export default SocialButton;

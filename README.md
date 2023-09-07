@@ -194,6 +194,12 @@ the site when pressed.
 | ----------- | ----------- | --------------------------------------------- |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
+- ### Contacts
+
+| Prop      | Default | Description                                        |
+| --------- | ------- | -------------------------------------------------- |
+| `variant` | `basic` | choose styles: `basic`, `footer-mob` or `mob-menu` |
+
 ```
 
 ```

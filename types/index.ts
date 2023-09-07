@@ -93,3 +93,7 @@ export interface LearnListItemProps {
   title: string;
   desc: string;
 }
+
+export interface ContactsProps {
+  variant?: 'basic' | 'footer-mob' | 'mob-menu';
+}
