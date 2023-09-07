@@ -78,6 +78,15 @@ export interface ButtonSecondaryProps {
   children: string;
 }
 
+export type IconBtnName = 'cross' | 'arrow' | 'scroll';
+
+export interface IconBtnProps {
+  icon: IconBtnName;
+  reverse?: boolean;
+  onClick: () => void;
+  classes?: string;
+}
+
 export interface LearnListProps {
   className?: string;
 }
@@ -101,4 +110,20 @@ export interface LearnListItemProps {
 
 export interface ContactsProps {
   variant?: 'basic' | 'footer-mob' | 'mob-menu';
+}
+
+export interface ClubKidsMafiaCardProps {
+  subtitle: string;
+  text: string;
+  iconDescr: string;
+}
+interface IKidsMafiaCard {
+  iconDescr: string;
+  subtitle: string;
+  text: string;
+}
+
+export interface KidsMafiaConditionsProps {
+  conditions: { title: string; cards: IKidsMafiaCard[] };
+  btn: string;
 }

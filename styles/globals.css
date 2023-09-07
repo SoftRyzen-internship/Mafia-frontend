@@ -68,3 +68,96 @@ body {
 .btn-secondary:active svg > path {
   stroke: #c964c2;
 }
+
+/* Functional Icon Buttons */
+
+.iconBtn {
+  @apply flex items-center justify-center rounded-normal border-2 border-gray transition-colors duration-300 hover:border-primary-light-900 focus:border-primary-light-900 active:border-primary-light-600;
+}
+
+.iconBtn--cross {
+  @apply h-[28px] w-[28px] rounded-[5px];
+}
+
+.iconBtn--arrow {
+  @apply h-[26px] w-[50px] sm:w-[64px];
+}
+
+.iconBtn--scroll {
+  @apply h-[48px] w-[48px] bg-[#262626];
+}
+
+.functionIcon {
+  @apply h-[16px] w-[24px];
+}
+
+.functionIcon--cross {
+  @apply w-[16px];
+}
+
+.functionIcon--scroll {
+  @apply h-[24px];
+}
+
+/* kids-mafia-club */
+@layer components {
+  .kids-mafia-club-mob {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-mob.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-mob@2x.webp) type('image/webp')
+        2x
+    );
+
+    @apply bg-left-top bg-no-repeat;
+  }
+
+  .kids-mafia-club-tab {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-tab.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-tab@2x.webp) type('image/webp')
+        2x
+    );
+
+    @apply bg-left-top bg-no-repeat;
+  }
+
+  .kids-mafia-club-xl {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
+    );
+
+    @apply bg-left-top bg-no-repeat;
+  }
+
+  .kids-mafia-club-2xl {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-2xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
+        2x
+    );
+
+    @apply bg-left-top bg-no-repeat;
+  }
+
+  .club-kids-gallery-card {
+    flex-basis: calc((100% - 24px) / 2);
+    @apply h-[180px]  overflow-hidden rounded-md md:h-[198px] xl:h-[407px] xxl:h-[490px];
+
+    @media (min-width: 768px) {
+      flex-basis: calc((100% - 3 * 24px) / 4);
+    }
+  }
+
+  .club-kids-gallery-card:nth-child(1) {
+    @apply md:mt-[48px] xl:mt-[81px] smOnly:mb-[282px];
+  }
+
+  .club-kids-gallery-card:nth-child(2) {
+    @apply mt-[120px] md:mt-[116px] xl:mt-[189px];
+  }
+
+  .club-kids-gallery-card:nth-child(4) {
+    @apply md:mt-[156px] xl:mt-[279px] smOnly:mt-[136px];
+  }
+}
