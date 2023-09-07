@@ -11,6 +11,8 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
 }) => {
   const socialButtonStyles = classNames(
     'flex items-center justify-center',
+    'hover:text-primary-light-900 active:text-primary-light-600',
+    'focus:text-primary-light-500 focus:outline-none',
     btnClassName,
   );
 
