@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import styles from './LearnListItem.module.css';
+// import styles from './LearnListItem.module.css';
 import { Heading } from '../Heading';
 import { LearnListItemProps } from '@/types';
 
