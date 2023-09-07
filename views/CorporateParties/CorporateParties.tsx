@@ -1,7 +1,7 @@
 import { Heading } from '@/components/Heading';
 import Section from '@/components/Section/Section';
 
-import data from '@/data/corporatePartiesSection.json';
+import data from '@/data/corporateParties.json';
 
 const { primary_title, secondary_title } = data;
 
