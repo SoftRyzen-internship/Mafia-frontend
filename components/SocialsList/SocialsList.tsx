@@ -9,12 +9,7 @@ import data from '@/data/socials.json';
 export const SocialsList: React.FC<SocialsListProps> = ({
   className = 'gap-5',
 }) => {
-  const listStyles = classNames(
-    {
-      flex: true,
-    },
-    className,
-  );
+  const listStyles = classNames('flex', className);
 
   return (
     <ul className={listStyles}>

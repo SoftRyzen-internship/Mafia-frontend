@@ -10,9 +10,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
   iconClassName,
 }) => {
   const socialButtonStyles = classNames(
-    {
-      'flex items-center justify-center': true,
-    },
+    'flex items-center justify-center',
     btnClassName,
   );
 

@@ -4,21 +4,14 @@ import Telegram from '@/public/icons/icon_telegram.svg';
 
 import { SocialIconProps } from '@/types';
 
+const icons = {
+  Facebook,
+  Instagram,
+  Telegram,
+};
+
 export const SocialIcon: React.FC<SocialIconProps> = ({ icon, styles }) => {
-  switch (icon) {
-    case 'Facebook':
-      return (
-        <Facebook className={styles} width={32} height={32} ariaLabel={icon} />
-      );
-    case 'Instagram':
-      return (
-        <Instagram className={styles} width={32} height={32} ariaLabel={icon} />
-      );
-    case 'Telegram':
-      return (
-        <Telegram className={styles} width={32} height={32} ariaLabel={icon} />
-      );
-    default:
-      return <></>;
-  }
+  const Icon = icons[icon];
+
+  return <Icon className={styles} width={32} height={32} aria-label={icon} />;
 };
