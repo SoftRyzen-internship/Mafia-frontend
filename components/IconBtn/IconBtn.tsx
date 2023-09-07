@@ -5,7 +5,7 @@ import getIconBtnStyles from '@/utils/helpers/getIconBtnStyles';
 
 import { IconBtnProps } from '@/types';
 
-const IconBtn: React.FC<IconBtnProps> = ({
+export const IconBtn: React.FC<IconBtnProps> = ({
   icon,
   onClick,
   reverse = false,
@@ -30,5 +30,3 @@ const IconBtn: React.FC<IconBtnProps> = ({
     </button>
   );
 };
-
-export default IconBtn;
