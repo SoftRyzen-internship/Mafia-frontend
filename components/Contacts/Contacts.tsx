@@ -6,22 +6,22 @@ import { ContactsProps } from '@/types';
 
 import data from '@/data/contacts.json';
 
-export const Contacts: React.FC<ContactsProps> = ({ styles = 'basic' }) => {
+export const Contacts: React.FC<ContactsProps> = ({ variant = 'basic' }) => {
   const contactListStyles = classNames(
     'flex flex-col mt-6 text-white-light font-normal',
     {
-      'gap-5 text-base leading-6': styles === 'basic',
-      'gap-7 text-base leading-6': styles === 'mob-menu',
-      'gap-6 text-sm leading-5': styles === 'footer-mob',
+      'gap-5 text-base leading-6': variant === 'basic',
+      'gap-7 text-base leading-6': variant === 'mob-menu',
+      'gap-6 text-sm leading-5': variant === 'footer-mob',
     },
   );
 
   const addressStyles = classNames('flex', {
-    'gap-1': styles === 'basic' || 'mob-menu',
-    'flex-col gap-0': styles === 'footer-mob',
+    'gap-1': variant === 'basic' || 'mob-menu',
+    'flex-col gap-0': variant === 'footer-mob',
   });
 
-  const headingVariant = styles === 'footer-mob' ? 'secondary' : 'tertiary';
+  const headingVariant = variant === 'footer-mob' ? 'secondary' : 'tertiary';
 
   return (
     <>
