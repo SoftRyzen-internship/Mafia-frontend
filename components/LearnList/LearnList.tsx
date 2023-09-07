@@ -1,4 +1,6 @@
 import React, { FC } from 'react';
+
+import LearnListItem from '../LearnListItem/LearnListItem';
 import mainContent from '@/data/mainPage.json';
 import { LearnListProps } from '@/types';
 
@@ -13,15 +15,7 @@ const LearnList: FC<LearnListProps> = ({ className }) => {
             key={idx}
             className=" rounded bg-primary-dark-400 p-6 xl:w-[286px] xl:px-8 xxl:w-[420px] xxl:px-11"
           >
-            <div className="after:mt-6 after:block after:h-[2px] after:w-full  after:bg-grad_500">
-              <h3 className=" mb-5 font-raleway text-xl font-medium text-white-light ">
-                {title}
-              </h3>
-
-              <p className=" font-raleway text-base text-white-light xxl:max-w-[221px] ">
-                {desc}
-              </p>
-            </div>
+            <LearnListItem title={title} desc={desc} />
           </li>
         );
       })}
