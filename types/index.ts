@@ -6,7 +6,7 @@ export interface LogoProps {
   className?: string;
 }
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4';
+type HeadingTag = 'h1' | 'h2' | 'h3';
 
 type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
 
@@ -22,7 +22,7 @@ export interface HeadingComponentProps extends HeadingElementProps {
   children: React.ReactNode;
 }
 
-type ParagraphVariant = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+type ParagraphVariant = 'normal' | 'large' | 'small';
 
 export interface ParagraphProps {
   children: React.ReactNode;
@@ -32,6 +32,32 @@ export interface ParagraphProps {
 
 export interface NavigationRowProps {
   position: 'header' | 'footer' | 'mobile-menu';
+  className?: string;
+}
+
+export type SocialContact = {
+  name: string;
+  link: string;
+  icon: string;
+};
+
+type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+
+export interface SocialsMenuProps {
+  variant?: SocialMenuVariants;
+}
+
+export interface SocialButtonProps {
+  link: string;
+  aria_label: string;
+  variant?: SocialMenuVariants;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export interface SocialIconProps {
+  icon: string;
+  variant?: SocialMenuVariants;
   className?: string;
 }
 
@@ -75,6 +101,15 @@ export interface NavigationRowLinkProps {
 export interface SectionProps {
   children: React.ReactNode;
   className?: string;
+}
+
+export interface LearnListItemProps {
+  title: string;
+  desc: string;
+}
+
+export interface ContactsProps {
+  variant?: 'basic' | 'footer-mob' | 'mob-menu';
 }
 
 export interface ClubKidsMafiaCardProps {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { ClubKidsMafiaCard } from '../ClubKidsMafiaCard';
 import { ButtonPrimary } from '../Buttons';
-import Heading from '../Heading/Heading';
+import { Heading } from '../Heading';
 import { KidsMafiaConditionsProps } from '@/types';
 
 export const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({

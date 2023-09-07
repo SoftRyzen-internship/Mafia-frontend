@@ -1,0 +1,3 @@
+.underline {
+  @apply after:mt-6 after:block after:h-[2px] after:w-full after:bg-grad_500;
+}
