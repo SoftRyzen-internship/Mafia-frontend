@@ -4,9 +4,11 @@ import Heading from '@/components/Heading/Heading';
 
 import { ContactsProps } from '@/types';
 
-import data from '@/data/contacts.json';
+import data from '@/data/common.json';
 
 export const Contacts: React.FC<ContactsProps> = ({ variant = 'basic' }) => {
+  const { title, address, phone } = data.contacts;
+
   const contactListStyles = classNames(
     'flex flex-col mt-6 text-white-light font-normal',
     {
@@ -25,15 +27,15 @@ export const Contacts: React.FC<ContactsProps> = ({ variant = 'basic' }) => {
 
   return (
     <>
-      <Heading variant={headingVariant}>{data.title}</Heading>
+      <Heading variant={headingVariant}>{title}</Heading>
       <ul className={contactListStyles}>
         <li className={addressStyles}>
-          <span>{data.address.city},</span>
-          <span>{data.address.street}</span>
+          <span>{address.city},</span>
+          <span>{address.street}</span>
         </li>
         <li className="flex flex-col">
-          {data.phone.map(phone => (
-            <span key={phone}>{phone}</span>
+          {phone.map(num => (
+            <span key={num}>{num}</span>
           ))}
         </li>
       </ul>

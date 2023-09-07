@@ -4,16 +4,18 @@ import { SocialButton } from '@/components/SocialButton';
 
 import { SocialsListProps, SocialContact } from '@/types';
 
-import data from '@/data/socials.json';
+import data from '@/data/common.json';
 
 export const SocialsList: React.FC<SocialsListProps> = ({
   className = 'gap-5',
 }) => {
+  const socialData = data.socials;
+
   const listStyles = classNames('flex', className);
 
   return (
     <ul className={listStyles}>
-      {data.map((social: SocialContact) => (
+      {socialData.map((social: SocialContact) => (
         <SocialButton
           key={social.name}
           social={social}

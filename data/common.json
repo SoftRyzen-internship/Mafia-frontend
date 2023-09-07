@@ -10,5 +10,30 @@
     { "title": "Корпоративи", "href": "corporate-parties" },
     { "title": "Дитяча мафія", "href": "mafia-kids" },
     { "title": "Зал слави", "href": "fame-hall" }
+  ],
+  "contacts": {
+    "title": "Контакти",
+    "address": {
+      "city": "м. Одеса",
+      "street": "вул. Канатна, 42"
+    },
+    "phone": ["+38 (093) 615 03 01"]
+  },
+  "socials": [
+    {
+      "name": "facebook",
+      "link": "https://www.facebook.com/mafclubod",
+      "icon": "Facebook"
+    },
+    {
+      "name": "instagram",
+      "link": "https://www.instagram.com/mafia_club_odesa/",
+      "icon": "Instagram"
+    },
+    {
+      "name": "telegram",
+      "link": "https://t.me/MafiaclubOdessa_Bot",
+      "icon": "Telegram"
+    }
   ]
 }
