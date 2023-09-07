@@ -8,6 +8,7 @@ import customCardData from '@/data/customCardData.json';
 import s from './HallFameList.module.css';
 import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import Heading from '../Heading/Heading';
+import Section from '../Section/Section';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,
@@ -46,7 +47,7 @@ const HallFameList: React.FC = () => {
   const shuffledData = shuffleArray([...hallFameData, customCardData]);
 
   return (
-    <section
+    <Section
       className={`${s.hallFameListContainer} rounded-lg bg-cover bg-center bg-no-repeat p-5 shadow-sm`}
     >
       <Heading tag="h1" variant="main" className={headerStyles}>
@@ -70,7 +71,7 @@ const HallFameList: React.FC = () => {
           return null;
         })}
       </ul>
-    </section>
+    </Section>
   );
 };
 
