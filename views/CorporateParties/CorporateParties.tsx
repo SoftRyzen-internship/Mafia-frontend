@@ -1,5 +1,5 @@
 import { Heading } from '@/components/Heading';
-import Section from '@/components/Section/Section';
+import { Section } from '@/components/Section';
 
 import data from '@/data/corporateParties.json';
 

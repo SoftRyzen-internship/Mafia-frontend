@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import { ParagraphProps } from '@/types';
 
-const Paragraph: FC<ParagraphProps> = ({
+export const Paragraph: FC<ParagraphProps> = ({
   children,
   variant = 'normal',
   className = '',
@@ -18,5 +18,3 @@ const Paragraph: FC<ParagraphProps> = ({
   );
   return <p className={paragraphClass}>{children}</p>;
 };
-
-export default Paragraph;

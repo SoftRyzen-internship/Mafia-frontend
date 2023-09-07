@@ -41,18 +41,23 @@ export type SocialContact = {
   icon: string;
 };
 
-export interface SocialIconProps {
-  icon: string;
-  styles: string;
+type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+
+export interface SocialsMenuProps {
+  variant?: SocialMenuVariants;
 }
 
 export interface SocialButtonProps {
-  social: SocialContact;
-  btnClassName?: string;
-  iconClassName?: string;
+  link: string;
+  aria_label: string;
+  variant?: SocialMenuVariants;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export interface SocialsListProps {
+export interface SocialIconProps {
+  icon: string;
+  variant?: SocialMenuVariants;
   className?: string;
 }
 
@@ -71,6 +76,15 @@ export interface ButtonSecondaryProps {
   loading?: boolean;
   className?: string;
   children: string;
+}
+
+export type IconBtnName = 'cross' | 'arrow' | 'scroll';
+
+export interface IconBtnProps {
+  icon: IconBtnName;
+  reverse?: boolean;
+  onClick: () => void;
+  classes?: string;
 }
 
 export interface LearnListProps {
@@ -92,4 +106,24 @@ export interface SectionProps {
 export interface LearnListItemProps {
   title: string;
   desc: string;
+}
+
+export interface ContactsProps {
+  variant?: 'basic' | 'footer-mob' | 'mob-menu';
+}
+
+export interface ClubKidsMafiaCardProps {
+  subtitle: string;
+  text: string;
+  iconDescr: string;
+}
+interface IKidsMafiaCard {
+  iconDescr: string;
+  subtitle: string;
+  text: string;
+}
+
+export interface KidsMafiaConditionsProps {
+  conditions: { title: string; cards: IKidsMafiaCard[] };
+  btn: string;
 }

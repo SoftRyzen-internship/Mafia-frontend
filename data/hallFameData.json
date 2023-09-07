@@ -1,0 +1,144 @@
+[
+  {
+    "name": "Пан Сова",
+    "description": "Здобув 13 кубків.\nНайбільше пишається:\n1. Mafia Stars 2021, 1 місце, особистий залік;\n2. FourGun 8, 1 місце, особистий залік;\n3. Рандеву 2021, 1 місце, особистий та командний заліки.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Mafia Stars 2021" },
+      { "title": "FourGun 8" },
+      { "title": "Рандеву 2021" }
+    ],
+    "image": {
+      "src": "/images/hallFame/pansovadesktop.jpg",
+      "alt": "фото Пан Сова"
+    }
+  },
+  {
+    "name": "Пані Рок",
+    "description": "Виграла 10 кубків. \nНайбільше пишається:\n1. Vinnytsia Mafia Cup 2021 - 1 місце у командному заліку.\n2. Big Ben Hard Version 2018 - 3 місце в особистому заліку.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Vinnytsia Mafia Cup 2021" },
+      { "title": "Big Ben Hard Version 2018" }
+    ],
+    "image": { "src": "/images/hallFame/panirock.jpg", "alt": "фото Пані Рок" }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image3.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Нора",
+    "description": "Кубок:\nПрофесійна Ліга Мафії 2018 - 1 місце в особистому заліку.",
+    "cupstitle": "Кубки:",
+    "cups": [{ "title": "Професійна Ліга Мафії 2018" }],
+    "image": {
+      "src": "/images/hallFame/image4.jpg",
+      "alt": "фото Пані Нора"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image5.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image6.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image7.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image8.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image9.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Америка",
+    "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Odessa Summer Cup 2021" },
+      { "title": "Pro100. Sherlock Cup 2021" },
+      { "title": "Black Sea Cup 2020" }
+    ],
+    "image": {
+      "src": "/images/hallFame/image10.jpg",
+      "alt": "фото Пані Америка"
+    }
+  },
+  {
+    "name": "Пані Рок",
+    "description": "Виграла 10 кубків. \nНайбільше пишається:\n1. Vinnytsia Mafia Cup 2021 - 1 місце у командному заліку.\n2. Big Ben Hard Version 2018 - 3 місце в особистому заліку.",
+    "cupstitle": "Кубки:",
+    "cups": [
+      { "title": "Vinnytsia Mafia Cup 2021" },
+      { "title": "Big Ben Hard Version 2018" }
+    ],
+    "image": { "src": "/images/hallFame/image12.jpg", "alt": "фото Пані Рок" }
+  }
+]

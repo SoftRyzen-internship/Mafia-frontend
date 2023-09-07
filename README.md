@@ -141,19 +141,21 @@ This is example of API for component `Title` and `Paragraph`
 | `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
 | `className` | `undefined` | add any custom styles                                                                                   |
 
-- ### SocialsList
+- ### SocialsMenu
 
-| Prop        | Default     | Description                                   |
-| ----------- | ----------- | --------------------------------------------- |
-| `className` | `undefined` | add custom or additional css class you'd need |
+| Prop      | Default | Description                     |
+| --------- | ------- | ------------------------------- |
+| `variant` | `basic` | `fixed`, `basic`, `mobile-menu` |
 
 - ### SocialButton
 
-| Prop            | Default     | Description                                              |
-| --------------- | ----------- | -------------------------------------------------------- |
-| `social`        | `undefined` | social media contact info                                |
-| `btnClassName`  | `undefined` | custom or additional css class you'd need for the button |
-| `iconClassName` | `undefined` | custom or additional css class you'd need for the icon   |
+| Prop         | Default     | Description                     |
+| ------------ | ----------- | ------------------------------- |
+| `link`       | `undefined` | link to social media            |
+| `aria_label` | `undefined` | text for aria label             |
+| `variant`    | `basic`     | `fixed`, `basic`, `mobile-menu` |
+| `children`   | `undefined` | SocialIcon component            |
+| `className`  | `undefined` | add any custom styles           |
 
 - ### ButtonPrimary
 
@@ -194,6 +196,31 @@ the site when pressed.
 | ----------- | ----------- | --------------------------------------------- |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
+- ### Contacts
+
+| Prop      | Default | Description                                        |
+| --------- | ------- | -------------------------------------------------- |
+| `variant` | `basic` | choose styles: `basic`, `footer-mob` or `mob-menu` |
+
 ```
 
 ```
+
+- ### IconBtn
+
+Props CANNOT be changed dynamically! To avoid hydration issues finish all prop
+setups before you start the server. Before making any changes to props it is
+better to stop the local server then start again.
+
+| Prop      | Type          | Description                                           |
+| --------- | ------------- | ----------------------------------------------------- |
+| `icon`    | ('cross'      | - Close btn,                                          |
+|           | / 'arrow'     | - Navigation btn with arrow to the right,             |
+|           | / scroll')    | - Scroll-to-Top btn                                   |
+|           |               |                                                       |
+| `onClick` | void function | Click handler                                         |
+|           |               |                                                       |
+| `reverse` | boolean       | Optional, false by default, turns icon by 180 degrees |
+|           |               |                                                       |
+| `classes` | string        | Optional, add additional tailwind classes,            |
+|           |               | e.g. to position component                            |

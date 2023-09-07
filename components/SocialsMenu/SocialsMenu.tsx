@@ -1,41 +1,37 @@
-import SocialButton from '@/components/SocialButton/SocialButton';
+import classNames from 'classnames';
 
-import { SocialContact } from '@/types';
+import { SocialButton } from '@/components/SocialButton';
+import { SocialIcon } from '../SocialIcon';
 
-import data from '@/data/socials.json';
+import { SocialsMenuProps, SocialContact } from '@/types';
 
-const SocialsMenu = () => {
-  // Sort the array with Telegram first
-  const shuffleSocials = (arr: SocialContact[]): SocialContact[] => {
-    const sortedArray = arr.slice(); // Create a new copy of the array
-    const telegramIndex = sortedArray.findIndex(
-      item => item.name === 'telegram',
-    );
+import data from '@/data/common.json';
 
-    if (telegramIndex !== -1) {
-      const firstItem = sortedArray[telegramIndex];
-      sortedArray.splice(telegramIndex, 1);
-      sortedArray.unshift(firstItem);
-    }
+export const SocialsMenu: React.FC<SocialsMenuProps> = ({
+  variant = 'basic',
+}) => {
+  const socialData = data.socials;
 
-    return sortedArray;
-  };
-
-  const menuSocials = shuffleSocials(data);
+  const menuStyles = classNames({
+    'fixed bottom-[80px] right-0 z-10 rounded-l-normal shadow-xs smOnly:hidden':
+      variant === 'fixed',
+    'flex gap-5': variant === 'basic',
+    'flex gap-7': variant === 'mobile-menu',
+  });
 
   return (
-    <ul className="fixed bottom-[80px] right-0 z-10 rounded-l-normal shadow-xs smOnly:hidden">
-      {menuSocials.map(social => (
-        <SocialButton
-          key={social.name}
-          social={social}
-          btnClassName="w-[72px] h-[72px] text-white-light bg-primary-light-100
-                    first-of-type:rounded-tl-normal last-of-type:rounded-bl-normal
-                    hover:bg-grad_600 focus:bg-grad_600 focus:outline-none"
-        />
+    <ul className={menuStyles}>
+      {socialData.map(({ icon, link, name }: SocialContact) => (
+        <li key={name}>
+          <SocialButton
+            link={link}
+            variant={variant}
+            aria_label={`Зв'яжіться з нами у ${icon}`}
+          >
+            <SocialIcon icon={icon} variant={variant} />
+          </SocialButton>
+        </li>
       ))}
     </ul>
   );
 };
-
-export default SocialsMenu;

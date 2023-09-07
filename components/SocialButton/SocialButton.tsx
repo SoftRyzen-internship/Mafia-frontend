@@ -1,34 +1,36 @@
 import classNames from 'classnames';
 
-import SocialIcon from '../SocialIcon/SocialIcon';
-
 import { SocialButtonProps } from '@/types';
 
-const SocialButton: React.FC<SocialButtonProps> = ({
-  social,
-  btnClassName,
-  iconClassName,
+export const SocialButton: React.FC<SocialButtonProps> = ({
+  link,
+  aria_label,
+  variant = 'basic',
+  children,
+  className,
 }) => {
   const socialButtonStyles = classNames(
     {
-      'flex items-center justify-center': true,
+      'w-[72px] h-[72px] text-white-light bg-primary-light-100 first-of-type:rounded-tl-normal last-of-type:rounded-bl-normal':
+        variant === 'fixed',
+      'w-8 h-8 text-body bg-primary-light-1000 rounded-normal':
+        variant !== 'fixed',
     },
-    btnClassName,
+    'flex items-center justify-center',
+    'hover:text-primary-light-900 active:text-primary-light-600',
+    'focus:text-primary-light-500 focus:outline-none',
+    className,
   );
-
-  const socialIconStyles = classNames(iconClassName);
 
   return (
     <a
-      href={social.link}
+      href={link}
       rel="noopener noreferrer"
       target="_blank"
       className={socialButtonStyles}
-      aria-label="social media"
+      aria-label={aria_label}
     >
-      <SocialIcon icon={social.icon} styles={socialIconStyles} />
+      {children}
     </a>
   );
 };
-
-export default SocialButton;
