@@ -14,21 +14,19 @@ const isHallFameCardProps = (
 ): data is HallFameCardProps => {
   if (!data) return false;
 
-  return (
-    'id' in data &&
-    'name' in data &&
-    'description' in data &&
-    'cupstitle' in data &&
-    'cups' in data &&
-    'image' in data &&
-    typeof data.id === 'string' &&
-    typeof data.name === 'string' &&
-    typeof data.description === 'string' &&
-    typeof data.cupstitle === 'string' &&
-    Array.isArray(data.cups) &&
-    typeof data.image?.src === 'string' &&
-    typeof data.image?.alt === 'string'
-  );
+  for (let key in data) {
+    if (key === 'cups') {
+      if (!Array.isArray(data[key])) {
+        return false;
+      }
+    } else {
+      if (typeof data[key] !== 'string' && typeof data[key] !== 'object') {
+        return false;
+      }
+    }
+  }
+
+  return true;
 };
 
 const shuffleArray = (
