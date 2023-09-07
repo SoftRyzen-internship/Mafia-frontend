@@ -5,10 +5,8 @@ export const reformatPhoneNumber = (phoneNumber: string): string => {
   const rest = phoneNumber.slice(6);
 
   // Format the phone number as +38 (###) ## ## ###
-  const formattedNumber = `${country} (${operator}) ${rest.slice(
-    0,
+  return `${country} (${operator}) ${rest.slice(0, 2)} ${rest.slice(
     2,
-  )} ${rest.slice(2, 4)} ${rest.slice(4)}`;
-
-  return formattedNumber;
+    4,
+  )} ${rest.slice(4)}`;
 };

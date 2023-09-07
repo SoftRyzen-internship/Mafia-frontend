@@ -83,7 +83,7 @@ export type IconBtnName = 'cross' | 'arrow' | 'scroll';
 export interface IconBtnProps {
   icon: IconBtnName;
   reverse?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   classes?: string;
 }
 
