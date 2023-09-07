@@ -88,3 +88,8 @@ export interface SectionProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface LearnListItemProps {
+  title: string;
+  desc: string;
+}
