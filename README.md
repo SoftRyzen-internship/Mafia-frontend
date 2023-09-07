@@ -143,17 +143,19 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### SocialsMenu
 
-| Prop      | Default     | Description                                                                  |
-| --------- | ----------- | ---------------------------------------------------------------------------- |
-| `variant` | `undefined` | choose styles: `fixedSocials`, `contactSocialBasic` or `contactSocialsmOnly` |
+| Prop      | Default | Description                     |
+| --------- | ------- | ------------------------------- |
+| `variant` | `basic` | `fixed`, `basic`, `mobile-menu` |
 
 - ### SocialButton
 
-| Prop            | Default     | Description                                              |
-| --------------- | ----------- | -------------------------------------------------------- |
-| `social`        | `undefined` | social media contact info                                |
-| `btnClassName`  | `undefined` | custom or additional css class you'd need for the button |
-| `iconClassName` | `undefined` | custom or additional css class you'd need for the icon   |
+| Prop         | Default     | Description                     |
+| ------------ | ----------- | ------------------------------- |
+| `link`       | `undefined` | link to social media            |
+| `aria_label` | `undefined` | text for aria label             |
+| `variant`    | `basic`     | `fixed`, `basic`, `mobile-menu` |
+| `children`   | `undefined` | SocialIcon component            |
+| `className`  | `undefined` | add any custom styles           |
 
 - ### ButtonPrimary
 

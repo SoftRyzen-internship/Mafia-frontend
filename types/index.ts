@@ -41,19 +41,24 @@ export type SocialContact = {
   icon: string;
 };
 
-export interface SocialIconProps {
-  icon: string;
-  styles: string;
+type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+
+export interface SocialsMenuProps {
+  variant?: SocialMenuVariants;
 }
 
 export interface SocialButtonProps {
-  social: SocialContact;
-  btnClassName?: string;
-  iconClassName?: string;
+  link: string;
+  aria_label: string;
+  variant?: SocialMenuVariants;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export interface SocialsMenuProps {
-  variant: 'fixedSocials' | 'contactSocialBasic' | 'contactSocialsmOnly';
+export interface SocialIconProps {
+  icon: string;
+  variant?: SocialMenuVariants;
+  className?: string;
 }
 
 export interface ButtonPrimaryProps {

@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 import Facebook from '@/public/icons/icon_facebook.svg';
 import Instagram from '@/public/icons/icon_instagram.svg';
 import Telegram from '@/public/icons/icon_telegram.svg';
@@ -10,8 +12,19 @@ const icons = {
   Telegram,
 };
 
-export const SocialIcon: React.FC<SocialIconProps> = ({ icon, styles }) => {
+export const SocialIcon: React.FC<SocialIconProps> = ({
+  icon,
+  variant = 'basic',
+  className,
+}) => {
   const Icon = icons[icon];
 
-  return <Icon className={styles} width={32} height={32} aria-label={icon} />;
+  const iconStyles = classNames(
+    {
+      'w-[26px] h-[26px]': variant !== 'fixed',
+    },
+    className,
+  );
+
+  return <Icon className={iconStyles} width={32} height={32} />;
 };
