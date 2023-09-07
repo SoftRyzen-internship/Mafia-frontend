@@ -174,7 +174,7 @@ the site when pressed.
 | `position`  | `header `   | Choose the position you'd need: `header`, `footer` or `mobile-menu` |
 | `className` | `undefined` | add custom or additional css class you'd need                       |
 
-- ### learnList
+- ### LearnList
 
 | Prop        | Default     | Description                                   |
 | ----------- | ----------- | --------------------------------------------- |
@@ -202,3 +202,9 @@ better to stop the local server then start again.
 |           |               |                                                       |
 | `classes` | string        | Optional, add additional tailwind classes,            |
 |           |               | e.g. to position component                            |
+
+- ### Schedule
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
