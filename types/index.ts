@@ -90,5 +90,5 @@ export interface SectionProps {
 }
 
 export interface ContactsProps {
-  variant: 'basic' | 'footer-mob' | 'mob-menu';
+  variant?: 'basic' | 'footer-mob' | 'mob-menu';
 }
