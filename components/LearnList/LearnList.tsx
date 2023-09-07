@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { LearnListItem } from '../LearnListItem';
-import mainContent from '@/data/mainPage.json';
+import schoolSection from '@/data/schoolSection.json';
 import { LearnListProps } from '@/types';
 
 export const LearnList: FC<LearnListProps> = ({ className }) => {
@@ -9,7 +9,7 @@ export const LearnList: FC<LearnListProps> = ({ className }) => {
     <ul
       className={`grid gap-6 md:w-[288px] xl:flex xl:w-[596px] xl:flex-wrap xxl:w-[864px]  ${className}`}
     >
-      {mainContent.learnList.map(({ title, desc }, idx) => {
+      {schoolSection.learnList.map(({ title, desc }, idx) => {
         return (
           <li
             key={idx}
