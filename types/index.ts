@@ -52,8 +52,8 @@ export interface SocialButtonProps {
   iconClassName?: string;
 }
 
-export interface SocialsListProps {
-  className?: string;
+export interface SocialsMenuProps {
+  variant: 'fixedSocials' | 'contactSocialBasic' | 'contactSocialsmOnly';
 }
 
 export interface ButtonPrimaryProps {
