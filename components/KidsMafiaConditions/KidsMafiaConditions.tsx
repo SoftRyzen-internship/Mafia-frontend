@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import ClubKidsMafiaCard from '../ClubKidsMafiaCard/ClubKidsMafiaCard';
+import { ClubKidsMafiaCard } from '../ClubKidsMafiaCard';
 import { ButtonPrimary } from '../Buttons';
+import Heading from '../Heading/Heading';
 import { KidsMafiaConditionsProps } from '@/types';
 
-const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
+export const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
   conditions,
   btn,
 }) => {
@@ -11,9 +12,13 @@ const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
 
   return (
     <div>
-      <h3 className="kids-club-subtitle mb-[78px] text-xl font-semibold xl:text-2xl">
+      <Heading
+        tag="h3"
+        variant="secondary"
+        className="kids-club-subtitle mb-[78px] text-xl font-semibold xl:text-2xl"
+      >
         {title}
-      </h3>
+      </Heading>
       <div className="mb-8  flex justify-center gap-6 md:flex-wrap xl:flex-nowrap smOnly:flex-col ">
         {cards.map(({ subtitle, text, iconDescr }, index) => (
           <ClubKidsMafiaCard
@@ -24,10 +29,7 @@ const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
           />
         ))}
       </div>
-      {/* <button type="button">{btn}</button> */}
       <ButtonPrimary className="m-auto smOnly:w-full">{btn}</ButtonPrimary>
     </div>
   );
 };
-
-export default KidsMafiaConditions;
