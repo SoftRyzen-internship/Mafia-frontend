@@ -3,7 +3,7 @@ import classnames from 'classnames';
 
 import { HeadingComponentProps, HeadingElementProps } from '@/types';
 
-const Heading: FC<HeadingComponentProps> = ({
+export const Heading: FC<HeadingComponentProps> = ({
   tag = 'h2',
   variant = 'primary',
   children,
@@ -33,5 +33,3 @@ const Heading: FC<HeadingComponentProps> = ({
 
   return createElement(tag, getHeadingProps(), children);
 };
-
-export default Heading;
