@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import { NavigationRowLinkProps } from '@/types';
 
-const NavigationRowLink: FC<NavigationRowLinkProps> = ({
+export const NavigationRowLink: FC<NavigationRowLinkProps> = ({
   currentPath,
   href,
   position,
@@ -27,5 +27,3 @@ const NavigationRowLink: FC<NavigationRowLinkProps> = ({
     </Link>
   );
 };
-
-export default NavigationRowLink;
