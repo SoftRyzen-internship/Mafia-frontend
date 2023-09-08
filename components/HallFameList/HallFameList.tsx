@@ -40,27 +40,22 @@ const shuffleArray = (
   return array;
 };
 
-const headerStyles =
-  '-mb-[15px] text-[32px] font-extrabold text-black-light md:-mb-[30px] md:px-[84px] md:text-[40px] md:leading-[56px] xl:-mb-[40px] xl:px-[112px] xl:text-[52px] xl:leading-[80px]';
-
 const HallFameList: React.FC = () => {
   const shuffledData = shuffleArray([...hallFameData, customCardData]);
 
   return (
     <Section
-      className={`${s.hallFameListContainer} rounded-lg bg-cover bg-center bg-no-repeat p-5 shadow-sm`}
+      className={`${s.hallFameListContainer} container rounded-lg shadow-sm`}
     >
-      <Heading tag="h1" variant="main" className={headerStyles}>
+      <Heading
+        tag="h1"
+        variant="main"
+        className="mb-[60px] text-[28px] font-semibold leading-9 md:text-[32px] md:font-semibold md:leading-[36px] xl:text-[42px] xl:font-semibold xl:leading-[52px]"
+        shadow={hallFameHeading.heading.main}
+      >
         {hallFameHeading.heading.main}
       </Heading>
-      <Heading
-        tag="h2"
-        variant="primary"
-        className="pb-6 text-[28px] font-semibold leading-9 md:px-[84px] md:text-[32px] md:font-semibold md:leading-[36px] xl:px-[112px] xl:text-[42px] xl:font-semibold xl:leading-[52px]"
-      >
-        {hallFameHeading.heading.sub}
-      </Heading>
-      <ul className="grid h-full w-full grid-cols-1 gap-6 md:grid-cols-2 md:px-[84px] xl:grid-cols-3 xl:px-[112px] xxl:grid-cols-4">
+      <ul className="grid h-full w-full grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4">
         {shuffledData.map((data, id) => {
           if (data === customCardData) {
             return <HallFameCustomCard key={id} />;
