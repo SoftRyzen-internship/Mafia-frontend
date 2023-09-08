@@ -3,6 +3,8 @@ import classnames from 'classnames';
 
 import { HeadingComponentProps, HeadingElementProps } from '@/types';
 
+import css from './Heading.module.css';
+
 export const Heading: FC<HeadingComponentProps> = ({
   tag = 'h2',
   variant = 'primary',
@@ -20,7 +22,7 @@ export const Heading: FC<HeadingComponentProps> = ({
       'text-[20px] font-semibold leading-[28px] xl:text-[24px] xl:leading-[32px]':
         variant === 'secondary',
       'text-[20px] font-medium leading-[28px]': variant === 'tertiary',
-      shadow: shadow !== '',
+      [css.shadow]: shadow !== '',
     },
     className,
   );
