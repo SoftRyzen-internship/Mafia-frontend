@@ -54,6 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
+        <div>THIS IS LAYOUT</div>
         {children}
       </body>
     </html>
