@@ -148,6 +148,7 @@ The Primary Button has `button` tag and performs an action when clicked.
 | Prop            | Default     | Description                                   |
 | --------------- | ----------- | --------------------------------------------- |
 | `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
+| `type`          | `button`    | choose the type: `button` or `submit`         |
 | `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
 | `loading`       | `false`     | choose the loading state: `false` or `true`   |
 | `className`     | `undefined` | add any custom styles                         |

@@ -37,6 +37,7 @@ export interface NavigationRowProps {
 
 export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  type?: 'button' | 'submit';
   disabled?: boolean;
   loading?: boolean;
   className?: string;
