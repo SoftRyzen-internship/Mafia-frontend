@@ -1,7 +1,7 @@
 import Title from '@/components/Title/Title';
 
 // temp
-import { PriceCard } from '@/components/PriceCard';
+import { Pricing } from '@/views/Pricing';
 
 import data from '@/data/common.json';
 
@@ -13,7 +13,7 @@ const Home = () => {
       <p className="font-montserrat">{mainPage.description}</p>
 
       {/* temp */}
-      <PriceCard />
+      <Pricing />
     </>
   );
 };
