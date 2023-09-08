@@ -25,6 +25,7 @@ module.exports = {
       sm: '-2px 0px 12px 0px rgba(62, 50, 95, 0.12)',
       md: '0px 0px 10px rgba(0, 0, 0, 0.1)',
       lg: '0px 0px 14px 0px rgba(159, 127, 199, 0.11)',
+      xl: '0px 0px 13px 0px rgba(126, 90, 143, 0.10)',
     },
     // THEME
     extend: {
