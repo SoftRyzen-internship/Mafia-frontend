@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { HTMLAttributes, ReactNode } from 'react';
 
 export interface LogoProps {
   href: string;
@@ -92,3 +92,11 @@ export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
 }
+
+export interface IPortal {
+  children: ReactNode;
+  // eslint-disable-next-line no-unused-vars
+  setShowModal: (show: boolean) => void;
+}
+
+

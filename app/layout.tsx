@@ -30,6 +30,7 @@ export default function RootLayout({
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         {children}
+        <div id="modal" />
       </body>
     </html>
   );
