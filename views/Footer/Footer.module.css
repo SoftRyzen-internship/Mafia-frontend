@@ -5,3 +5,6 @@
     @apply inline-block px-[6px] text-xs transition-colors duration-300 hover:text-primary-light-900 focus:text-primary-light-500;
   }
 }
+
+.footerLinks {
+}
