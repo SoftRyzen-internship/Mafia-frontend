@@ -8,7 +8,10 @@ import { ContactsProps } from '@/types';
 
 import data from '@/data/common.json';
 
-export const Contacts: React.FC<ContactsProps> = ({ variant = 'footer' }) => {
+export const Contacts: React.FC<ContactsProps> = ({
+  variant = 'footer',
+  className,
+}) => {
   const { title, address, phone } = data.contacts;
 
   const contactListStyles = classNames(
@@ -30,7 +33,7 @@ export const Contacts: React.FC<ContactsProps> = ({ variant = 'footer' }) => {
   });
 
   return (
-    <>
+    <div className={className}>
       <Heading variant={'tertiary'} tag="h3" className={headingStyles}>
         {title}
       </Heading>
@@ -41,6 +44,6 @@ export const Contacts: React.FC<ContactsProps> = ({ variant = 'footer' }) => {
         </p>
         <a href={`tel:${phone}`}>{reformatPhoneNumber(phone)}</a>
       </address>
-    </>
+    </div>
   );
 };
