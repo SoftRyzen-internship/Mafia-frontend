@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 import { KidsMafiaConditions } from '@/components/KidsMafiaConditions';
 import { Heading } from '@/components/Heading';
-import { Paragraph } from '@/components/Parapgaph';
+import { Paragraph } from '@/components/Paragraph';
 import data from '@/data/kidsMafia.json';
 import { kidsMafiaGallery } from '@/data/kidsMafiaClub';
 
