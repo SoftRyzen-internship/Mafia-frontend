@@ -1,15 +1,15 @@
 .card {
   background-image: image-set(
-    url('/images/pricing/price-card-bg-mob.webp') 1x,
-    url('/images/pricing/price-card-bg-mob@2x.webp') 2x
+    url('/images/common/price-card-bg-mob.webp') 1x,
+    url('/images/common/price-card-bg-mob@2x.webp') 2x
   );
 }
 
 @media screen and (min-width: 768px) {
   .card {
     background-image: image-set(
-      url('/images/pricing/price-card-bg-tab.webp') 1x,
-      url('/images/pricing/price-card-bg-tab@2x.webp') 2x
+      url('/images/common/price-card-bg-tab.webp') 1x,
+      url('/images/common/price-card-bg-tab@2x.webp') 2x
     );
   }
 }
@@ -17,8 +17,8 @@
 @media screen and (min-width: 1280px) {
   .card {
     background-image: image-set(
-      url('/images/pricing/price-card-bg-desk.webp') 1x,
-      url('/images/pricing/price-card-bg-desk@2x.webp') 2x
+      url('/images/common/price-card-bg-desk.webp') 1x,
+      url('/images/common/price-card-bg-desk@2x.webp') 2x
     );
   }
 }
@@ -26,8 +26,8 @@
 @media screen and (min-width: 1752px) {
   .card {
     background-image: image-set(
-      url('/images/pricing/price-card-bg-desk-lg.webp') 1x,
-      url('/images/pricing/price-card-bg-desk-lg@2x.webp') 2x
+      url('/images/common/price-card-bg-desk-lg.webp') 1x,
+      url('/images/common/price-card-bg-desk-lg@2x.webp') 2x
     );
   }
 }
