@@ -1,5 +1,8 @@
 .hallFameListContainer {
   background-image: url('/images/hallfame/bghallfame.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
