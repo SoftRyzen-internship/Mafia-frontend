@@ -5,6 +5,9 @@
     "title": "Hello world",
     "description": "This is a test page"
   },
+  "header": {
+    "button": "Зв’язатися"
+  },
   "navigationRowLinks": [
     { "title": "Турніри", "href": "tournaments" },
     { "title": "Корпоративи", "href": "corporate-parties" },
