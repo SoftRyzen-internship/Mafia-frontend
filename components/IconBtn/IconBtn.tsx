@@ -1,11 +1,13 @@
 'use client';
 
+import { FC } from 'react';
+
 import getIconByName from '@/utils/helpers/getIconByName';
 import getIconBtnStyles from '@/utils/helpers/getIconBtnStyles';
 
 import { IconBtnProps } from '@/types';
 
-export const IconBtn: React.FC<IconBtnProps> = ({
+export const IconBtn: FC<IconBtnProps> = ({
   icon,
   onClick,
   reverse = false,

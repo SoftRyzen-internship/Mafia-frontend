@@ -7,8 +7,8 @@ import hallFameData from '@/data/hallFameData.json';
 import customCardData from '@/data/customCardData.json';
 import s from '@/components/HallFameList/HallFameList.module.css';
 import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
-import Heading from '@/components/Heading/Heading';
-import Section from '@/components/Section/Section';
+import { Heading } from '@/components/Heading/Heading';
+import { Section } from '@/components/Section/Section';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,

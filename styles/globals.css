@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-body font-raleway text-base font-normal text-white;
+  @apply bg-body font-raleway text-base font-normal text-white-light;
 }
 
 .visually-hidden {

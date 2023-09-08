@@ -6,7 +6,7 @@ import Link from 'next/link';
 import LogoImg from '@/public/images/common/logo.svg';
 import { LogoProps } from '@/types';
 
-const Logo: FC<LogoProps> = ({
+export const Logo: FC<LogoProps> = ({
   href = '/',
   className,
   position = 'header',
@@ -28,5 +28,3 @@ const Logo: FC<LogoProps> = ({
     </Link>
   );
 };
-
-export default Logo;
