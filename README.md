@@ -143,9 +143,10 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### SocialsMenu
 
-| Prop      | Default | Description                     |
-| --------- | ------- | ------------------------------- |
-| `variant` | `basic` | `fixed`, `basic`, `mobile-menu` |
+| Prop        | Default     | Description                      |
+| ----------- | ----------- | -------------------------------- |
+| `variant`   | `footer`    | `fixed`, `footer`, `mobile-menu` |
+| `className` | `undefined` | add any custom styles            |
 
 - ### SocialButton
 
@@ -198,9 +199,10 @@ the site when pressed.
 
 - ### Contacts
 
-| Prop      | Default | Description                                        |
-| --------- | ------- | -------------------------------------------------- |
-| `variant` | `basic` | choose styles: `basic`, `footer-mob` or `mob-menu` |
+| Prop        | Default     | Description                              |
+| ----------- | ----------- | ---------------------------------------- |
+| `variant`   | `footer`    | choose styles: `footer` or `mobile-menu` |
+| `className` | `undefined` | add any custom styles                    |
 
 ```
 

@@ -41,10 +41,11 @@ export type SocialContact = {
   icon: string;
 };
 
-type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
+  className?: string;
 }
 
 export interface SocialButtonProps {
@@ -108,8 +109,11 @@ export interface LearnListItemProps {
   desc: string;
 }
 
+type ContactsVariants = 'footer' | 'mobile-menu';
+
 export interface ContactsProps {
-  variant?: 'basic' | 'footer-mob' | 'mob-menu';
+  variant?: ContactsVariants;
+  className?: string;
 }
 
 export interface ClubKidsMafiaCardProps {
