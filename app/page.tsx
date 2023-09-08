@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <Title>{mainPage.title}</Title>
       <p className="font-montserrat">{mainPage.description}</p>
-      <Slider />
+      <Slider pagination device="tablet" />
     </>
   );
 };
