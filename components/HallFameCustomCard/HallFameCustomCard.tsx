@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import s from '../HallFameCard/HallFameCard.module.css';
+
+import s from '@/components/HallFameCard/HallFameCard.module.css';
 import customCardData from '@/data/customCardData.json';
 
 const HallFameCustomCard = () => {

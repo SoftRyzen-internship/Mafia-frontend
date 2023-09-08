@@ -1,14 +1,14 @@
 import React from 'react';
 
-import HallFameCard from '../HallFameCard/HallFameCard';
-import HallFameCustomCard from '../HallFameCustomCard/HallFameCustomCard';
+import HallFameCard from '@/components/HallFameCard/HallFameCard';
+import HallFameCustomCard from '@/components/HallFameCustomCard/HallFameCustomCard';
 import hallFameHeading from '@/data/hallFameHeading.json';
 import hallFameData from '@/data/hallFameData.json';
 import customCardData from '@/data/customCardData.json';
-import s from './HallFameList.module.css';
+import s from '@/components/HallFameList/HallFameList.module.css';
 import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
-import Heading from '../Heading/Heading';
-import Section from '../Section/Section';
+import Heading from '@/components/Heading/Heading';
+import Section from '@/components/Section/Section';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,
@@ -41,7 +41,7 @@ const shuffleArray = (
 };
 
 const headerStyles =
-  '-mb-[15px] text-[32px] font-extrabold text-black-dark md:-mb-[30px] md:px-[84px] md:text-[40px] md:leading-[56px] xl:-mb-[40px] xl:px-[112px] xl:text-[52px] xl:leading-[80px]';
+  '-mb-[15px] text-[32px] font-extrabold text-black-light md:-mb-[30px] md:px-[84px] md:text-[40px] md:leading-[56px] xl:-mb-[40px] xl:px-[112px] xl:text-[52px] xl:leading-[80px]';
 
 const HallFameList: React.FC = () => {
   const shuffledData = shuffleArray([...hallFameData, customCardData]);

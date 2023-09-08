@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import s from './HallFameCard.module.css';
+import s from '@/components/HallFameCard/HallFameCard.module.css';
 import IconCup from '@/public/images/hallFame/iconcupfirst.svg';
 import { HallFameCardProps } from '@/types/index';
 
