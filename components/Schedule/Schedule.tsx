@@ -5,13 +5,7 @@ import { getSchedule } from '@/utils/getSchedule';
 import { ScheduleProps } from '@/types';
 
 export const Schedule: FC<ScheduleProps> = async ({ className }) => {
-  const {
-    schedule: {
-      data: {
-        attributes: { schedules },
-      },
-    },
-  } = await getSchedule();
+  const schedules = await getSchedule();
 
   return (
     <ul
