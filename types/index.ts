@@ -92,3 +92,25 @@ export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
 }
+
+export interface HallFameCup {
+  title: string;
+}
+
+export interface HallFameCardProps {
+  id?: string;
+  name: string;
+  description: string;
+  cupstitle: string;
+  cups: HallFameCup[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+export interface HallFameCustomCardProps {
+  id?: string;
+  title?: string;
+  src?: string;
+  alt?: string;
+}
