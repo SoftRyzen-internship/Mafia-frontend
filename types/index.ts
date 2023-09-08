@@ -142,6 +142,7 @@ export interface ScheduleItemProps {
   time_start: string;
   time_end: string;
 }
+
 export interface ScheduleDataType {
   schedule: {
     data: {
@@ -150,4 +151,26 @@ export interface ScheduleDataType {
       };
     };
   };
+}
+
+export interface HallFameCup {
+  title: string;
+}
+
+export interface HallFameCardProps {
+  id?: string;
+  name: string;
+  description: string;
+  cupstitle: string;
+  cups: HallFameCup[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+export interface HallFameCustomCardProps {
+  id?: string;
+  title?: string;
+  src?: string;
+  alt?: string;
 }
