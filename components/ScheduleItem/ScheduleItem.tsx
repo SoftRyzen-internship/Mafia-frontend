@@ -2,12 +2,10 @@ import React, { FC } from 'react';
 
 import { ScheduleItemProps } from '@/types';
 
-type ScheduleItemType = {
-  scheduleItem: ScheduleItemProps;
-};
-
-export const ScheduleItem: FC<ScheduleItemType> = ({
-  scheduleItem: { time_start, time_end, day },
+export const ScheduleItem: FC<ScheduleItemProps> = ({
+  time_start,
+  time_end,
+  day,
 }) => {
   return (
     <>

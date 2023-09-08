@@ -23,7 +23,7 @@ export const Schedule: FC<ScheduleProps> = async ({ className }) => {
             key={scheduleItem.id}
             className=" flex justify-between rounded-md bg-grad_700 py-2 pr-4"
           >
-            <ScheduleItem scheduleItem={scheduleItem} />
+            <ScheduleItem {...scheduleItem} />
           </li>
         );
       })}
