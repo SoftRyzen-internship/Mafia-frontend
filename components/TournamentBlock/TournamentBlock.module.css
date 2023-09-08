@@ -1,0 +1,31 @@
+.tournamentBlock:nth-child(2n) .tournamentContainer {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+.tournamentBlock:nth-child(2n + 1) .tournamentContainer {
+  justify-content: end;
+}
+
+.tournamentBlock:nth-child(2n) {
+  background: rgba(22, 20, 28, 0.4);
+}
+
+.tournamentBlock {
+  background: url(../../public/images/tournaments/tournament-bg-mob.png);
+
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title {
+  position: relative;
+}
+/* .title::before {
+  content: '';
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  background-image: url(../../public/images/tournaments/bg-title.png);
+  background-repeat: no-repeat;
+} */

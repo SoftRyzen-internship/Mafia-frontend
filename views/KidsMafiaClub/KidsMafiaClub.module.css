@@ -1,0 +1,44 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .kidsMob {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-mob.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-mob@2x.webp) type('image/webp')
+        2x
+    );
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
+  }
+
+  .kidsTab {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-tab.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-tab@2x.webp) type('image/webp')
+        2x
+    );
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
+  }
+
+  .kidsXl {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
+    );
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
+  }
+
+  .kidsXxl {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-2xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
+        2x
+    );
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
+  }
+} */

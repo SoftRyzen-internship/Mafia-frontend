@@ -108,7 +108,8 @@ body {
         2x
     );
 
-    @apply bg-left-top bg-no-repeat;
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
   }
 
   .kids-mafia-club-tab {
@@ -118,7 +119,8 @@ body {
         2x
     );
 
-    @apply bg-left-top bg-no-repeat;
+    background-size: 100% 100%;
+    @apply bg-[center_top] bg-no-repeat;
   }
 
   .kids-mafia-club-xl {
@@ -127,7 +129,8 @@ body {
       url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
     );
 
-    @apply bg-left-top bg-no-repeat;
+    background-size: 100% 100%;
+    @apply bg-center bg-no-repeat;
   }
 
   .kids-mafia-club-2xl {
@@ -136,8 +139,9 @@ body {
       url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
         2x
     );
-
-    @apply bg-left-top bg-no-repeat;
+    /* background-size: 1752px 100%; */
+    background-size: 1688px 100%;
+    @apply bg-center bg-no-repeat;
   }
 
   .club-kids-gallery-card {
