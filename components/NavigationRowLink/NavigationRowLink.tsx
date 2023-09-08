@@ -18,6 +18,7 @@ export const NavigationRowLink: FC<NavigationRowLinkProps> = ({
         currentPath === href && position === 'mobile-menu',
       'text-white-light': currentPath !== href && position === 'mobile-menu',
       'text-white-light ': position === 'header' || position === 'footer',
+      'text-sm': position === 'footer',
     },
   );
 

@@ -4,6 +4,7 @@ import React from 'react';
 import { Montserrat, Raleway } from 'next/font/google';
 
 import data from '@/data/common.json';
+import { Footer } from '@/views/Footer';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
