@@ -127,3 +127,23 @@ export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
 }
+
+export interface ScheduleProps {
+  className?: string;
+}
+
+export interface ScheduleItemProps {
+  id: string;
+  day: string;
+  time_start: string;
+  time_end: string;
+}
+export interface ScheduleDataType {
+  schedule: {
+    data: {
+      attributes: {
+        schedules: ScheduleItemProps[];
+      };
+    };
+  };
+}

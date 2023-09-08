@@ -224,3 +224,9 @@ better to stop the local server then start again.
 |           |               |                                                       |
 | `classes` | string        | Optional, add additional tailwind classes,            |
 |           |               | e.g. to position component                            |
+
+- ### Schedule
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
