@@ -1,11 +1,11 @@
 import { request } from 'graphql-request';
 
 import { GET_SCHEDULE } from '@/components/api';
-import { ScheduleDataType } from '@/types';
+import { ScheduleDataType, ScheduleItemProps } from '@/types';
 
 const baseURL = 'https://mafia-cms.onrender.com/graphql';
 
-export async function getSchedule(): Promise<ScheduleDataType> {
+export async function getSchedule(): Promise<ScheduleItemProps[]> {
   const data: ScheduleDataType = await request(baseURL, GET_SCHEDULE);
-  return data;
+  return data.schedule.data.attributes.schedules;
 }
