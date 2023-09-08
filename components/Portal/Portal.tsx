@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState, MouseEvent  } from 'react';
+import { useRef, useEffect, useState, MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 
 import { IPortal } from '@/types';
@@ -37,7 +37,10 @@ const Portal = ({ setShowModal, children }: IPortal) => {
 
   return mounted && ref.current
     ? createPortal(
-        <div onClick={handleBackdrop} className="fixed left-0 top-0 z-20 h-[100%] w-[100%] opacity-75">
+        <div
+          onClick={handleBackdrop}
+          className="fixed left-0 top-0 z-20 h-[100%] w-[100%] opacity-75"
+        >
           {children}
         </div>,
         ref.current,
@@ -46,4 +49,3 @@ const Portal = ({ setShowModal, children }: IPortal) => {
 };
 
 export default Portal;
-

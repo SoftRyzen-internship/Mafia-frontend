@@ -10,7 +10,7 @@ const SuccessWindow = () => {
         Заявку успішно надіслано!{' '}
       </Paragraph>
       <Paragraph variant="lg" className="text-center">
-        Наш менеджер 
+        Наш менеджер
         <span className="block md:inline  "> звʼяжеться з Вами</span>
         <span className="block">найближчим часом!</span>
       </Paragraph>

@@ -98,5 +98,3 @@ export interface IPortal {
   // eslint-disable-next-line no-unused-vars
   setShowModal: (show: boolean) => void;
 }
-
-
