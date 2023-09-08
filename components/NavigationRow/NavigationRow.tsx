@@ -4,11 +4,11 @@ import classNames from 'classnames';
 import React, { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
-import NavigationRowLink from '../NavigationRowLink/NavigationRowLink';
+import { NavigationRowLink } from '../NavigationRowLink';
 import data from '@/data/common.json';
 import { NavigationRowProps } from '@/types';
 
-const NavigationRow: FC<NavigationRowProps> = ({
+export const NavigationRow: FC<NavigationRowProps> = ({
   position = 'header',
   className,
 }) => {
@@ -41,5 +41,3 @@ const NavigationRow: FC<NavigationRowProps> = ({
     </ul>
   );
 };
-
-export default NavigationRow;

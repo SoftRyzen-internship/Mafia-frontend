@@ -6,7 +6,7 @@ export interface LogoProps {
   className?: string;
 }
 
-type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4';
+type HeadingTag = 'h1' | 'h2' | 'h3';
 
 type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
 
@@ -22,7 +22,7 @@ export interface HeadingComponentProps extends HeadingElementProps {
   children: React.ReactNode;
 }
 
-type ParagraphVariant = 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+type ParagraphVariant = 'normal' | 'large' | 'small';
 
 export interface ParagraphProps {
   children: React.ReactNode;
@@ -32,6 +32,33 @@ export interface ParagraphProps {
 
 export interface NavigationRowProps {
   position: 'header' | 'footer' | 'mobile-menu';
+  className?: string;
+}
+
+export type SocialContact = {
+  name: string;
+  link: string;
+  icon: string;
+};
+
+type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
+
+export interface SocialsMenuProps {
+  variant?: SocialMenuVariants;
+  className?: string;
+}
+
+export interface SocialButtonProps {
+  link: string;
+  aria_label: string;
+  variant?: SocialMenuVariants;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export interface SocialIconProps {
+  icon: string;
+  variant?: SocialMenuVariants;
   className?: string;
 }
 
@@ -57,7 +84,7 @@ export type IconBtnName = 'cross' | 'arrow' | 'scroll';
 export interface IconBtnProps {
   icon: IconBtnName;
   reverse?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   classes?: string;
 }
 
@@ -77,6 +104,18 @@ export interface SectionProps {
   className?: string;
 }
 
+export interface LearnListItemProps {
+  title: string;
+  desc: string;
+}
+
+type ContactsVariants = 'footer' | 'mobile-menu';
+
+export interface ContactsProps {
+  variant?: ContactsVariants;
+  className?: string;
+}
+
 export interface ClubKidsMafiaCardProps {
   subtitle: string;
   text: string;
@@ -93,8 +132,52 @@ export interface KidsMafiaConditionsProps {
   btn: string;
 }
 
+
 export interface IPortal {
   children: ReactNode;
   // eslint-disable-next-line no-unused-vars
   setShowModal: (show: boolean) => void;
+}
+
+export interface ScheduleProps {
+  className?: string;
+}
+
+export interface ScheduleItemProps {
+  id: string;
+  day: string;
+  time_start: string;
+  time_end: string;
+}
+
+export interface ScheduleDataType {
+  schedule: {
+    data: {
+      attributes: {
+        schedules: ScheduleItemProps[];
+      };
+    };
+  };
+}
+
+export interface HallFameCup {
+  title: string;
+}
+
+export interface HallFameCardProps {
+  id?: string;
+  name: string;
+  description: string;
+  cupstitle: string;
+  cups: HallFameCup[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+export interface HallFameCustomCardProps {
+  id?: string;
+  title?: string;
+  src?: string;
+  alt?: string;
 }
