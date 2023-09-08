@@ -1,5 +1,5 @@
-const page = () => {
+const Tournaments = () => {
   return <div>Tournaments page</div>;
 };
 
-export default page;
+export default Tournaments;
