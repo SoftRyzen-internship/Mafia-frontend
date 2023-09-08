@@ -116,6 +116,23 @@ export interface ContactsProps {
   className?: string;
 }
 
+export interface MafiaSchoolSectionData {
+  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
+  level?: HeadingComponentProps['tag'];
+  content?: string;
+  variant?: HeadingComponentProps['variant'];
+  src?: string;
+  alt?: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface MafiaSchoolHeroData {
+  sections: MafiaSchoolSectionData[];
+}
+
 export interface ClubKidsMafiaCardProps {
   subtitle: string;
   text: string;
