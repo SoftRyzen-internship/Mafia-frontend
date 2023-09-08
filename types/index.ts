@@ -109,8 +109,11 @@ export interface LearnListItemProps {
   desc: string;
 }
 
+type ContactsVariants = 'footer' | 'mobile-menu';
+
 export interface ContactsProps {
-  variant?: 'basic' | 'footer-mob' | 'mob-menu';
+  variant?: ContactsVariants;
+  className?: string;
 }
 
 export interface ClubKidsMafiaCardProps {
