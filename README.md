@@ -119,7 +119,7 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                     |
 | ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h4` |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
 | `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`  | `undefined` | required, any content                           |
 | `className` | `undefined` | add custom or additional css class you'd need   |
@@ -129,7 +129,7 @@ This is example of API for component `Title` and `Paragraph`
 
 | Prop        | Default     | Description                                   |
 | ----------- | ----------- | --------------------------------------------- |
-| `variant`   | `md`        | `xs`, `sm`, `md`, `lg`, `xl`                  |
+| `variant`   | `normal`    | `normal`, `large`, `small`                    |
 | `children`  | `undefined` | required, any content                         |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
@@ -140,6 +140,22 @@ This is example of API for component `Title` and `Paragraph`
 | `href`      | `/`         | section id or path                                                                                      |
 | `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
 | `className` | `undefined` | add any custom styles                                                                                   |
+
+- ### SocialsMenu
+
+| Prop      | Default | Description                     |
+| --------- | ------- | ------------------------------- |
+| `variant` | `basic` | `fixed`, `basic`, `mobile-menu` |
+
+- ### SocialButton
+
+| Prop         | Default     | Description                     |
+| ------------ | ----------- | ------------------------------- |
+| `link`       | `undefined` | link to social media            |
+| `aria_label` | `undefined` | text for aria label             |
+| `variant`    | `basic`     | `fixed`, `basic`, `mobile-menu` |
+| `children`   | `undefined` | SocialIcon component            |
+| `className`  | `undefined` | add any custom styles           |
 
 - ### ButtonPrimary
 
@@ -170,11 +186,42 @@ the site when pressed.
 
 - ### NavigationRow
 
-| Prop        | Default     | Description                                               |
-| ----------- | ----------- | --------------------------------------------------------- |
-| `position`  | `header `   | Choose the position you'd need: `header` or `mobile-menu` |
-| `className` | `undefined` | add custom or additional css class you'd need             |
+| Prop        | Default     | Description                                                         |
+| ----------- | ----------- | ------------------------------------------------------------------- |
+| `position`  | `header `   | Choose the position you'd need: `header`, `footer` or `mobile-menu` |
+| `className` | `undefined` | add custom or additional css class you'd need                       |
+
+- ### LearnList
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
+- ### Contacts
+
+| Prop      | Default | Description                                        |
+| --------- | ------- | -------------------------------------------------- |
+| `variant` | `basic` | choose styles: `basic`, `footer-mob` or `mob-menu` |
 
 ```
 
 ```
+
+- ### IconBtn
+
+Props CANNOT be changed dynamically! To avoid hydration issues finish all prop
+setups before you start the server. Before making any changes to props it is
+better to stop the local server then start again.
+
+| Prop      | Type          | Description                                           |
+| --------- | ------------- | ----------------------------------------------------- |
+| `icon`    | ('cross'      | - Close btn,                                          |
+|           | / 'arrow'     | - Navigation btn with arrow to the right,             |
+|           | / scroll')    | - Scroll-to-Top btn                                   |
+|           |               |                                                       |
+| `onClick` | void function | Click handler                                         |
+|           |               |                                                       |
+| `reverse` | boolean       | Optional, false by default, turns icon by 180 degrees |
+|           |               |                                                       |
+| `classes` | string        | Optional, add additional tailwind classes,            |
+|           |               | e.g. to position component                            |

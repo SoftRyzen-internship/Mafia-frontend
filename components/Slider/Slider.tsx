@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 import cn from 'classnames';
 
 import { SliderImage } from '../SliderImage';
-import data from '@/data/common.json';
+import data from '@/data/schoolSection.json';
 import SvgArrow from '@/public/icons/swiper-nav-button-arrow.svg';
 
 interface SliderProps {
@@ -48,7 +48,7 @@ export const Slider: React.FC<SliderProps> = ({ className = '' }) => {
         speed={1000}
         spaceBetween={24}
       >
-        {data.schoolSectionSwiperData.map(card => {
+        {data.swiperData.map(card => {
           return (
             <SwiperSlide
               key={card.id}

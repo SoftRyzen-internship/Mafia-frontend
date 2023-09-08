@@ -6,7 +6,7 @@ import Link from 'next/link';
 import LogoImg from '@/public/images/common/logo.svg';
 import { LogoProps } from '@/types';
 
-const Logo: FC<LogoProps> = ({
+export const Logo: FC<LogoProps> = ({
   href = '/',
   className,
   position = 'header',
@@ -22,11 +22,9 @@ const Logo: FC<LogoProps> = ({
     <Link
       href={href}
       className={` ${logoClasses}  ${className}`}
-      aria-label="Company logo link"
+      aria-label="Посилання із логотипом компанії"
     >
-      <LogoImg aria-label="Company logo image" />
+      <LogoImg aria-label="Зображення із логотипом компанії" />
     </Link>
   );
 };
-
-export default Logo;

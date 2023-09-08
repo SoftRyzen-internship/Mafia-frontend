@@ -9,62 +9,31 @@
     { "title": "Турніри", "href": "tournaments" },
     { "title": "Корпоративи", "href": "corporate-parties" },
     { "title": "Дитяча мафія", "href": "mafia-kids" },
-    { "title": "Зал слави", "href": "glory-hall" }
+    { "title": "Зал слави", "href": "fame-hall" }
   ],
-  "schoolSectionSwiperData": [
+  "contacts": {
+    "title": "Контакти",
+    "address": {
+      "city": "м. Одеса",
+      "street": "вул. Канатна, 42"
+    },
+    "phone": "+380936150301"
+  },
+  "socials": [
     {
-      "id": 1,
-      "name": "Наталія",
-      "alias": "пані Муза",
-      "imageUrl": "/images/school-section/1.jpg"
+      "name": "facebook",
+      "link": "https://www.facebook.com/mafclubod",
+      "icon": "Facebook"
     },
     {
-      "id": 2,
-      "name": "Валерія",
-      "alias": "пані San Andreas",
-      "imageUrl": "/images/school-section/2.jpg"
+      "name": "instagram",
+      "link": "https://www.instagram.com/mafia_club_odesa/",
+      "icon": "Instagram"
     },
     {
-      "id": 3,
-      "name": "Анастасія",
-      "alias": "пані Золушка",
-      "imageUrl": "/images/school-section/3.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Лілія",
-      "alias": "пані Трініті",
-      "imageUrl": "/images/school-section/4.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Андрій",
-      "alias": "пан Орбіт",
-      "imageUrl": "/images/school-section/5.jpg"
-    },
-    {
-      "id": 6,
-      "name": "Катерина",
-      "alias": "пані Сахар",
-      "imageUrl": "/images/school-section/6.jpg"
-    },
-    {
-      "id": 7,
-      "name": "Максим",
-      "alias": "пан Турецький",
-      "imageUrl": "/images/school-section/7.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Анастасія",
-      "alias": "пані Текіла",
-      "imageUrl": "/images/school-section/8.jpg"
-    },
-    {
-      "id": 9,
-      "name": "Катерина",
-      "alias": "пані Лейла",
-      "imageUrl": "/images/school-section/9.jpg"
+      "name": "telegram",
+      "link": "https://t.me/MafiaclubOdessa_Bot",
+      "icon": "Telegram"
     }
   ]
 }
