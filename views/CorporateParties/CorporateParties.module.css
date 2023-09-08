@@ -3,7 +3,7 @@
   max-width: 1920px;
   margin: 0 auto;
 
-  background-image: url(/images/corporateParties/bg-small.png);
+  background-image: url(/images/corporateParties/bg-small.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,17 +23,46 @@
   width: 100%;
 }
 
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg_img {
+    background-image: url(/images/corporateParties/bg-small@x2.webp);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .bg_img {
-    background-image: url(/images/corporateParties/bg-medium.png);
+    background-image: url(/images/corporateParties/bg-medium.webp);
   }
   .bg_img::before {
     top: 76%;
   }
 }
 
+@media screen and (min-width: 768px),
+  (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg_img {
+    background-image: url(/images/corporateParties/bg-medium@x2.webp);
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .bg_img {
-    background-image: url(/images/corporateParties/bg-large.png);
+    background-image: url(/images/corporateParties/bg-large.webp);
+  }
+}
+
+@media screen and (min-width: 1280px),
+  (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .bg_img {
+    background-image: url(/images/corporateParties/bg-large@x2.webp);
   }
 }
