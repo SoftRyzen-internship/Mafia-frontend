@@ -41,10 +41,11 @@ export type SocialContact = {
   icon: string;
 };
 
-type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
+  className?: string;
 }
 
 export interface SocialButtonProps {

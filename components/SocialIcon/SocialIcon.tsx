@@ -14,7 +14,7 @@ const icons = {
 
 export const SocialIcon: React.FC<SocialIconProps> = ({
   icon,
-  variant = 'basic',
+  variant = 'footer',
   className,
 }) => {
   const Icon = icons[icon];
