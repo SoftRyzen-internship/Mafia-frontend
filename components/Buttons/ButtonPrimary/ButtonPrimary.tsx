@@ -12,7 +12,7 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   loading = false,
   className = '',
   children,
-  actionHandler = () => console.log('click!'),
+  actionHandler,
 }: ButtonPrimaryProps) => {
   const primaryBtnClass = cn(
     {
