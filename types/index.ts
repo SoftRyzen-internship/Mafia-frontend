@@ -152,7 +152,8 @@ export interface ScheduleDataType {
   };
 }
 
-export interface FooterLinkProps {
+export interface FooterLinkItemProps {
+  [any: string]: string;
   title: string;
   href: string;
 }

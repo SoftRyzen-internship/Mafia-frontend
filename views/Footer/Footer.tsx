@@ -8,6 +8,7 @@ import { Contacts } from '@/components/Contacts';
 import { SocialsMenu } from '@/components/SocialsMenu';
 import { Paragraph } from '@/components/Parapgaph';
 import { FooterLinksList } from '@/components/FooterLinksList';
+import { FooterLinkItem } from '@/components/FooterLinkItem';
 
 import data from '@/data/footer.json';
 import css from './Footer.module.css';
@@ -34,8 +35,14 @@ export const Footer: FC = () => {
       </div>
 
       <div className={css.footerLinksWrapper}>
-        <Paragraph variant="small" className="mb-4 xl:mb-0">
-          {data.copyright}
+        <Paragraph variant="small" className="mb-4 flex xl:mb-0">
+          <span className="mr-1">{data.copyright}</span>
+          <FooterLinkItem
+            href={data.creator.href}
+            title={data.creator.title}
+            rel="noopener noreferrer nofollow"
+            target="_blank"
+          />
         </Paragraph>
         <FooterLinksList />
       </div>

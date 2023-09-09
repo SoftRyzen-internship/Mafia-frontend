@@ -1,6 +1,10 @@
 {
   "menuTitle": "Меню",
-  "copyright": "© 2023 | Odessa Mafia Club | Created by Softrysen",
+  "copyright": "© 2023 | Odessa Mafia Club |     ",
+  "creator": {
+    "title": " Created by Softrysen",
+    "href": "https://softryzen.com/"
+  },
   "footerLinks": [
     { "title": "Політика конфіденційності", "href": "policy" },
     { "title": "Правила Федерації", "href": "rules" }
