@@ -3,8 +3,8 @@ import '@/styles/globals.css';
 import React from 'react';
 import { Montserrat, Raleway } from 'next/font/google';
 
-import data from '@/data/common.json';
 import { Footer } from '@/views/Footer';
+import data from '@/data/common.json';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],

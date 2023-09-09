@@ -151,3 +151,8 @@ export interface ScheduleDataType {
     };
   };
 }
+
+export interface FooterLinkProps {
+  title: string;
+  href: string;
+}
