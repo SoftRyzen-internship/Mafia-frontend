@@ -12,7 +12,7 @@ export const NavigationRowLink: FC<NavigationRowLinkProps> = ({
   title,
 }) => {
   const navLinkClasses = classNames(
-    'font-raleway text-base hover:text-primary-light-900 focus:text-primary-light-500 transition-colors duration-300 ',
+    ' block font-raleway text-base hover:text-primary-light-900 focus:text-primary-light-500 transition-colors duration-300 ',
     {
       'text-primary-light-500':
         currentPath === href && position === 'mobile-menu',

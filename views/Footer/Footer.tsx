@@ -14,40 +14,36 @@ import css from './Footer.module.css';
 
 export const Footer = () => {
   return (
-    <footer className="  pb-[24px] pt-[60px]">
-      <div className=" container  mb-[60px] ">
-        <div className=" relative flex flex-col items-center md:flex-row md:items-start">
+    <footer className="pb-6 pt-[60px]">
+      <div className="container mb-[60px]">
+        <div className="relative flex flex-col items-center  md:flex-row md:items-start md:pl-[6px] xl:pl-0 xxl:pl-[46px]">
           <Logo
             href="/"
             position="footer"
-            className="mb-[104px] shrink-0 md:mb-0 md:mr-[48px] xl:mr-[482px] xxl:mr-[654px]"
+            className={`relative mt-1 shrink-0 md:mr-12 md:mt-[14px] xl:mr-[478px] xl:mt-[17px] xxl:mr-[654px] xxl:mt-0 smOnly:mb-[104px] ${css.logo}`}
           />
-          <div className=" flex w-full flex-wrap justify-between md:max-h-[208px] md:flex-col">
+          <div className="flex w-full flex-wrap md:mr-[44px] md:h-[208px] md:flex-col md:content-between xl:mr-[94px] xxl:mr-[228px] smOnly:justify-between">
             <div>
               <Heading tag="h3" variant="tertiary" className="mb-6">
                 {data.menuTitle}
               </Heading>
               <NavigationRow position="footer" />
             </div>
-            <div className=" ml-auto ">
-              <Contacts />
-            </div>
-            <SocialsMenu className=" ml-auto mr-auto mt-[60px] flex w-full justify-center md:ml-auto md:mr-0 md:mt-[24px] md:w-[192px] md:justify-start" />
+
+            <Contacts className="" />
+            <SocialsMenu className="mt-[60px] w-full md:mt-[24px] md:w-[195px] smOnly:justify-center" />
           </div>
           <IconBtn icon="scroll" classes="absolute top-0 right-0" />
         </div>
       </div>
 
-      <div className="flex w-full flex-col items-center border-t border-[rgba(115,115,115,0.50)] pt-6 ">
-        <Paragraph variant="small" className="mb-4">
+      <div className="flex flex-col items-center border-t border-[rgba(115,115,115,0.50)] pt-6 xl:container xl:flex-row xl:items-center xl:justify-between">
+        <Paragraph variant="small" className="mb-4 xl:mb-0">
           {data.copyright}
         </Paragraph>
 
-        <div className=" h-[16px]">
-          <Link
-            href="policy"
-            className={` border-r pr-[7px] ${css.footerLink}`}
-          >
+        <div className="flex ">
+          <Link href="policy" className={` ${css.footerLink}`}>
             {data.policy}
           </Link>
           <Link href="rules" className={css.footerLink}>
