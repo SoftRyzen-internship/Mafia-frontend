@@ -1,4 +1,11 @@
-import { HTMLAttributes } from 'react';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
+
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  RegisterOptions,
+} from 'react-hook-form';
 
 export interface LogoProps {
   href: string;
@@ -150,6 +157,11 @@ export interface KidsMafiaConditionsProps {
   btn: string;
 }
 
+export interface IPortal {
+  children: ReactNode;
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
 export interface ScheduleProps {
   className?: string;
 }
@@ -224,13 +236,6 @@ export interface HallFameCustomCardProps {
 
 // ---- FORM START ---
 
-import {
-  FieldErrors,
-  FieldValues,
-  UseFormRegister,
-  RegisterOptions,
-} from 'react-hook-form';
-
 export type InputT = {
   id: string;
   label: string;
@@ -266,3 +271,9 @@ export interface FormProps {
 }
 
 // ---- FORM END ---
+
+export interface FooterLinkItemProps {
+  [any: string]: string;
+  title: string;
+  href: string;
+}
