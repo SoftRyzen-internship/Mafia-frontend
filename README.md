@@ -165,6 +165,7 @@ The Primary Button has `button` tag and performs an action when clicked.
 | Prop            | Default     | Description                                   |
 | --------------- | ----------- | --------------------------------------------- |
 | `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
+| `type`          | `button`    | choose the type: `button` or `submit`         |
 | `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
 | `loading`       | `false`     | choose the loading state: `false` or `true`   |
 | `className`     | `undefined` | add any custom styles                         |
@@ -239,6 +240,19 @@ better to stop the local server then start again.
 | --------- | ------ | ----------------------------------------------- |
 | `classes` | string | Optional, add additional tailwind classes,      |
 |           |        | e.g. to position the form or set the form width |
+
+- ### Slider
+
+The `Slider` component is created using `swiper` library. It is important to
+give the `section` property `position: relative`. This is necessary in order for
+the `Slider` to extend beyond the `container`.
+
+| Prop         | Default     | Description                                                           |
+| ------------ | ----------- | --------------------------------------------------------------------- |
+| `section `   | `undefined` | choose the name of the section: `school`, `presenters` or `corporate` |
+| `pagination` | `false`     | choose the pagination availability: `false` or `true`                 |
+| `autoplay`   | `false`     | choose the autoplay availability: `false` or `true`                   |
+| `className`  | `undefined` | add any custom styles                                                 |
 
 - ### Pricing
 

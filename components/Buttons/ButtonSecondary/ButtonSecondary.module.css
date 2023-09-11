@@ -1,0 +1,3 @@
+.btn-secondary:active svg > path {
+  stroke: #c964c2;
+}
