@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Mafia Club Odessa",
     "description": "Запрошуємо поринути у світ стратегії та інтриг клубу спортивної мафії",
-    "metadataBase": "http://localhost:3000",
+    "base": "http://localhost:3000",
     "keywords": "Mafia Club Odessa, клуб мафії, спортивна мафія, мафія Одеса"
   },
   "twitter": {
@@ -10,7 +10,7 @@
     "card": "summary_large_image",
     "images": [
       {
-        "url": "/images/ogp-image-big.jpg",
+        "url": "/images/common/ogp-image-big.jpg",
         "width": 1200,
         "height": 630,
         "alt": "Одеса мафія клуб"
@@ -21,12 +21,13 @@
   "openGraph": {
     "images": [
       {
-        "url": "/images/ogp-image-small.jpg",
+        "url": "/images/common/ogp-image-small.jpg",
         "width": 800,
         "height": 600,
         "alt": "Одеса мафія клуб"
       }
     ],
+    "description": "Клуб спортивної мафії у місті Одеса",
     "type": "website",
     "title": "Mafia Club Odessa"
   }
