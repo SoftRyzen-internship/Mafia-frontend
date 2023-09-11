@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
 import { metadata, twitter, openGraph } from '@/data/shared-metadata.json';
 
-// console.log(metadata);
-
 export const meta: Metadata = {
   title: metadata.title,
   description: metadata.description,
@@ -12,7 +10,7 @@ export const meta: Metadata = {
   twitter,
   openGraph,
   icons: {
-    icon: '/images/favicon.ico',
-    apple: '/images/apple-touch-icon.png',
+    icon: '/images/common/favicon.ico',
+    apple: '/images/common/apple-touch-icon.png',
   },
 };
