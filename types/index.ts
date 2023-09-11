@@ -151,3 +151,8 @@ export interface ScheduleDataType {
     };
   };
 }
+
+export interface MobileMenuBtnProps {
+  className?: string;
+  onClick: () => void;
+}
