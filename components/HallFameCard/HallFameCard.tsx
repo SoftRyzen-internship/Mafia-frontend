@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import s from '@/components/HallFameCard/HallFameCard.module.css';
+
+import { Paragraph } from '@/components/Paragraph';
 import { HallFameCardProps } from '@/types/index';
 import cupsData from '@/data/hallFameData.json';
 
@@ -8,19 +9,19 @@ import IconFirst from '@/public/images/hallfame/iconcupfirst.svg';
 import IconSecond from '@/public/images/hallfame/iconcuptwo.svg';
 import IconThird from '@/public/images/hallfame/iconcupthree.svg';
 import IconStar from '@/public/images/hallfame/iconcupstar.svg';
-import { Paragraph } from '../Paragraph';
+import s from '@/components/HallFameCard/HallFameCard.module.css';
 
 const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
   if (!attributes) {
     return null;
   }
-
   const { title, description, img } = attributes;
-  const cupIcons = {
-    first: <IconFirst className="h-10 w-10" />,
-    second: <IconSecond className="h-10 w-10" />,
-    third: <IconThird className="h-10 w-10" />,
-    star: <IconStar className="h-10 w-10" />,
+
+  const iconsMap = {
+    first: IconFirst,
+    second: IconSecond,
+    third: IconThird,
+    star: IconStar,
   };
 
   return (
@@ -58,12 +59,13 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
           </h3>
           <ul className="flex list-none flex-row text-sm font-semibold md:text-base xl:p-10">
             {cups?.map((cup, index) => {
+              const Icon = iconsMap[cup.place_number];
               return (
                 <li
                   key={index}
                   className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:p-3 md:text-base"
                 >
-                  {cupIcons[cup.place_number]}
+                  {Icon && <Icon className="h-10 w-10" />}
                   <Paragraph className="overflow-wrap break-words text-[10px] md:text-[16px]">
                     {cup.competition_name}
                   </Paragraph>
