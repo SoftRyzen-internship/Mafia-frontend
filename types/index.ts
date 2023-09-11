@@ -333,4 +333,5 @@ export interface PriceCardProps {
 export interface SkillsListItemProps {
   text: string;
   icon: string;
+  idx: number;
 }

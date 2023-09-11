@@ -21,7 +21,7 @@ export const SkillsList: FC = () => {
 
           return (
             <li key={idx} className={skillItemStyles}>
-              <SkillsListItem {...skill} />
+              <SkillsListItem {...skill} idx={idx} />
             </li>
           );
         })}
