@@ -1,0 +1,43 @@
+.shadow {
+  position: relative;
+}
+
+.shadow::after {
+  content: attr(shadow);
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: 0;
+
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    175deg,
+    rgba(243, 243, 243, 0.04) 4.15%,
+    rgba(243, 243, 243, 0) 124.36%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .shadow::after {
+    top: -36px;
+
+    font-size: 40px;
+    line-height: 56px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .shadow::after {
+    top: -44px;
+
+    font-size: 52px;
+    line-height: 80px;
+  }
+}

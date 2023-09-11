@@ -1,33 +1,34 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
-import Heading from '../Heading/Heading';
-import Paragraph from '../Parapgaph/Paragraph';
+import { Heading } from '../Heading';
+import { Paragraph } from '../Paragraph';
 
 import s from './TournamentBlock.module.css';
 
+import { ITournament } from '@/views/TournamentsSection';
+
 interface TournamentBlockProps {
-  tournament: {
-    imgUrl: any;
-    title: string;
-    type: string;
-    playersInTeam: number;
-    description: string;
-  };
+  tournament: ITournament;
 }
 
 export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
-  const { title, type, playersInTeam, description, imgUrl } = tournament;
+  const { title, type, playersInTeam, description, image } = tournament;
+  const { url, alternativeText } = image.data.attributes;
+
+  const teamText = generateTeamText(playersInTeam);
+
+  const htmlString = parseTextToHTML(description);
 
   return (
     <div className={classNames('pb-20 pt-[96px]', s.tournamentBlock)}>
       <div
         className={classNames(
-          'container md:flex md:items-center md:gap-6 xl:items-stretch',
+          'container md:flex md:items-center md:gap-6 ',
           s.tournamentContainer,
         )}
       >
-        <div className="xl:w-[516px] smOnly:mb-[60px]">
+        <div className="w-full xl:w-[516px] smOnly:mb-[60px]">
           <Heading
             tag="h3"
             variant="secondary"
@@ -35,20 +36,24 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
           >
             {title}
           </Heading>
-          <Paragraph variant="lg" className="mb-4">
+          <Paragraph variant="large" className="mb-4">
             {type}
           </Paragraph>
           <Paragraph className="mb-6 text-base text-gray md:mb-[46px] xl:mb-[50px]">
-            {playersInTeam} особи в команді
+            {teamText}
           </Paragraph>
-          <Paragraph>{description}</Paragraph>
+          <div dangerouslySetInnerHTML={{ __html: htmlString }} />
         </div>
-        <div className="xxl-min-w-[716px] md:min-w-[236px] md:basis-[236px] xl:min-h-full xl:min-w-[493px] xl:basis-[493px] xxl:basis-[716px]">
+        <div
+          className={`${s.imgWrapper} xxl-min-w-[716px] relative flex min-h-[288px] items-center  justify-center bg-[#040404] p-5 md:h-[285px]  md:min-w-[236px] md:basis-[236px]  xl:min-h-[483px]  xl:min-w-[493px] xl:basis-[493px] xxl:basis-[716px]`}
+        >
           <Image
-            src={imgUrl}
-            alt={title}
-            height={236}
-            className="w-full object-cover md:h-[285px] xl:h-full"
+            src={url}
+            alt={alternativeText || title}
+            priority
+            height={288}
+            width={272}
+            className="h-full min-w-full object-contain  smOnly:h-[288px]"
           />
         </div>
       </div>
@@ -56,4 +61,30 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
   );
 };
 
-// function parseDescription() {}
+function generateTeamText(playersInTeam: number): string {
+  let ending;
+
+  if (playersInTeam % 10 === 1 && playersInTeam % 100 !== 11) {
+    ending = 'оба';
+  } else if (
+    [2, 3, 4].includes(playersInTeam % 10) &&
+    ![12, 13, 14].includes(playersInTeam % 100)
+  ) {
+    ending = 'оби';
+  } else {
+    ending = 'іб';
+  }
+
+  return `${playersInTeam} ос${ending} у команді`;
+}
+
+function parseTextToHTML(text) {
+  const paragraphs = text.split('\n');
+  const htmlParagraphs = paragraphs.map(paragraph => {
+    if (paragraph) return `<p>${paragraph}</p>`;
+    return '<br>';
+  });
+  const htmlContent = htmlParagraphs.join('\n');
+
+  return htmlContent;
+}
