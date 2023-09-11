@@ -32,9 +32,9 @@ export default function RootLayout({
         {/* TODO: this component should include all shared components. Put header, footer and social media icons or whatever you need to this component in appropriate places around children */}
         <div>THIS IS LAYOUT</div>
         {children}
-        
+
         <div id="modal" />
-        
+
         <Footer />
       </body>
     </html>

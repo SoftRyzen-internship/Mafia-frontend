@@ -5,10 +5,7 @@ import { createPortal } from 'react-dom';
 
 import { IPortal } from '@/types';
 
-// eslint-disable-next-line no-unused-vars
-type IClickHandler = (e: MouseEvent) => void;
-
-const Portal = ({ setShowModal, children }: IPortal) => {
+export const Portal = ({ setShowModal, children }: IPortal) => {
   const ref = useRef<Element | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -29,7 +26,7 @@ const Portal = ({ setShowModal, children }: IPortal) => {
     };
   }, [setShowModal]);
 
-  const handleBackdrop: IClickHandler = event => {
+  const handleBackdrop = (event: MouseEvent) => {
     if (event.target === event.currentTarget) {
       setShowModal(false);
     }
@@ -47,5 +44,3 @@ const Portal = ({ setShowModal, children }: IPortal) => {
       )
     : null;
 };
-
-export default Portal;
