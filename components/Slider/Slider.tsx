@@ -115,7 +115,7 @@ export const Slider: React.FC<SliderProps> = ({
               key={card.id}
               className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer"
             >
-              <SliderImage card={card} section={section} />
+              <SliderImage src={card.imageUrl} alt={card.name} />
               <p className="mb-4 text-base font-normal text-gray">
                 {card.name}
               </p>
@@ -137,7 +137,10 @@ export const Slider: React.FC<SliderProps> = ({
         presentersData?.map((card, idx) => {
           return (
             <SwiperSlide key={idx}>
-              <SliderImage card={card} section={section} />
+              <SliderImage
+                src={card.attributes.img.data.attributes.url}
+                alt={card.attributes.name}
+              />
             </SwiperSlide>
           );
         })}
@@ -146,7 +149,7 @@ export const Slider: React.FC<SliderProps> = ({
         corporateData.swiperData.map(card => {
           return (
             <SwiperSlide key={card.id}>
-              <SliderImage card={card} section={section} />
+              <SliderImage src={card.imageUrl} alt={card.altText} />
             </SwiperSlide>
           );
         })}

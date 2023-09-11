@@ -266,23 +266,10 @@ export interface SliderNavigationProps {
   handleNextClick: () => void;
 }
 
-interface SliderCard {
-  id: number;
-  imageUrl: string;
-}
-
-export interface SliderCardSchool extends SliderCard {
-  name: string;
-  alias: string;
-}
-
-export interface SliderCardCorporate extends SliderCard {
-  altText: string;
-}
-
 export interface SliderImageProps {
-  card: SliderCardSchool | SliderCardCorporate | PresenterItemProps;
-  section: 'school' | 'presenters' | 'corporate';
+  src: string;
+  alt: string;
+  className?: string;
 }
 
 export interface PresenterImageType {
