@@ -2,7 +2,7 @@ import SvgSuccess from '@/public/icons/success.svg';
 
 import { Paragraph } from '@/components/Paragraph';
 
-import data from "@/data/success.json"
+import data from '@/data/success.json';
 
 export const SuccessWindow = () => {
   return (
@@ -12,7 +12,7 @@ export const SuccessWindow = () => {
         {data.success_message}{' '}
       </Paragraph>
       <Paragraph variant="large" className="text-center">
-      {data.someone}
+        {data.someone}
         <span className="block md:inline  "> {data.span_1}</span>
         <span className="block">{data.span_2}</span>
       </Paragraph>
