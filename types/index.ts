@@ -1,5 +1,12 @@
 import { HTMLAttributes } from 'react';
 
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  RegisterOptions,
+} from 'react-hook-form';
+
 export interface LogoProps {
   href: string;
   position: 'header' | 'footer' | 'mobile-menu';
@@ -195,13 +202,6 @@ export interface HallFameCustomCardProps {
 
 // ---- FORM START ---
 
-import {
-  FieldErrors,
-  FieldValues,
-  UseFormRegister,
-  RegisterOptions,
-} from 'react-hook-form';
-
 export type InputT = {
   id: string;
   label: string;
@@ -237,3 +237,9 @@ export interface FormProps {
 }
 
 // ---- FORM END ---
+
+export interface FooterLinkItemProps {
+  [any: string]: string;
+  title: string;
+  href: string;
+}
