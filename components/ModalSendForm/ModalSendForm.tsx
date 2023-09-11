@@ -3,7 +3,7 @@ import { IPortal } from '@/types';
 
 import s from './ModalSendForm.module.css';
 
-const ModalSendForm = ({ setShowModal, children }: IPortal) => {
+export const ModalSendForm = ({ setShowModal, children }: IPortal) => {
   return (
     <div className=" mx-auto max-w-[480px] px-6  md:mx-0 md:w-auto md:px-0   ">
       <div
@@ -18,5 +18,3 @@ const ModalSendForm = ({ setShowModal, children }: IPortal) => {
     </div>
   );
 };
-
-export default ModalSendForm;

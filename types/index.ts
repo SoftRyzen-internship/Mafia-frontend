@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
 
 import {
   FieldErrors,
@@ -159,8 +159,7 @@ export interface KidsMafiaConditionsProps {
 
 export interface IPortal {
   children: ReactNode;
-  // eslint-disable-next-line no-unused-vars
-  setShowModal: (show: boolean) => void;
+  setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface ScheduleProps {
