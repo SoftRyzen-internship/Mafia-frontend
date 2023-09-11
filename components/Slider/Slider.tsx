@@ -72,16 +72,14 @@ export const Slider: React.FC<SliderProps> = ({
     <Swiper
       id="swiper"
       breakpoints={{
-        [SCREEN_MOBILE]: { slidesPerView: 1, initialSlide: 0 },
-        [SCREEN_TABLET]: { slidesPerView: 4, initialSlide: 1, loopedSlides: 3 },
+        [SCREEN_MOBILE]: { slidesPerView: 1 },
+        [SCREEN_TABLET]: { slidesPerView: 4, loopedSlides: 3 },
         [SCREEN_DESKTOP]: {
           slidesPerView: 5,
-          initialSlide: 1,
           loopedSlides: 3,
         },
         [LARGE_SCREEN_DESKTOP]: {
           slidesPerView: 4,
-          initialSlide: 1,
           loopedSlides: 3,
         },
       }}
@@ -106,7 +104,6 @@ export const Slider: React.FC<SliderProps> = ({
           : false
       }
       loop
-      centeredSlides
       speed={1000}
       spaceBetween={24}
       className={swiperClass}
@@ -116,7 +113,7 @@ export const Slider: React.FC<SliderProps> = ({
           return (
             <SwiperSlide
               key={card.id}
-              className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out xl:right-[118px] xxl:right-[221px] mediaHover:hover:cursor-pointer"
+              className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer"
             >
               <SliderImage card={card} section={section} />
               <p className="mb-4 text-base font-normal text-gray">
