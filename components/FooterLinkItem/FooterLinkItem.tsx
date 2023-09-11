@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React, { FC } from 'react';
 
 import { FooterLinkItemProps } from '@/types';
-import css from './FooterLink.module.css';
 
 export const FooterLinkItem: FC<FooterLinkItemProps> = ({
   title,
@@ -11,7 +10,11 @@ export const FooterLinkItem: FC<FooterLinkItemProps> = ({
   ...other
 }) => {
   return (
-    <Link href={href} {...other} className={css.footerLink}>
+    <Link
+      href={href}
+      {...other}
+      className="block text-xs transition-colors duration-300 hover:text-primary-light-900 focus:text-primary-light-500 xl:shadow-xxs"
+    >
       {title}
     </Link>
   );

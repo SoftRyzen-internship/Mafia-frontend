@@ -1,7 +1,0 @@
-@tailwind components;
-
-@layer components {
-  .footerLink {
-    @apply block text-xs transition-colors duration-300 hover:text-primary-light-900 focus:text-primary-light-500 xl:shadow-xxs;
-  }
-}
