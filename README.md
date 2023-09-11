@@ -253,3 +253,9 @@ the `Slider` to extend beyond the `container`.
 | `pagination` | `false`     | choose the pagination availability: `false` or `true`                 |
 | `autoplay`   | `false`     | choose the autoplay availability: `false` or `true`                   |
 | `className`  | `undefined` | add any custom styles                                                 |
+
+- ### Pricing
+
+| Prop      | Type        | Description                                        |
+| --------- | ----------- | -------------------------------------------------- |
+| `variant` | `corporate` | choose page placement: `corporate` or `kids-mafia` |
