@@ -2,7 +2,7 @@
   "metadata": {
     "title": "Mafia Club Odessa",
     "description": "Запрошуємо поринути у світ стратегії та інтриг клубу спортивної мафії",
-    "metadataBase": "http://localhost:3000",
+    "base": "http://localhost:3000",
     "keywords": "Mafia Club Odessa, клуб мафії, спортивна мафія, мафія Одеса"
   },
   "twitter": {
@@ -27,6 +27,7 @@
         "alt": "Одеса мафія клуб"
       }
     ],
+    "description": "Клуб спортивної мафії у місті Одеса",
     "type": "website",
     "title": "Mafia Club Odessa"
   }
