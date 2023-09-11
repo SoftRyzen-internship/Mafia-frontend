@@ -162,15 +162,15 @@ This is example of API for component `Title` and `Paragraph`
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                   |
-| --------------- | ----------- | --------------------------------------------- |
-| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large` |
-| `type`          | `button`    | choose the type: `button` or `submit`         |
-| `disabled`      | `false`     | choose the disabled state: `false` or `true`  |
-| `loading`       | `false`     | choose the loading state: `false` or `true`   |
-| `className`     | `undefined` | add any custom styles                         |
-| `children`      | `undefined` | a necessary prop. any text content            |
-| `actionHandler` | `black`     | a function that is executed when clicked      |
+| Prop            | Default     | Description                                      |
+| --------------- | ----------- | ------------------------------------------------ |
+| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
+| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
+| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
+| `loading`       | `false`     | choose the loading state: `false` or `true`      |
+| `className`     | `undefined` | add any custom styles                            |
+| `children`      | `undefined` | a necessary prop. any text content               |
+| `actionHandler` | `black`     | a function that is executed when clicked         |
 
 - ### ButtonSecondary
 

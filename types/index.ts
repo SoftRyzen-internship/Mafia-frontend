@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
 
 import {
   FieldErrors,
@@ -155,6 +155,11 @@ interface IKidsMafiaCard {
 export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
+}
+
+export interface IPortal {
+  children: ReactNode;
+  setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface ScheduleProps {
