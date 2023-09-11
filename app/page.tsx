@@ -13,8 +13,8 @@ const Home = () => {
       <p className="font-montserrat">{mainPage.description}</p>
 
       {/* temp */}
-      <Pricing page={'corporate'} />
-      <Pricing page={'kids-mafia'} />
+      <Pricing variant={'corporate'} />
+      {/* <Pricing variant={'kids-mafia'} /> */}
     </>
   );
 };
