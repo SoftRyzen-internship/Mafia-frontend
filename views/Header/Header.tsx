@@ -5,6 +5,8 @@ import { NavigationRow } from '../../components/NavigationRow';
 
 import data from '@/data/common.json';
 
+// чекаю модлку
+
 export const Header = () => {
   const header = data.header;
 
