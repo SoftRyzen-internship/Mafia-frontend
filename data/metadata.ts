@@ -1,5 +1,5 @@
-import { Metadata } from "next";
-import {metadata, twitter, openGraph} from '@/data/shared-metadata.json';
+import { Metadata } from 'next';
+import { metadata, twitter, openGraph } from '@/data/shared-metadata.json';
 
 // console.log(metadata);
 

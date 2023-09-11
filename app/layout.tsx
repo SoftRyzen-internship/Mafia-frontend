@@ -17,6 +17,7 @@ const raleway = Raleway({
   variable: '--font-raleway',
 });
 
+// Shared metadata for all pages
 export const metadata: Metadata = meta;
 
 export default function RootLayout({
