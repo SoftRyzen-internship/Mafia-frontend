@@ -249,6 +249,54 @@ export interface FooterLinkItemProps {
   href: string;
 }
 
+export interface SliderProps {
+  section: 'school' | 'presenters' | 'corporate';
+  pagination?: boolean;
+  autoplay?: boolean;
+  className?: string;
+}
+
+export interface SliderNavigationProps {
+  handlePrevClick: () => void;
+  handleNextClick: () => void;
+}
+
+interface SliderCard {
+  id: number;
+  imageUrl: string;
+}
+
+export interface SliderCardSchool extends SliderCard {
+  name: string;
+  alias: string;
+}
+
+export interface SliderCardCorporate extends SliderCard {
+  altText: string;
+}
+
+export interface SliderImageProps {
+  card: SliderCardSchool | SliderCardCorporate | PresenterItemProps;
+  section: 'school' | 'presenters' | 'corporate';
+}
+
+export interface PresenterImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface PresenterItemProps {
+  attributes: { name: string; description: string; img: PresenterImageType };
+}
+
+export interface PresentersDataType {
+  presenters: {
+    data: PresenterItemProps[];
+  };
+}
+  
 type PricingPlacementOptions = 'kids-mafia' | 'corporate';
 
 export interface PricingProps {
