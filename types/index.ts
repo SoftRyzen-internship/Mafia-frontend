@@ -1,5 +1,12 @@
 import { HTMLAttributes } from 'react';
 
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  RegisterOptions,
+} from 'react-hook-form';
+
 export interface LogoProps {
   href: string;
   position: 'header' | 'footer' | 'mobile-menu';
@@ -64,6 +71,7 @@ export interface SocialIconProps {
 
 export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
   className?: string;
@@ -116,6 +124,23 @@ export interface ContactsProps {
   className?: string;
 }
 
+export interface MafiaSchoolSectionData {
+  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
+  level?: HeadingComponentProps['tag'];
+  content?: string;
+  variant?: HeadingComponentProps['variant'];
+  src?: string;
+  alt?: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface MafiaSchoolHeroData {
+  sections: MafiaSchoolSectionData[];
+}
+
 export interface ClubKidsMafiaCardProps {
   subtitle: string;
   text: string;
@@ -142,6 +167,7 @@ export interface ScheduleItemProps {
   time_start: string;
   time_end: string;
 }
+
 export interface ScheduleDataType {
   schedule: {
     data: {
@@ -151,6 +177,66 @@ export interface ScheduleDataType {
     };
   };
 }
+
+export interface HallFameCup {
+  title: string;
+}
+
+export interface HallFameCardProps {
+  id?: string;
+  name: string;
+  description: string;
+  cupstitle: string;
+  cups: HallFameCup[];
+  image: {
+    src: string;
+    alt: string;
+  };
+}
+export interface HallFameCustomCardProps {
+  id?: string;
+  title?: string;
+  src?: string;
+  alt?: string;
+}
+
+// ---- FORM START ---
+
+export type InputT = {
+  id: string;
+  label: string;
+  type?: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export type TextAreaT = {
+  id: string;
+  label: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export interface TextAreaProps {
+  textarea: TextAreaT;
+  height: number;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface InputProps {
+  input: InputT;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface FormProps {
+  classes?: string;
+}
+
+// ---- FORM END ---
 
 export interface FooterLinkItemProps {
   [any: string]: string;

@@ -25,6 +25,10 @@ module.exports = {
       sm: '-2px 0px 12px 0px rgba(62, 50, 95, 0.12)',
       md: '0px 0px 10px rgba(0, 0, 0, 0.1)',
       lg: '0px 0px 14px 0px rgba(159, 127, 199, 0.11)',
+      input: '3px 3px 4px 0px rgba(19, 8, 19, 0.16)',
+      inputHover: '4px 5px 16px 0px rgba(25, 8, 26, 0.2)',
+      inputFocus: '0px 5px 12px 0px rgba(8,3,21,0.1) inset',
+      inputError: '0px_0px_16px_0px_rgba(255,65,96,0.2)',
     },
     // THEME
     extend: {
@@ -100,6 +104,7 @@ module.exports = {
             400: '#141318',
             500: '#130813',
             600: '#60637463',
+            700: '#606374',
           },
         },
         notify: {
