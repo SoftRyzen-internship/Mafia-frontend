@@ -10,7 +10,7 @@
     "card": "summary_large_image",
     "images": [
       {
-        "url": "/images/ogp-image-big.jpg",
+        "url": "/images/common/ogp-image-big.jpg",
         "width": 1200,
         "height": 630,
         "alt": "Одеса мафія клуб"
@@ -21,7 +21,7 @@
   "openGraph": {
     "images": [
       {
-        "url": "/images/ogp-image-small.jpg",
+        "url": "/images/common/ogp-image-small.jpg",
         "width": 800,
         "height": 600,
         "alt": "Одеса мафія клуб"
