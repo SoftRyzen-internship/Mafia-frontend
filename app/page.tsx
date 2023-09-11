@@ -1,8 +1,5 @@
 import Title from '@/components/Title/Title';
 
-// temp
-import { Pricing } from '@/views/Pricing';
-
 import data from '@/data/common.json';
 
 const Home = () => {
@@ -11,10 +8,6 @@ const Home = () => {
     <>
       <Title>{mainPage.title}</Title>
       <p className="font-montserrat">{mainPage.description}</p>
-
-      {/* temp */}
-      <Pricing variant={'corporate'} />
-      <Pricing variant={'kids-mafia'} />
     </>
   );
 };
