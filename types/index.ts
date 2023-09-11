@@ -171,21 +171,50 @@ export interface ScheduleDataType {
   };
 }
 
+//---HallFame----
+export interface HallFameCards {
+  data: HallFameCardProps[];
+}
+
+export interface HallFameCardDataType {
+  flipCards: HallFameCards;
+}
 export interface HallFameCup {
+  id: number;
+  competition_name: string;
+  place_number: string;
+}
+
+export interface HallFameImageAttributes {
+  url: string;
+  alternativeText: string;
+}
+
+export interface HallFameImageData {
+  id: number;
+  attributes: HallFameImageAttributes;
+}
+
+export interface HallFameImage {
+  data: HallFameImageData;
+}
+
+export interface HallFameAttributes {
   title: string;
+  description: string;
+  img: HallFameImage;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  cups: HallFameCup[];
 }
 
 export interface HallFameCardProps {
-  id?: string;
-  name: string;
-  description: string;
-  cupstitle: string;
+  id: number;
+  attributes: HallFameAttributes;
   cups: HallFameCup[];
-  image: {
-    src: string;
-    alt: string;
-  };
 }
+
 export interface HallFameCustomCardProps {
   id?: string;
   title?: string;

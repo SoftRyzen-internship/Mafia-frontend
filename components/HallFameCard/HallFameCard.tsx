@@ -1,25 +1,37 @@
 import React from 'react';
 import Image from 'next/image';
 import s from '@/components/HallFameCard/HallFameCard.module.css';
-import IconCup from '@/public/images/hallFame/iconcupfirst.svg';
 import { HallFameCardProps } from '@/types/index';
+import cupsData from '@/data/hallFameData.json';
 
-const HallFameCard: React.FC<HallFameCardProps> = ({
-  name,
-  description,
-  cupstitle,
-  cups,
-  image,
-}) => {
+import IconFirst from '@/public/images/hallfame/iconcupfirst.svg';
+import IconSecond from '@/public/images/hallfame/iconcuptwo.svg';
+import IconThird from '@/public/images/hallfame/iconcupthree.svg';
+import IconStar from '@/public/images/hallfame/iconcupstar.svg';
+import { Paragraph } from '../Paragraph';
+
+const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
+  if (!attributes) {
+    return null;
+  }
+
+  const { title, description, img } = attributes;
+  const cupIcons = {
+    first: <IconFirst className="h-10 w-10" />,
+    second: <IconSecond className="h-10 w-10" />,
+    third: <IconThird className="h-10 w-10" />,
+    star: <IconStar className="h-10 w-10" />,
+  };
+
   return (
-    <li className={` relative h-[460px] w-full  ${s.card}`}>
+    <li className={`relative h-[460px] w-full ${s.card}`}>
       <div
         className={`${s.front} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] transition duration-1000 hover:shadow-lg focus:shadow-lg`}
       >
         <div className="relative h-full w-full">
           <Image
-            src={image.src}
-            alt={image.alt}
+            src={img.data.attributes.url}
+            alt={img.data.attributes.alternativeText}
             className="h-full w-full rounded-md object-cover"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -31,28 +43,33 @@ const HallFameCard: React.FC<HallFameCardProps> = ({
         className={`${s.back} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] font-raleway transition duration-1000 hover:shadow-lg focus:shadow-lg`}
       >
         <h2 className="mx-auto my-0 mb-2 px-0 py-2 text-center font-raleway text-xl font-semibold xl:pb-0 xl:pt-9">
-          {name}
+          {title}
         </h2>
         <div
-          className="px-5 text-left font-raleway text-base font-normal leading-6 tracking-normal"
+          className="mb-4 px-5 text-left font-raleway text-sm font-normal tracking-normal md:text-base"
           dangerouslySetInnerHTML={{
             __html: description.replace(/\n/g, '<br />'),
           }}
         />
 
-        <div className="mt-4">
-          <h3 className="text-center text-lg font-semibold">{cupstitle}</h3>
-          <ul className="xl: flex list-none flex-row p-3 xl:p-10">
-            {cups.map((cup, index) => (
-              <li
-                key={index}
-                className="flex flex-col items-center gap-5 text-center"
-              >
-                {' '}
-                <IconCup className="text-790E8D h-12 w-12" />
-                <p>{cup.title}</p>
-              </li>
-            ))}
+        <div className="mx-auto my-0 ">
+          <h3 className="mb-2 text-center text-lg font-semibold">
+            {cupsData.cupstitle}
+          </h3>
+          <ul className="flex list-none flex-row text-sm font-semibold md:text-base xl:p-10">
+            {cups?.map((cup, index) => {
+              return (
+                <li
+                  key={index}
+                  className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:p-3 md:text-base"
+                >
+                  {cupIcons[cup.place_number]}
+                  <Paragraph className="overflow-wrap break-words text-[10px] md:text-[16px]">
+                    {cup.competition_name}
+                  </Paragraph>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
