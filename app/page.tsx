@@ -14,7 +14,7 @@ const Home = () => {
 
       {/* temp */}
       <Pricing variant={'corporate'} />
-      {/* <Pricing variant={'kids-mafia'} /> */}
+      <Pricing variant={'kids-mafia'} />
     </>
   );
 };

@@ -239,3 +239,9 @@ better to stop the local server then start again.
 | --------- | ------ | ----------------------------------------------- |
 | `classes` | string | Optional, add additional tailwind classes,      |
 |           |        | e.g. to position the form or set the form width |
+
+- ### Pricing
+
+| Prop      | Type        | Description                                        |
+| --------- | ----------- | -------------------------------------------------- |
+| `variant` | `corporate` | choose page placement: `corporate` or `kids-mafia` |

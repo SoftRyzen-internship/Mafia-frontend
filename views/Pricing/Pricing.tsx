@@ -7,9 +7,13 @@ import { PriceCard } from '@/components/PriceCard';
 
 import { PricingProps } from '@/types';
 
+import data from '@/data/pricingSectionData.json';
+
 import css from './Pricing.module.css';
 
-export const Pricing: React.FC<PricingProps> = async ({ variant }) => {
+export const Pricing: React.FC<PricingProps> = async ({
+  variant = 'corporate',
+}) => {
   const pricesInfo = await fetchPricing();
 
   const sectionStyles = classNames(
@@ -21,21 +25,16 @@ export const Pricing: React.FC<PricingProps> = async ({ variant }) => {
   );
   return (
     <section className={sectionStyles}>
-      {/* replace with Container component */}
-      <div
-        className="mx-auto max-w-[480px] px-6 md:max-w-[768px] 
-        xl:max-w-[1216px] xxl:max-w-[1752px]"
-      >
+      <div className="container">
         <Heading variant="secondary" shadow="Вартість" className="mb-[60px]">
-          Вартість
+          {data.title}
         </Heading>
+
         <ul className="flex flex-wrap justify-center gap-6">
           {pricesInfo &&
             pricesInfo.map(info => (
               <PriceCard key={info.id} rate={info.attributes} />
             ))}
-          {/* <PriceCard />
-          <PriceCard /> */}
         </ul>
       </div>
     </section>
