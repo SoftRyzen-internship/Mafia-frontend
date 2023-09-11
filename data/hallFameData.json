@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Пан Сова",
     "description": "Здобув 13 кубків.\nНайбільше пишається:\n1. Mafia Stars 2021, 1 місце, особистий залік;\n2. FourGun 8, 1 місце, особистий залік;\n3. Рандеву 2021, 1 місце, особистий та командний заліки.",
     "cupstitle": "Кубки:",
@@ -14,6 +15,7 @@
     }
   },
   {
+    "id": "2",
     "name": "Пані Рок",
     "description": "Виграла 10 кубків. \nНайбільше пишається:\n1. Vinnytsia Mafia Cup 2021 - 1 місце у командному заліку.\n2. Big Ben Hard Version 2018 - 3 місце в особистому заліку.",
     "cupstitle": "Кубки:",
@@ -24,6 +26,7 @@
     "image": { "src": "/images/hallFame/panirock.jpg", "alt": "фото Пані Рок" }
   },
   {
+    "id": "3",
     "name": "Пані Америка",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
@@ -38,6 +41,7 @@
     }
   },
   {
+    "id": "4",
     "name": "Пані Нора",
     "description": "Кубок:\nПрофесійна Ліга Мафії 2018 - 1 місце в особистому заліку.",
     "cupstitle": "Кубки:",
@@ -48,7 +52,8 @@
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "5",
+    "name": "Пані Electron",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -58,11 +63,12 @@
     ],
     "image": {
       "src": "/images/hallFame/image5.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Electron"
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "6",
+    "name": "Пані Ketrin",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -72,11 +78,12 @@
     ],
     "image": {
       "src": "/images/hallFame/image6.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Ketrin"
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "7",
+    "name": "Пані Pshield",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -86,11 +93,12 @@
     ],
     "image": {
       "src": "/images/hallFame/image7.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Pshield"
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "8",
+    "name": "Пані Горнятко",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -100,11 +108,12 @@
     ],
     "image": {
       "src": "/images/hallFame/image8.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Горнятко"
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "9",
+    "name": "Пані Всесвіт",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -114,11 +123,12 @@
     ],
     "image": {
       "src": "/images/hallFame/image9.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Всесвіт"
     }
   },
   {
-    "name": "Пані Америка",
+    "id": "10",
+    "name": "Пані Трініті",
     "description": "Виграла 7 кубків.\nПишається тим, що тричі отримувала звання MVP.\nОстанні кубки:\n1.Odessa Summer Cup 2021.\n2.Pro100. Sherlock Cup 2021.\n3.Black Sea Cup 2020.",
     "cupstitle": "Кубки:",
     "cups": [
@@ -128,17 +138,21 @@
     ],
     "image": {
       "src": "/images/hallFame/image10.jpg",
-      "alt": "фото Пані Америка"
+      "alt": "фото Пані Трініті"
     }
   },
   {
-    "name": "Пані Рок",
+    "id": "11",
+    "name": "Пані Рокстар",
     "description": "Виграла 10 кубків. \nНайбільше пишається:\n1. Vinnytsia Mafia Cup 2021 - 1 місце у командному заліку.\n2. Big Ben Hard Version 2018 - 3 місце в особистому заліку.",
     "cupstitle": "Кубки:",
     "cups": [
       { "title": "Vinnytsia Mafia Cup 2021" },
       { "title": "Big Ben Hard Version 2018" }
     ],
-    "image": { "src": "/images/hallFame/image12.jpg", "alt": "фото Пані Рок" }
+    "image": {
+      "src": "/images/hallFame/image12.jpg",
+      "alt": "фото Пані Рокстар"
+    }
   }
 ]

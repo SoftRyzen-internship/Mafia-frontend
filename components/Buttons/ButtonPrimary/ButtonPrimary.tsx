@@ -8,6 +8,7 @@ import SvgButtonLoader from '@/public/icons/buttons-loading.svg';
 
 export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   buttonsize = 'medium',
+  type = 'button',
   disabled = false,
   loading = false,
   className = '',
@@ -34,7 +35,7 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
 
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
       onClick={actionHandler}
       className={primaryBtnClass}
