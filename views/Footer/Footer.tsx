@@ -6,7 +6,7 @@ import { Heading } from '@/components/Heading';
 import { NavigationRow } from '@/components/NavigationRow';
 import { Contacts } from '@/components/Contacts';
 import { SocialsMenu } from '@/components/SocialsMenu';
-import { Paragraph } from '@/components/Parapgaph';
+import { Paragraph } from '@/components/Paragraph';
 import { FooterLinksList } from '@/components/FooterLinksList';
 import { FooterLinkItem } from '@/components/FooterLinkItem';
 

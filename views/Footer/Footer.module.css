@@ -17,6 +17,7 @@
 .footerLinksWrapper {
   @apply flex flex-col items-center border-t border-[rgba(115,115,115,0.50)] pt-6 xl:container xl:flex-row xl:items-center xl:justify-between;
 }
+
 .logo::after {
   content: '';
   display: block;
