@@ -41,7 +41,7 @@ export const CorporateParties = () => {
         <Heading
           tag="h3"
           variant="secondary"
-          className="relative z-10 mb-[42px] md:mb-[76px]"
+          className="relative mb-[42px] md:mb-[76px]"
         >
           {secondary_title}
         </Heading>
