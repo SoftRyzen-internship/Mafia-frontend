@@ -143,9 +143,10 @@ This is example of API for component `Title` and `Paragraph`
 
 - ### SocialsMenu
 
-| Prop      | Default | Description                     |
-| --------- | ------- | ------------------------------- |
-| `variant` | `basic` | `fixed`, `basic`, `mobile-menu` |
+| Prop        | Default     | Description                      |
+| ----------- | ----------- | -------------------------------- |
+| `variant`   | `footer`    | `fixed`, `footer`, `mobile-menu` |
+| `className` | `undefined` | add any custom styles            |
 
 - ### SocialButton
 
@@ -199,9 +200,10 @@ the site when pressed.
 
 - ### Contacts
 
-| Prop      | Default | Description                                        |
-| --------- | ------- | -------------------------------------------------- |
-| `variant` | `basic` | choose styles: `basic`, `footer-mob` or `mob-menu` |
+| Prop        | Default     | Description                              |
+| ----------- | ----------- | ---------------------------------------- |
+| `variant`   | `footer`    | choose styles: `footer` or `mobile-menu` |
+| `className` | `undefined` | add any custom styles                    |
 
 ```
 
@@ -225,3 +227,22 @@ better to stop the local server then start again.
 |           |               |                                                       |
 | `classes` | string        | Optional, add additional tailwind classes,            |
 |           |               | e.g. to position component                            |
+
+- ### Schedule
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `className` | `undefined` | add custom or additional css class you'd need |
+
+- ### Slider
+
+The `Slider` component is created using `swiper` library. It is important to
+give the `section` property `position: relative`. This is necessary in order for
+the `Slider` to extend beyond the `container`.
+
+| Prop         | Default     | Description                                                           |
+| ------------ | ----------- | --------------------------------------------------------------------- |
+| `section `   | `undefined` | choose the name of the section: `school`, `presenters` or `corporate` |
+| `pagination` | `false`     | choose the pagination availability: `false` or `true`                 |
+| `autoplay`   | `false`     | choose the autoplay availability: `false` or `true`                   |
+| `className`  | `undefined` | add any custom styles                                                 |

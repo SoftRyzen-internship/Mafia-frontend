@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Heading } from '../Heading';
-import { Paragraph } from '../Parapgaph';
+import { Paragraph } from '../Paragraph';
 import { LearnListItemProps } from '@/types';
 import css from './LearnListItem.module.css';
 

@@ -41,10 +41,11 @@ export type SocialContact = {
   icon: string;
 };
 
-type SocialMenuVariants = 'fixed' | 'basic' | 'mobile-menu';
+type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
+  className?: string;
 }
 
 export interface SocialButtonProps {
@@ -109,8 +110,11 @@ export interface LearnListItemProps {
   desc: string;
 }
 
+type ContactsVariants = 'footer' | 'mobile-menu';
+
 export interface ContactsProps {
-  variant?: 'basic' | 'footer-mob' | 'mob-menu';
+  variant?: ContactsVariants;
+  className?: string;
 }
 
 export interface ClubKidsMafiaCardProps {
@@ -127,4 +131,72 @@ interface IKidsMafiaCard {
 export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
+}
+
+export interface ScheduleProps {
+  className?: string;
+}
+
+export interface ScheduleItemProps {
+  id: string;
+  day: string;
+  time_start: string;
+  time_end: string;
+}
+export interface ScheduleDataType {
+  schedule: {
+    data: {
+      attributes: {
+        schedules: ScheduleItemProps[];
+      };
+    };
+  };
+}
+
+export interface SliderProps {
+  section: 'school' | 'presenters' | 'corporate';
+  pagination?: boolean;
+  autoplay?: boolean;
+  className?: string;
+}
+
+export interface SliderNavigationProps {
+  handlePrevClick: () => void;
+  handleNextClick: () => void;
+}
+
+interface SliderCard {
+  id: number;
+  imageUrl: string;
+}
+
+export interface SliderCardSchool extends SliderCard {
+  name: string;
+  alias: string;
+}
+
+export interface SliderCardCorporate extends SliderCard {
+  altText: string;
+}
+
+export interface SliderImageProps {
+  card: SliderCardSchool | SliderCardCorporate | PresenterItemProps;
+  section: 'school' | 'presenters' | 'corporate';
+}
+
+export interface PresenterImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface PresenterItemProps {
+  attributes: { name: string; description: string; img: PresenterImageType };
+}
+
+export interface PresentersDataType {
+  presenters: {
+    data: PresenterItemProps[];
+  };
 }
