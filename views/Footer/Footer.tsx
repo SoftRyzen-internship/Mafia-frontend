@@ -27,7 +27,7 @@ export const Footer: FC = () => {
               <NavigationRow position="footer" />
             </div>
 
-            <Contacts className="" />
+            <Contacts />
             <SocialsMenu className={css.socialsMenu} />
           </div>
           <TopButtonHolder />
