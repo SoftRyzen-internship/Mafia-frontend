@@ -12,7 +12,7 @@ function getIconByName(icon: IconBtnName): any | null {
   switch (icon.toLowerCase()) {
     case 'cross':
       iconRef = crossIcon;
-      iconFunction = iconFunction + ' "Закрити"';
+      iconFunction = iconFunction + ' Закрити';
       iconLabel = iconLabel + ' з хрестиком';
       break;
 
@@ -24,8 +24,8 @@ function getIconByName(icon: IconBtnName): any | null {
 
     case 'scroll':
       iconRef = upIcon;
-      iconFunction = iconFunction + ' "Повернутись до початку"';
-      iconLabel = iconLabel + ' з стрілкою вгору';
+      iconFunction = iconFunction + ' Повернутись до початку';
+      iconLabel = iconLabel + ' зі стрілкою вгору';
       break;
 
     default:
