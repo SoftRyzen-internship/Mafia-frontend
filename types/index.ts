@@ -243,3 +243,36 @@ export interface FooterLinkItemProps {
   title: string;
   href: string;
 }
+
+type PricingPlacementOptions = 'kids-mafia' | 'corporate';
+
+export interface PricingProps {
+  variant: PricingPlacementOptions;
+}
+
+export type PriceRateInfo = {
+  rateType: string;
+  amount: number;
+  presenters: number;
+  duration: number;
+  extraPlayerPrice: number;
+  playersInTeam: number | null;
+  maxPlayersInTeam: number | null;
+};
+
+export type PriceInfo = {
+  id: number;
+  attributes: PriceRateInfo;
+};
+
+export type PricesData = PriceInfo[] | undefined;
+
+export interface PricesDataType {
+  prices: {
+    data: PricesData;
+  };
+}
+
+export interface PriceCardProps {
+  rate: PriceRateInfo;
+}

@@ -1,20 +1,22 @@
 import classNames from 'classnames';
 
+import { fetchPricing } from '@/utils/api/fetchPricing';
+
 import { Heading } from '@/components/Heading';
 import { PriceCard } from '@/components/PriceCard';
 
+import { PricingProps } from '@/types';
+
 import css from './Pricing.module.css';
 
-export interface PricingProps {
-  page: 'kids-mafia' | 'corporate';
-}
+export const Pricing: React.FC<PricingProps> = async ({ variant }) => {
+  const pricesInfo = await fetchPricing();
 
-export const Pricing = ({ page }) => {
   const sectionStyles = classNames(
     'py-[80px] bg-no-repeat bg-center bg-cover',
     {
-      [css.sectionKids]: page === 'kids-mafia',
-      [css.sectionCorporate]: page === 'corporate',
+      [css.sectionKids]: variant === 'kids-mafia',
+      [css.sectionCorporate]: variant === 'corporate',
     },
   );
   return (
@@ -28,8 +30,12 @@ export const Pricing = ({ page }) => {
           Вартість
         </Heading>
         <ul className="flex flex-wrap justify-center gap-6">
-          <PriceCard />
-          <PriceCard />
+          {pricesInfo &&
+            pricesInfo.map(info => (
+              <PriceCard key={info.id} rate={info.attributes} />
+            ))}
+          {/* <PriceCard />
+          <PriceCard /> */}
         </ul>
       </div>
     </section>
