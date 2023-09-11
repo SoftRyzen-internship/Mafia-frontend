@@ -1,6 +1,6 @@
 import { request } from 'graphql-request';
 
-import { GET_SCHEDULE } from '@/components/api';
+import { GET_SCHEDULE } from '@/api';
 import { ScheduleDataType, ScheduleItemProps } from '@/types';
 
 const baseURL = 'https://mafia-cms.onrender.com/graphql';
