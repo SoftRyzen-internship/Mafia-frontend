@@ -1,4 +1,11 @@
-import { HTMLAttributes } from 'react';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
+
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  RegisterOptions,
+} from 'react-hook-form';
 
 export interface LogoProps {
   href: string;
@@ -64,6 +71,7 @@ export interface SocialIconProps {
 
 export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
   className?: string;
@@ -116,6 +124,23 @@ export interface ContactsProps {
   className?: string;
 }
 
+export interface MafiaSchoolSectionData {
+  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
+  level?: HeadingComponentProps['tag'];
+  content?: string;
+  variant?: HeadingComponentProps['variant'];
+  src?: string;
+  alt?: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface MafiaSchoolHeroData {
+  sections: MafiaSchoolSectionData[];
+}
+
 export interface ClubKidsMafiaCardProps {
   subtitle: string;
   text: string;
@@ -130,6 +155,11 @@ interface IKidsMafiaCard {
 export interface KidsMafiaConditionsProps {
   conditions: { title: string; cards: IKidsMafiaCard[] };
   btn: string;
+}
+
+export interface IPortal {
+  children: ReactNode;
+  setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface ScheduleProps {
@@ -173,4 +203,78 @@ export interface HallFameCustomCardProps {
   title?: string;
   src?: string;
   alt?: string;
+}
+
+// ---- FORM START ---
+
+export type InputT = {
+  id: string;
+  label: string;
+  type?: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export type TextAreaT = {
+  id: string;
+  label: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export interface TextAreaProps {
+  textarea: TextAreaT;
+  height: number;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface InputProps {
+  input: InputT;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface FormProps {
+  classes?: string;
+}
+
+// ---- FORM END ---
+
+export interface FooterLinkItemProps {
+  [any: string]: string;
+  title: string;
+  href: string;
+}
+
+export interface ITournament {
+  title: string;
+  type: string;
+  playersInTeam: number;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        alternativeText: string;
+      };
+    };
+  };
+}
+
+export interface ITournamentItem {
+  id: string;
+  attributes: ITournament;
+}
+
+export interface ITournamentsData {
+  tournaments: {
+    data: ITournamentItem[];
+  };
+}
+
+export interface TournamentBlockProps {
+  tournament: ITournament;
 }

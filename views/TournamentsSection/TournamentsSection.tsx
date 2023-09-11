@@ -1,70 +1,23 @@
 'use client';
 
 import React, { FC, useEffect, useState } from 'react';
-import { gql } from 'graphql-request';
+
 import classNames from 'classnames';
+import { request } from 'graphql-request';
 
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { TournamentBlock } from '@/components/TournamentBlock';
 
+import { ITournamentItem, ITournamentsData } from '@/types';
+
+import { GET_TOURNAMENTS } from '@/api/getTournaments';
+
 import data from '@/data/tournaments.json';
 
 import s from './TournamentsSection.module.css';
 
-export const GET_TOURNAMENTS = gql`
-  query {
-    tournaments(sort: "id:asc") {
-      data {
-        id
-        attributes {
-          title
-          type
-          playersInTeam
-          description
-          image {
-            data {
-              attributes {
-                url
-                alternativeText
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
-import { request } from 'graphql-request';
-
 const BASE_URL = 'https://mafia-cms.onrender.com/graphql';
-
-export interface ITournament {
-  title: string;
-  type: string;
-  playersInTeam: number;
-  description: string;
-  image: {
-    data: {
-      attributes: {
-        url: string;
-        alternativeText: string;
-      };
-    };
-  };
-}
-
-export interface ITournamentItem {
-  id: string;
-  attributes: ITournament;
-}
-
-export interface ITournamentsData {
-  tournaments: {
-    data: ITournamentItem[];
-  };
-}
 
 export const TournamentsSection: FC = () => {
   const { title, text } = data;

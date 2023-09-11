@@ -6,11 +6,7 @@ import { Paragraph } from '../Paragraph';
 
 import s from './TournamentBlock.module.css';
 
-import { ITournament } from '@/views/TournamentsSection';
-
-interface TournamentBlockProps {
-  tournament: ITournament;
-}
+import { TournamentBlockProps } from '@/types';
 
 export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
   const { title, type, playersInTeam, description, image } = tournament;

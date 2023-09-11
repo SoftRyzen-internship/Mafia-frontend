@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "title": "Mafia Club Odessa",
+    "description": "Запрошуємо поринути у світ стратегії та інтриг клубу спортивної мафії",
+    "base": "http://localhost:3000",
+    "keywords": "Mafia Club Odessa, клуб мафії, спортивна мафія, мафія Одеса"
+  },
+  "twitter": {
+    "title": "Mafia Club Odessa - поринь у світ спортивної мафії",
+    "card": "summary_large_image",
+    "images": [
+      {
+        "url": "/images/common/ogp-image-big.jpg",
+        "width": 1200,
+        "height": 630,
+        "alt": "Одеса мафія клуб"
+      }
+    ],
+    "description": "Mafia Club Odessa - поринь у світ спортивної мафії"
+  },
+  "openGraph": {
+    "images": [
+      {
+        "url": "/images/common/ogp-image-small.jpg",
+        "width": 800,
+        "height": 600,
+        "alt": "Одеса мафія клуб"
+      }
+    ],
+    "description": "Клуб спортивної мафії у місті Одеса",
+    "type": "website",
+    "title": "Mafia Club Odessa"
+  }
+}

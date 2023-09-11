@@ -13,7 +13,7 @@ export const IconBtn: FC<IconBtnProps> = ({
   reverse = false,
   classes,
 }) => {
-  const { iconRef: Icon } = getIconByName(icon);
+  const { iconRef: Icon, iconFunction, iconLabel } = getIconByName(icon);
 
   const btnStyles: string = getIconBtnStyles(icon, false);
   const iconStyles: string = getIconBtnStyles(icon, true);
@@ -23,11 +23,11 @@ export const IconBtn: FC<IconBtnProps> = ({
       type="button"
       onClick={onClick}
       className={`${btnStyles} ${classes && classes}`}
-      aria-label="icon-button"
+      aria-label={iconFunction}
     >
       <Icon
         className={`${iconStyles} ${reverse ? 'rotate-180' : ''}`}
-        aria-label={`${icon} icon`}
+        aria-label={iconLabel}
       />
     </button>
   );
