@@ -64,6 +64,7 @@ export interface SocialIconProps {
 
 export interface ButtonPrimaryProps {
   buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
   className?: string;
@@ -114,6 +115,23 @@ type ContactsVariants = 'footer' | 'mobile-menu';
 export interface ContactsProps {
   variant?: ContactsVariants;
   className?: string;
+}
+
+export interface MafiaSchoolSectionData {
+  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
+  level?: HeadingComponentProps['tag'];
+  content?: string;
+  variant?: HeadingComponentProps['variant'];
+  src?: string;
+  alt?: string;
+  images?: {
+    src: string;
+    alt: string;
+  }[];
+}
+
+export interface MafiaSchoolHeroData {
+  sections: MafiaSchoolSectionData[];
 }
 
 export interface ClubKidsMafiaCardProps {
@@ -174,3 +192,48 @@ export interface HallFameCustomCardProps {
   src?: string;
   alt?: string;
 }
+
+// ---- FORM START ---
+
+import {
+  FieldErrors,
+  FieldValues,
+  UseFormRegister,
+  RegisterOptions,
+} from 'react-hook-form';
+
+export type InputT = {
+  id: string;
+  label: string;
+  type?: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export type TextAreaT = {
+  id: string;
+  label: string;
+  placeholder: string;
+  name: string;
+  options: Record<string, RegisterOptions>;
+};
+
+export interface TextAreaProps {
+  textarea: TextAreaT;
+  height: number;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface InputProps {
+  input: InputT;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+}
+
+export interface FormProps {
+  classes?: string;
+}
+
+// ---- FORM END ---

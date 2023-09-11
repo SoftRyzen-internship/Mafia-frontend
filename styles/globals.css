@@ -117,3 +117,29 @@ body {
     @apply md:mt-[156px] xl:mt-[279px] smOnly:mt-[136px];
   }
 }
+
+/* Autofill behavior */
+.input-autofill:autofill,
+.input-autofill:-webkit-autofill,
+.input-autofill:-moz-autofill,
+.input-autofill:-ms-input-placeholder {
+  @apply bg-white/5 transition-all delay-0 duration-[5000s] ease-in-out;
+}
+
+/* Form */
+
+.label-behavior {
+  @apply relative cursor-pointer text-[16px] leading-[1.5] text-white-light;
+}
+
+.input-behavior {
+  @apply block w-full rounded-normal bg-white/5 px-[16px] py-[12px] text-[16px] italic leading-[1.5] text-white-light placeholder-primary-dark-700/40 shadow-input outline-none transition-all duration-300 hover:shadow-inputHover hover:outline-1 hover:outline-primary-light-400 focus:shadow-inputFocus focus:outline-1 focus:outline-primary-light-600;
+}
+
+.input-error-behavior {
+  @apply shadow-inputError outline-notify-error;
+}
+
+.error-behavior {
+  @apply absolute -bottom-[4px] left-0 text-notify-error;
+}
