@@ -1,6 +1,6 @@
 import { request } from 'graphql-request';
 
-import { GET_PRESENTERS } from '@/components/api';
+import { GET_PRESENTERS } from '@/api';
 import { PresentersDataType, PresenterItemProps } from '@/types';
 
 const baseURL = 'https://mafia-cms.onrender.com/graphql';
