@@ -178,6 +178,11 @@ export interface ScheduleDataType {
   };
 }
 
+export interface MobileMenuBtnProps {
+  className?: string;
+  onClick: () => void;
+}
+
 export interface HallFameCup {
   title: string;
 }
