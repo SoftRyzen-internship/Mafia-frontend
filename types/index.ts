@@ -124,21 +124,26 @@ export interface ContactsProps {
   className?: string;
 }
 
-export interface MafiaSchoolSectionData {
-  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
-  level?: HeadingComponentProps['tag'];
-  content?: string;
-  variant?: HeadingComponentProps['variant'];
-  src?: string;
-  alt?: string;
-  images?: {
-    src: string;
-    alt: string;
-  }[];
+export interface MafiaSchoolImageData {
+  src: string;
+  alt: string;
 }
 
 export interface MafiaSchoolHeroData {
-  sections: MafiaSchoolSectionData[];
+  heading: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+    variant: string;
+  };
+  paragraph: string;
+  subtitle: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+  };
+  images: {
+    main: MafiaSchoolImageData;
+    grid: MafiaSchoolImageData[];
+  };
 }
 
 export interface ClubKidsMafiaCardProps {

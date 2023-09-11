@@ -1,10 +1,10 @@
 .mafiaSchoolHero {
-  background-image: url('/images/mafiaschool/bgmafiaschool.webp');
+  background-image: url('/images/kidsMafia/bgmafiaschool.webp');
   background-repeat: no-repeat;
 }
 
 @media (min-resolution: 192dpi), (min-width: 2dppx) {
   .mafiaSchoolHero {
-    background-image: url('/images/mafiaschool/bgmafiaschool@2x.webp');
+    background-image: url('/images/kidsMafia/bgmafiaschool@2x.webp');
   }
 }
