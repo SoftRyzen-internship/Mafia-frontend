@@ -234,6 +234,13 @@ better to stop the local server then start again.
 | ----------- | ----------- | --------------------------------------------- |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
+- ### Form
+
+| Prop      | Type   | Description                                     |
+| --------- | ------ | ----------------------------------------------- |
+| `classes` | string | Optional, add additional tailwind classes,      |
+|           |        | e.g. to position the form or set the form width |
+
 - ### Slider
 
 The `Slider` component is created using `swiper` library. It is important to
