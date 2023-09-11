@@ -1,0 +1,58 @@
+.logo {
+  @apply relative mt-1 shrink-0 md:mr-12 md:mt-[14px] xl:mr-[478px] xl:mt-[17px] xxl:mr-[654px] xxl:mt-0 smOnly:mb-[104px];
+}
+
+.socialsMenu {
+  @apply mt-[60px] w-full md:mt-[24px] md:w-[195px] smOnly:justify-center;
+}
+
+.logoWrapper {
+  @apply relative flex flex-col items-center  md:flex-row md:items-start md:pl-[6px] xl:pl-0 xxl:pl-[46px];
+}
+
+.menuWrapper {
+  @apply flex w-full flex-wrap md:mr-[44px] md:h-[208px] md:flex-col md:content-between xl:mr-[94px] xxl:mr-[228px] smOnly:justify-between;
+}
+
+.footerLinksWrapper {
+  @apply flex flex-col items-center border-t border-[rgba(115,115,115,0.50)] pt-6 xl:container xl:flex-row xl:items-center xl:justify-between;
+}
+.logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  background-image: url('/images/common/logoBgsvg.svg');
+  width: 200px;
+  height: 200px;
+  background-color: rgba(217, 217, 217, 0.15);
+  filter: blur(70px);
+}
+
+@media screen and (min-width: 768px) {
+  .logo::after {
+    width: 150px;
+    height: 150px;
+    top: -14px;
+    left: -24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo::after {
+    width: 200px;
+    height: 150px;
+    top: -17px;
+    left: -30px;
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .logo::after {
+    width: 200px;
+    height: 150px;
+    top: -3px;
+    left: -6px;
+  }
+}

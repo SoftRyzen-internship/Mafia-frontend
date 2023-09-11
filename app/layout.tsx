@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import React from 'react';
 import { Montserrat, Raleway } from 'next/font/google';
 
+import { Footer } from '@/views/Footer';
 import data from '@/data/common.json';
 
 const montserrat = Montserrat({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         {children}
+        <Footer />
       </body>
     </html>
   );
