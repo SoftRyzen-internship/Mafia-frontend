@@ -296,7 +296,7 @@ export interface PresentersDataType {
     data: PresenterItemProps[];
   };
 }
-  
+
 type PricingPlacementOptions = 'kids-mafia' | 'corporate';
 
 export interface PricingProps {
@@ -328,4 +328,10 @@ export interface PricesDataType {
 
 export interface PriceCardProps {
   rate: PriceRateInfo;
+}
+
+export interface SkillsListItemProps {
+  text: string;
+  icon: string;
+  idx: number;
 }
