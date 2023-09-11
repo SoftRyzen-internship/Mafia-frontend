@@ -329,3 +329,9 @@ export interface PricesDataType {
 export interface PriceCardProps {
   rate: PriceRateInfo;
 }
+
+export interface SkillsListItemProps {
+  text: string;
+  icon: string;
+  idx: number;
+}
