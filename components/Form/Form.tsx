@@ -12,7 +12,7 @@ import { Input } from '@/components/Input';
 import { TextArea } from '@/components/TextArea';
 import { ButtonPrimary } from '@/components/Buttons/ButtonPrimary';
 
-export const Form: React.FC<FormProps> = ({ classes }) => {
+export const Form: React.FC<FormProps> = ({ classes, onClose }) => {
   const dataString = JSON.stringify(formBuildingData);
   const data = JSON.parse(dataString);
   const { inputs, textarea, button } = data;
@@ -35,8 +35,31 @@ export const Form: React.FC<FormProps> = ({ classes }) => {
     }
   }, [reset, isSubmitSuccessful]);
 
-  const onSubmit: SubmitHandler<FieldValues> = (formData: FieldValues) => {
-    console.log(formData);
+  const onSubmit: SubmitHandler<FieldValues> = async (
+    formData: FieldValues,
+  ) => {
+    function sendData(data: FieldValues): Promise<FieldValues> {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(data);
+        }, 3000);
+      });
+    }
+
+    try {
+      const result = await sendData(formData);
+      console.log(result);
+      if (onClose) {
+        onClose();
+      }
+    } catch (error) {
+      console.log(error.message);
+      if (onClose) {
+        onClose();
+      }
+    } finally {
+      reset();
+    }
   };
 
   return (

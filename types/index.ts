@@ -157,7 +157,6 @@ export interface KidsMafiaConditionsProps {
   btn: string;
 }
 
-
 export interface IPortal {
   children: ReactNode;
   // eslint-disable-next-line no-unused-vars
@@ -241,6 +240,7 @@ export interface InputProps {
 
 export interface FormProps {
   classes?: string;
+  onClose?: () => void;
 }
 
 // ---- FORM END ---
