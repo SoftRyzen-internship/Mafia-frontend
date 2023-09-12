@@ -67,7 +67,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         <Header />
         {children}
-        <SocialsMenu />
+        <SocialsMenu variant="fixed" />
         <Footer />
       </body>
     </html>

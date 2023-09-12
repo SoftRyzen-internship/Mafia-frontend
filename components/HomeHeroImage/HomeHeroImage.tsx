@@ -53,8 +53,24 @@ export const HomeHeroImage = ({ images, alt }) => {
   return (
     <>
       {image && (
-        <div>
-          <Image src={image} alt={alt} width={400} height={600} />
+        <div
+          className="mb-5 w-full rounded-normal 
+            md:mb-9 md:h-[272px] md:w-[600px]
+            xl:absolute xl:right-8 xl:top-[80px] xl:mb-0 xl:h-[644px] xl:w-[493px]
+            xxl:bottom-[120px] xxl:top-auto xxl:h-[778px] xxl:w-[716px]"
+        >
+          <Image
+            src={image}
+            alt={alt}
+            width={716}
+            height={778}
+            loading="lazy"
+            sizes="(max-width: 767px) 328px, (max-width: 1279px) 600px, (max-width: 1751px) 493px, 716px"
+            className="h-auto w-full rounded-normal object-cover
+              md:h-[272px] md:w-[600px]
+              xl:h-[644px] xl:w-[493px]
+              xxl:h-[778px] xxl:w-[716px]"
+          />
         </div>
       )}
     </>
