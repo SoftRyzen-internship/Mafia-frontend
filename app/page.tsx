@@ -4,6 +4,7 @@ import data from '@/data/common.json';
 
 const Home = () => {
   const mainPage = data.mainPage;
+
   return (
     <>
       <Title>{mainPage.title}</Title>
