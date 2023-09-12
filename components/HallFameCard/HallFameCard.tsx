@@ -63,7 +63,7 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
               return (
                 <li
                   key={index}
-                  className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:p-3 md:text-base"
+                  className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:text-base"
                 >
                   {Icon && <Icon className="h-10 w-10" />}
                   <Paragraph className="overflow-wrap break-words text-[10px] md:text-[16px]">

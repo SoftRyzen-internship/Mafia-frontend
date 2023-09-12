@@ -1,6 +1,6 @@
 import { request } from 'graphql-request';
 
-import { GET_HALLFAME_CARDS } from '@/components/api';
+import { GET_HALLFAME_CARDS } from '@/components/api/hallOfFameCardsQuery';
 import { HallFameCardDataType, HallFameCardProps } from '@/types';
 
 const baseURL = 'https://mafia-cms.onrender.com/graphql';
