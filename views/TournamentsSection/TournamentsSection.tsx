@@ -1,6 +1,4 @@
-'use client';
-
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC } from 'react';
 
 import classNames from 'classnames';
 import { request } from 'graphql-request';
@@ -17,22 +15,20 @@ import data from '@/data/tournaments.json';
 
 import s from './TournamentsSection.module.css';
 
-const BASE_URL = 'https://mafia-cms.onrender.com/graphql';
+const BASE_URL = process.env.API_BASE_URL;
 
-export const TournamentsSection: FC = () => {
-  const { title, text } = data;
-  const [tournaments, setTournaments] = useState<ITournamentItem[] | null>(
-    null,
+async function getTournaments(): Promise<ITournamentItem[]> {
+  const data: ITournamentsData = await request(
+    BASE_URL as string,
+    GET_TOURNAMENTS,
   );
+  return data.tournaments.data;
+}
 
-  async function getTournaments(): Promise<void> {
-    const data: ITournamentsData = await request(BASE_URL, GET_TOURNAMENTS);
-    setTournaments(data.tournaments.data);
-  }
+export const TournamentsSection: FC = async () => {
+  const { title, text } = data;
 
-  useEffect(() => {
-    getTournaments();
-  }, []);
+  const tournaments = await getTournaments();
 
   return (
     <section className={classNames('pb-0', s.section)}>
