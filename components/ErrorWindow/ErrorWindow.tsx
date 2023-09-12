@@ -2,7 +2,7 @@ import SvgSmileSad from '@/public/icons/smile-sad.svg';
 
 import { Paragraph } from '@/components/Paragraph';
 
-import data from "@/data//error.json"
+import data from '@/data//error.json';
 
 export const ErrorWindow = () => {
   return (
@@ -10,7 +10,7 @@ export const ErrorWindow = () => {
       <SvgSmileSad className="mx-auto mb-3 h-[60px] w-[60px]" />
       <Paragraph variant="large" className="text-center">
         {data.error_message}
-        <span className="block md:inline">  {data.advice}</span>
+        <span className="block md:inline"> {data.advice}</span>
       </Paragraph>
     </div>
   );
