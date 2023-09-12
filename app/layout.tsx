@@ -8,7 +8,7 @@ import meta from '@/data/metadata';
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
 // import { SocialsMenu } from '@/components/SocialsMenu';
-import { KidsMafia } from '@/components/KidsMafia';
+import { KidsMafia } from '@/views/KidsMafia';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],

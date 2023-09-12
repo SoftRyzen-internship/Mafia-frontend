@@ -1,0 +1,11 @@
+.sectionBg {
+  background-image: linear-gradient(
+      rgba(22, 20, 28, 0.4),
+      rgba(22, 20, 28, 0.4)
+    ),
+    url('../../public/images/home/bgKidsWide-1x.webp'),
+    linear-gradient(#16141c66, #16141c66);
+  background-repeat: no-repeat;
+  background-position: 50% 56%;
+  /* background-size: cover; */
+}

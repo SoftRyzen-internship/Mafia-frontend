@@ -6,14 +6,15 @@ import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { ButtonSecondary } from '@/components/Buttons';
-import { SkillsList } from '../SkillsList';
+import { SkillsList } from '../../components/SkillsList';
 import { ButtonPrimary } from '@/components/Buttons';
+import css from './KidsMafia.module.css';
 
 import data from '@/data/kidsMafiaMainPage.json';
 
 export const KidsMafia: FC = () => {
   return (
-    <Section>
+    <Section className={`mx-auto max-w-[1920px] ${css.sectionBg}`}>
       <div className="container">
         <Heading
           shadow={data.title}
@@ -77,30 +78,3 @@ export const KidsMafia: FC = () => {
     </Section>
   );
 };
-
-// <Section>
-//   <div className="container">
-
-//     <div className=" xl:items-start">
-//       <div className="  ">
-//         <Image
-//           src={data.img1.src}
-//           alt={data.img1.alt}
-//           fill
-//           className="object-cover object-left-top"
-//           priority
-//         />
-//       </div>
-
-//       <ul className="    ">
-//         {data.text.map((text, idx) => (
-//           <li key={idx}>
-//             <Paragraph>{text}</Paragraph>
-//           </li>
-//         ))}
-//       </ul>
-
-//     </div>
-
-//   </div>
-// </Section>;
