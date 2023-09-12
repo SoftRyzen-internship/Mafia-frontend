@@ -262,7 +262,6 @@ export interface FooterLinkItemProps {
   href: string;
 }
 
-
 export interface ITournament {
   title: string;
   type: string;
@@ -291,6 +290,7 @@ export interface ITournamentsData {
 
 export interface TournamentBlockProps {
   tournament: ITournament;
+}
 
 export interface LoaderProps {
   size: number;
