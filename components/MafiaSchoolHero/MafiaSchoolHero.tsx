@@ -11,11 +11,12 @@ const typedData: MafiaSchoolHeroData = data as MafiaSchoolHeroData;
 
 const MafiaSchoolHero = () => {
   return (
-    <Section className={`container pt-8 md:pt-4 xl:pt-32 ${s.mafiaSchoolHero}`}>
+    <Section className={`container ${s.mafiaSchoolHero}`}>
       <Heading
         tag="h1"
         variant="main"
-        className="mb-[24px] text-[32px] font-extrabold text-white-light md:text-[40px] md:leading-[56px] xl:text-[52px] xl:leading-[80px]"
+        className="mb-[42px] mt-[62px] text-[32px] font-extrabold text-white-light md:mb-[32px] md:mt-[52px] md:text-[40px] md:leading-[56px] xl:mb-[35px] xl:mt-[41px] xl:text-[52px] xl:leading-[80px]"
+        shadow={typedData.heading.content}
       >
         {typedData.heading.content}
       </Heading>
