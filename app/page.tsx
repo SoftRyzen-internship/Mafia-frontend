@@ -4,7 +4,7 @@ import { Slider } from '@/components/Slider';
 import { SliderSchoolElement } from '@/components/SliderSchoolElement';
 import schoolData from '@/data/schoolSection.json';
 
-const Home = async () => {
+const Home = () => {
   return (
     <>
       <CorporateParties />

@@ -125,7 +125,7 @@ body {
 /* Form */
 
 .label-behavior {
-  @apply relative cursor-pointer text-[16px] leading-[1.5] text-white-light;
+  @apply relative block cursor-pointer text-[16px] leading-[1.5] text-white-light;
 }
 
 .input-behavior {
@@ -137,7 +137,13 @@ body {
 }
 
 .error-behavior {
-  @apply absolute -bottom-[4px] left-0 text-notify-error;
+  @apply absolute -bottom-[24px] left-[20px] text-[12px] font-light leading-[1.33] text-notify-error;
+}
+
+.error-behavior::before {
+  content: '';
+  background-image: url(/icons/error-cross.svg);
+  @apply absolute -left-[20px] -top-[2px] h-[16px] w-[16px] bg-cover bg-center bg-no-repeat;
 }
 
 /* Slider (school section) */

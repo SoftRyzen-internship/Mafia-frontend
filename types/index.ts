@@ -244,7 +244,15 @@ export interface InputProps {
 
 export interface FormProps {
   classes?: string;
+  center?: boolean | undefined;
+  setPopUpType: Dispatch<SetStateAction<'success' | 'error'>>;
 }
+
+export type FormData = {
+  userName: string;
+  phoneNumber: string;
+  userComment: string;
+};
 
 // ---- FORM END ---
 
@@ -253,7 +261,6 @@ export interface FooterLinkItemProps {
   title: string;
   href: string;
 }
-
 export interface SliderProps {
   section: 'school' | 'presenters' | 'corporate';
   pagination?: boolean;
@@ -367,4 +374,10 @@ export interface SkillsListItemProps {
   text: string;
   icon: string;
   idx: number;
+}
+
+export interface LoaderProps {
+  size: number;
+  color: string;
+  className?: string;
 }

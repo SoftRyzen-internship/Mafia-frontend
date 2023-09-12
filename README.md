@@ -234,13 +234,6 @@ better to stop the local server then start again.
 | ----------- | ----------- | --------------------------------------------- |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
-- ### Form
-
-| Prop      | Type   | Description                                     |
-| --------- | ------ | ----------------------------------------------- |
-| `classes` | string | Optional, add additional tailwind classes,      |
-|           |        | e.g. to position the form or set the form width |
-
 - ### Slider
 
 The `Slider` component is created using `swiper` library. It is important to
@@ -262,3 +255,29 @@ the `Slider` to extend beyond the `container`.
 | Prop      | Type        | Description                                        |
 | --------- | ----------- | -------------------------------------------------- |
 | `variant` | `corporate` | choose page placement: `corporate` or `kids-mafia` |
+
+- ### Form
+
+| Prop           | Type          | Description                                           |
+| -------------- | ------------- | ----------------------------------------------------- |
+| `classes`      | string        | Optional, add additional tailwind classes,            |
+|                |               | e.g. to position the form or set the form width       |
+|                |               |                                                       |
+| `setPopUpType` | void function | Required, setter function that will receive           |
+|                |               | either "success" or "error" to define which           |
+|                |               | type of popup window you need to render after         |
+|                |               | the form has been sent                                |
+|                |               |                                                       |
+| `center`       | boolean       | Optional, if you need to center the form heading text |
+
+- ### Loader
+
+| Prop       | Type   | Description                                           |
+| ---------- | ------ | ----------------------------------------------------- |
+| `className | string | Optional, add additional tailwind classes             |
+|            |        | to Loader CONTAINER,                                  |
+|            |        | e.g. to set the height and width                      |
+|            |        |                                                       |
+| `size`     | number | set size of the loader in pixels                      |
+|            |        |                                                       |
+| `color`    | string | set color of the loader in hex format, e.g. "#8D0B93" |

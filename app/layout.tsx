@@ -3,7 +3,7 @@ import '@/styles/globals.css';
 import React from 'react';
 import { Metadata } from 'next';
 import { Montserrat, Raleway } from 'next/font/google';
-import { meta } from '@/data/metadata';
+import meta from '@/data/metadata';
 
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';

@@ -1,4 +1,5 @@
 {
+  "heading": "Залиште ваші контактні дані, ми з вами зв'яжемося протягом години!",
   "inputs": [
     {
       "id": "i01",
@@ -8,7 +9,7 @@
       "options": {
         "required": true,
         "pattern": {
-          "value": "^[A-Za-zА-Яа-я' -]+$",
+          "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
           "message": "Невірно введене ім’я"
         },
         "minLength": { "value": 2, "message": "Не менше 2 символів" },
@@ -38,7 +39,6 @@
     "placeholder": "Ваш коментар...",
     "name": "userComment",
     "options": {
-      "required": true,
       "pattern": {
         "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ()s',.!? -]+$",
         "message": "Присутні недопустимі символи"
