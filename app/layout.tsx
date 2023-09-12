@@ -5,7 +5,9 @@ import { Metadata } from 'next';
 import { Montserrat, Raleway } from 'next/font/google';
 import meta from '@/data/metadata';
 
+import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
+import { SocialsMenu } from '@/components/SocialsMenu';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -29,12 +31,10 @@ export default function RootLayout({
   return (
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
-        {/* TODO: this component should include all shared components. Put header, footer and social media icons or whatever you need to this component in appropriate places around children */}
-        <div>THIS IS LAYOUT</div>
+        <Header />
         {children}
-
+        <SocialsMenu />
         <div id="modal" />
-
         <Footer />
       </body>
     </html>

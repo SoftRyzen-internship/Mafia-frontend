@@ -1,0 +1,23 @@
+{
+  "title": "Вартість",
+  "priceCard": {
+    "currency": "грн*",
+    "hosts": {
+      "singular": "ведучий",
+      "plural": "ведучих"
+    },
+    "players": "осіб у команді**",
+    "gameDuration": {
+      "description": "тривалість - ",
+      "time": "год"
+    },
+    "notes": {
+      "extra": "*кожний наступний гравець - +",
+      "maxPlayers": {
+        "description": "**максимальна кількість гравців - ",
+        "players": "осіб"
+      }
+    }
+  },
+  "button": "Замовити"
+}

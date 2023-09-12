@@ -7,6 +7,7 @@ import cn from 'classnames';
 import { ButtonSecondaryProps } from '@/types';
 import SvgButtonLoader from '@/public/icons/buttons-loading.svg';
 import SvgArrowRight from '@/public/icons/arrow-right.svg';
+import css from './ButtonSecondary.module.css';
 
 export const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   linkto,
@@ -24,9 +25,10 @@ export const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
 
       'w-full h-12 md:w-[288px] md:h-14': buttonsize === 'large',
     },
-    'btn-secondary outline-without flex items-center justify-center gap-5 rounded-md border-[2px] border-primary-light-600 bg-body',
+    'outline-without flex items-center justify-center gap-5 rounded-md border-[2px] border-primary-light-600 bg-body',
     'px-3 text-base font-semibold text-white-light hover:border-primary-light-400 hover:bg-black-medium focus:border-primary-light-500',
     'active:border-primary-light-400 active:bg-black-medium active:text-primary-light-900 disabled:bg-gray-dark disabled:bg-none disabled:text-gray-medium',
+    css['btn-secondary'],
     className,
   );
 

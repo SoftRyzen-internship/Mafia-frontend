@@ -1,1 +1,1 @@
-export * from './reformatPhoneNumber';
+export * from './helpers/reformatPhoneNumber';
