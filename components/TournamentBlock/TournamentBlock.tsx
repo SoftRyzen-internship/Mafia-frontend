@@ -1,10 +1,7 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import classNames from 'classnames';
 import { Heading } from '../Heading';
 import { Paragraph } from '../Paragraph';
-
-import s from './TournamentBlock.module.css';
 
 import { TournamentBlockProps } from '@/types';
 
@@ -17,18 +14,13 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
   const htmlString = parseTextToHTML(description);
 
   return (
-    <div className={classNames('pb-20 pt-[96px]', s.tournamentBlock)}>
-      <div
-        className={classNames(
-          'container md:flex md:items-center md:gap-6 ',
-          s.tournamentContainer,
-        )}
-      >
+    <div className="tournament-block pb-20 pt-[96px]">
+      <div className="tournament-container container md:flex md:items-center md:gap-6">
         <div className="w-full xl:w-[516px] smOnly:mb-[60px]">
           <Heading
             tag="h3"
             variant="secondary"
-            className={classNames('mb-[34px] xl:mb-8', s.title)}
+            className="tournament-block-title mb-[34px] xl:mb-8"
           >
             {title}
           </Heading>
@@ -40,9 +32,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
           </Paragraph>
           <div dangerouslySetInnerHTML={{ __html: htmlString }} />
         </div>
-        <div
-          className={`${s.imgWrapper} xxl-min-w-[716px] relative flex min-h-[288px] items-center  justify-center bg-[#040404] p-5 md:h-[285px]  md:min-w-[236px] md:basis-[236px]  xl:min-h-[483px]  xl:min-w-[493px] xl:basis-[493px] xxl:basis-[716px]`}
-        >
+        <div className="tournament-block-img-wrapper xxl-min-w-[716px] relative flex min-h-[288px] items-center  justify-center bg-[#040404] p-5 md:h-[285px]  md:min-w-[236px] md:basis-[236px]  xl:min-h-[483px]  xl:min-w-[493px] xl:basis-[493px] xxl:basis-[716px]">
           <Image
             src={url}
             alt={alternativeText || title}

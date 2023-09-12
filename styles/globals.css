@@ -86,3 +86,65 @@ body {
   background-image: url(/icons/error-cross.svg);
   @apply absolute -left-[20px] -top-[2px] h-[16px] w-[16px] bg-cover bg-center bg-no-repeat;
 }
+
+/* Tournaments */
+.tournament-block:nth-child(2n) .tournament-container {
+  @apply flex-row-reverse justify-start;
+}
+.tournament-block:nth-child(2n + 1) .tournament-container {
+  @apply justify-end;
+}
+
+.tournament-block:nth-child(2n) {
+  background-color: rgba(22, 20, 28, 0.4);
+}
+
+.tournament-block-title {
+  @apply relative w-full;
+}
+
+.tournament-block-title::before {
+  content: '';
+  @apply absolute -left-6 top-1/2 min-h-[64px] w-full -translate-y-1/2 bg-grad_400;
+}
+
+.tournament-block-img-wrapper::before {
+  content: '';
+  @apply absolute top-[95px] block h-[2px] w-[88px] overflow-hidden rounded-[1px];
+}
+
+.tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+  @apply -right-6 bg-grad_900;
+}
+
+.tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+  @apply -left-6 bg-grad_1000;
+}
+
+@media (min-width: 768px) {
+  .tournament-block-img-wrapper::before {
+    @apply top-[49px] w-[228px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[200px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[200px];
+  }
+}
+
+@media (min-width: 1280px) {
+  .tournament-block-img-wrapper::before {
+    @apply top-[172px] w-[286px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[206px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[206px];
+  }
+}
