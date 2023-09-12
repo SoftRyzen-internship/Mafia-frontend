@@ -1,10 +1,25 @@
 .mafiaSchoolHero {
-  background-image: url('/images/mafiaschool/bgmafiaschool.webp');
+  background-image: image-set(
+    url('/images/kidsMafia/bgmafiaschoolmob.webp') 1x,
+    url('/images/kidsMafia/bgmafiaschoolmob@2x.webp') 2x
+  );
   background-repeat: no-repeat;
 }
 
-@media (min-resolution: 192dpi), (min-width: 2dppx) {
+@media screen and (min-width: 768px) {
   .mafiaSchoolHero {
-    background-image: url('/images/mafiaschool/bgmafiaschool@2x.webp');
+    background-image: image-set(
+      url('/images/kidsMafia/bgmafiaschooltab.webp') 1x,
+      url('/images/kidsMafia/bgmafiaschooltab@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mafiaSchoolHero {
+    background-image: image-set(
+      url('/images/kidsMafia/bgmafiaschooldesk.webp') 1x,
+      url('/images/kidsMafia/bgmafiaschooldesc@2x.webp') 2x
+    );
   }
 }
