@@ -39,6 +39,7 @@ export const MobileMenu = () => {
 
   const menuClasses = classNames(
     [css.bg_image],
+    { 'overflow-auto': showMenu },
     'absolute left-0 top-0 h-[100vh] w-[calc(100vw-24px)] bg-body sm:min-w-fit md:w-[calc(100vw*0.5)]',
   );
 
