@@ -54,7 +54,7 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
         />
 
         <div className="mx-auto my-0 ">
-          <h3 className="mb-2 text-center text-lg font-semibold">
+          <h3 className="mb-2 text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
             {cupsData.cupstitle}
           </h3>
           <ul className="flex list-none flex-row text-sm font-semibold md:text-base xl:p-10">
@@ -65,8 +65,10 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
                   key={index}
                   className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:text-base"
                 >
-                  {Icon && <Icon className="h-10 w-10" />}
-                  <Paragraph className="overflow-wrap break-words text-[10px] md:text-[16px]">
+                  {Icon && (
+                    <Icon className="mb-[24px] h-10 w-10 xl:mb-[16px] xxl:mb-[15px]" />
+                  )}
+                  <Paragraph className="overflow-wrap max-w-[80px] break-words text-[12px] md:max-w-[100px] md:text-[16px]">
                     {cup.competition_name}
                   </Paragraph>
                 </li>
