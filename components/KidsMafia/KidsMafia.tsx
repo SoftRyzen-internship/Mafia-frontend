@@ -17,13 +17,12 @@ export const KidsMafia: FC = () => {
       <div className="container">
         <Heading
           shadow={data.title}
-          className="mb-[60px] md:mb-[100px] xl:mb-[85px]"
+          className="mb-[60px] md:mb-[100px] xl:mb-[85px] xxl:mb-[100px]"
         >
           {data.title}
         </Heading>
-
-        <div className="mb-[60px] md:flex md:flex-wrap xl:mb-[88px] xl:h-[368px] xl:flex-col">
-          <div className="relative h-[315px] w-full overflow-hidden rounded-md md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px] smOnly:mb-[60px]">
+        <div className="mb-[60px] md:flex md:flex-wrap xl:mb-[88px] xl:h-[368px] xl:flex-col xl:content-between">
+          <div className="relative h-[315px] w-full overflow-hidden rounded-md md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px] xxl:w-[568px] smOnly:mb-[60px]">
             <Image
               src={data.img1.src}
               alt={data.img1.alt}
@@ -33,7 +32,7 @@ export const KidsMafia: FC = () => {
             />
           </div>
 
-          <ul className="grid shrink gap-6 xl:mr-[23px] xl:w-[465px] smOnly:mb-9 mdOnly:ml-[22px] mdOnly:w-[290px]">
+          <ul className="grid shrink gap-6 xl:mr-[23px] xl:w-[465px] xl:gap-9 xxl:mr-[220px] xxl:w-[496px] smOnly:mb-9 mdOnly:ml-[22px] mdOnly:w-[290px]">
             {data.text.map((text, idx) => (
               <li key={idx}>
                 <Paragraph>{text}</Paragraph>
@@ -50,7 +49,7 @@ export const KidsMafia: FC = () => {
         </div>
 
         <div className="mb-9 md:relative md:mb-8 xl:mb-[68px]">
-          <div className="relative h-[260px] w-full overflow-hidden rounded-md md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px] xl:h-[352px] xl:w-[493px] smOnly:mb-[60px]">
+          <div className="relative h-[260px] w-full overflow-hidden rounded-md md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px] xl:h-[352px] xl:w-[493px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]">
             <Image
               src={data.img2.src}
               alt={data.img2.alt}
@@ -68,7 +67,6 @@ export const KidsMafia: FC = () => {
           </Heading>
           <SkillsList />
         </div>
-
         <ButtonPrimary
           buttonsize="large"
           className="md:mx-auto xl:h-12 xl:w-[301px] xxl:w-[336px]"
