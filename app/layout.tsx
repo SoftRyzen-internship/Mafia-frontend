@@ -8,6 +8,7 @@ import meta from '@/data/metadata';
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
 import { SocialsMenu } from '@/components/SocialsMenu';
+import { KidsMafia } from '@/components/KidsMafia';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         <SocialsMenu />
         <div id="modal" />
+        <KidsMafia />
         <Footer />
       </body>
     </html>
