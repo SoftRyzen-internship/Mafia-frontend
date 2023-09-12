@@ -4,12 +4,12 @@ import React, { FC } from 'react';
 
 import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
-import { Paragraph } from '@/components/Paragraph';
+import { KidsMafiaTextList } from '@/components/KidsMafiaTextList';
 import { ButtonSecondary } from '@/components/Buttons';
 import { SkillsList } from '../../components/SkillsList';
 import { ButtonPrimary } from '@/components/Buttons';
-import css from './KidsMafia.module.css';
 
+import css from './KidsMafia.module.css';
 import data from '@/data/kidsMafiaMainPage.json';
 
 export const KidsMafia: FC = () => {
@@ -36,13 +36,7 @@ export const KidsMafia: FC = () => {
             />
           </div>
 
-          <ul className="grid shrink gap-6 xl:mr-[23px] xl:w-[465px] xxl:mr-[220px] xxl:w-[496px] smOnly:mb-9 mdOnly:ml-[22px] mdOnly:w-[290px]">
-            {data.text.map((text, idx) => (
-              <li key={idx}>
-                <Paragraph>{text}</Paragraph>
-              </li>
-            ))}
-          </ul>
+          <KidsMafiaTextList />
           <ButtonSecondary
             className=" md:mt-8 xl:h-12 xl:w-[301px] xxl:w-[336px] mdOnly:mx-auto"
             buttonsize="large"
