@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { Dispatch, HTMLAttributes, ReactNode, SetStateAction } from 'react';
 
 import {
   FieldErrors,
@@ -157,6 +157,11 @@ export interface KidsMafiaConditionsProps {
   btn: string;
 }
 
+export interface IPortal {
+  children: ReactNode;
+  setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
 export interface ScheduleProps {
   className?: string;
 }
@@ -249,6 +254,41 @@ export interface FooterLinkItemProps {
   href: string;
 }
 
+export interface SliderProps {
+  section: 'school' | 'presenters' | 'corporate';
+  pagination?: boolean;
+  autoplay?: boolean;
+  className?: string;
+}
+
+export interface SliderNavigationProps {
+  handlePrevClick: () => void;
+  handleNextClick: () => void;
+}
+
+export interface SliderImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+export interface PresenterImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface PresenterItemProps {
+  attributes: { name: string; description: string; img: PresenterImageType };
+}
+
+export interface PresentersDataType {
+  presenters: {
+    data: PresenterItemProps[];
+  };
+}
+
 type PricingPlacementOptions = 'kids-mafia' | 'corporate';
 
 export interface PricingProps {
@@ -280,4 +320,10 @@ export interface PricesDataType {
 
 export interface PriceCardProps {
   rate: PriceRateInfo;
+}
+
+export interface SkillsListItemProps {
+  text: string;
+  icon: string;
+  idx: number;
 }

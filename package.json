@@ -27,7 +27,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
     "react-hook-form-persist": "^3.0.0",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@graphql-codegen/typescript-graphql-request": "^5.0.0",

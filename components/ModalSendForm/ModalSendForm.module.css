@@ -1,0 +1,30 @@
+.background {
+  background-image: url('/images/hallfame/bghallfame.webp'),
+    linear-gradient(
+      90deg,
+      rgba(255, 5, 124, 0.13) 0%,
+      rgba(141, 11, 147, 0.13) 50%,
+      rgba(50, 21, 117, 0.13) 100%
+    );
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .hallFameListContainer {
+    background-image: url('/images/hallfame/bghallfametabl.webp');
+  }
+  @media (min-resolution: 192dpi), (min-width: 2dppx) {
+    .hallFameListContainer {
+      background-image: url('/images/hallfame/bghallfametabl@2x.webp');
+    }
+  }
+}
+
+@media (min-resolution: 192dpi), (min-width: 2dppx) {
+  .hallFameListContainer {
+    background-image: url('/images/hallfame/bghallfame@2x.webp');
+  }
+}

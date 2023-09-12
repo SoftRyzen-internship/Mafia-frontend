@@ -21,10 +21,6 @@ body {
   outline-offset: 0;
 }
 
-.btn-secondary:active svg > path {
-  stroke: #c964c2;
-}
-
 /* Functional Icon Buttons */
 
 .iconBtn {
@@ -142,4 +138,51 @@ body {
 
 .error-behavior {
   @apply absolute -bottom-[4px] left-0 text-notify-error;
+}
+
+/* Slider (school section) */
+
+#swiper
+  > .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal
+  > .swiper-pagination-bullet {
+  opacity: 0;
+  background-color: #737373;
+  transform: scale(1);
+  width: 5px;
+  height: 5px;
+}
+
+.swiper-pagination {
+  bottom: -10px !important;
+}
+
+#swiper
+  > .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal
+  > .swiper-pagination-bullet-active {
+  background-color: #f3f3f3;
+}
+
+.swiper-pagination-bullet-active-main,
+.swiper-pagination-bullet-active-main {
+  opacity: 1 !important;
+}
+
+.swiper-slide:hover > .alias {
+  color: #d01de1;
+}
+
+#swiper {
+  padding-top: 12px;
+}
+
+.swiper-wrapper {
+  margin-bottom: 44px;
+
+  @media screen and (min-width: 1752px) {
+    margin-bottom: 48px;
+  }
+}
+
+.swiper-slide:hover {
+  transform: translate3d(0, -12px, 0) !important;
 }
