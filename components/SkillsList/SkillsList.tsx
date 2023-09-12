@@ -9,7 +9,7 @@ import { SkillsListProps } from '@/types';
 export const SkillsList: FC<SkillsListProps> = ({ className }) => {
   return (
     <ul
-      className={`flex flex-col gap-6 md:w-[496px] xl:w-[699px] xl:flex-row xl:flex-wrap xxl:w-[864px] ${className}`}
+      className={`flex flex-col gap-6 md:w-[496px] xl:w-[699px] xl:flex-row xl:flex-wrap xxl:w-[844px] ${className}`}
     >
       {data.skills.map((skill, idx) => {
         const skillItemStyles = classNames(

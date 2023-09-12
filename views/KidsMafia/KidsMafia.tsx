@@ -23,17 +23,20 @@ export const KidsMafia: FC = () => {
           {data.title}
         </Heading>
         <div className="mb-[60px] md:flex md:flex-wrap xl:mb-[88px] xl:h-[368px] xl:flex-col xl:content-between">
-          <div className="relative h-[315px] w-full overflow-hidden rounded-md md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px] xxl:w-[568px] smOnly:mb-[60px]">
+          <div
+            className={`relative h-[348px] w-full overflow-hidden rounded-md md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px] xxl:w-[568px] smOnly:mb-[60px] ${css.imageBg}`}
+          >
             <Image
               src={data.img1.src}
               alt={data.img1.alt}
               fill
-              className="object-cover object-left-top"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              className="object-cover object-center"
               priority
             />
           </div>
 
-          <ul className="grid shrink gap-6 xl:mr-[23px] xl:w-[465px] xl:gap-9 xxl:mr-[220px] xxl:w-[496px] smOnly:mb-9 mdOnly:ml-[22px] mdOnly:w-[290px]">
+          <ul className="grid shrink gap-6 xl:mr-[23px] xl:w-[465px] xxl:mr-[220px] xxl:w-[496px] smOnly:mb-9 mdOnly:ml-[22px] mdOnly:w-[290px]">
             {data.text.map((text, idx) => (
               <li key={idx}>
                 <Paragraph>{text}</Paragraph>
@@ -55,7 +58,8 @@ export const KidsMafia: FC = () => {
               src={data.img2.src}
               alt={data.img2.alt}
               fill
-              className="object-cover object-left-top"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              className="object-cover object-center"
               priority
             />
           </div>

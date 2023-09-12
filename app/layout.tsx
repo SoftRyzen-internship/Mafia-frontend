@@ -35,7 +35,6 @@ export default function RootLayout({
         {children}
         <SocialsMenu />
         <div id="modal" />
-
         <Footer />
       </body>
     </html>
