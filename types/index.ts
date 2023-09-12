@@ -239,7 +239,15 @@ export interface InputProps {
 
 export interface FormProps {
   classes?: string;
+  center?: boolean | undefined;
+  setPopUpType: Dispatch<SetStateAction<'success' | 'error'>>;
 }
+
+export type FormData = {
+  userName: string;
+  phoneNumber: string;
+  userComment: string;
+};
 
 // ---- FORM END ---
 
@@ -247,4 +255,10 @@ export interface FooterLinkItemProps {
   [any: string]: string;
   title: string;
   href: string;
+}
+
+export interface LoaderProps {
+  size: number;
+  color: string;
+  className?: string;
 }
