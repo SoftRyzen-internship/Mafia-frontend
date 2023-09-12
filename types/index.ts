@@ -262,8 +262,39 @@ export interface FooterLinkItemProps {
   href: string;
 }
 
+
+export interface ITournament {
+  title: string;
+  type: string;
+  playersInTeam: number;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        alternativeText: string;
+      };
+    };
+  };
+}
+
+export interface ITournamentItem {
+  id: string;
+  attributes: ITournament;
+}
+
+export interface ITournamentsData {
+  tournaments: {
+    data: ITournamentItem[];
+  };
+}
+
+export interface TournamentBlockProps {
+  tournament: ITournament;
+
 export interface LoaderProps {
   size: number;
   color: string;
   className?: string;
+
 }
