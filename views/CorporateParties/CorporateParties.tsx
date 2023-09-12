@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Heading } from '@/components/Heading';
 import { Section } from '@/components/Section';
 
-import data from '@/data/corporateParties.json';
+import data from '@/data/corporateMainPage.json';
 import css from './CorporateParties.module.css';
 
 export const CorporateParties = () => {
@@ -31,6 +31,7 @@ export const CorporateParties = () => {
               src={image.src}
               alt={image.alt}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
           <div className="border pt-[100px] text-center xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
