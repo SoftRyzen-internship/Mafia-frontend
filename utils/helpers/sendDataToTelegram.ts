@@ -1,19 +1,19 @@
-import sendTelegramMessage from '../../components/api/telegramBotAPI';
 import { FieldValues } from 'react-hook-form';
+
+// TODO: Need fix with paths, split api files with reexport to index
+import sendTelegramMessage from '../../components/api/telegramBotAPI';
+import data from '@/data/telegramMessageTemplate.json';
 
 export const sendDataToTelegram = async (formData: FieldValues) => {
   const { userName, phoneNumber, userComment } = formData;
-  console.log(formData);
+  const { title, name, phone, comment } = data;
 
-  const messageMarkup = `<b>Нова заявка з сайту:</b>\n\nІм'я: ${userName}\nНомер телефону: ${phoneNumber}\nКоментар: ${userComment}`;
+  const messageMarkup = `<b>${title}</b>\n
+  ${name}${userName}
+  ${phone}${phoneNumber}
+  ${comment}${userComment}`;
 
-  // Use formData to send the message to your Telegram bot API
-  const success = await sendTelegramMessage(messageMarkup);
-  if (success) {
-    console.log('Message sent successfully');
-  } else {
-    console.error('Failed to send message');
-  }
+  return await sendTelegramMessage(messageMarkup);
 };
 
 export default sendDataToTelegram;

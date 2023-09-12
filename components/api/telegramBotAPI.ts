@@ -19,7 +19,6 @@ const sendTelegramMessage = async (message: string) => {
       return false;
     }
   } catch (error) {
-    console.error('Error:', error);
     return false;
   }
 };
