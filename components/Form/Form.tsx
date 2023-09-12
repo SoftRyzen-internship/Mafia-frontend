@@ -11,6 +11,7 @@ import { FormProps, InputT } from '@/types';
 import { Input } from '@/components/Input';
 import { TextArea } from '@/components/TextArea';
 import { ButtonPrimary } from '@/components/Buttons/ButtonPrimary';
+import { sendDataToTelegram } from '@/utils/helpers/sendDataToTelegram';
 
 export const Form: React.FC<FormProps> = ({ classes }) => {
   const dataString = JSON.stringify(formBuildingData);
@@ -35,7 +36,13 @@ export const Form: React.FC<FormProps> = ({ classes }) => {
     }
   }, [reset, isSubmitSuccessful]);
 
-  const onSubmit: SubmitHandler<FieldValues> = (formData: FieldValues) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (
+    formData: FieldValues,
+  ) => {
+    // Here is the handler to create message and send it by Telegram bot to tg channel. You can use isSuccess to send as a status of result to next pop-up modal
+    const isSuccess: boolean = await sendDataToTelegram(formData);
+    console.log(isSuccess);
+
     console.log(formData);
   };
 
