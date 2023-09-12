@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, MouseEvent } from 'react';
+import classNames from 'classnames';
 
 import { IconBtn } from '../IconBtn';
 import { Logo } from '../Logo';
@@ -8,6 +9,8 @@ import { NavigationRow } from '../NavigationRow';
 import { Contacts } from '../Contacts';
 import { MobileMenuBtn } from '../MobileMenuBtn';
 import { SocialsMenu } from '../SocialsMenu';
+
+import css from './MobileMenu.module.css';
 
 export const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -34,6 +37,11 @@ export const MobileMenu = () => {
     handleMenuToggle();
   };
 
+  const menuClasses = classNames(
+    [css.bg_image],
+    'absolute left-0 top-0 h-[100vh] w-[calc(100vw-24px)] bg-body sm:min-w-fit md:w-[calc(100vw*0.5)]',
+  );
+
   return (
     <div className="xl:hidden">
       <MobileMenuBtn onClick={handleMenuToggle} />
@@ -43,7 +51,7 @@ export const MobileMenu = () => {
           onClick={handleOverlayClick}
           className="fixed bottom-0 left-0 h-[100vh] w-[100vw] bg-[#171718C4]"
         >
-          <div className="absolute left-0 top-0 h-[100vh] w-[calc(100vw-24px)] bg-body sm:min-w-fit md:w-[calc(100vw*0.5)]">
+          <nav className={menuClasses}>
             <div
               className="flex items-center justify-between 
             border-b border-gray-light px-[24px] pb-[6px] pt-[5px] 
@@ -57,7 +65,7 @@ export const MobileMenu = () => {
               <Contacts variant="mobile-menu" className="mt-[54px]" />
               <SocialsMenu variant="mobile-menu" className="mt-[36px]" />
             </div>
-          </div>
+          </nav>
         </div>
       ) : null}
     </div>
