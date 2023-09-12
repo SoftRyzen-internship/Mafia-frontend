@@ -1,11 +1,28 @@
 .sectionBg {
-  background-image: linear-gradient(
-      rgba(22, 20, 28, 0.4),
-      rgba(22, 20, 28, 0.4)
-    ),
-    url('../../public/images/home/bgKidsWide-1x.webp'),
-    linear-gradient(#16141c66, #16141c66);
+  position: relative;
+  /* position: relative;
+  background-image: url('../../public/images/home/bgKidsWide-1x.webp');
+
   background-repeat: no-repeat;
   background-position: 50% 56%;
-  /* background-size: cover; */
+  background-size: cover;
+  z-index: 0; */
+}
+
+.sectionBg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      270deg,
+      rgba(22, 20, 28, 1),
+      rgba(22, 20, 28, 0.84)
+    ),
+    url('/images/home/bgKidsWide-1x.webp');
+  background-repeat: no-repeat;
+  background-position: 50% 56%;
+  z-index: -1;
 }
