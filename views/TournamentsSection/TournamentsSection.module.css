@@ -1,0 +1,26 @@
+.section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  background-image: image-set(
+    url(/images/tournaments/tournaments-bg-mob.webp) type('image/webp') 1x,
+    url(/images/tournaments/tournaments-bg-mob@2x.webp) type('image/webp') 2x
+  );
+  @media (min-width: 768px) {
+    background-image: image-set(
+      url(/images/tournaments/tournaments-bg-tab.webp) type('image/webp') 1x,
+      url(/images/tournaments/tournaments-bg-tab@2x.webp) type('image/webp') 2x
+    );
+  }
+  @media (min-width: 1280px) {
+    background-image: image-set(
+      url(/images/tournaments/tournaments-bg-desk.webp) type('image/webp') 1x,
+      url(/images/tournaments/tournaments-bg-desk@2x.webp) type('image/webp') 2x
+    );
+  }
+}
+
+.hero {
+  background-color: rgba(22, 20, 28, 0.4);
+}
