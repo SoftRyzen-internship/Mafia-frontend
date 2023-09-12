@@ -41,17 +41,19 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
         </div>
       </div>
       <div
-        className={`${s.back} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] font-raleway transition duration-1000 hover:shadow-lg focus:shadow-lg`}
+        className={`${s.back} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] font-raleway transition duration-1000 `}
       >
         <h2 className="mx-auto my-0 mb-2 px-0 py-2 text-center font-raleway text-xl font-semibold xl:pb-0 xl:pt-9">
           {title}
         </h2>
-        <div
-          className="mb-4 px-5 text-left font-raleway text-sm font-normal tracking-normal md:text-base"
-          dangerouslySetInnerHTML={{
-            __html: description.replace(/\n/g, '<br />'),
-          }}
-        />
+        <div className="mb-4 px-5 text-left font-raleway text-sm font-normal tracking-normal md:text-base">
+          {description.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < description.split('\n').length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </div>
 
         <div className="mx-auto my-0 ">
           <h3 className="mb-2 text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
@@ -63,12 +65,12 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
               return (
                 <li
                   key={index}
-                  className="flex max-w-fit flex-col items-center px-[5px] text-center  md:max-w-fit md:gap-5 md:text-base"
+                  className="flex flex-col items-center px-[5px] text-center  md:text-base"
                 >
                   {Icon && (
                     <Icon className="mb-[24px] h-10 w-10 xl:mb-[16px] xxl:mb-[15px]" />
                   )}
-                  <Paragraph className="overflow-wrap max-w-[80px] break-words text-[12px] md:max-w-[100px] md:text-[16px]">
+                  <Paragraph className="overflow-wrap max-w-[80px] break-words text-[12px] md:max-w-[100px] md:text-[16px] xl:max-w-[100%]">
                     {cup.competition_name}
                   </Paragraph>
                 </li>
