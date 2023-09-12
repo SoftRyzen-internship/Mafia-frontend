@@ -2,16 +2,18 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+import hallFameHeading from '@/data/hallFameHeading.json';
+import customCardData from '@/data/customCardData.json';
+
+import { getHallFameCards } from '@/utils/getHallFameCards';
+
+import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import HallFameCard from '@/components/HallFameCard/HallFameCard';
 import HallFameCustomCard from '@/components/HallFameCustomCard/HallFameCustomCard';
 import { Heading } from '@/components/Heading/Heading';
 import { Section } from '@/components/Section/Section';
 
-import { getHallFameCards } from '@/utils/getHallFameCards';
 import s from '@/components/HallFameList/HallFameList.module.css';
-import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
-import hallFameHeading from '@/data/hallFameHeading.json';
-import customCardData from '@/data/customCardData.json';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,

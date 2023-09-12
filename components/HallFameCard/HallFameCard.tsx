@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { Paragraph } from '@/components/Paragraph';
-import { HallFameCardProps } from '@/types/index';
-
 import cupsData from '@/data/hallFameData.json';
 import iconsMap from '@/data/hallFameCardIconMap';
+
+import { HallFameCardProps } from '@/types/index';
+
+import { Paragraph } from '@/components/Paragraph';
 
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
