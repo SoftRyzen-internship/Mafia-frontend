@@ -7,7 +7,7 @@ import meta from '@/data/metadata';
 
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
-import { SocialsMenu } from '@/components/SocialsMenu';
+// import { SocialsMenu } from '@/components/SocialsMenu';
 import { KidsMafia } from '@/components/KidsMafia';
 
 const montserrat = Montserrat({
@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         <Header />
         {children}
-        <SocialsMenu />
+        {/* <SocialsMenu /> */}
         <div id="modal" />
         <KidsMafia />
         <Footer />
