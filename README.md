@@ -140,6 +140,7 @@ This is example of API for component `Title` and `Paragraph`
 | `href`      | `/`         | section id or path                                                                                      |
 | `position`  | `header`    | add sizes according to logo position. Choose the position you'd need: `header`, `footer`, `mobile-menu` |
 | `className` | `undefined` | add any custom styles                                                                                   |
+| `onClick`   | `undefined` | Click handler                                                                                           |
 
 - ### SocialsMenu
 
@@ -191,6 +192,7 @@ the site when pressed.
 | ----------- | ----------- | ------------------------------------------------------------------- |
 | `position`  | `header `   | Choose the position you'd need: `header`, `footer` or `mobile-menu` |
 | `className` | `undefined` | add custom or additional css class you'd need                       |
+| `onClick`   | `undefined` | Link click handler                                                  |
 
 - ### LearnList
 
