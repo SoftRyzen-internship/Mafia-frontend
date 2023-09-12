@@ -1,4 +1,6 @@
+
 import React, { FC } from 'react';
+
 
 import classNames from 'classnames';
 import { request } from 'graphql-request';
@@ -29,6 +31,8 @@ export const TournamentsSection: FC = async () => {
   const { title, text } = data;
 
   const tournaments = await getTournaments();
+
+
 
   return (
     <section className={classNames('pb-0', s.section)}>
