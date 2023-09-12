@@ -16,7 +16,9 @@ export const sendDataToTelegram = async (formData: FieldValues) => {
       text: messageMarkup,
     });
 
-    if (response.status === 200) {
+    console.log(response);
+
+    if (response.data.status === 200) {
       return true;
     } else {
       return false;

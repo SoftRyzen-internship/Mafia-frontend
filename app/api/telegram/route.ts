@@ -15,20 +15,10 @@ export async function POST(req: Request) {
       parse_mode: 'HTML',
     });
 
-    if (response.status === 200) {
-      return new Response('ok');
-      //  return NextResponse.json({status: 200});
-      //  NextResponse.next();
-    } else {
-      return NextResponse.json({ status: 400 });
-      // NextResponse.next();
+    if (response.data.result) {
+      return NextResponse.json({ status: 200 });
     }
-
-    // return {"status": "200"};
   } catch (error) {
-    console.log('error: from route');
-    return NextResponse.json({ status: 501 });
-    // NextResponse.next();
-    // return
+    return NextResponse.json({ status: 500 });
   }
 }
