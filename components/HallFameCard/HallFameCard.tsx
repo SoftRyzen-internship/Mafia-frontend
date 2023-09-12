@@ -3,12 +3,10 @@ import Image from 'next/image';
 
 import { Paragraph } from '@/components/Paragraph';
 import { HallFameCardProps } from '@/types/index';
-import cupsData from '@/data/hallFameData.json';
 
-import IconFirst from '@/public/images/hallfame/iconcupfirst.svg';
-import IconSecond from '@/public/images/hallfame/iconcuptwo.svg';
-import IconThird from '@/public/images/hallfame/iconcupthree.svg';
-import IconStar from '@/public/images/hallfame/iconcupstar.svg';
+import cupsData from '@/data/hallFameData.json';
+import iconsMap from '@/data/hallFameCardIconMap';
+
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
 const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
@@ -16,13 +14,6 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
     return null;
   }
   const { title, description, img } = attributes;
-
-  const iconsMap = {
-    first: IconFirst,
-    second: IconSecond,
-    third: IconThird,
-    star: IconStar,
-  };
 
   return (
     <li className={`relative h-[460px] w-full ${s.card}`}>

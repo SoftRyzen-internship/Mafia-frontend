@@ -101,7 +101,7 @@ export interface LearnListProps {
 }
 
 export interface NavigationRowLinkProps {
-  currentPath: string;
+  currentPath: string | null;
   href: string;
   position: string;
   title: string;
