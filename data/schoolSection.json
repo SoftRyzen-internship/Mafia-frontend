@@ -72,5 +72,9 @@
       "alias": "пані Лейла",
       "imageUrl": "/images/school-section/9.jpg"
     }
-  ]
+  ],
+  "swiperNavButtonsData": {
+    "left": "Click to show the previous image",
+    "right": "Click to show the next image"
+  }
 }

@@ -1,12 +1,9 @@
 import { CorporateParties } from '@/views/CorporateParties';
 
-import { Slider } from '@/components/Slider';
-
-const Home = () => {
+const Home = async () => {
   return (
     <>
       <CorporateParties />
-      <Slider section="school" />
     </>
   );
 };
