@@ -5,6 +5,7 @@ import useFormPersist from 'react-hook-form-persist';
 import { useEffect, useState } from 'react';
 
 import formBuildingData from '@/data/formBuildingData.json';
+import { sendDataToTelegram } from '@/utils/helpers/sendDataToTelegram';
 
 import { FormProps, InputT, FormData } from '@/types';
 
@@ -43,14 +44,6 @@ export const Form: React.FC<FormProps> = ({
   }, [reset, isSubmitSuccessful]);
 
   const onSubmit: SubmitHandler<FieldValues> = async (formData: FormData) => {
-    function sendData(data: FormData): Promise<FormData> {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve(data);
-        }, 3000);
-      });
-    }
-
     function resolveForm(isSuccess: boolean): void {
       setIsLoading(false);
       const popUpType = isSuccess ? 'success' : 'error';
@@ -61,11 +54,9 @@ export const Form: React.FC<FormProps> = ({
 
     try {
       setIsLoading(true);
-      const result = await sendData(formData);
-      console.log(result);
-      resolveForm(true);
+      const isSuccess: boolean = await sendDataToTelegram(formData);
+      resolveForm(isSuccess);
     } catch (error) {
-      console.log(error.message);
       resolveForm(false);
     }
   };
