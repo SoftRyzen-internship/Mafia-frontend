@@ -257,8 +257,46 @@ export interface FooterLinkItemProps {
 export interface SliderProps {
   section: 'school' | 'presenters' | 'corporate';
   pagination?: boolean;
+  navigation?: boolean;
   autoplay?: boolean;
+  data: any;
+  element: any;
   className?: string;
+}
+
+interface SliderElementProps {
+  id: string;
+  imageUrl: string;
+}
+
+export interface SliderSchoolElementProps extends SliderElementProps {
+  alias: string;
+  name: string;
+}
+
+export interface SliderCorporateElementProps extends SliderElementProps {
+  altText: string;
+}
+
+export interface SliderPresentersElementImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface SliderPresentersElementItemProps {
+  attributes: {
+    name: string;
+    description: string;
+    img: SliderPresentersElementImageType;
+  };
+}
+
+export interface SliderPresentersDataType {
+  presenters: {
+    data: SliderPresentersElementItemProps[];
+  };
 }
 
 export interface SliderNavigationProps {
@@ -270,6 +308,7 @@ export interface SliderImageProps {
   src: string;
   alt: string;
   className?: string;
+  imageClassName?: string;
 }
 
 export interface PresenterImageType {
@@ -280,7 +319,9 @@ export interface PresenterImageType {
 }
 
 export interface PresenterItemProps {
-  attributes: { name: string; description: string; img: PresenterImageType };
+  attributes:
+    | { name: string; description: string; img: PresenterImageType }
+    | undefined;
 }
 
 export interface PresentersDataType {

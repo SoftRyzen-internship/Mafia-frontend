@@ -251,7 +251,10 @@ the `Slider` to extend beyond the `container`.
 | ------------ | ----------- | --------------------------------------------------------------------- |
 | `section `   | `undefined` | choose the name of the section: `school`, `presenters` or `corporate` |
 | `pagination` | `false`     | choose the pagination availability: `false` or `true`                 |
+| `navigation` | `false`     | choose the navigation availability: `false` or `true`                 |
 | `autoplay`   | `false`     | choose the autoplay availability: `false` or `true`                   |
+| `data`       | `undefined` | any array of data for mapping                                         |
+| `element`    | `undefined` | the element that will be placed inside the slide                      |
 | `className`  | `undefined` | add any custom styles                                                 |
 
 - ### Pricing
