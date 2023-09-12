@@ -11,10 +11,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { SliderProps, PresenterItemProps } from '@/types';
-import { getPresenters } from '@/utils/helpers/getPresenters';
-import schoolData from '@/data/schoolSection.json';
-import corporateData from '@/data/corporateParties.json';
+import { SliderProps } from '@/types';
+
 import {
   SCREEN_MOBILE,
   SCREEN_TABLET,
@@ -22,17 +20,21 @@ import {
   LARGE_SCREEN_DESKTOP,
 } from '@/constants';
 
-import { SliderImage } from '../SliderImage';
 import { SliderNavigation } from '../SliderNavigation';
 
 export const Slider: React.FC<SliderProps> = ({
   section,
   pagination = false,
+  navigation = false,
   autoplay,
+  data,
+  element: Element,
   className = '',
 }) => {
   const [isFirstRender, setIsFirstRender] = useState<boolean>(true);
-  const [presentersData, setPresentersData] = useState<PresenterItemProps[]>();
+  const Component = (props: any) => {
+    return <Element {...props} />;
+  };
 
   const swiperRef = useRef<SwiperCore>();
 
@@ -47,17 +49,6 @@ export const Slider: React.FC<SliderProps> = ({
       setIsFirstRender(false);
       return;
     }
-
-    const getPresentersData = async () => {
-      try {
-        const data = await getPresenters();
-        setPresentersData(data);
-      } catch (error) {
-        console.error('Error fetching presenters data: ', error);
-      }
-    };
-
-    getPresentersData();
   }, [isFirstRender]);
 
   const handlePrevClick = () => {
@@ -108,51 +99,23 @@ export const Slider: React.FC<SliderProps> = ({
       spaceBetween={24}
       className={swiperClass}
     >
-      {section === 'school' &&
-        schoolData.swiperData.map(card => {
-          return (
-            <SwiperSlide
-              key={card.id}
-              className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer"
-            >
-              <SliderImage src={card.imageUrl} alt={card.name} />
-              <p className="mb-4 text-base font-normal text-gray">
-                {card.name}
-              </p>
-              <p className="alias text-xl font-medium text-white-light transition duration-300 ease-out">
-                {card.alias}
-              </p>
-            </SwiperSlide>
-          );
-        })}
+      {data?.map((cardInfo: any, idx: number) => {
+        return (
+          <SwiperSlide
+            key={idx}
+            className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer"
+          >
+            <Component {...cardInfo} />
+          </SwiperSlide>
+        );
+      })}
 
-      {section === 'school' && (
+      {navigation && (
         <SliderNavigation
           handlePrevClick={handlePrevClick}
           handleNextClick={handleNextClick}
         />
       )}
-
-      {section === 'presenters' &&
-        presentersData?.map((card, idx) => {
-          return (
-            <SwiperSlide key={idx}>
-              <SliderImage
-                src={card.attributes.img.data.attributes.url}
-                alt={card.attributes.name}
-              />
-            </SwiperSlide>
-          );
-        })}
-
-      {section === 'corporate' &&
-        corporateData.swiperData.map(card => {
-          return (
-            <SwiperSlide key={card.id}>
-              <SliderImage src={card.imageUrl} alt={card.altText} />
-            </SwiperSlide>
-          );
-        })}
     </Swiper>
   ) : null;
 };
