@@ -159,7 +159,8 @@ export interface KidsMafiaConditionsProps {
 
 export interface IPortal {
   children: ReactNode;
-  setShowModal: Dispatch<SetStateAction<boolean>>;
+  onModalClose: () => void;
+  className?: string;
 }
 
 export interface ScheduleProps {

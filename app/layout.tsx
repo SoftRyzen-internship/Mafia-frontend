@@ -33,9 +33,8 @@ export default function RootLayout({
         <div>THIS IS LAYOUT</div>
         {children}
 
-        <div id="modal" />
-
         <Footer />
+        <div id="modal" />
       </body>
     </html>
   );
