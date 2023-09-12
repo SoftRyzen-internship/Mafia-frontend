@@ -236,7 +236,16 @@ better to stop the local server then start again.
 
 - ### Form
 
-| Prop      | Type   | Description                                     |
-| --------- | ------ | ----------------------------------------------- |
-| `classes` | string | Optional, add additional tailwind classes,      |
-|           |        | e.g. to position the form or set the form width |
+| Prop           | Type          | Description                                     |
+| -------------- | ------------- | ----------------------------------------------- |
+| `classes`      | string        | Optional, add additional tailwind classes,      |
+|                |               | e.g. to position the form or set the form width |
+|                |               |                                                 |
+| `setPopUpType` | void function | Required, setter function that will receive     |
+|                |               | either "success" or "error" to define which     |
+|                |               | type of popup window you need to render after   |
+|                |               | the form has been sent                          |
+|                |               |                                                 |
+| `onClose`      | void function | Optional, only required if the form is located  |
+|                |               | in a modal window; setter function to close     |
+|                |               | the modal window                                |
