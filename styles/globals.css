@@ -167,7 +167,7 @@ body {
   opacity: 1 !important;
 }
 
-.swiper-slide:hover > .alias {
+.swiper-slide:hover .alias {
   color: #d01de1;
 }
 
