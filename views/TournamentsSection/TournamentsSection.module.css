@@ -2,6 +2,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+  max-width: 1920px;
+  margin: 0 auto;
 
   background-image: image-set(
     url(/images/tournaments/tournaments-bg-mob.webp) type('image/webp') 1x,
