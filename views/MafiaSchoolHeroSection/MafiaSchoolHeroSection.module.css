@@ -1,9 +1,4 @@
 .mafiaSchoolHero {
-  /* background-image: image-set(
-    url('/images/kidsMafia/bgmafiaschoolmob.webp') 1x,
-    url('/images/kidsMafia/bgmafiaschoolmob@2x.webp') 2x
-  ); */
-
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
@@ -37,31 +32,7 @@
     background-image: url(/images/kidsMafia/bgmafiaschooltab@2x.webp);
   }
 }
-/* @media screen and (min-width: 768px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgmafiaschooltab.webp') 1x,
-      url('/images/kidsMafia/bgmafiaschooltab@2x.webp') 2x
-    );
-  }
-} */
 
-/* @media screen and (min-width: 1280px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgkidsmafiaheroxl.webp') 1x,
-      url('/images/kidsMafia/bgkidsmafiaheroxl@2x.webp') 2x
-    );
-  }
-}
-@media screen and (min-width: 1920px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgkidsmafiaheroxxl.webp') 1x,
-      url('/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp') 2x
-    );
-  }
-} */
 @media screen and (min-width: 1280px) {
   .mafiaSchoolHero {
     background-image: url(/images/kidsMafia/bgkidsmafiaheroxl.webp);
