@@ -27,6 +27,7 @@
     "react-hook-form": "^7.43.9",
     "react-hook-form-persist": "^3.0.0",
     "react-hot-toast": "^2.4.1",
+    "react-markdown": "^8.0.7",
     "react-spinners": "^0.13.8"
   },
   "devDependencies": {
