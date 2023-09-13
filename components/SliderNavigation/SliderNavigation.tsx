@@ -9,7 +9,7 @@ export const SliderNavigation: React.FC<SliderNavigationProps> = ({
   handleNextClick,
 }) => {
   return (
-    <div className="bottom-0 mx-auto flex w-full justify-between md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl">
+    <div className="bottom-0 mx-auto mt-10 flex w-full justify-between md:max-w-3xl xl:max-w-7xl xxl:mt-12 xxl:max-w-screen-xxl">
       <SliderNavButton direction="left" actionHandler={handlePrevClick} />
       <SliderNavButton direction="right" actionHandler={handleNextClick} />
     </div>

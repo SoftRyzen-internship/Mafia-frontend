@@ -4,7 +4,7 @@ import { KidsMafia } from '@/views/KidsMafia';
 
 import { Slider } from '@/components/Slider';
 import { SliderPresentersElement } from '@/components/SliderPresentersElement';
-import { getPresenters } from '@/utils/helpers/getPresenters';
+import { getPresenters } from '@/utils/api/getPresenters';
 
 const Home = async () => {
   const presentersData = await getPresenters();
@@ -16,9 +16,11 @@ const Home = async () => {
 
       <div className="container">
         <Slider
+          pagination
           section="presenters"
           element={SliderPresentersElement}
           data={presentersData}
+          className="bg-red-500"
         />
       </div>
     </>
