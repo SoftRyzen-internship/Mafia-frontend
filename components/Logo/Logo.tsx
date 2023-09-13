@@ -24,9 +24,11 @@ export const Logo: FC<LogoProps> = ({
       href={href}
       className={` ${logoClasses}  ${className}`}
       aria-label="Посилання із логотипом компанії"
-      onClick={onClick}
     >
-      <LogoImg aria-label="Зображення із логотипом компанії" />
+      <LogoImg
+        aria-label="Зображення із логотипом компанії"
+        onClick={onClick}
+      />
     </Link>
   );
 };

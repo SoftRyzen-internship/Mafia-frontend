@@ -24,8 +24,8 @@ export const NavigationRowLink: FC<NavigationRowLinkProps> = ({
   );
 
   return (
-    <Link href={href} className={navLinkClasses} onClick={onClick}>
-      {title}
+    <Link href={href} className={navLinkClasses}>
+      <span onClick={onClick}>{title}</span>
     </Link>
   );
 };
