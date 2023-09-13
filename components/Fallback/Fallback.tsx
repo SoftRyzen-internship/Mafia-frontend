@@ -35,11 +35,6 @@ export const Fallback: React.FC<FallbackProps> = ({
     'w-[178px]': variant === 'small',
   });
 
-  const smileClasses = classNames({
-    'h-[78px] w-[78px]': variant === 'default',
-    'h-[48px] w-[48px]': variant === 'small',
-  });
-
   return (
     <div className={wrapClasses}>
       <Paragraph
@@ -49,7 +44,10 @@ export const Fallback: React.FC<FallbackProps> = ({
         {fallbackText}
       </Paragraph>
 
-      <SadSmile className={smileClasses} />
+      <SadSmile
+        width={variant === 'default' ? 78 : 48}
+        height={variant === 'default' ? 78 : 48}
+      />
     </div>
   );
 };
