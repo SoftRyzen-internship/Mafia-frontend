@@ -1,3 +1,4 @@
+import { HomeHero } from '@/views/HomeHero';
 import { CorporateParties } from '@/views/CorporateParties';
 import { Slider } from '@/components/Slider';
 import { SliderSchoolElement } from '@/components/SliderSchoolElement';
@@ -8,6 +9,7 @@ import schoolData from '@/data/schoolSection.json';
 const Home = () => {
   return (
     <>
+      <HomeHero />
       <CorporateParties />
 
       <div className="container">
