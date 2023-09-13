@@ -1,0 +1,54 @@
+.schoolSection {
+  max-width: 1920px;
+  background-image: image-set(
+    url('/images/home/home-school-bg-mob.webp') 1x,
+    url('/images/home/home-school-bg-mob@2x.webp') 2x
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .schoolSection {
+    background-image: image-set(
+      url('/images/home/home-school-bg-tab.webp') 1x,
+      url('/images/home/home-school-bg-tab@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .schoolSection {
+    background-image: image-set(
+      url('/images/home/home-school-bg-desk.webp') 1x,
+      url('/images/home/home-school-bg-desk@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .schoolSection {
+    background-image: image-set(
+      url('/images/home/home-school-bg-desk-lg.webp') 1x,
+      url('/images/home/home-school-bg-desk-lg@2x.webp') 2x
+    );
+  }
+}
+
+.gradient {
+  width: 296px;
+
+  padding: 16px 0 16px 24px;
+  margin-left: -24px;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
+  );
+}
+
+@media screen and (min-width: 768px) {
+  /* check 1024 etc */
+  .gradient {
+    width: 684px;
+  }
+}
