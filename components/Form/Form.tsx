@@ -5,7 +5,7 @@ import useFormPersist from 'react-hook-form-persist';
 import { useEffect, useState } from 'react';
 
 import formBuildingData from '@/data/formBuildingData.json';
-import { sendDataToTelegram } from '@/utils/helpers/sendDataToTelegram';
+import sendDataToTelegram from '@/utils/helpers/sendDataToTelegram';
 
 import { FormProps, InputT, FormData } from '@/types';
 
