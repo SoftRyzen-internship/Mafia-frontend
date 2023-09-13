@@ -6,7 +6,7 @@ import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
 import { KidsMafiaTextList } from '@/components/KidsMafiaTextList';
 import { ButtonSecondary } from '@/components/Buttons';
-import { SkillsList } from '../../components/SkillsList';
+import { SkillsList } from '@/components/SkillsList';
 import { KidsMafiaBtnHolder } from '@/components/KidsMafiaBtnHolder';
 
 import css from './KidsMafia.module.css';
@@ -25,7 +25,9 @@ export const KidsMafia: FC = () => {
         </Heading>
         <div className="mb-[60px] md:flex md:flex-wrap xl:mb-[88px] xl:h-[368px] xl:flex-col xl:content-between">
           <div
-            className={`relative h-[348px] w-full overflow-hidden rounded-md md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px] xxl:w-[568px] smOnly:mb-[60px] ${css.imageBg}`}
+            className={`relative h-[348px] w-full overflow-hidden rounded-normal 
+                      md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px]
+                      xxl:w-[568px] smOnly:mb-[60px] ${css.imageBg}`}
           >
             <Image
               src={data.img1.src}
@@ -48,7 +50,11 @@ export const KidsMafia: FC = () => {
         </div>
 
         <div className="mb-9 md:relative md:mb-8 xl:mb-[68px]">
-          <div className="relative h-[260px] w-full overflow-hidden rounded-md md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px] xl:h-[352px] xl:w-[493px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]">
+          <div
+            className="relative h-[260px] w-full overflow-hidden rounded-normal 
+                      md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px]
+                      xl:h-[352px] xl:w-[493px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
+          >
             <Image
               src={data.img2.src}
               alt={data.img2.alt}

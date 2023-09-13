@@ -38,7 +38,7 @@ export const Footer: FC = () => {
         </div>
       </div>
 
-      <div className="border-t border-[#73737380]">
+      <div className="border-t border-gray-light">
         <div className="flex flex-col items-center  pt-6 xl:container xl:flex-row xl:items-center xl:justify-between">
           <Paragraph variant="small" className="mb-4 flex xl:mb-0">
             <span className="mr-1">&copy; {data.copyright}</span>
