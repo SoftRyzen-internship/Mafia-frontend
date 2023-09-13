@@ -18,6 +18,7 @@ module.exports = {
       smOnly: { max: '767.98px' },
       mdOnly: { min: '768px', max: '1279.98px' },
       notXl: { max: '1279.98px' },
+      mediaHover: { raw: '(hover: hover)' },
     },
     //BOX SHADOW
     boxShadow: {
@@ -26,11 +27,15 @@ module.exports = {
       sm: '-2px 0px 12px 0px rgba(62, 50, 95, 0.12)',
       md: '0px 0px 10px rgba(0, 0, 0, 0.1)',
       lg: '0px 0px 14px 0px rgba(159, 127, 199, 0.11)',
+      xl: '0px 0px 13px 0px rgba(126, 90, 143, 0.10)',
       input: '3px 3px 4px 0px rgba(19, 8, 19, 0.16)',
       inputHover: '4px 5px 16px 0px rgba(25, 8, 26, 0.2)',
+
       inputFocus: '0px 5px 12px 0px rgba(8, 3, 21, 0.1) inset',
       inputError: '0px 0px 16px 0px rgba(255, 65, 96, 0.2)',
       modalSentForm: '0px 0px 8px 0px rgba(52, 48, 57, 0.12)',
+     
+      diff: '0px 0px 9px 0px rgba(62,50,95,0.09)',
     },
     // THEME
     extend: {

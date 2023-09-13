@@ -16,5 +16,65 @@
       "title": "Комунікативні навички",
       "desc": "Розвивати комунікативні навички, знаходити спільну мову з іншими"
     }
-  ]
+  ],
+  "swiperData": [
+    {
+      "id": 1,
+      "name": "Наталія",
+      "alias": "пані Муза",
+      "imageUrl": "/images/school-section/1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Валерія",
+      "alias": "пані San Andreas",
+      "imageUrl": "/images/school-section/2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Анастасія",
+      "alias": "пані Золушка",
+      "imageUrl": "/images/school-section/3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Лілія",
+      "alias": "пані Трініті",
+      "imageUrl": "/images/school-section/4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Андрій",
+      "alias": "пан Орбіт",
+      "imageUrl": "/images/school-section/5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Катерина",
+      "alias": "пані Сахар",
+      "imageUrl": "/images/school-section/6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Максим",
+      "alias": "пан Турецький",
+      "imageUrl": "/images/school-section/7.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Анастасія",
+      "alias": "пані Текіла",
+      "imageUrl": "/images/school-section/8.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Катерина",
+      "alias": "пані Лейла",
+      "imageUrl": "/images/school-section/9.jpg"
+    }
+  ],
+  "swiperNavButtonsData": {
+    "left": "Перейти до попереднього слайду",
+    "right": "Перейти до наступного слайду"
+  }
 }
