@@ -9,7 +9,7 @@ export async function getSchedule(): Promise<ScheduleItemProps[]> {
   try {
     const data: ScheduleDataType = await request(baseURL, GET_SCHEDULE);
     return data.schedule.data.attributes.schedules;
-  } catch (error) {
+  } catch {
     return [];
   }
 }
