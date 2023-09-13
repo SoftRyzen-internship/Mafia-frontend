@@ -124,21 +124,26 @@ export interface ContactsProps {
   className?: string;
 }
 
-export interface MafiaSchoolSectionData {
-  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
-  level?: HeadingComponentProps['tag'];
-  content?: string;
-  variant?: HeadingComponentProps['variant'];
-  src?: string;
-  alt?: string;
-  images?: {
-    src: string;
-    alt: string;
-  }[];
+export interface MafiaSchoolImageData {
+  src: string;
+  alt: string;
 }
 
 export interface MafiaSchoolHeroData {
-  sections: MafiaSchoolSectionData[];
+  heading: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+    variant: string;
+  };
+  paragraph: string;
+  subtitle: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+  };
+  images: {
+    main: MafiaSchoolImageData;
+    grid: MafiaSchoolImageData[];
+  };
 }
 
 export interface ClubKidsMafiaCardProps {
@@ -239,7 +244,15 @@ export interface InputProps {
 
 export interface FormProps {
   classes?: string;
+  center?: boolean | undefined;
+  setPopUpType: Dispatch<SetStateAction<'success' | 'error'>>;
 }
+
+export type FormData = {
+  userName: string;
+  phoneNumber: string;
+  userComment: string;
+};
 
 // ---- FORM END ---
 
@@ -247,4 +260,40 @@ export interface FooterLinkItemProps {
   [any: string]: string;
   title: string;
   href: string;
+}
+
+export interface ITournament {
+  title: string;
+  type: string;
+  playersInTeam: number;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        alternativeText: string;
+      };
+    };
+  };
+}
+
+export interface ITournamentItem {
+  id: string;
+  attributes: ITournament;
+}
+
+export interface ITournamentsData {
+  tournaments: {
+    data: ITournamentItem[];
+  };
+}
+
+export interface TournamentBlockProps {
+  tournament: ITournament;
+}
+
+export interface LoaderProps {
+  size: number;
+  color: string;
+  className?: string;
 }

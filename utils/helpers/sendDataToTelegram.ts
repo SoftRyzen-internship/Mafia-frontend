@@ -1,8 +1,9 @@
 import { FieldValues } from 'react-hook-form';
+
 import axios from 'axios';
 import data from '@/data/telegramMessageTemplate.json';
 
-export const sendDataToTelegram = async (formData: FieldValues) => {
+const sendDataToTelegram = async (formData: FieldValues): Promise<boolean> => {
   const { userName, phoneNumber, userComment } = formData;
   const { title, name, phone, comment } = data;
 
@@ -16,16 +17,13 @@ export const sendDataToTelegram = async (formData: FieldValues) => {
       text: messageMarkup,
     });
 
-    console.log(response);
-
     if (response.data.status === 200) {
       return true;
-    } else {
-      return false;
     }
   } catch (error) {
     return false;
   }
+  return false;
 };
 
 export default sendDataToTelegram;
