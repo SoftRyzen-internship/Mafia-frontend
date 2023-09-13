@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, { FC } from 'react';
 import Link from 'next/link';
 
-import LogoImg from '@/public/images/common/logo.svg';
+import LogoImg from '@/public/images/common/logoNew.svg';
 import { LogoProps } from '@/types';
 
 export const Logo: FC<LogoProps> = ({
@@ -24,9 +24,11 @@ export const Logo: FC<LogoProps> = ({
       href={href}
       className={` ${logoClasses}  ${className}`}
       aria-label="Посилання із логотипом компанії"
-      onClick={onClick}
     >
-      <LogoImg aria-label="Зображення із логотипом компанії" />
+      <LogoImg
+        aria-label="Зображення із логотипом компанії"
+        onClick={onClick}
+      />
     </Link>
   );
 };

@@ -1,4 +1,4 @@
-// import { HomeHero } from '@/views/HomeHero';
+import { HomeHero } from '@/views/HomeHero';
 import { CorporateParties } from '@/views/CorporateParties';
 import { KidsMafia } from '@/views/KidsMafia';
 
@@ -10,7 +10,7 @@ const Home = async () => {
   const presentersData = await getPresenters();
   return (
     <>
-      {/* <HomeHero /> */}
+      <HomeHero />
       <CorporateParties />
       <KidsMafia />
 

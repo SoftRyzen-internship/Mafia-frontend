@@ -55,6 +55,7 @@ type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialButtonProps {
@@ -63,6 +64,7 @@ export interface SocialButtonProps {
   variant?: SocialMenuVariants;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialIconProps {
@@ -386,4 +388,9 @@ export interface LoaderProps {
 
 export interface SkillsListProps {
   className?: string;
+}
+
+export interface HeroImageProps {
+  image: string;
+  alt: string;
 }

@@ -10,8 +10,8 @@ import data from '@/data/homeHero.json';
 
 import css from './HomeHero.module.css';
 
-export const HomeHero = () => {
-  const { title, description, images, subtitle, button } = data;
+export const HomeHero: React.FC = () => {
+  const { title, description, image, subtitle, button } = data;
 
   const sectionStyles = classNames(
     'mx-auto bg-no-repeat bg-top bg-cover',
@@ -39,7 +39,7 @@ export const HomeHero = () => {
           {description}
         </Paragraph>
 
-        <HomeHeroImage images={images} alt={title} />
+        <HomeHeroImage image={image} alt={title} />
 
         <Heading tag="h2" variant="tertiary" className={subtitleStyles}>
           {subtitle}
