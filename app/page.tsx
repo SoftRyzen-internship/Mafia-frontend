@@ -1,18 +1,21 @@
-import { HomeHero } from '@/views/HomeHero';
+// import { HomeHero } from '@/views/HomeHero';
 import { CorporateParties } from '@/views/CorporateParties';
-import { Slider } from '@/components/Slider';
-import { SliderSchoolElement } from '@/components/SliderSchoolElement';
 import { KidsMafia } from '@/views/KidsMafia';
 
-import schoolData from '@/data/schoolSection.json';
+// import { Slider } from '@/components/Slider';
+// import { SliderSchoolElement } from '@/components/SliderSchoolElement';
+
+// import schoolData from '@/data/schoolSection.json';
 
 const Home = () => {
   return (
     <>
-      <HomeHero />
+      {/* <HomeHero /> */}
       <CorporateParties />
+      <KidsMafia />
 
-      <div className="container">
+      {/* Slider example */}
+      {/* <div className="container">
         <Slider
           section="school"
           navigation
@@ -20,9 +23,7 @@ const Home = () => {
           element={SliderSchoolElement}
           data={schoolData.swiperData}
         />
-      </div>
-
-      <KidsMafia />
+      </div> */}
     </>
   );
 };
