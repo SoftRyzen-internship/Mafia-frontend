@@ -1,0 +1,9 @@
+.bg_image {
+  background-image: image-set(
+    url('/images/common/bg-mobile-menu.webp') 1x,
+    url('/images/common/bg-mobile-menu@2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

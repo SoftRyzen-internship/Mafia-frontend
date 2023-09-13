@@ -196,6 +196,12 @@ export interface HallFameCards {
 export interface HallFameCardDataType {
   flipCards: HallFameCards;
 }
+
+export interface MobileMenuBtnProps {
+  className?: string;
+  onClick: () => void;
+}
+
 export interface HallFameCup {
   id: number;
   competition_name: string;
@@ -289,6 +295,120 @@ export interface FooterLinkItemProps {
   [any: string]: string;
   title: string;
   href: string;
+}
+export interface SliderProps {
+  section: 'school' | 'presenters' | 'corporate';
+  pagination?: boolean;
+  navigation?: boolean;
+  autoplay?: boolean;
+  data: any;
+  element: any;
+  className?: string;
+}
+
+interface SliderElementProps {
+  id: string;
+  imageUrl: string;
+}
+
+export interface SliderSchoolElementProps extends SliderElementProps {
+  alias: string;
+  name: string;
+}
+
+export interface SliderCorporateElementProps extends SliderElementProps {
+  altText: string;
+}
+
+export interface SliderPresentersElementImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface SliderPresentersElementItemProps {
+  attributes: {
+    name: string;
+    description: string;
+    img: SliderPresentersElementImageType;
+  };
+}
+
+export interface SliderPresentersDataType {
+  presenters: {
+    data: SliderPresentersElementItemProps[];
+  };
+}
+
+export interface SliderNavigationProps {
+  handlePrevClick: () => void;
+  handleNextClick: () => void;
+}
+
+export interface SliderImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  imageClassName?: string;
+}
+
+export interface PresenterImageType {
+  data: {
+    id: string;
+    attributes: { url: string };
+  };
+}
+
+export interface PresenterItemProps {
+  attributes:
+    | { name: string; description: string; img: PresenterImageType }
+    | undefined;
+}
+
+export interface PresentersDataType {
+  presenters: {
+    data: PresenterItemProps[];
+  };
+}
+
+type PricingPlacementOptions = 'kids-mafia' | 'corporate';
+
+export interface PricingProps {
+  variant: PricingPlacementOptions;
+}
+
+export type PriceRateInfo = {
+  rateType: string;
+  amount: number;
+  presenters: number;
+  duration: number;
+  extraPlayerPrice: number;
+  playersInTeam: number | null;
+  maxPlayersInTeam: number | null;
+};
+
+export type PriceInfo = {
+  id: number;
+  attributes: PriceRateInfo;
+};
+
+export type PricesData = PriceInfo[] | undefined;
+
+export interface PricesDataType {
+  prices: {
+    data: PricesData;
+  };
+}
+
+export interface PriceCardProps {
+  rate: PriceRateInfo;
+}
+
+export interface SkillsListItemProps {
+  text: string;
+  icon: string;
+  idx: number;
 }
 
 export interface ITournament {

@@ -1,7 +1,8 @@
 // telegramApi.ts
+
 import axios from 'axios';
 
-const sendTelegramMessage = async (message: string) => {
+export const sendTelegramMessage = async (message: string) => {
   const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
   const CHAT_ID = process.env.NEXT_PUBLIC_CHAT_ID;
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
@@ -22,5 +23,3 @@ const sendTelegramMessage = async (message: string) => {
     return false;
   }
 };
-
-export default sendTelegramMessage;
