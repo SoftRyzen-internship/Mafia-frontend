@@ -5,6 +5,7 @@ import { Section } from '@/components/Section';
 
 import data from '@/data/corporateMainPage.json';
 import css from './CorporateParties.module.css';
+import { Fallback } from '@/components/Fallback';
 
 export const CorporateParties = () => {
   const { primary_title, secondary_title, image } = data;
@@ -46,7 +47,7 @@ export const CorporateParties = () => {
         >
           {secondary_title}
         </Heading>
-        <div className="border text-center"> Тут може бути ваш слайдер</div>
+        <Fallback />
       </div>
     </Section>
   );
