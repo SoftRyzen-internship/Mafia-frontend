@@ -10,7 +10,7 @@ import data from '@/data/homeHero.json';
 
 import css from './HomeHero.module.css';
 
-export const HomeHero = () => {
+export const HomeHero: React.FC = () => {
   const { title, description, image, subtitle, button } = data;
 
   const sectionStyles = classNames(

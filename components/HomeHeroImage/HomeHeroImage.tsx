@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import classNames from 'classnames';
 
+import { HeroImageProps } from '@/types';
+
 import css from './HomeHeroImage.module.css';
 
-export const HomeHeroImage = ({ image, alt }) => {
+export const HomeHeroImage: React.FC<HeroImageProps> = ({ image, alt }) => {
   const containerStyles = classNames(
     css.heroImgContainer,
     'mb-5 w-full h-[214px] rounded-normal',

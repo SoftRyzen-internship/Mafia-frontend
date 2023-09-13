@@ -389,3 +389,8 @@ export interface LoaderProps {
 export interface SkillsListProps {
   className?: string;
 }
+
+export interface HeroImageProps {
+  image: string;
+  alt: string;
+}
