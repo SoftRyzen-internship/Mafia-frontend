@@ -1,7 +1,7 @@
 import React from "react";
 
 const PrivacyPolicy = () => {
-  return <div>Mafia kids page</div>;
+  return <div>Privacy Policy page</div>;
 };
 
 export default PrivacyPolicy;
