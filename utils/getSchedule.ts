@@ -10,6 +10,6 @@ export async function getSchedule(): Promise<ScheduleItemProps[]> {
     const data: ScheduleDataType = await request(baseURL, GET_SCHEDULE);
     return data.schedule.data.attributes.schedules;
   } catch (error) {
-    throw new Error(error);
+    return [];
   }
 }
