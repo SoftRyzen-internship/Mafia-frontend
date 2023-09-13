@@ -1,33 +1,26 @@
+'use client';
 import React from 'react';
+import { useState, useEffect } from 'react';
 
+import hallFameHeading from '@/data/hallFameHeading.json';
+import customCardData from '@/data/customCardData.json';
+
+import { getHallFameCards } from '@/utils/getHallFameCards';
+
+import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import HallFameCard from '@/components/HallFameCard/HallFameCard';
 import HallFameCustomCard from '@/components/HallFameCustomCard/HallFameCustomCard';
-import hallFameHeading from '@/data/hallFameHeading.json';
-import hallFameData from '@/data/hallFameData.json';
-import customCardData from '@/data/customCardData.json';
-import s from '@/components/HallFameList/HallFameList.module.css';
-import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import { Heading } from '@/components/Heading/Heading';
 import { Section } from '@/components/Section/Section';
+
+import s from '@/components/HallFameList/HallFameList.module.css';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,
 ): data is HallFameCardProps => {
-  if (!data) return false;
-
-  for (let key in data) {
-    if (key === 'cups') {
-      if (!Array.isArray(data[key])) {
-        return false;
-      }
-    } else {
-      if (typeof data[key] !== 'string' && typeof data[key] !== 'object') {
-        return false;
-      }
-    }
-  }
-
-  return true;
+  return data
+    ? 'id' in data && 'attributes' in data && 'cups' in data.attributes
+    : false;
 };
 
 const shuffleArray = (
@@ -41,8 +34,22 @@ const shuffleArray = (
 };
 
 const HallFameList: React.FC = () => {
-  const shuffledData = shuffleArray([...hallFameData, customCardData]);
+  const [hallFameData, setHallFameData] = useState<HallFameCardProps[]>([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getHallFameCards();
+        setHallFameData(data);
+      } catch (error) {
+        console.error('Error fetching data in component:', error); //TO-DO обробити помилку коли зявиться картинка-заглушка
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const shuffledData = shuffleArray([...hallFameData, customCardData]);
   return (
     <Section
       className={`${s.hallFameListContainer} container rounded-lg shadow-sm`}
@@ -61,8 +68,16 @@ const HallFameList: React.FC = () => {
             return <HallFameCustomCard key={id} />;
           }
           if (isHallFameCardProps(data)) {
-            return <HallFameCard key={id} {...data} />;
+            return (
+              <HallFameCard
+                key={id}
+                id={data.id}
+                attributes={data.attributes}
+                cups={data.attributes.cups}
+              />
+            );
           }
+
           return null;
         })}
       </ul>
