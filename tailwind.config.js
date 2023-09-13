@@ -30,6 +30,7 @@ module.exports = {
       inputHover: '4px 5px 16px 0px rgba(25, 8, 26, 0.2)',
       inputFocus: '0px 5px 12px 0px rgba(8, 3, 21, 0.1) inset',
       inputError: '0px 0px 16px 0px rgba(255, 65, 96, 0.2)',
+      modalSentForm: '0px 0px 8px 0px rgba(52, 48, 57, 0.12)',
     },
     // THEME
     extend: {
@@ -57,6 +58,8 @@ module.exports = {
           'linear-gradient(90deg, #ff057c 0%, #8d0b93 50%, rgba(50, 21, 117, 0) 100%);',
         grad_1000:
           'linear-gradient(270deg, #ff057c 0%, #8d0b93 50%, rgba(50, 21, 117, 0) 100%);',
+        grad_1100:
+          'linear-gradient(90deg, rgba(255, 5, 124, 0.13) 0%, rgba(141, 11, 147, 0.13) 50%, rgba(50, 21, 117, 0.13) 100%)',
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],
