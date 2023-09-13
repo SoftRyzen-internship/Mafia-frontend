@@ -1,0 +1,38 @@
+.sectionBg {
+  background-image: image-set(
+    url(/images/home/bgKidsMob-1x.webp) type('image/webp') 1x,
+    url(/images/home/bgKidsMob-2x.webp) type('image/webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: 0% 16%;
+}
+
+@media screen and (min-width: 768px) {
+  .sectionBg {
+    background-image: image-set(
+      url(/images/home/bgKidsTab-1x.webp) type('image/webp') 1x,
+      url(/images/home/bgKidsTab-2x.webp) type('image/webp') 2x
+    );
+    background-position: 0% 12%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionBg {
+    background-image: image-set(
+      url(/images/home/bgKidsDesk-1x.webp) type('image/webp') 1x,
+      url(/images/home/bgKidsDesk-2x.webp) type('image/webp') 2x
+    );
+    background-position: 0% 57%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionBg {
+    background-image: image-set(
+      url(/images/home/bgKidsWide-1x.webp) type('image/webp') 1x,
+      url(/images/home/bgKidsWide-2x.webp) type('image/webp') 2x
+    );
+    background-position: 0% 56%;
+  }
+}

@@ -379,5 +379,8 @@ export interface SkillsListItemProps {
 export interface LoaderProps {
   size: number;
   color: string;
+}
+
+export interface SkillsListProps {
   className?: string;
 }
