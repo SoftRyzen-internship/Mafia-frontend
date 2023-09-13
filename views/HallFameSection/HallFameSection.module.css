@@ -1,4 +1,7 @@
 .hallFameListContainer {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
   background-image: image-set(
     url('/images/hallfame/bghallfamemob.webp') 1x,
     url('/images/hallfame/bghallfamemob@2x.webp') 2x
