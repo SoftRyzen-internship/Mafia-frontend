@@ -1,0 +1,12 @@
+{
+  "title": "Mafia Club Odesa",
+  "description": "Запрошуємо поринути у світ стратегії та інтриг клубу спортивної мафії",
+  "images": {
+    "mobile": "/images/home/home-hero-mob@2x.webp",
+    "tablet": "/images/home/home-hero-tab@2x.webp",
+    "desktop": "/images/home/home-hero-desk@2x.webp",
+    "desktopLg": "/images/home/home-hero-desk-lg@2x.webp"
+  },
+  "subtitle": "Розклад",
+  "button": "Записатися"
+}

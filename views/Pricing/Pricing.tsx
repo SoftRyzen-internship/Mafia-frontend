@@ -17,7 +17,7 @@ export const Pricing: React.FC<PricingProps> = async ({
   const pricesInfo = await fetchPricing();
 
   const sectionStyles = classNames(
-    'py-[80px] bg-no-repeat bg-center bg-cover',
+    'py-[80px] mx-auto bg-no-repeat bg-top bg-cover',
     {
       [css.sectionKids]: variant === 'kids-mafia',
       [css.sectionCorporate]: variant === 'corporate',

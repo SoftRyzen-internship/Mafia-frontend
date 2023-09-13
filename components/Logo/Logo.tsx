@@ -10,6 +10,7 @@ export const Logo: FC<LogoProps> = ({
   href = '/',
   className,
   position = 'header',
+  onClick,
 }) => {
   const logoClasses = classNames('inline-block', {
     'h-[41px] w-14 md:h-[47px] md:w-[65px] xl:h-[58px] xl:w-20 xxl:h-[74px] xxl:w-[103px]':
@@ -23,6 +24,7 @@ export const Logo: FC<LogoProps> = ({
       href={href}
       className={` ${logoClasses}  ${className}`}
       aria-label="Посилання із логотипом компанії"
+      onClick={onClick}
     >
       <LogoImg aria-label="Зображення із логотипом компанії" />
     </Link>
