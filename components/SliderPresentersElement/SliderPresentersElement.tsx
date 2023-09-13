@@ -9,9 +9,11 @@ export const SliderPresentersElement: React.FC<
   SliderPresentersElementItemProps
 > = cardInfo => {
   return (
-    <SliderImage
-      src={cardInfo.attributes.img.data.attributes.url}
-      alt={cardInfo.attributes.name}
-    />
+    <div className="rounded-normal border-[2px] border-primary-light-600 bg-green-100 p-5">
+      <SliderImage
+        src={cardInfo.attributes.img.data.attributes.url}
+        alt={cardInfo.attributes.name}
+      />
+    </div>
   );
 };
