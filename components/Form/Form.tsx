@@ -62,7 +62,7 @@ export const Form: React.FC<FormProps> = ({
   };
 
   return (
-    <div className={`min-h-[390px] ${classes && classes}`}>
+    <div className={`min-h-[390px]  ${classes && classes}`}>
       {isLoading && (
         <Loader
           size={40}
@@ -82,7 +82,7 @@ export const Form: React.FC<FormProps> = ({
           </h2>
 
           <form
-            className={`mt-[16px] flex w-full flex-col gap-[20px]`}
+            className={`mt-[16px] flex w-full flex-col gap-[20px] `}
             onSubmit={handleSubmit(onSubmit)}
             noValidate
           >
