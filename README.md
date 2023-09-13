@@ -234,6 +234,28 @@ better to stop the local server then start again.
 | ----------- | ----------- | --------------------------------------------- |
 | `className` | `undefined` | add custom or additional css class you'd need |
 
+- ### Slider
+
+The `Slider` component is created using `swiper` library. It is important to
+give the `section` property `position: relative`. This is necessary in order for
+the `Slider` to extend beyond the `container`.
+
+| Prop         | Default     | Description                                                           |
+| ------------ | ----------- | --------------------------------------------------------------------- |
+| `section `   | `undefined` | choose the name of the section: `school`, `presenters` or `corporate` |
+| `pagination` | `false`     | choose the pagination availability: `false` or `true`                 |
+| `navigation` | `false`     | choose the navigation availability: `false` or `true`                 |
+| `autoplay`   | `false`     | choose the autoplay availability: `false` or `true`                   |
+| `data`       | `undefined` | any array of data for mapping                                         |
+| `element`    | `undefined` | the element that will be placed inside the slide                      |
+| `className`  | `undefined` | add any custom styles                                                 |
+
+- ### Pricing
+
+| Prop      | Type        | Description                                        |
+| --------- | ----------- | -------------------------------------------------- |
+| `variant` | `corporate` | choose page placement: `corporate` or `kids-mafia` |
+
 - ### Form
 
 | Prop           | Type          | Description                                           |

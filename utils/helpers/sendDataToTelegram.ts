@@ -1,10 +1,9 @@
 import { FieldValues } from 'react-hook-form';
 
-// TODO: Need fix with paths, split api files with reexport to index
-import sendTelegramMessage from '../../components/api/telegramBotAPI';
+import axios from 'axios';
 import data from '@/data/telegramMessageTemplate.json';
 
-export const sendDataToTelegram = async (formData: FieldValues) => {
+const sendDataToTelegram = async (formData: FieldValues): Promise<boolean> => {
   const { userName, phoneNumber, userComment } = formData;
   const { title, name, phone, comment } = data;
 
@@ -13,7 +12,18 @@ export const sendDataToTelegram = async (formData: FieldValues) => {
   ${phone}${phoneNumber}
   ${comment}${userComment}`;
 
-  return await sendTelegramMessage(messageMarkup);
+  try {
+    const response = await axios.post(`/api/telegram`, {
+      text: messageMarkup,
+    });
+
+    if (response.data.status === 200) {
+      return true;
+    }
+  } catch (error) {
+    return false;
+  }
+  return false;
 };
 
 export default sendDataToTelegram;
