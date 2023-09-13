@@ -8,6 +8,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
   variant = 'basic',
   children,
   className,
+  onClick,
 }) => {
   const socialButtonStyles = classNames(
     {
@@ -29,6 +30,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
       target="_blank"
       className={socialButtonStyles}
       aria-label={aria_label}
+      onClick={onClick}
     >
       {children}
     </a>

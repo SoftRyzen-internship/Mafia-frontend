@@ -27,8 +27,8 @@
     "react-hook-form": "^7.43.9",
     "react-hook-form-persist": "^3.0.0",
     "react-hot-toast": "^2.4.1",
-    "swiper": "^10.2.0",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "swiper": "^10.2.0"
   },
   "devDependencies": {
     "@graphql-codegen/typescript-graphql-request": "^5.0.0",
@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^6.2.1",
     "autoprefixer": "^10.4.13",
+    "encoding": "^0.1.13",
     "eslint": "^8.35.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "^8.6.0",
