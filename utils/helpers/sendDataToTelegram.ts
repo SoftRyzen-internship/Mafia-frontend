@@ -1,7 +1,6 @@
 import { FieldValues } from 'react-hook-form';
 
-// TODO: Need fix with paths, split api files with reexport to index
-import sendTelegramMessage from '../../components/api/telegramBotAPI';
+import { sendTelegramMessage } from '@/api';
 import data from '@/data/telegramMessageTemplate.json';
 
 export const sendDataToTelegram = async (formData: FieldValues) => {

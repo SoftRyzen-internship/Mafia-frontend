@@ -1,0 +1,12 @@
+.condition::before {
+  content: '';
+
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  left: 0;
+  top: 3px;
+
+  background-image: url('/icons/icon_check-mark.svg');
+}

@@ -1,14 +1,22 @@
-import Title from '@/components/Title/Title';
+import { CorporateParties } from '@/views/CorporateParties';
 
-import data from '@/data/common.json';
+import { Slider } from '@/components/Slider';
+import { SliderSchoolElement } from '@/components/SliderSchoolElement';
+import schoolData from '@/data/schoolSection.json';
 
 const Home = () => {
-  const mainPage = data.mainPage;
-
   return (
     <>
-      <Title>{mainPage.title}</Title>
-      <p className="font-montserrat">{mainPage.description}</p>
+      <CorporateParties />
+      <div className="container">
+        <Slider
+          section="school"
+          navigation
+          pagination
+          element={SliderSchoolElement}
+          data={schoolData.swiperData}
+        />
+      </div>
     </>
   );
 };
