@@ -37,6 +37,7 @@
 /* corporate bg */
 
 .sectionCorporate {
+  max-width: 1920px;
   background-image: image-set(
     url('/images/corporate/corp-pricing-bg-mob.webp') 1x,
     url('/images/corporate/corp-pricing-bg-mob@2x.webp') 2x

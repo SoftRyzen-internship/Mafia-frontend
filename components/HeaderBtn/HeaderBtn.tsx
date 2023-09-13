@@ -19,8 +19,6 @@ export const HeaderBtn = () => {
     setShowModal(prev => !prev);
   };
 
-  console.log(popUpType);
-
   return (
     <>
       <ButtonPrimary buttonsize="small" actionHandler={handleToggeModal}>
@@ -30,7 +28,9 @@ export const HeaderBtn = () => {
       {showModal ? (
         <Portal setShowModal={handleToggeModal}>
           <ModalSendForm setShowModal={handleToggeModal}>
-            <Form setPopUpType={setPopUpType} />
+            {popUpType === 'default' ? (
+              <Form setPopUpType={setPopUpType} />
+            ) : null}
           </ModalSendForm>
         </Portal>
       ) : null}

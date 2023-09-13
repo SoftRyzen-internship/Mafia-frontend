@@ -58,13 +58,24 @@ export const MobileMenu = () => {
             border-b border-gray-light px-[24px] pb-[6px] pt-[5px] 
             sm:pl-[16vw] md:pb-[16px] md:pl-[16vw] md:pt-[17px]"
             >
-              <Logo position="mobile-menu" href="/" />
+              <Logo
+                position="mobile-menu"
+                href="/"
+                onClick={handleMenuToggle}
+              />
               <IconBtn icon="cross" onClick={() => handleMenuToggle()} />
             </div>
             <div className="px-[24px] py-[40px] sm:py-[60px] sm:pl-[16vw] md:pl-[16vw]">
-              <NavigationRow position="mobile-menu" />
+              <NavigationRow
+                position="mobile-menu"
+                onClick={handleMenuToggle}
+              />
               <Contacts variant="mobile-menu" className="mt-[54px]" />
-              <SocialsMenu variant="mobile-menu" className="mt-[36px]" />
+              <SocialsMenu
+                variant="mobile-menu"
+                className="mt-[36px]"
+                onClick={handleMenuToggle}
+              />
             </div>
           </nav>
         </div>

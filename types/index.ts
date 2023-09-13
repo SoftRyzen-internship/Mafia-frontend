@@ -11,6 +11,7 @@ export interface LogoProps {
   href: string;
   position: 'header' | 'footer' | 'mobile-menu';
   className?: string;
+  onClick?: () => void;
 }
 
 type HeadingTag = 'h1' | 'h2' | 'h3';
@@ -40,6 +41,7 @@ export interface ParagraphProps {
 export interface NavigationRowProps {
   position: 'header' | 'footer' | 'mobile-menu';
   className?: string;
+  onClick?: () => void;
 }
 
 export type SocialContact = {
@@ -53,6 +55,7 @@ type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialButtonProps {
@@ -61,6 +64,7 @@ export interface SocialButtonProps {
   variant?: SocialMenuVariants;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialIconProps {
@@ -105,6 +109,7 @@ export interface NavigationRowLinkProps {
   href: string;
   position: string;
   title: string;
+  onClick?: () => void;
 }
 
 export interface SectionProps {
@@ -379,5 +384,13 @@ export interface SkillsListItemProps {
 export interface LoaderProps {
   size: number;
   color: string;
+}
+
+export interface SkillsListProps {
   className?: string;
+}
+
+export interface HeroImageProps {
+  image: string;
+  alt: string;
 }
