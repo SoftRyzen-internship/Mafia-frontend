@@ -23,11 +23,11 @@ export const CorporateParties = () => {
                     md:flex-row md:gap-[24px] xl:gap-[127px] xxl:gap-[320px]"
         >
           <div
-            className="relative h-[315px] w-full md:h-[490px] md:w-[288px] 
-                     xl:h-[459px] xl:w-[596px] xxl:w-[716px]"
+            className="relative h-[315px] w-full overflow-hidden rounded-normal 
+                    md:h-[490px] md:w-[288px] xl:h-[459px] xl:w-[596px] xxl:w-[716px]"
           >
             <Image
-              className="object-cover"
+              className="object-cover object-center"
               src={image.src}
               alt={image.alt}
               fill

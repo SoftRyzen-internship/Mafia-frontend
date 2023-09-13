@@ -12,14 +12,13 @@ import data from '@/data/common.json';
 export const HeaderBtn = () => {
   const [popUpType, setPopUpType] = useState('default');
   const [showModal, setShowModal] = useState(false);
+  const onModalClose = () => setShowModal(false);
 
   const { button } = data.header;
 
   const handleToggeModal = () => {
     setShowModal(prev => !prev);
   };
-
-  console.log(popUpType);
 
   return (
     <>
@@ -28,9 +27,11 @@ export const HeaderBtn = () => {
       </ButtonPrimary>
 
       {showModal ? (
-        <Portal setShowModal={handleToggeModal}>
-          <ModalSendForm setShowModal={handleToggeModal}>
-            <Form setPopUpType={setPopUpType} />
+        <Portal onModalClose={onModalClose}>
+          <ModalSendForm onModalClose={onModalClose}>
+            {popUpType === 'default' ? (
+              <Form setPopUpType={setPopUpType} />
+            ) : null}
           </ModalSendForm>
         </Portal>
       ) : null}
