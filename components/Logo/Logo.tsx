@@ -3,13 +3,14 @@ import classNames from 'classnames';
 import React, { FC } from 'react';
 import Link from 'next/link';
 
-import LogoImg from '@/public/images/common/logo.svg';
+import LogoImg from '@/public/images/common/logoNew.svg';
 import { LogoProps } from '@/types';
 
 export const Logo: FC<LogoProps> = ({
   href = '/',
   className,
   position = 'header',
+  onClick,
 }) => {
   const logoClasses = classNames('inline-block', {
     'h-[41px] w-14 md:h-[47px] md:w-[65px] xl:h-[58px] xl:w-20 xxl:h-[74px] xxl:w-[103px]':
@@ -24,7 +25,10 @@ export const Logo: FC<LogoProps> = ({
       className={` ${logoClasses}  ${className}`}
       aria-label="Посилання із логотипом компанії"
     >
-      <LogoImg aria-label="Зображення із логотипом компанії" />
+      <LogoImg
+        aria-label="Зображення із логотипом компанії"
+        onClick={onClick}
+      />
     </Link>
   );
 };
