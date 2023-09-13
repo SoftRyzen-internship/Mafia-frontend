@@ -28,8 +28,8 @@ export const HeaderBtn = () => {
       </ButtonPrimary>
 
       {showModal ? (
-        <Portal setShowModal={handleToggeModal}>
-          <ModalSendForm setShowModal={handleToggeModal}>
+        <Portal onModalClose={handleToggeModal}>
+          <ModalSendForm onModalClose={handleToggeModal}>
             <Form setPopUpType={setPopUpType} />
           </ModalSendForm>
         </Portal>

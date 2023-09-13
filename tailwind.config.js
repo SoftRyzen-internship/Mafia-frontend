@@ -34,7 +34,7 @@ module.exports = {
       inputFocus: '0px 5px 12px 0px rgba(8, 3, 21, 0.1) inset',
       inputError: '0px 0px 16px 0px rgba(255, 65, 96, 0.2)',
       modalSentForm: '0px 0px 8px 0px rgba(52, 48, 57, 0.12)',
-     
+
       diff: '0px 0px 9px 0px rgba(62,50,95,0.09)',
     },
     // THEME
