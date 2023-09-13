@@ -84,7 +84,7 @@ body {
 }
 /* Tournaments */
 .tournament-block:nth-child(2n) .tournament-container {
-  @apply flex-row-reverse justify-start;
+  @apply flex-row-reverse justify-end;
 }
 .tournament-block:nth-child(2n + 1) .tournament-container {
   @apply justify-end;
@@ -141,6 +141,24 @@ body {
 
   .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
     @apply -left-[206px];
+  }
+}
+
+@media (min-width: 1752px) {
+  .tournament-block:nth-child(2n + 1) .tournament-container {
+    @apply gap-[172px];
+  }
+
+  .tournament-block-img-wrapper::before {
+    @apply w-[272px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[168px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[168px] top-[160px] w-[420px];
   }
 }
 
