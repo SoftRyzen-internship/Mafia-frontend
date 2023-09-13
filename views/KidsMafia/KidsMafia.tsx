@@ -11,6 +11,7 @@ import { ButtonPrimary } from '@/components/Buttons';
 
 import css from './KidsMafia.module.css';
 import data from '@/data/kidsMafiaMainPage.json';
+import common from '@/data/common.json';
 
 export const KidsMafia: FC = () => {
   return (
@@ -40,7 +41,7 @@ export const KidsMafia: FC = () => {
           <ButtonSecondary
             className=" md:mt-8 xl:h-12 xl:w-[301px] xxl:w-[336px] mdOnly:mx-auto"
             buttonsize="large"
-            linkto=""
+            linkto={common.navigationRowLinks[2].href}
           >
             {data.buttonSecondaryText}
           </ButtonSecondary>
