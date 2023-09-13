@@ -1,4 +1,3 @@
-// import SvgClose from '@/public/icons/icon_cross.svg';
 import { IconBtn } from '../IconBtn';
 
 import { IPortal } from '@/types';
