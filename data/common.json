@@ -7,10 +7,10 @@
     "button": "Зв’язатися"
   },
   "navigationRowLinks": [
-    { "title": "Турніри", "href": "tournaments" },
-    { "title": "Корпоративи", "href": "corporate-parties" },
-    { "title": "Дитяча мафія", "href": "mafia-kids" },
-    { "title": "Зал слави", "href": "fame-hall" }
+    { "title": "Турніри", "href": "/tournaments" },
+    { "title": "Корпоративи", "href": "/corporate-parties" },
+    { "title": "Дитяча мафія", "href": "/mafia-kids" },
+    { "title": "Зал слави", "href": "/fame-hall" }
   ],
   "contacts": {
     "title": "Контакти",
