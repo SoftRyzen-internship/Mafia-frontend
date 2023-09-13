@@ -11,6 +11,7 @@ import { NavigationRowProps } from '@/types';
 export const NavigationRow: FC<NavigationRowProps> = ({
   position = 'header',
   className,
+  onClick,
 }) => {
   const currentPath = usePathname();
   const NavigationRowClasses = classNames('flex', {
@@ -34,6 +35,7 @@ export const NavigationRow: FC<NavigationRowProps> = ({
               href={href}
               title={title}
               position={position}
+              onClick={onClick}
             />
           </li>
         );
