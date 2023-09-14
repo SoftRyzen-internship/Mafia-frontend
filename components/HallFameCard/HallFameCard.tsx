@@ -36,7 +36,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
         <div className="relative h-full w-full">
           <Image
             src={img.data.attributes.url}
-            alt={img.data.attributes.alternativeText}
+            alt={img.data.attributes.alternativeText || 'Фото без опису'}
             className="h-full w-full rounded-md object-cover"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
