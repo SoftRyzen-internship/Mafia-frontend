@@ -6,12 +6,14 @@ import { KidsMafia } from '@/views/KidsMafia';
 import { Slider } from '@/components/Slider';
 import { SliderPresentersElement } from '@/components/SliderPresentersElement';
 import { getPresenters } from '@/utils/api/getPresenters';
+import { HallFameSection } from '@/views/HallFameSection';
 // ==========================================
 
 const Home = async () => {
   const presentersData = await getPresenters();
   return (
     <>
+      <HallFameSection />
       <HomeHero />
       <CorporateParties />
       <KidsMafia />

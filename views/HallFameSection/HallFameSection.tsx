@@ -9,7 +9,6 @@ import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import { HallFameCard } from '@/components/HallFameCard';
 import { HallFameCustomCard } from '@/components/HallFameCustomCard';
 import { Heading } from '@/components/Heading/Heading';
-import { Section } from '@/components/Section/Section';
 
 import s from '@/views/HallFameSection/HallFameSection.module.css';
 
@@ -37,12 +36,14 @@ export const HallFameSection: React.FC = async () => {
     const shuffledData = shuffleArray([...hallFameData, customCardData]);
 
     return (
-      <Section className={`${s.hallFameListContainer} container`}>
-        <div className="container">
+      <section
+        className={`${s.hallFameListContainer} pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
+      >
+        <div className="container py-[80px]">
           <Heading
             tag="h1"
             variant="main"
-            className="mb-[84px] mt-[56px] text-[28px] font-semibold leading-9 md:mb-[68px] md:mt-[52px] md:text-[32px] xl:mb-[71px] xl:mt-[41px] xl:text-[42px] xl:leading-[52px]"
+            className="mb-[60px] text-[28px] font-semibold leading-9 md:text-[32px] xl:text-[42px] xl:leading-[52px]"
             shadow={hallFameHeading.heading.main}
           >
             {hallFameHeading.heading.main}
@@ -67,7 +68,7 @@ export const HallFameSection: React.FC = async () => {
             })}
           </ul>
         </div>
-      </Section>
+      </section>
     );
   } catch (error) {
     console.error('Error fetching data in component:', error);
