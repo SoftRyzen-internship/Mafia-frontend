@@ -1,6 +1,5 @@
 // import { HomeHero } from '@/views/HomeHero';
 import { CorporateParties } from '@/views/CorporateParties';
-import { HallFameSection } from '@/views/HallFameSection';
 import { KidsMafia } from '@/views/KidsMafia';
 
 // import { Slider } from '@/components/Slider';
@@ -12,7 +11,6 @@ const Home = () => {
   return (
     <>
       {/* <HomeHero /> */}
-      <HallFameSection />
       <CorporateParties />
       <KidsMafia />
 
