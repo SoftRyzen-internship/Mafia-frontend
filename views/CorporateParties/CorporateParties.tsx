@@ -1,14 +1,20 @@
 import Image from 'next/image';
 
+import { getPresenters } from '@/utils/api/getPresenters';
+
 import { Heading } from '@/components/Heading';
 import { Section } from '@/components/Section';
+import { FormWithPopUp } from '@/components/FormWithPopUp';
+import { Fallback } from '@/components/Fallback';
+import { Slider } from '@/components/Slider';
+import { SliderPresentersElement } from '@/components/SliderPresentersElement';
 
 import data from '@/data/corporateMainPage.json';
 import css from './CorporateParties.module.css';
-import { Fallback } from '@/components/Fallback';
 
-export const CorporateParties = () => {
+export const CorporateParties = async () => {
   const { primary_title, secondary_title, image } = data;
+  const presentersData = await getPresenters();
 
   return (
     <Section className={css.bg_img}>
@@ -35,8 +41,8 @@ export const CorporateParties = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
-          <div className="border pt-[100px] text-center xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
-            Тут може бути ваша форма
+          <div className="xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
+            <FormWithPopUp />
           </div>
         </div>
 
@@ -47,7 +53,16 @@ export const CorporateParties = () => {
         >
           {secondary_title}
         </Heading>
-        <Fallback />
+        {presentersData && presentersData.length > 0 ? (
+          <Slider
+            pagination
+            section="presenters"
+            element={SliderPresentersElement}
+            data={presentersData}
+          />
+        ) : (
+          <Fallback />
+        )}
       </div>
     </Section>
   );
