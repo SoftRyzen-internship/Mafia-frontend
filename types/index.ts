@@ -395,7 +395,7 @@ export interface SkillsListProps {
   className?: string;
 }
 
-export interface HeroImageProps {
+export interface SectionImageProps {
   image: string;
   alt: string;
 }

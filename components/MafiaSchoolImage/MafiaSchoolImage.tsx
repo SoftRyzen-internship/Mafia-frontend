@@ -1,22 +1,36 @@
 import Image from 'next/image';
 import classNames from 'classnames';
 
+import { SectionImageProps } from '@/types';
+
 import css from './MafiaSchoolImage.module.css';
 
-export const MafiaSchoolImage = ({ image, alt }) => {
+export const MafiaSchoolImage: React.FC<SectionImageProps> = ({
+  image,
+  alt,
+}) => {
+  const sizes = classNames(
+    'h-[315px] w-full',
+    'md:h-[630px] md:w-[288px]',
+    'xl:h-[412px] xl:w-[493px]',
+    'xxl:h-[412px] xxl:w-[716px]',
+  );
+
+  const containerStyles = classNames(
+    sizes,
+    'mb-[76px] rounded-normal shadow-sm',
+    'md:mb-[96px] xxl:bottom-[120px] xxl:top-auto',
+  );
+
   const imageStyles = classNames(
-    'h-[315px] w-full rounded-normal object-cover object-center',
-    'md:h-[630px] md:w-[288px] md:object-left',
-    'xl:h-[412px] xl:w-[493px] xxl:h-[412px] xxl:w-[716px]',
+    sizes,
+    'rounded-normal object-cover object-center',
+    'md:object-left',
     css.image,
   );
+
   return (
-    <div
-      className="mb-[76px] h-[315px] w-full rounded-normal shadow-sm
-            md:mb-[96px] md:h-[630px] md:w-[288px]
-            xl:h-[412px] xl:w-[493px]
-            xxl:bottom-[120px] xxl:top-auto xxl:h-[412px] xxl:w-[716px]"
-    >
+    <div className={containerStyles}>
       <Image
         src={image}
         alt={alt}

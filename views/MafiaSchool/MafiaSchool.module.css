@@ -6,12 +6,45 @@
   );
 }
 
+.schoolSection::before {
+  content: '';
+
+  height: 60px;
+  width: 100%;
+
+  position: absolute;
+  top: 767px;
+  left: 0;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
+  );
+}
+
+@media screen and (min-width: 352px) {
+  .schoolSection::before {
+    top: 742px;
+  }
+}
+
+@media screen and (min-width: 378px) {
+  .schoolSection::before {
+    top: 718px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .schoolSection {
     background-image: image-set(
       url('/images/home/home-school-bg-tab.webp') 1x,
       url('/images/home/home-school-bg-tab@2x.webp') 2x
     );
+  }
+
+  .schoolSection::before {
+    top: 344px;
   }
 }
 
@@ -22,6 +55,10 @@
       url('/images/home/home-school-bg-desk@2x.webp') 2x
     );
   }
+
+  .schoolSection::before {
+    top: 340px;
+  }
 }
 
 @media screen and (min-width: 1752px) {
@@ -30,42 +67,5 @@
       url('/images/home/home-school-bg-desk-lg.webp') 1x,
       url('/images/home/home-school-bg-desk-lg@2x.webp') 2x
     );
-  }
-}
-
-.gradient {
-  width: 296px;
-
-  padding: 16px 0 16px 24px;
-  margin-left: -24px;
-
-  background: linear-gradient(
-    270deg,
-    rgba(22, 20, 28, 0) -1.47%,
-    #16141c 95.63%
-  );
-}
-
-@media screen and (min-width: 768px) {
-  /* check 1024 etc */
-  .gradient {
-    width: 684px;
-    margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  /* check 1024 etc */
-  .gradient {
-    width: 1196px;
-    padding-right: 265px;
-  }
-}
-
-@media screen and (min-width: 1752px) {
-  .gradient {
-    width: 1836px;
-    padding-right: 615px;
-    margin-left: -84px;
   }
 }

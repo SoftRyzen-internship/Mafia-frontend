@@ -12,20 +12,22 @@ import data from '@/data/schoolSection.json';
 
 import css from './MafiaSchool.module.css';
 
-export const MafiaSchool = () => {
-  const { title, intro, invite, image, imageAlt, subtitle, description, join } =
-    data;
+export const MafiaSchool: React.FC = () => {
+  const {
+    title,
+    intro,
+    invite,
+    image,
+    imageAlt,
+    subtitle,
+    description,
+    join,
+    swiperData,
+  } = data;
 
   const sectionStyles = classNames(
     css.schoolSection,
-    'py-[80px] mx-auto bg-no-repeat bg-top bg-cover',
-  );
-
-  const bgGradient = classNames(
-    css.gradient,
-    'mb-[40px]',
-    'md:mb-0 md:absolute md:top-[280px] md:left-0 md:text-right',
-    'xl:top-[256px]',
+    'py-[80px] mx-auto relative bg-no-repeat bg-top bg-cover',
   );
 
   return (
@@ -44,13 +46,19 @@ export const MafiaSchool = () => {
 
         <MafiaSchoolImage image={image} alt={imageAlt} />
 
-        <div className={bgGradient}>
-          <Heading variant="secondary" className="w-[274px] md:w-auto">
-            {subtitle}
-          </Heading>
-        </div>
+        <Heading
+          variant="secondary"
+          className="mb-[40px] w-[274px] 
+          md:absolute md:right-[99px] md:top-[280px] md:mb-0 md:w-auto
+          xl:right-[350px] xl:top-[272px] xxl:right-[565px]"
+        >
+          {subtitle}
+        </Heading>
 
-        <LearnList className="mb-[60px] md:absolute md:right-[84px] md:top-[418px] xl:right-8 xl:top-[416px]" />
+        <LearnList
+          className="mb-[60px] md:absolute md:right-[84px] md:top-[418px] 
+            xl:right-[84px] xl:top-[416px]"
+        />
 
         <Paragraph className="mb-6 md:w-[280px] xl:w-[597px]">
           {description}
@@ -64,7 +72,7 @@ export const MafiaSchool = () => {
           navigation
           pagination
           element={SliderSchoolElement}
-          data={data.swiperData}
+          data={swiperData}
         />
       </div>
     </Section>
