@@ -18,13 +18,13 @@ export const MafiaSchoolImage: React.FC<SectionImageProps> = ({
 
   const containerStyles = classNames(
     sizes,
-    'mb-[76px] rounded-normal shadow-sm',
-    'md:mb-[96px] xxl:bottom-[120px] xxl:top-auto',
+    'mb-[76px] relative rounded-normal shadow-sm',
+    'md:mb-[96px]',
   );
 
   const imageStyles = classNames(
     sizes,
-    'rounded-normal object-cover object-center',
+    'z-1 rounded-normal object-cover object-center',
     'md:object-left',
     css.image,
   );

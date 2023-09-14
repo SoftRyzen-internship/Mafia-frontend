@@ -23,15 +23,39 @@
   );
 }
 
-@media screen and (min-width: 352px) {
+.container::before {
+  content: '';
+
+  width: 384px;
+  height: 387px;
+
+  position: absolute;
+  top: 276px;
+  left: -158px;
+
+  background: #141318;
+
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 351px) {
   .schoolSection::before {
     top: 742px;
+  }
+
+  .container::before {
+    top: 250px;
   }
 }
 
 @media screen and (min-width: 378px) {
   .schoolSection::before {
     top: 718px;
+  }
+
+  .container::before {
+    width: 484px;
+    top: 227px;
   }
 }
 
@@ -46,6 +70,14 @@
   .schoolSection::before {
     top: 344px;
   }
+
+  .container::before {
+    width: 582px;
+    height: 702px;
+
+    top: 386px;
+    left: -262px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -59,6 +91,13 @@
   .schoolSection::before {
     top: 340px;
   }
+
+  .container::before {
+    width: 735px;
+    height: 484px;
+
+    top: 380px;
+  }
 }
 
 @media screen and (min-width: 1752px) {
@@ -67,5 +106,15 @@
       url('/images/home/home-school-bg-desk-lg.webp') 1x,
       url('/images/home/home-school-bg-desk-lg@2x.webp') 2x
     );
+  }
+
+  .container::before {
+    width: 652px;
+    height: 484px;
+
+    top: 380px;
+    left: -84px;
+
+    border-radius: 0 6px 6px 0;
   }
 }
