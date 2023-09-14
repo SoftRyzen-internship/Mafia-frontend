@@ -1,25 +1,31 @@
 import Image from 'next/image';
 import classNames from 'classnames';
 
-import { HeroImageProps } from '@/types';
+import { SectionImageProps } from '@/types';
 
 import css from './HomeHeroImage.module.css';
 
-export const HomeHeroImage: React.FC<HeroImageProps> = ({ image, alt }) => {
-  const containerStyles = classNames(
-    css.heroImgContainer,
-    'mb-5 w-full h-[214px] rounded-normal',
-    'md:mb-9 md:h-[272px] md:w-[600px]',
-    'xl:absolute xl:right-8 xl:top-[80px] xl:mb-0 xl:h-[644px] xl:w-[493px]',
-    'xxl:bottom-[120px] xxl:top-auto xxl:h-[778px] xxl:w-[716px]',
-  );
-
-  const imageStyles = classNames(
-    css.heroImg,
-    'h-[214px] w-full rounded-normal object-cover object-top',
+export const HomeHeroImage: React.FC<SectionImageProps> = ({ image, alt }) => {
+  const sizes = classNames(
+    'w-full h-[214px]',
     'md:h-[272px] md:w-[600px]',
     'xl:h-[644px] xl:w-[493px]',
     'xxl:h-[778px] xxl:w-[716px]',
+  );
+
+  const containerStyles = classNames(
+    sizes,
+    css.heroImgContainer,
+    'mb-5 rounded-normal',
+    'mdOnly:mb-9',
+    'xl:absolute xl:right-[84px] xl:top-0',
+    // 'xxl:bottom-[120px] xxl:top-auto',
+  );
+
+  const imageStyles = classNames(
+    sizes,
+    css.heroImg,
+    'rounded-normal object-cover object-top',
   );
 
   return (

@@ -274,9 +274,9 @@ export type TextAreaT = {
 
 export interface TextAreaProps {
   textarea: TextAreaT;
-  height: number;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
+  className: string;
 }
 
 export interface InputProps {
@@ -461,7 +461,7 @@ export interface SkillsListProps {
   className?: string;
 }
 
-export interface HeroImageProps {
+export interface SectionImageProps {
   image: string;
   alt: string;
 }
@@ -471,4 +471,5 @@ export type PopUpType = 'default' | 'success' | 'error';
 export interface BtnWithFormModalProps {
   buttonsize: ButtonPrimaryVariants;
   text: string;
+  btnClassName?: string;
 }

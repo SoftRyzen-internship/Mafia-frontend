@@ -11,7 +11,7 @@ export const getSliderBreakpointsOptions = (
   if (section === 'school') {
     return {
       [SCREEN_MOBILE]: { slidesPerView: 1 },
-      [SCREEN_TABLET]: { slidesPerView: 4, loopedSlides: 3 },
+      [SCREEN_TABLET]: { slidesPerView: 3, loopedSlides: 3 },
       [SCREEN_DESKTOP]: {
         slidesPerView: 5,
         loopedSlides: 3,
