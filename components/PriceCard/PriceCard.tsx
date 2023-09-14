@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import { ButtonPrimary } from '@/components/Buttons';
+import { BtnWithFormModal } from '../BtnWithFormModal';
 import { Heading } from '@/components/Heading';
 import { PricePackConditions } from '@/components/PricePackConditions';
 import { PricePackNotes } from '@/components/PricePackNotes';
@@ -46,9 +46,11 @@ export const PriceCard: React.FC<PriceCardProps> = ({ rate }) => {
 
       <PricePackNotes rate={rate} />
 
-      <ButtonPrimary className="mx-auto mt-6 xl:mt-[30px]">
-        {button}
-      </ButtonPrimary>
+      <BtnWithFormModal
+        btnClassName="mx-auto mt-6 xl:mt-[30px]"
+        buttonsize="medium"
+        text={button}
+      />
     </li>
   );
 };
