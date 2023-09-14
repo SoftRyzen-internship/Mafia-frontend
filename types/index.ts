@@ -302,6 +302,7 @@ export interface FooterLinkItemProps {
   title: string;
   href: string;
 }
+
 export interface SliderProps {
   section: 'school' | 'presenters' | 'corporate';
   pagination?: boolean;
@@ -309,7 +310,9 @@ export interface SliderProps {
   autoplay?: boolean;
   data: any;
   element: any;
+  allowTouchMove?: boolean;
   className?: string;
+  slideClassName?: string;
 }
 
 interface SliderElementProps {
