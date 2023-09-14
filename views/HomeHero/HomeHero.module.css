@@ -11,10 +11,6 @@
   .hero {
     padding-top: 72px;
     padding-bottom: 20px;
-    background-image: image-set(
-      url('/images/home/home-hero-bg-mob-md.webp') 1x,
-      url('/images/home/home-hero-bg-mob-md@2x.webp') 2x
-    );
   }
 }
 

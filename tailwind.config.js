@@ -132,9 +132,9 @@ module.exports = {
         padding: {
           DEFAULT: '1.5rem',
           sm: '1.5rem',
-          md: '2rem',
-          xl: '2rem',
-          xxl: '2rem',
+          md: '5.25rem',
+          xl: '5.25rem',
+          xxl: '5.25rem',
         },
       },
       // KEYFRAMES
