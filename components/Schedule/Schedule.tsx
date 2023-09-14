@@ -26,7 +26,7 @@ export const Schedule: FC<ScheduleProps> = async ({ className }) => {
           })}
         </ul>
       ) : (
-        <Fallback variant="small" />
+        <Fallback variant="small" className="mb-6" />
       )}
     </>
   );

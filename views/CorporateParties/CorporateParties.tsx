@@ -8,8 +8,10 @@ import { FormWithPopUp } from '@/components/FormWithPopUp';
 import { Fallback } from '@/components/Fallback';
 import { Slider } from '@/components/Slider';
 import { SliderPresentersElement } from '@/components/SliderPresentersElement';
+import { ButtonSecondary } from '@/components/Buttons';
 
 import data from '@/data/corporateMainPage.json';
+import common from '@/data/common.json';
 import css from './CorporateParties.module.css';
 
 export const CorporateParties = async () => {
@@ -63,6 +65,14 @@ export const CorporateParties = async () => {
         ) : (
           <Fallback />
         )}
+
+        <ButtonSecondary
+          linkto={common.navigationRowLinks[1].href}
+          buttonsize="large"
+          className="mt-9 md:mx-auto md:mt-8 xl:h-12 xl:w-[301px] xxl:w-[336px]"
+        >
+          {data.buttonSecondaryText}
+        </ButtonSecondary>
       </div>
     </Section>
   );
