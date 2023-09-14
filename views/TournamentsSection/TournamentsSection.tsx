@@ -25,7 +25,7 @@ export const TournamentsSection: FC = async () => {
       )}
     >
       <div className={classNames('pt-[80px]', s.hero)}>
-        <div className="container pb-[78px] md:pb-[60px]">
+        <div className="container pb-[78px] xl:pb-[60px]">
           <Heading className="mb-6" shadow={title}>
             {title}
           </Heading>

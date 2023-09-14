@@ -17,7 +17,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
   const htmlString = parseTextToHTML(description);
 
   return (
-    <div className="tournament-block pb-20 pt-[96px]">
+    <div className="tournament-block">
       <div className="tournament-container container md:flex md:items-center md:gap-6">
         <div className="w-full xl:w-[516px] smOnly:mb-[60px]">
           <Heading
