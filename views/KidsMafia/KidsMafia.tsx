@@ -7,7 +7,7 @@ import { Heading } from '@/components/Heading';
 import { KidsMafiaTextList } from '@/components/KidsMafiaTextList';
 import { ButtonSecondary } from '@/components/Buttons';
 import { SkillsList } from '@/components/SkillsList';
-import { KidsMafiaBtnHolder } from '@/components/KidsMafiaBtnHolder';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
 
 import css from './KidsMafia.module.css';
 import data from '@/data/kidsMafiaMainPage.json';
@@ -53,7 +53,7 @@ export const KidsMafia: FC = () => {
           <div
             className="relative h-[260px] w-full overflow-hidden rounded-normal 
                       md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px]
-                      xl:h-[352px] xl:w-[493px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
+                      xl:h-[352px] xl:w-[394px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
           >
             <Image
               src={data.img2.src}
@@ -73,7 +73,12 @@ export const KidsMafia: FC = () => {
           </Heading>
           <SkillsList />
         </div>
-        <KidsMafiaBtnHolder />
+
+        <BtnWithFormModal
+          buttonsize="large"
+          text={data.buttonPrimaryText}
+          btnClassName="md:mx-auto xl:h-12 xl:w-[301px] xxl:w-[336px]"
+        />
       </div>
     </Section>
   );

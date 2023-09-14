@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { SliderPresentersElementItemProps } from '@/types';
 import { useWindowWidth } from '@/hooks';
@@ -9,16 +9,15 @@ import { SliderImage } from '../SliderImage';
 export const SliderPresentersElement: React.FC<
   SliderPresentersElementItemProps
 > = cardInfo => {
-  const [swiperWrapperHeight, setSwiperWrapperHeight] = useState<number>();
-
   const { isScreenDesktop } = useWindowWidth();
 
   useEffect(() => {
-    const pagination = document.querySelector('.swiper-pagination');
-    pagination?.classList.add('presenters-section');
+    const pagination = document.querySelector(
+      '#swiper:has(#presenters) .swiper-pagination',
+    );
 
     const swiperWrapper = document.querySelector(
-      '.swiper-wrapper',
+      '.swiper-wrapper:has(#presenters)',
     ) as HTMLElement | null;
 
     if (swiperWrapper) {
@@ -26,14 +25,13 @@ export const SliderPresentersElement: React.FC<
         swiperWrapper.childElementCount < 4 &&
         pagination?.classList.add('hidden');
       swiperWrapper.childElementCount;
-      setSwiperWrapperHeight(swiperWrapper.offsetHeight);
     }
   }, [isScreenDesktop]);
 
   return (
     <div
-      style={{ height: swiperWrapperHeight }}
-      className="overflow-hidden rounded-normal border-[2px] border-primary-light-600 p-5 transition duration-300 ease-out hover:border-primary-light-500 md:p-6 xl:p-8 xxl:p-9"
+      id="presenters"
+      className="h-full overflow-hidden rounded-normal border-[2px] border-primary-light-600 p-5 transition duration-300 ease-out hover:border-primary-light-500 md:p-6 xl:p-8 xxl:p-9"
     >
       <SliderImage
         src={cardInfo.attributes.img.data.attributes.url}

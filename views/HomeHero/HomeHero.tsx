@@ -4,7 +4,7 @@ import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { HomeHeroImage } from '@/components/HomeHeroImage';
 import { Schedule } from '@/components/Schedule';
-import { ButtonPrimary } from '@/components/Buttons';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
 
 import data from '@/data/homeHero.json';
 
@@ -14,7 +14,7 @@ export const HomeHero: React.FC = () => {
   const { title, description, image, subtitle, button } = data;
 
   const sectionStyles = classNames(
-    'mx-auto bg-no-repeat bg-top bg-cover',
+    'mx-auto bg-no-repeat bg-top bg-cover py-[40px] sm:py-[60px] md:py-[80px] xxl:py-[120px]',
     css.hero,
   );
 
@@ -25,7 +25,7 @@ export const HomeHero: React.FC = () => {
 
   return (
     <section className={sectionStyles}>
-      <div className="container relative py-[40px] md:py-[80px] xxl:py-[120px]">
+      <div className="container relative">
         <Heading tag="h1" variant="main" className="mb-3 md:mb-5 xl:mb-6">
           {title}
         </Heading>
@@ -33,8 +33,8 @@ export const HomeHero: React.FC = () => {
         <Paragraph
           className="mb-[26px] text-lg font-light leading-[28px]
             md:mb-9 md:w-[332px] md:text-xl
-            xl:mb-[192px] xl:w-[608px] xl:text-2xl xl:leading-8
-            xxl:mb-[334px]"
+            xl:mb-[192px] xl:w-[600px] xl:text-2xl xl:leading-8
+            xxl:mb-[334px] xxl:w-[608px]"
         >
           {description}
         </Paragraph>
@@ -46,7 +46,11 @@ export const HomeHero: React.FC = () => {
         </Heading>
         <Schedule className="mb-5 md:mb-6" />
 
-        <ButtonPrimary className="w-full xxl:w-[417px]">{button}</ButtonPrimary>
+        <BtnWithFormModal
+          btnClassName="w-full xxl:w-[417px]"
+          buttonsize="medium"
+          text={button}
+        />
       </div>
     </section>
   );
