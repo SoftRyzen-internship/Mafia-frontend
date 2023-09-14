@@ -1,11 +1,7 @@
 import { HallFameSection } from '@/views/HallFameSection';
 
 const HallFame = () => {
-  return (
-    <div>
-      <HallFameSection />
-    </div>
-  );
+  return <HallFameSection />;
 };
 
 export default HallFame;
