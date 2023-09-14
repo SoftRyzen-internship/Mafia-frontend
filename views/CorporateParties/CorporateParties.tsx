@@ -43,7 +43,7 @@ export const CorporateParties = async () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
-          <div className="xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
+          <div className="xl:w-[390px] xxl:w-[420px] smOnly:h-[482px] mdOnly:flex-1">
             <FormWithPopUp />
           </div>
         </div>
