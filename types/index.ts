@@ -73,8 +73,10 @@ export interface SocialIconProps {
   className?: string;
 }
 
+type ButtonPrimaryVariants = 'small' | 'medium' | 'large' | undefined;
+
 export interface ButtonPrimaryProps {
-  buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  buttonsize?: ButtonPrimaryVariants;
   type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
@@ -266,6 +268,7 @@ export interface FooterLinkItemProps {
   title: string;
   href: string;
 }
+
 export interface SliderProps {
   section: 'school' | 'presenters' | 'corporate';
   pagination?: boolean;
@@ -273,7 +276,9 @@ export interface SliderProps {
   autoplay?: boolean;
   data: any;
   element: any;
+  allowTouchMove?: boolean;
   className?: string;
+  slideClassName?: string;
 }
 
 interface SliderElementProps {
@@ -393,4 +398,11 @@ export interface SkillsListProps {
 export interface HeroImageProps {
   image: string;
   alt: string;
+}
+
+export type PopUpType = 'default' | 'success' | 'error';
+
+export interface BtnWithFormModalProps {
+  buttonsize: ButtonPrimaryVariants;
+  text: string;
 }

@@ -1,14 +1,17 @@
 import { HomeHero } from '@/views/HomeHero';
 import { MafiaSchool } from '@/views/MafiaSchool';
+
 import { CorporateParties } from '@/views/CorporateParties';
 import { KidsMafia } from '@/views/KidsMafia';
 
+// FOR SAMPLE OF PRESENTERS SLIDER ==========
 // import { Slider } from '@/components/Slider';
-// import { SliderSchoolElement } from '@/components/SliderSchoolElement';
+// import { SliderPresentersElement } from '@/components/SliderPresentersElement';
+// import { getPresenters } from '@/utils/api/getPresenters';
+// ==========================================
 
-// import schoolData from '@/data/schoolSection.json';
-
-const Home = () => {
+const Home = async () => {
+  // const presentersData = await getPresenters();
   return (
     <>
       <HomeHero />
@@ -16,14 +19,12 @@ const Home = () => {
       <CorporateParties />
       <KidsMafia />
 
-      {/* Slider example */}
       {/* <div className="container">
         <Slider
-          section="school"
-          navigation
           pagination
-          element={SliderSchoolElement}
-          data={schoolData.swiperData}
+          section="presenters"
+          element={SliderPresentersElement}
+          data={presentersData}
         />
       </div> */}
     </>
