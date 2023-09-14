@@ -162,7 +162,7 @@ body {
   }
 }
 
-/* Slider (school section) */
+/* Slider */
 
 #swiper
   > .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal
@@ -176,6 +176,12 @@ body {
 
 .swiper-pagination {
   bottom: -10px !important;
+}
+
+.swiper-pagination.presenters-section {
+  position: static;
+  transform: translateX(0%) !important;
+  margin: 40px auto 0 auto;
 }
 
 #swiper
@@ -195,14 +201,6 @@ body {
 
 #swiper {
   padding-top: 12px;
-}
-
-.swiper-wrapper {
-  margin-bottom: 44px;
-
-  @media screen and (min-width: 1752px) {
-    margin-bottom: 48px;
-  }
 }
 
 .swiper-slide:hover {
