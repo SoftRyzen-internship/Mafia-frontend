@@ -1,7 +1,11 @@
-import { HeaderBtn } from '@/components/HeaderBtn';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
 import { Logo } from '@/components/Logo';
 import { MobileMenu } from '@/components/MobileMenu';
 import { NavigationRow } from '@/components/NavigationRow';
+
+import data from '@/data/common.json';
+
+const { button } = data.header;
 
 export const Header = () => (
   <header className="fixed z-[2] w-full border-b border-gray-light bg-body py-[6px] md:py-[14px] xl:py-[12px]">
@@ -11,7 +15,7 @@ export const Header = () => (
         <Logo href="/" position="header" />
         <NavigationRow position="header" className="notXl:hidden" />
       </nav>
-      <HeaderBtn />
+      <BtnWithFormModal buttonsize="small" text={button} />
     </div>
   </header>
 );
