@@ -10,18 +10,19 @@ export const ModalSendForm = ({
   className,
 }: IPortal) => {
   return (
-    <div className=" mx-auto max-w-[480px] px-6  md:mx-0 md:w-auto md:px-0   ">
-      <div
-        className={`${s.background} relative  z-40 mt-[100px] rounded-normal bg-body shadow-modalSentForm md:absolute md:left-[50%]  md:top-[50%] md:mt-auto md:w-auto md:translate-x-[-50%]   md:translate-y-[-50%] ${className} `}
-      >
-        <div className="absolute left-0 top-[60px] h-[178px] w-[100%] bg-grad_1100 blur-[150px] "></div>
-        <IconBtn
-          icon="cross"
-          classes="absolute right-[21px] top-[21px] z-20 h-[57.5px] w-[57.5px]"
-          onClick={onModalClose}
-        />
-        {children}
-      </div>
+    <div
+      className={`${s.background} relative z-40 m-[20px] flex items-center justify-center 
+      rounded-normal bg-body px-[20px] py-[96px] shadow-modalSentForm
+      sm:mx-auto sm:w-[440px] md:w-[496px] xl:absolute xl:left-1/2
+      xl:top-1/2 xl:w-[840px] xl:-translate-x-1/2 xl:-translate-y-1/2 xxl:w-[864px] 
+      smOnly:mt-[40px] mdOnly:mt-[60px] ${className}`}
+    >
+      <IconBtn
+        icon="cross"
+        classes="absolute right-[21px] top-[21px] z-20 h-[57.5px] w-[57.5px]"
+        onClick={onModalClose}
+      />
+      {children}
     </div>
   );
 };

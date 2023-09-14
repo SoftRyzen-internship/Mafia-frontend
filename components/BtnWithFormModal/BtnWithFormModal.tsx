@@ -22,6 +22,7 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
   const handleToggeModal = () => {
     setShowModal(prev => !prev);
     setPopUpType('default');
+    document.body.classList.toggle('overflow-hidden');
   };
 
   return (
@@ -38,7 +39,10 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
         <Portal onModalClose={handleToggeModal}>
           <ModalSendForm onModalClose={handleToggeModal}>
             {popUpType === 'default' ? (
-              <Form setPopUpType={setPopUpType} />
+              <Form
+                setPopUpType={setPopUpType}
+                classes="md:w-[406px] xl-[460px]"
+              />
             ) : null}
             {popUpType === 'success' ? <SuccessWindow /> : null}
             {popUpType === 'error' ? <ErrorWindow /> : null}
