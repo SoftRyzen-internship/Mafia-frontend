@@ -16,7 +16,12 @@ export interface LogoProps {
 
 type HeadingTag = 'h1' | 'h2' | 'h3';
 
-type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
+type HeadingVariant =
+  | 'main'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'privacy-policy';
 
 export interface HeadingElementProps {
   className?: string;
@@ -73,8 +78,10 @@ export interface SocialIconProps {
   className?: string;
 }
 
+type ButtonPrimaryVariants = 'small' | 'medium' | 'large' | undefined;
+
 export interface ButtonPrimaryProps {
-  buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  buttonsize?: ButtonPrimaryVariants;
   type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
@@ -462,4 +469,21 @@ export interface SkillsListProps {
 export interface HeroImageProps {
   image: string;
   alt: string;
+}
+
+export interface IPrivacyPolicy {
+  privacyPolicy: {
+    data: {
+      attributes: {
+        text: string;
+      };
+    };
+  };
+}
+
+export type PopUpType = 'default' | 'success' | 'error';
+
+export interface BtnWithFormModalProps {
+  buttonsize: ButtonPrimaryVariants;
+  text: string;
 }

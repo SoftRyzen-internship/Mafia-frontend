@@ -10,7 +10,7 @@ export const Schedule: FC<ScheduleProps> = async ({ className }) => {
 
   return (
     <>
-      {schedules.length > 0 && (
+      {schedules.length > 0 ? (
         <ul
           className={`grid gap-4 md:w-[236px] xl:w-[300px] xxl:w-[418px] ${className}`}
         >
@@ -25,8 +25,9 @@ export const Schedule: FC<ScheduleProps> = async ({ className }) => {
             );
           })}
         </ul>
+      ) : (
+        <Fallback variant="small" />
       )}
-      {schedules.length === 0 && <Fallback variant="small" />}
     </>
   );
 };
