@@ -14,11 +14,12 @@ export const SliderPresentersElement: React.FC<
   const { isScreenDesktop } = useWindowWidth();
 
   useEffect(() => {
-    const pagination = document.querySelector('.swiper-pagination');
-    pagination?.classList.add('presenters-section');
+    const pagination = document.querySelector(
+      '#swiper:has(#presenters) .swiper-pagination',
+    );
 
     const swiperWrapper = document.querySelector(
-      '.swiper-wrapper',
+      '.swiper-wrapper:has(#presenters)',
     ) as HTMLElement | null;
 
     if (swiperWrapper) {
@@ -32,6 +33,7 @@ export const SliderPresentersElement: React.FC<
 
   return (
     <div
+      id="presenters"
       style={{ height: swiperWrapperHeight }}
       className="overflow-hidden rounded-normal border-[2px] border-primary-light-600 p-5 transition duration-300 ease-out hover:border-primary-light-500 md:p-6 xl:p-8 xxl:p-9"
     >
