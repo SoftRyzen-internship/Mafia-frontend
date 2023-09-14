@@ -48,8 +48,8 @@ export const BtnWithFormModal: React.FC<BtnWithFormModalProps> = ({
       </ButtonPrimary>
 
       {showModal ? (
-        <Portal setShowModal={handleToggeModal}>
-          <ModalSendForm setShowModal={handleToggeModal}>
+        <Portal onModalClose={handleToggeModal}>
+          <ModalSendForm onModalClose={handleToggeModal}>
             {popUpType === 'default' ? (
               <Form setPopUpType={setPopUpType} />
             ) : null}

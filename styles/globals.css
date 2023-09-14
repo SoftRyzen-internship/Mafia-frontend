@@ -51,69 +51,6 @@ body {
   @apply h-[24px];
 }
 
-/* kids-mafia-club */
-@layer components {
-  .kids-mafia-club-mob {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-mob.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-mob@2x.webp) type('image/webp')
-        2x
-    );
-
-    @apply bg-left-top bg-no-repeat;
-  }
-
-  .kids-mafia-club-tab {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-tab.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-tab@2x.webp) type('image/webp')
-        2x
-    );
-
-    @apply bg-left-top bg-no-repeat;
-  }
-
-  .kids-mafia-club-xl {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
-    );
-
-    @apply bg-left-top bg-no-repeat;
-  }
-
-  .kids-mafia-club-2xl {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
-        2x
-    );
-
-    @apply bg-left-top bg-no-repeat;
-  }
-
-  .club-kids-gallery-card {
-    flex-basis: calc((100% - 24px) / 2);
-    @apply h-[180px]  overflow-hidden rounded-md md:h-[198px] xl:h-[407px] xxl:h-[490px];
-
-    @media (min-width: 768px) {
-      flex-basis: calc((100% - 3 * 24px) / 4);
-    }
-  }
-
-  .club-kids-gallery-card:nth-child(1) {
-    @apply md:mt-[48px] xl:mt-[81px] smOnly:mb-[282px];
-  }
-
-  .club-kids-gallery-card:nth-child(2) {
-    @apply mt-[120px] md:mt-[116px] xl:mt-[189px];
-  }
-
-  .club-kids-gallery-card:nth-child(4) {
-    @apply md:mt-[156px] xl:mt-[279px] smOnly:mt-[136px];
-  }
-}
-
 /* Autofill behavior */
 .input-autofill:autofill,
 .input-autofill:-webkit-autofill,
@@ -144,6 +81,85 @@ body {
   content: '';
   background-image: url(/icons/error-cross.svg);
   @apply absolute -left-[20px] -top-[2px] h-[16px] w-[16px] bg-cover bg-center bg-no-repeat;
+}
+/* Tournaments */
+.tournament-block:nth-child(2n) .tournament-container {
+  @apply flex-row-reverse justify-end;
+}
+.tournament-block:nth-child(2n + 1) .tournament-container {
+  @apply justify-end;
+}
+
+.tournament-block:nth-child(2n) {
+  background-color: rgba(22, 20, 28, 0.4);
+}
+
+.tournament-block-title {
+  @apply relative w-full;
+}
+
+.tournament-block-title::before {
+  content: '';
+  @apply absolute -left-6 top-1/2 min-h-[64px] w-full -translate-y-1/2 bg-grad_400;
+}
+
+.tournament-block-img-wrapper::before {
+  content: '';
+  @apply absolute top-[95px] block h-[2px] w-[88px] overflow-hidden rounded-[1px];
+}
+
+.tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+  @apply -right-6 bg-grad_900;
+}
+
+.tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+  @apply -left-6 bg-grad_1000;
+}
+
+@media (min-width: 768px) {
+  .tournament-block-img-wrapper::before {
+    @apply top-[49px] w-[228px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[200px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[200px];
+  }
+}
+
+@media (min-width: 1280px) {
+  .tournament-block-img-wrapper::before {
+    @apply top-[172px] w-[286px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[206px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[206px];
+  }
+}
+
+@media (min-width: 1752px) {
+  .tournament-block:nth-child(2n + 1) .tournament-container {
+    @apply gap-[172px];
+  }
+
+  .tournament-block-img-wrapper::before {
+    @apply w-[272px];
+  }
+
+  .tournament-block:nth-child(2n) .tournament-block-img-wrapper::before {
+    @apply -right-[168px];
+  }
+
+  .tournament-block:nth-child(2n + 1) .tournament-block-img-wrapper::before {
+    @apply -left-[168px] top-[160px] w-[420px];
+  }
 }
 
 /* Slider */

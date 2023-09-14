@@ -17,3 +17,10 @@
 .card:focus .back {
   transform: rotateY(360deg);
 }
+
+.active .front {
+  transform: rotateY(180deg);
+}
+.active .back {
+  transform: rotateY(360deg);
+}
