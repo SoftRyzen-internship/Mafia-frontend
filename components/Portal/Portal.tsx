@@ -36,7 +36,7 @@ export const Portal = ({ onModalClose, children }: IPortal) => {
     ? createPortal(
         <div
           onClick={handleBackdrop}
-          className="fixed left-0 top-0 z-20 h-[100%] w-[100%] bg-black-dark/75 "
+          className="fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75"
         >
           {children}
         </div>,

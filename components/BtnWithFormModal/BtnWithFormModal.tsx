@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
+import { FC, useState } from 'react';
 
 import { ButtonPrimary } from '../Buttons';
 import { Portal } from '../Portal';
@@ -9,41 +8,30 @@ import { ModalSendForm } from '../ModalSendForm';
 import { Form } from '../Form/Form';
 
 import { BtnWithFormModalProps, PopUpType } from '@/types';
-import data from '@/data/common.json';
 import { SuccessWindow } from '../SuccessWindow';
 import { ErrorWindow } from '../ErrorWindow';
 
-const { onSuccess, onError } = data.onFormSubmitNotify;
-
-export const BtnWithFormModal: React.FC<BtnWithFormModalProps> = ({
+export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
   buttonsize,
   text,
+  btnClassName,
 }) => {
   const [popUpType, setPopUpType] = useState<PopUpType>('default');
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    const checkPopUpType = (popUpType: PopUpType) => {
-      switch (popUpType) {
-        case 'default':
-          return;
-        case 'success':
-          return toast.success(onSuccess);
-        case 'error':
-          return toast.error(onError);
-      }
-    };
-
-    checkPopUpType(popUpType);
-  }, [popUpType]);
-
   const handleToggeModal = () => {
     setShowModal(prev => !prev);
+    setPopUpType('default');
+    document.body.classList.toggle('overflow-hidden');
   };
 
   return (
     <>
-      <ButtonPrimary buttonsize={buttonsize} actionHandler={handleToggeModal}>
+      <ButtonPrimary
+        buttonsize={buttonsize}
+        actionHandler={handleToggeModal}
+        className={btnClassName}
+      >
         {text}
       </ButtonPrimary>
 
@@ -51,7 +39,10 @@ export const BtnWithFormModal: React.FC<BtnWithFormModalProps> = ({
         <Portal onModalClose={handleToggeModal}>
           <ModalSendForm onModalClose={handleToggeModal}>
             {popUpType === 'default' ? (
-              <Form setPopUpType={setPopUpType} />
+              <Form
+                setPopUpType={setPopUpType}
+                classes="md:w-[406px] xl-[460px]"
+              />
             ) : null}
             {popUpType === 'success' ? <SuccessWindow /> : null}
             {popUpType === 'error' ? <ErrorWindow /> : null}

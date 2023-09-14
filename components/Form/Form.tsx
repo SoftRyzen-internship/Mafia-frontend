@@ -100,7 +100,7 @@ export const Form: React.FC<FormProps> = ({
             <TextArea
               textarea={textarea}
               register={register}
-              height={106}
+              className="h-[106px]"
               errors={errors}
             />
             {/* Button */}
