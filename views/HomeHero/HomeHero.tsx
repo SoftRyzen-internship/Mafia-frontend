@@ -14,7 +14,7 @@ export const HomeHero: React.FC = () => {
   const { title, description, image, subtitle, button } = data;
 
   const sectionStyles = classNames(
-    'mx-auto bg-no-repeat bg-top bg-cover',
+    'mx-auto bg-no-repeat bg-top bg-cover py-[40px] sm:py-[60px] md:py-[80px] xxl:py-[120px]',
     css.hero,
   );
 
@@ -25,7 +25,7 @@ export const HomeHero: React.FC = () => {
 
   return (
     <section className={sectionStyles}>
-      <div className="container relative py-[40px] md:py-[80px] xxl:py-[120px]">
+      <div className="container relative">
         <Heading tag="h1" variant="main" className="mb-3 md:mb-5 xl:mb-6">
           {title}
         </Heading>
