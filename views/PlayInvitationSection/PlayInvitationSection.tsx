@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { Heading } from '@/components/Heading';
-import { Section } from '@/components/Section';
 import { FormWithPopUp } from '@/components/FormWithPopUp';
 
 import data from '@/data/corporateInviteGame.json';
@@ -11,18 +10,22 @@ export const PlayInvitationSection = () => {
   const { primary_title, image } = data;
 
   return (
-    <Section className={s.bg_img}>
-      <div className="container pb-[32px] pt-[62px] md:pb-[112px] md:pt-[52px]">
+    <section
+      className={`${s.bg_img} pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
+    >
+      <div className="container pb-[32px] pt-[80px] md:pb-[112px] md:pt-[52px] ">
         <Heading
+          tag="h2"
+          variant="main"
           shadow={primary_title}
-          className="mb-[62px] md:mb-[60px] md:hidden smOnly:w-[280px]"
+          className="mb-[44px] text-start md:hidden smOnly:w-[280px]"
         >
           {primary_title}
         </Heading>
         <div className="flex flex-col md:flex-row md:gap-[24px] xl:gap-[127px] xxl:gap-[320px]">
           <div
-            className="relative order-1 mb-[62px] h-[315px] w-full overflow-hidden
-                     rounded-normal md:order-1 md:h-[518px] md:w-[288px] xl:h-[570px] xl:w-[493px] xxl:w-[716px]"
+            className="relative order-1 mb-[60px] h-[315px] w-full overflow-hidden rounded-normal
+                     md:order-1 md:mb-0 md:h-[518px] md:w-[288px] xl:h-[570px] xl:w-[493px] xxl:w-[716px]"
           >
             <Image
               className="object-cover"
@@ -34,8 +37,10 @@ export const PlayInvitationSection = () => {
           </div>
           <div className="order-3 text-center md:order-2 xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
             <Heading
+              tag="h2"
+              variant="main"
               shadow={primary_title}
-              className="mb-[24px] hidden md:mb-[116px] md:block xl:mb-[67px] smOnly:w-[280px]"
+              className="hidden text-start md:mb-[100px] md:block xl:mb-[30px] smOnly:w-[280px]"
             >
               {primary_title}
             </Heading>
@@ -45,6 +50,6 @@ export const PlayInvitationSection = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };

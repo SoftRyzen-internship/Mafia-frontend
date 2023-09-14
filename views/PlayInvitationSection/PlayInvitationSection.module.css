@@ -30,7 +30,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .bg_img {
-    background-image: url(/images/corporate/bginvitegametab@x2.webp);
+    background-image: url(/images/corporate/bginvitegametab@2x.webp);
   }
 }
 
@@ -46,7 +46,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .bg_img {
-    background-image: url(/images/corporate/bginvitegamexl@x2.webp);
+    background-image: url(/images/corporate/bginvitegamexl@2x.webp);
   }
 }
 
@@ -62,6 +62,6 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .bg_img {
-    background-image: url(/images/corporate/bginvitegamexxl@x2.webp);
+    background-image: url(/images/corporate/bginvitegamexxl@2x.webp);
   }
 }
