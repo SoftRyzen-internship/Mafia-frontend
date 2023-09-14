@@ -30,9 +30,11 @@ export const MafiaSchool: React.FC = () => {
     'py-[80px] mx-auto relative bg-no-repeat bg-top bg-cover',
   );
 
+  const containerStyles = classNames('container relative', css.container);
+
   return (
     <Section className={sectionStyles}>
-      <div className="container relative">
+      <div className={containerStyles}>
         <Heading variant="primary" shadow={title} className="mb-6">
           {title}
         </Heading>
