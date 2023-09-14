@@ -4,7 +4,7 @@ import Image from 'next/image';
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 import customCardData from '@/data/customCardData.json';
 
-const HallFameCustomCard = () => {
+export const HallFameCustomCard = () => {
   return (
     <li className={`relative h-[460px] w-full ${s.card}`}>
       <div className="absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] bg-black-dark transition duration-1000">
@@ -25,5 +25,3 @@ const HallFameCustomCard = () => {
     </li>
   );
 };
-
-export default HallFameCustomCard;

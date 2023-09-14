@@ -11,6 +11,7 @@ import data from '@/data/kidsMafiaMainPage.json';
 export const KidsMafiaBtnHolder: FC = () => {
   const [popUpType, setPopUpType] = useState('default');
   const [showModal, setShowModal] = useState(false);
+  const onModalClose = () => setShowModal(false);
 
   return (
     <>
@@ -23,8 +24,8 @@ export const KidsMafiaBtnHolder: FC = () => {
       </ButtonPrimary>
 
       {showModal ? (
-        <Portal setShowModal={setShowModal}>
-          <ModalSendForm setShowModal={setShowModal}>
+        <Portal onModalClose={onModalClose}>
+          <ModalSendForm onModalClose={onModalClose}>
             {popUpType === 'default' && <Form setPopUpType={setPopUpType} />}
           </ModalSendForm>
         </Portal>

@@ -36,8 +36,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <SocialsMenu variant="fixed" />
-        <Toaster position="top-right" reverseOrder={true} />
         <div id="modal" />
+        <Toaster position="top-right" reverseOrder={true} />
       </body>
     </html>
   );

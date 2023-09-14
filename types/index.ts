@@ -107,7 +107,7 @@ export interface LearnListProps {
 }
 
 export interface NavigationRowLinkProps {
-  currentPath: string;
+  currentPath: string | null;
   href: string;
   position: string;
   title: string;
@@ -131,21 +131,26 @@ export interface ContactsProps {
   className?: string;
 }
 
-export interface MafiaSchoolSectionData {
-  type: 'heading' | 'paragraph' | 'image-main' | 'image-grid' | 'subtitle';
-  level?: HeadingComponentProps['tag'];
-  content?: string;
-  variant?: HeadingComponentProps['variant'];
-  src?: string;
-  alt?: string;
-  images?: {
-    src: string;
-    alt: string;
-  }[];
+export interface MafiaSchoolImageData {
+  src: string;
+  alt: string;
 }
 
 export interface MafiaSchoolHeroData {
-  sections: MafiaSchoolSectionData[];
+  heading: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+    variant: string;
+  };
+  paragraph: string;
+  subtitle: {
+    level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+    content: string;
+  };
+  images: {
+    main: MafiaSchoolImageData;
+    grid: MafiaSchoolImageData[];
+  };
 }
 
 export interface ClubKidsMafiaCardProps {
@@ -166,7 +171,8 @@ export interface KidsMafiaConditionsProps {
 
 export interface IPortal {
   children: ReactNode;
-  setShowModal: Dispatch<SetStateAction<boolean>>;
+  onModalClose: () => void;
+  className?: string;
 }
 
 export interface ScheduleProps {
@@ -190,26 +196,56 @@ export interface ScheduleDataType {
   };
 }
 
+//---HallFame----
+export interface HallFameCards {
+  data: HallFameCardProps[];
+}
+
+export interface HallFameCardDataType {
+  flipCards: HallFameCards;
+}
+
 export interface MobileMenuBtnProps {
   className?: string;
   onClick: () => void;
 }
 
 export interface HallFameCup {
+  id: number;
+  competition_name: string;
+  place_number: string;
+}
+
+export interface HallFameImageAttributes {
+  url: string;
+  alternativeText: string;
+}
+
+export interface HallFameImageData {
+  id: number;
+  attributes: HallFameImageAttributes;
+}
+
+export interface HallFameImage {
+  data: HallFameImageData;
+}
+
+export interface HallFameAttributes {
   title: string;
+  description: string;
+  img: HallFameImage;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  cups: HallFameCup[];
 }
 
 export interface HallFameCardProps {
-  id?: string;
-  name: string;
-  description: string;
-  cupstitle: string;
+  id: number;
+  attributes: HallFameAttributes;
   cups: HallFameCup[];
-  image: {
-    src: string;
-    alt: string;
-  };
 }
+
 export interface HallFameCustomCardProps {
   id?: string;
   title?: string;
@@ -384,6 +420,36 @@ export interface SkillsListItemProps {
   text: string;
   icon: string;
   idx: number;
+}
+
+export interface ITournament {
+  title: string;
+  type: string;
+  playersInTeam: number;
+  description: string;
+  image: {
+    data: {
+      attributes: {
+        url: string;
+        alternativeText: string;
+      };
+    };
+  };
+}
+
+export interface ITournamentItem {
+  id: string;
+  attributes: ITournament;
+}
+
+export interface ITournamentsData {
+  tournaments: {
+    data: ITournamentItem[];
+  };
+}
+
+export interface TournamentBlockProps {
+  tournament: ITournament;
 }
 
 export interface LoaderProps {

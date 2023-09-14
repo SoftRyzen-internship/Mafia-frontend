@@ -1,0 +1,30 @@
+.hallFameListContainer {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: image-set(
+    url('/images/hallfame/bghallfamemob.webp') 1x,
+    url('/images/hallfame/bghallfamemob@2x.webp') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .hallFameListContainer {
+    background-image: image-set(
+      url('/images/hallfame/bghallfametab.webp') 1x,
+      url('/images/hallfame/bghallfametab@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hallFameListContainer {
+    background-image: image-set(
+      url('/images/hallfame/bghallfamedesc.webp') 1x,
+      url('/images/hallfame/bghallfamedesc@2x.webp') 2x
+    );
+  }
+}
