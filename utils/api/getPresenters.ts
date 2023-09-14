@@ -12,6 +12,6 @@ export async function getPresenters(): Promise<
     const data: PresentersDataType = await request(baseURL, GET_PRESENTERS);
     return data.presenters.data;
   } catch (error) {
-    console.log('Fetching presenters data error', error);
+    return [];
   }
 }

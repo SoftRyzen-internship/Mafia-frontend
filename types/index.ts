@@ -78,8 +78,10 @@ export interface SocialIconProps {
   className?: string;
 }
 
+type ButtonPrimaryVariants = 'small' | 'medium' | 'large' | undefined;
+
 export interface ButtonPrimaryProps {
-  buttonsize?: 'small' | 'medium' | 'large' | undefined;
+  buttonsize?: ButtonPrimaryVariants;
   type?: 'button' | 'submit' | undefined;
   disabled?: boolean;
   loading?: boolean;
@@ -477,4 +479,11 @@ export interface IPrivacyPolicy {
       };
     };
   };
+}
+
+export type PopUpType = 'default' | 'success' | 'error';
+
+export interface BtnWithFormModalProps {
+  buttonsize: ButtonPrimaryVariants;
+  text: string;
 }
