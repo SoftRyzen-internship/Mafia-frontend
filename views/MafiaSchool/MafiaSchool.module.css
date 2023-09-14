@@ -50,5 +50,22 @@
   /* check 1024 etc */
   .gradient {
     width: 684px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* check 1024 etc */
+  .gradient {
+    width: 1196px;
+    padding-right: 265px;
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .gradient {
+    width: 1836px;
+    padding-right: 615px;
+    margin-left: -84px;
   }
 }
