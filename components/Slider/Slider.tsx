@@ -62,7 +62,7 @@ export const Slider: React.FC<SliderProps> = ({
       autoplay={
         autoplay
           ? {
-              delay: 2000,
+              delay: 300,
               disableOnInteraction: false,
             }
           : false
@@ -90,7 +90,7 @@ export const Slider: React.FC<SliderProps> = ({
         return (
           <SwiperSlide
             key={idx}
-            className={`mediaHover:hover:translate max-w-sm transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer ${slideClassName}`}
+            className={`mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer ${slideClassName}`}
           >
             <Component {...cardInfo} />
           </SwiperSlide>

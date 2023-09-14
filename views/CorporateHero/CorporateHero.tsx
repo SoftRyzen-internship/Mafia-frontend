@@ -35,6 +35,7 @@ export const CorporateHero: FC = () => {
             allowTouchMove={false}
             // centeredSlides={false}
             // slideClassName=''
+            className="h-[402px] w-full max-w-[480px]"
           />
         </div>
       </div>

@@ -16,7 +16,7 @@ export const CorporateHeroSlide: FC<CorporateHeroSlideProps> = ({
 }) => {
   return (
     <div
-      className="mb-7 aspect-[0.8] w-full overflow-hidden rounded-normal md:aspect-[0.69]
+      className=" h-[402px] w-full overflow-hidden rounded-normal md:aspect-[0.69]
     xl:aspect-[0.71] xxl:relative  "
     >
       <Image
@@ -26,7 +26,7 @@ export const CorporateHeroSlide: FC<CorporateHeroSlideProps> = ({
         alt={altText}
         priority
         quality={90}
-        className="h-full w-full object-cover xxl:absolute xxl:-top-14 xxl:h-auto xxl:object-top"
+        className="h-full w-full object-cover xxl:object-top"
       />
     </div>
   );

@@ -55,15 +55,15 @@ export const getSliderBreakpointsOptions = (
 
   if (section === 'corporate-hero') {
     return {
-      [SCREEN_MOBILE]: { slidesPerView: 1 },
-      [SCREEN_TABLET]: { slidesPerView: 2 },
+      [SCREEN_MOBILE]: { slidesPerView: 1, loopedSlides: 3 },
+      [SCREEN_TABLET]: { slidesPerView: 1.2, centeredSlides: true },
       [SCREEN_DESKTOP]: {
-        slidesPerView: 5,
-        loopedSlides: 3,
+        slidesPerView: 2,
+        loopedSlides: 4,
       },
       [LARGE_SCREEN_DESKTOP]: {
-        slidesPerView: 4,
-        loopedSlides: 3,
+        slidesPerView: 2,
+        // loopedSlides: 3,
       },
     };
   }
