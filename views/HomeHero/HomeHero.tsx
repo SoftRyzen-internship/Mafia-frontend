@@ -4,7 +4,7 @@ import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { HomeHeroImage } from '@/components/HomeHeroImage';
 import { Schedule } from '@/components/Schedule';
-import { ButtonPrimary } from '@/components/Buttons';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
 
 import data from '@/data/homeHero.json';
 
@@ -46,7 +46,11 @@ export const HomeHero: React.FC = () => {
         </Heading>
         <Schedule className="mb-5 md:mb-6" />
 
-        <ButtonPrimary className="w-full xxl:w-[417px]">{button}</ButtonPrimary>
+        <BtnWithFormModal
+          btnClassName="w-full xxl:w-[417px]"
+          buttonsize="medium"
+          text={button}
+        />
       </div>
     </section>
   );
