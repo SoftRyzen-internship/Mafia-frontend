@@ -179,14 +179,6 @@ body {
   padding-top: 12px;
 }
 
-.swiper-wrapper {
-  margin-bottom: 44px;
-
-  @media screen and (min-width: 1752px) {
-    margin-bottom: 48px;
-  }
-}
-
 .swiper-slide:hover {
   transform: translate3d(0, -12px, 0) !important;
 }

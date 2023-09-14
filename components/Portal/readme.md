@@ -14,8 +14,22 @@ inside the element.
 
 # Examples
 
-const Example = () => { const [showModal, setShowModal] = useState(false);
-return ( <> <button onClick={() => setShowModal(true)}> Show modal </button>
-{showModal && ( <Portal setShowModal={setShowModal}>
-<ModalSendForm setShowModal={setShowModal}> <div>content<div> </ModalSendForm>
-</Portal> )} </> ); };
+```tsx
+const Example = () => {
+  const mainPage = data.mainPage;
+  const [showModal, setShowModal] = useState(false);
+  const onModalClose = () => setShowModal(false);
+  return (
+    <>
+      <button onClick={() => setShowModal(true)}> Show modal </button>
+      {showModal && (
+        <Portal onModalClose={onModalClose}>
+          <ModalSendForm onModalClose={onModalClose}>
+            <ErrorWindow />
+          </ModalSendForm>
+        </Portal>
+      )}
+    </>
+  );
+};
+```

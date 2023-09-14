@@ -12,14 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { SliderProps } from '@/types';
-
-import {
-  SCREEN_MOBILE,
-  SCREEN_TABLET,
-  SCREEN_DESKTOP,
-  LARGE_SCREEN_DESKTOP,
-} from '@/constants';
-
+import { getSliderBreakpointsOptions } from '@/utils';
 import { SliderNavigation } from '../SliderNavigation';
 
 export const Slider: React.FC<SliderProps> = ({
@@ -29,7 +22,10 @@ export const Slider: React.FC<SliderProps> = ({
   autoplay,
   data,
   element: Element,
+  allowTouchMove,
   className = '',
+  slideClassName = '',
+  // centeredSlides = true,
 }) => {
   const [isFirstRender, setIsFirstRender] = useState<boolean>(true);
   const Component = (props: any) => {
@@ -39,7 +35,7 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef = useRef<SwiperCore>();
 
   const swiperClass = cn(
-    { 'max-w-sm absolute': section === 'corporate' },
+    // { 'max-w-sm absolute': section === 'corporate' },
     'font-raleway mx-auto, max-w-[432px] md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl',
     className,
   );
@@ -62,18 +58,7 @@ export const Slider: React.FC<SliderProps> = ({
   return !isFirstRender ? (
     <Swiper
       id="swiper"
-      breakpoints={{
-        [SCREEN_MOBILE]: { slidesPerView: 1 },
-        [SCREEN_TABLET]: { slidesPerView: 4, loopedSlides: 3 },
-        [SCREEN_DESKTOP]: {
-          slidesPerView: 5,
-          loopedSlides: 3,
-        },
-        [LARGE_SCREEN_DESKTOP]: {
-          slidesPerView: 4,
-          loopedSlides: 3,
-        },
-      }}
+      breakpoints={getSliderBreakpointsOptions(section)}
       autoplay={
         autoplay
           ? {
@@ -97,13 +82,15 @@ export const Slider: React.FC<SliderProps> = ({
       loop
       speed={1000}
       spaceBetween={24}
+      allowTouchMove={allowTouchMove}
+      // centeredSlides={centeredSlides}
       className={swiperClass}
     >
       {data?.map((cardInfo: any, idx: number) => {
         return (
           <SwiperSlide
             key={idx}
-            className="mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer"
+            className={`mediaHover:hover:translate max-w-sm transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer ${slideClassName}`}
           >
             <Component {...cardInfo} />
           </SwiperSlide>

@@ -33,9 +33,9 @@ export default function RootLayout({
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         <Header />
         {children}
-        <SocialsMenu />
-        <div id="modal" />
+        <SocialsMenu variant="fixed" />
         <Footer />
+        <div id="modal" />
       </body>
     </html>
   );

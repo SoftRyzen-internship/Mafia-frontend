@@ -32,7 +32,8 @@ export const useWindowWidth = () => {
   const isLargeScreenMobile =
     width! >= LARGE_SCREEN_MOBILE && width! < SCREEN_TABLET;
   const isScreenTablet = width! >= SCREEN_TABLET && width! < SCREEN_DESKTOP;
-  const isScreenDesktop = width! >= SCREEN_DESKTOP;
+  const isScreenDesktop =
+    width! >= SCREEN_DESKTOP && width! < LARGE_SCREEN_DESKTOP;
   const isLargeScreenDesktop = width! >= LARGE_SCREEN_DESKTOP;
 
   return {

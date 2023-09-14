@@ -11,6 +11,7 @@ export interface LogoProps {
   href: string;
   position: 'header' | 'footer' | 'mobile-menu';
   className?: string;
+  onClick?: () => void;
 }
 
 type HeadingTag = 'h1' | 'h2' | 'h3';
@@ -40,6 +41,7 @@ export interface ParagraphProps {
 export interface NavigationRowProps {
   position: 'header' | 'footer' | 'mobile-menu';
   className?: string;
+  onClick?: () => void;
 }
 
 export type SocialContact = {
@@ -53,6 +55,7 @@ type SocialMenuVariants = 'fixed' | 'footer' | 'mobile-menu';
 export interface SocialsMenuProps {
   variant?: SocialMenuVariants;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialButtonProps {
@@ -61,6 +64,7 @@ export interface SocialButtonProps {
   variant?: SocialMenuVariants;
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
 
 export interface SocialIconProps {
@@ -105,6 +109,7 @@ export interface NavigationRowLinkProps {
   href: string;
   position: string;
   title: string;
+  onClick?: () => void;
 }
 
 export interface SectionProps {
@@ -164,7 +169,8 @@ export interface KidsMafiaConditionsProps {
 
 export interface IPortal {
   children: ReactNode;
-  setShowModal: Dispatch<SetStateAction<boolean>>;
+  onModalClose: () => void;
+  className?: string;
 }
 
 export interface ScheduleProps {
@@ -297,13 +303,16 @@ export interface FooterLinkItemProps {
   href: string;
 }
 export interface SliderProps {
-  section: 'school' | 'presenters' | 'corporate';
+  section: 'school' | 'presenters' | 'corporate' | 'corporate-hero';
   pagination?: boolean;
   navigation?: boolean;
   autoplay?: boolean;
   data: any;
   element: any;
+  allowTouchMove?: boolean;
+  // centeredSlides?: boolean;
   className?: string;
+  slideClassName?: string;
 }
 
 interface SliderElementProps {
@@ -444,5 +453,13 @@ export interface TournamentBlockProps {
 export interface LoaderProps {
   size: number;
   color: string;
+}
+
+export interface SkillsListProps {
   className?: string;
+}
+
+export interface HeroImageProps {
+  image: string;
+  alt: string;
 }

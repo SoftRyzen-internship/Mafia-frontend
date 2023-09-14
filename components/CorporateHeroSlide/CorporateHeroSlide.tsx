@@ -15,13 +15,18 @@ export const CorporateHeroSlide: FC<CorporateHeroSlideProps> = ({
   //   id,
 }) => {
   return (
-    <div>
+    <div
+      className="mb-7 aspect-[0.8] w-full overflow-hidden rounded-normal md:aspect-[0.69]
+    xl:aspect-[0.71] xxl:relative  "
+    >
       <Image
-        width={624}
+        width={270}
         height={402}
         src={imageUrl}
         alt={altText}
-        className="object-cover"
+        priority
+        quality={90}
+        className="h-full w-full object-cover xxl:absolute xxl:-top-14 xxl:h-auto xxl:object-top"
       />
     </div>
   );

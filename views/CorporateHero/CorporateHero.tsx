@@ -7,6 +7,7 @@ import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { Slider } from '@/components/Slider';
 import { CorporateHeroSlide } from '@/components/CorporateHeroSlide';
+// import { SliderCorporateElement } from '@/components/SliderCorporateElement';
 
 import s from './CorporateHero.module.css';
 
@@ -18,18 +19,24 @@ export const CorporateHero: FC = () => {
   const { swiperData } = sliderDataCorp;
 
   return (
-    <Section className={classNames('', s.sectionBg)}>
+    <Section className={classNames('relative', s.sectionBg)}>
       <div className="container">
         <Heading shadow={title} className="mb-6">
           {title}
         </Heading>
         <Paragraph className="mb-[60px]">{text}</Paragraph>
-        <Slider
-          section="corporate"
-          data={swiperData}
-          //   autoplay={true}
-          element={CorporateHeroSlide}
-        />
+        <div className="">
+          <Slider
+            section="corporate-hero"
+            data={swiperData}
+            autoplay={true}
+            element={CorporateHeroSlide}
+            // element={SliderCorporateElement}\
+            allowTouchMove={false}
+            // centeredSlides={false}
+            // slideClassName=''
+          />
+        </div>
       </div>
     </Section>
   );
