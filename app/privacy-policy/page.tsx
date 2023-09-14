@@ -1,11 +1,11 @@
-import React from 'react';
+import { PrivacyPolicy } from '@/views/PrivacyPolicy';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicyPage = () => {
   return (
     <>
-      <div>Privacy Policy page</div>
+      <PrivacyPolicy />
     </>
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;
