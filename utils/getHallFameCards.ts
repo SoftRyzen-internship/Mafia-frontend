@@ -3,7 +3,7 @@ import { request } from 'graphql-request';
 import { GET_HALLFAME_CARDS } from '@/api/hallOfFameCardsQuery';
 import { HallFameCardDataType, HallFameCardProps } from '@/types';
 
-const baseURL = 'https://mafia-cms.onrender.com/graphql';
+const baseURL = process.env.API_BASE_URL as string;
 
 export async function getHallFameCards(): Promise<HallFameCardProps[]> {
   try {

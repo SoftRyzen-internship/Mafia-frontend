@@ -3,6 +3,9 @@ import Image from 'next/image';
 import { Heading } from '../Heading';
 import { Paragraph } from '../Paragraph';
 
+import { parseTextToHTML } from '@/utils/helpers/parseTextToHTML';
+import { generateTeamText } from '@/utils/helpers/generateTeamText';
+
 import { TournamentBlockProps } from '@/types';
 
 export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
@@ -14,7 +17,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
   const htmlString = parseTextToHTML(description);
 
   return (
-    <div className="tournament-block pb-20 pt-[96px]">
+    <div className="tournament-block">
       <div className="tournament-container container md:flex md:items-center md:gap-6">
         <div className="w-full xl:w-[516px] smOnly:mb-[60px]">
           <Heading
@@ -46,31 +49,3 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
     </div>
   );
 };
-
-function generateTeamText(playersInTeam: number): string {
-  let ending;
-
-  if (playersInTeam % 10 === 1 && playersInTeam % 100 !== 11) {
-    ending = 'оба';
-  } else if (
-    [2, 3, 4].includes(playersInTeam % 10) &&
-    ![12, 13, 14].includes(playersInTeam % 100)
-  ) {
-    ending = 'оби';
-  } else {
-    ending = 'іб';
-  }
-
-  return `${playersInTeam} ос${ending} у команді`;
-}
-
-function parseTextToHTML(text) {
-  const paragraphs = text.split('\n');
-  const htmlParagraphs = paragraphs.map(paragraph => {
-    if (paragraph) return `<p>${paragraph}</p>`;
-    return '<br>';
-  });
-  const htmlContent = htmlParagraphs.join('\n');
-
-  return htmlContent;
-}
