@@ -2,7 +2,6 @@
 .back {
   backface-visibility: hidden;
   background-color: rgba(20, 19, 24, 0.83);
-  transition: transform 1s;
 }
 .back {
   transform: rotateY(180deg);
