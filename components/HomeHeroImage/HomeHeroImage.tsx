@@ -23,19 +23,16 @@ export const HomeHeroImage: React.FC<HeroImageProps> = ({ image, alt }) => {
   );
 
   return (
-    <>
-      <div className={containerStyles}>
-        <Image
-          src={image}
-          alt={alt}
-          width={716}
-          height={778}
-          loading="lazy"
-          priority
-          sizes="(max-width: 767px) 328px, (max-width: 1279px) 600px, (max-width: 1751px) 493px, 716px"
-          className={imageStyles}
-        />
-      </div>
-    </>
+    <div className={containerStyles}>
+      <Image
+        src={image}
+        alt={alt}
+        width={716}
+        height={778}
+        priority
+        sizes="(max-width: 767px) 328px, (max-width: 1279px) 600px, (max-width: 1751px) 493px, 716px"
+        className={imageStyles}
+      />
+    </div>
   );
 };
