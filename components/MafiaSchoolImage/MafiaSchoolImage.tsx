@@ -36,7 +36,6 @@ export const MafiaSchoolImage: React.FC<SectionImageProps> = ({
         alt={alt}
         width={493}
         height={630}
-        loading="lazy"
         sizes="(max-width: 767px) 328px, (max-width: 1279px) 288px, (max-width: 1751px) 493px, 716px"
         className={imageStyles}
       />
