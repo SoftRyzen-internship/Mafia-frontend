@@ -1,11 +1,5 @@
-import { CorporateHero } from '@/views/CorporateHero';
 const CorporateParties = () => {
-  return (
-    <div>
-      {/* Corporate Parties page */}
-      <CorporateHero />
-    </div>
-  );
+  return <div>Corporate Parties page</div>;
 };
 
 export default CorporateParties;

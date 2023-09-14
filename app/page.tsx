@@ -1,4 +1,3 @@
-// import { HomeHero } from '@/views/HomeHero';
 import { CorporateParties } from '@/views/CorporateParties';
 import { KidsMafia } from '@/views/KidsMafia';
 
@@ -10,7 +9,6 @@ import { KidsMafia } from '@/views/KidsMafia';
 const Home = () => {
   return (
     <>
-      {/* <HomeHero /> */}
       <CorporateParties />
       <KidsMafia />
 

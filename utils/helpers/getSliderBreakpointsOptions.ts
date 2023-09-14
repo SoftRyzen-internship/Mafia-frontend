@@ -6,7 +6,7 @@ import {
 } from '@/constants';
 
 export const getSliderBreakpointsOptions = (
-  section: 'school' | 'presenters' | 'corporate' | 'corporate-hero',
+  section: 'school' | 'presenters' | 'corporate',
 ) => {
   if (section === 'school') {
     return {
@@ -41,29 +41,12 @@ export const getSliderBreakpointsOptions = (
   if (section === 'corporate') {
     return {
       [SCREEN_MOBILE]: { slidesPerView: 1 },
-      [SCREEN_TABLET]: { slidesPerView: 4, loopedSlides: 3 },
-      [SCREEN_DESKTOP]: {
-        slidesPerView: 5,
-        loopedSlides: 3,
-      },
-      [LARGE_SCREEN_DESKTOP]: {
-        slidesPerView: 4,
-        loopedSlides: 3,
-      },
-    };
-  }
-
-  if (section === 'corporate-hero') {
-    return {
-      [SCREEN_MOBILE]: { slidesPerView: 1, loopedSlides: 3 },
-      [SCREEN_TABLET]: { slidesPerView: 1.2, centeredSlides: true },
+      [SCREEN_TABLET]: { slidesPerView: 1 },
       [SCREEN_DESKTOP]: {
         slidesPerView: 2,
-        loopedSlides: 4,
       },
       [LARGE_SCREEN_DESKTOP]: {
-        slidesPerView: 2,
-        // loopedSlides: 3,
+        slidesPerView: 3,
       },
     };
   }

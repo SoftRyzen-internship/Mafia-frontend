@@ -25,7 +25,6 @@ export const Slider: React.FC<SliderProps> = ({
   allowTouchMove,
   className = '',
   slideClassName = '',
-  // centeredSlides = true,
 }) => {
   const [isFirstRender, setIsFirstRender] = useState<boolean>(true);
   const Component = (props: any) => {
@@ -35,8 +34,7 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef = useRef<SwiperCore>();
 
   const swiperClass = cn(
-    // { 'max-w-sm absolute': section === 'corporate' },
-    'font-raleway mx-auto, max-w-[432px] md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl',
+    'font-raleway mx-auto max-w-[432px] md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl',
     className,
   );
 
@@ -62,7 +60,7 @@ export const Slider: React.FC<SliderProps> = ({
       autoplay={
         autoplay
           ? {
-              delay: 300,
+              delay: 2000,
               disableOnInteraction: false,
             }
           : false
@@ -83,7 +81,6 @@ export const Slider: React.FC<SliderProps> = ({
       speed={1000}
       spaceBetween={24}
       allowTouchMove={allowTouchMove}
-      // centeredSlides={centeredSlides}
       className={swiperClass}
     >
       {data?.map((cardInfo: any, idx: number) => {

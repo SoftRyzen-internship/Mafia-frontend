@@ -6,8 +6,7 @@ import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
 import { Slider } from '@/components/Slider';
-import { CorporateHeroSlide } from '@/components/CorporateHeroSlide';
-// import { SliderCorporateElement } from '@/components/SliderCorporateElement';
+import { SliderCorporateElement } from '@/components/SliderCorporateElement';
 
 import s from './CorporateHero.module.css';
 
@@ -19,25 +18,21 @@ export const CorporateHero: FC = () => {
   const { swiperData } = sliderDataCorp;
 
   return (
-    <Section className={classNames('relative', s.sectionBg)}>
+    <Section className={classNames('relative ', s.sectionBg)}>
       <div className="container">
         <Heading shadow={title} className="mb-6">
           {title}
         </Heading>
-        <Paragraph className="mb-[60px]">{text}</Paragraph>
-        <div className="">
-          <Slider
-            section="corporate-hero"
-            data={swiperData}
-            autoplay={true}
-            element={CorporateHeroSlide}
-            // element={SliderCorporateElement}\
-            allowTouchMove={false}
-            // centeredSlides={false}
-            // slideClassName=''
-            className="h-[402px] w-full max-w-[480px]"
-          />
-        </div>
+        <Paragraph className="mb-[60px]  md:max-w-[312px] xl:max-w-[624px]">
+          {text}
+        </Paragraph>
+        <Slider
+          section="corporate"
+          data={swiperData}
+          autoplay={true}
+          element={SliderCorporateElement}
+          allowTouchMove={false}
+        />
       </div>
     </Section>
   );

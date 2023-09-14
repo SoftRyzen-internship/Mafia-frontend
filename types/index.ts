@@ -303,14 +303,13 @@ export interface FooterLinkItemProps {
   href: string;
 }
 export interface SliderProps {
-  section: 'school' | 'presenters' | 'corporate' | 'corporate-hero';
+  section: 'school' | 'presenters' | 'corporate';
   pagination?: boolean;
   navigation?: boolean;
   autoplay?: boolean;
   data: any;
   element: any;
   allowTouchMove?: boolean;
-  // centeredSlides?: boolean;
   className?: string;
   slideClassName?: string;
 }
@@ -326,6 +325,7 @@ export interface SliderSchoolElementProps extends SliderElementProps {
 }
 
 export interface SliderCorporateElementProps extends SliderElementProps {
+  imageUrl: string;
   altText: string;
 }
 
