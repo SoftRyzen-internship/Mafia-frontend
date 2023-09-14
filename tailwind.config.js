@@ -30,8 +30,11 @@ module.exports = {
       xl: '0px 0px 13px 0px rgba(126, 90, 143, 0.10)',
       input: '3px 3px 4px 0px rgba(19, 8, 19, 0.16)',
       inputHover: '4px 5px 16px 0px rgba(25, 8, 26, 0.2)',
-      inputFocus: '0px 5px 12px 0px rgba(8,3,21,0.1) inset',
-      inputError: '0px_0px_16px_0px_rgba(255,65,96,0.2)',
+
+      inputFocus: '0px 5px 12px 0px rgba(8, 3, 21, 0.1) inset',
+      inputError: '0px 0px 16px 0px rgba(255, 65, 96, 0.2)',
+      modalSentForm: '0px 0px 8px 0px rgba(52, 48, 57, 0.12)',
+
       diff: '0px 0px 9px 0px rgba(62,50,95,0.09)',
     },
     // THEME
@@ -56,6 +59,12 @@ module.exports = {
           'linear-gradient(270deg, rgba(117, 103, 140, 0.53) 0%, rgba(117, 103, 140, 0) 100%)',
         grad_800:
           'linear-gradient(270deg, rgba(22, 20, 28, 0) 0%, #16141c 100%)',
+        grad_900:
+          'linear-gradient(90deg, #ff057c 0%, #8d0b93 50%, rgba(50, 21, 117, 0) 100%);',
+        grad_1000:
+          'linear-gradient(270deg, #ff057c 0%, #8d0b93 50%, rgba(50, 21, 117, 0) 100%);',
+        grad_1100:
+          'linear-gradient(90deg, rgba(255, 5, 124, 0.13) 0%, rgba(141, 11, 147, 0.13) 50%, rgba(50, 21, 117, 0.13) 100%)',
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],

@@ -34,8 +34,8 @@ export default function RootLayout({
         <Header />
         {children}
         <SocialsMenu variant="fixed" />
-        <div id="modal" />
         <Footer />
+        <div id="modal" />
       </body>
     </html>
   );

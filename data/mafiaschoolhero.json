@@ -1,45 +1,35 @@
 {
-  "sections": [
-    {
-      "type": "heading",
-      "level": "h1",
-      "content": "Дитяча мафія",
-      "variant": "main"
+  "heading": {
+    "level": "h1",
+    "content": "Дитяча мафія"
+  },
+  "paragraph": "Якщо ви маєте метушливих дітей і шукаєте варіанти, щоб цікаво відсвяткувати особливий день разом з ними, гра у \"Мафію\" стане влучним варіантом. Ми спеціалізуємось на проведенні захоплюючих заходів у форматі гри \"Мафія\" у м. Одеса та надаємо всі реквізити і ведучих. Гарантуємо море позитивних емоцій для дітей та дорослих.",
+  "subtitle": {
+    "level": "h2",
+    "content": "Організація заходів"
+  },
+  "images": {
+    "main": {
+      "src": "/images/kidsMafia/mainhero.webp",
+      "alt": "Діти сидять за столом та грають у гру Мафія"
     },
-    {
-      "type": "paragraph",
-      "content": "Якщо ви маєте метушливих дітей і шукаєте варіанти, щоб цікаво відсвяткувати особливий день разом з ними, гра у \"Мафію\" стане влучним варіантом. Ми спеціалізуємось на проведенні захоплюючих заходів у форматі гри \"Мафія\" у м. Одеса та надаємо всі реквізити і ведучих. Гарантуємо море позитивних емоцій для дітей та дорослих."
-    },
-    {
-      "type": "subtitle",
-      "level": "h3",
-      "content": "Організація заходів"
-    },
-    {
-      "type": "image-main",
-      "src": "/images/mafiaschool/mainhero.webp",
-      "alt": "Main Image"
-    },
-    {
-      "type": "image-grid",
-      "images": [
-        {
-          "src": "/images/mafiaschool/hero2.webp",
-          "alt": "Image 1"
-        },
-        {
-          "src": "/images/mafiaschool/hero4.webp",
-          "alt": "Image 2"
-        },
-        {
-          "src": "/images/mafiaschool/hero3.webp",
-          "alt": "Image 3"
-        },
-        {
-          "src": "/images/mafiaschool/hero5.webp",
-          "alt": "Image 4"
-        }
-      ]
-    }
-  ]
+    "grid": [
+      {
+        "src": "/images/kidsMafia/hero2.webp",
+        "alt": "Хлопчик посміхається"
+      },
+      {
+        "src": "/images/kidsMafia/hero3.webp",
+        "alt": "Хлопчик показує жестом що все добре"
+      },
+      {
+        "src": "/images/kidsMafia/hero4.webp",
+        "alt": "Дівчинка показує карту"
+      },
+      {
+        "src": "/images/kidsMafia/hero5.webp",
+        "alt": "Діти закрили очі та грають у мафію"
+      }
+    ]
+  }
 }
