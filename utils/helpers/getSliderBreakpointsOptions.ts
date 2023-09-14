@@ -25,15 +25,17 @@ export const getSliderBreakpointsOptions = (
 
   if (section === 'presenters') {
     return {
-      [SCREEN_MOBILE]: { slidesPerView: 1 },
-      [SCREEN_TABLET]: { slidesPerView: 2 },
+      [SCREEN_MOBILE]: { slidesPerView: 1, loop: false },
+      [SCREEN_TABLET]: { slidesPerView: 2, centeredSlides: false, loop: false },
       [SCREEN_DESKTOP]: {
-        slidesPerView: 5,
-        loopedSlides: 3,
+        slidesPerView: 3,
+        centeredSlides: false,
+        loop: false,
       },
       [LARGE_SCREEN_DESKTOP]: {
-        slidesPerView: 4,
-        loopedSlides: 3,
+        slidesPerView: 3,
+        centeredSlides: false,
+        loop: false,
       },
     };
   }

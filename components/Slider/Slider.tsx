@@ -34,7 +34,8 @@ export const Slider: React.FC<SliderProps> = ({
   const swiperRef = useRef<SwiperCore>();
 
   const swiperClass = cn(
-    'font-raleway mx-auto max-w-[432px] md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl',
+    // { 'max-w-sm absolute': section === 'corporate' },
+    'font-raleway mx-auto, max-w-[432px] md:max-w-3xl xl:max-w-7xl xxl:max-w-screen-xxl',
     className,
   );
 

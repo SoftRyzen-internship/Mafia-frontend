@@ -1,19 +1,11 @@
 .mafiaSchoolHero {
-  /* background-image: image-set(
-    url('/images/kidsMafia/bgmafiaschoolmob.webp') 1x,
-    url('/images/kidsMafia/bgmafiaschoolmob@2x.webp') 2x
-  ); */
-
-  position: relative;
+  /* position: relative; */
   max-width: 1920px;
   margin: 0 auto;
-
   background-image: url(/images/kidsMafia/bgmafiaschoolmob.webp);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
-
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -22,12 +14,13 @@
     background-image: url(/images/kidsMafia/bgmafiaschoolmob@2x.webp);
   }
 }
+
 @media screen and (min-width: 768px) {
   .mafiaSchoolHero {
     background-image: url(/images/kidsMafia/bgmafiaschooltab.webp);
+    background-size: contain;
   }
 }
-
 @media screen and (min-width: 768px),
   (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
@@ -37,34 +30,11 @@
     background-image: url(/images/kidsMafia/bgmafiaschooltab@2x.webp);
   }
 }
-/* @media screen and (min-width: 768px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgmafiaschooltab.webp') 1x,
-      url('/images/kidsMafia/bgmafiaschooltab@2x.webp') 2x
-    );
-  }
-} */
 
-/* @media screen and (min-width: 1280px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgkidsmafiaheroxl.webp') 1x,
-      url('/images/kidsMafia/bgkidsmafiaheroxl@2x.webp') 2x
-    );
-  }
-}
-@media screen and (min-width: 1920px) {
-  .mafiaSchoolHero {
-    background-image: image-set(
-      url('/images/kidsMafia/bgkidsmafiaheroxxl.webp') 1x,
-      url('/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp') 2x
-    );
-  }
-} */
 @media screen and (min-width: 1280px) {
   .mafiaSchoolHero {
     background-image: url(/images/kidsMafia/bgkidsmafiaheroxl.webp);
+    background-size: cover;
   }
 }
 @media screen and (min-width: 1280px),
@@ -74,5 +44,21 @@
   (min-resolution: 2dppx) {
   .mafiaSchoolHero {
     background-image: url(/images/kidsMafia/bgkidsmafiaheroxl@2x.webp);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .mafiaSchoolHero {
+    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl.webp);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1920px),
+  (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .mafiaSchoolHero {
+    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp);
   }
 }

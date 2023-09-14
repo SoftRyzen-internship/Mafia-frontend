@@ -1,7 +1,8 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
-import cupsData from '@/data/hallFameData.json';
+import hallFameData from '@/data/hallFameData.json';
 import iconsMap from '@/data/hallFameCardIconMap';
 
 import { HallFameCardProps } from '@/types/index';
@@ -10,21 +11,35 @@ import { Paragraph } from '@/components/Paragraph';
 
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
-const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
+export const HallFameCard: React.FC<HallFameCardProps> = ({
+  attributes,
+  cups,
+}) => {
+  const [isTouched, setIsTouched] = useState(false);
+
   if (!attributes) {
     return null;
   }
   const { title, description, img } = attributes;
 
   return (
-    <li className={`relative h-[460px] w-full ${s.card}`}>
+    <li
+      className={`relative h-[460px] w-full ${s.card} ${
+        isTouched ? s.active : ''
+      }`}
+      onTouchStart={() => setIsTouched(prev => !prev)}
+      // onTouchEnd={() => setIsTouched(false)}    !!!При використанні лише одна карта одночасно буде перевернута back стороною
+    >
       <div
         className={`${s.front} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] transition duration-1000 hover:shadow-lg focus:shadow-lg`}
       >
         <div className="relative h-full w-full">
           <Image
             src={img.data.attributes.url}
-            alt={img.data.attributes.alternativeText}
+            alt={
+              img.data.attributes.alternativeText ||
+              hallFameData.alternativeText
+            }
             className="h-full w-full rounded-md object-cover"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
@@ -49,7 +64,7 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
 
         <div className="mx-auto my-0 ">
           <h3 className="mb-2 text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
-            {cupsData.cupstitle}
+            {hallFameData.cupstitle}
           </h3>
           <ul className="flex list-none flex-row text-sm font-semibold md:text-base xl:p-10">
             {cups?.map((cup, index) => {
@@ -62,7 +77,7 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
                   {Icon && (
                     <Icon className="mb-[24px] h-10 w-10 xl:mb-[16px] xxl:mb-[15px]" />
                   )}
-                  <Paragraph className="overflow-wrap max-w-[80px] break-words text-[12px] md:max-w-[100px] md:text-[16px] xl:max-w-[100%]">
+                  <Paragraph className="overflow-wrap max-w-[70px] break-words text-[12px] md:max-w-[100px] md:text-[16px] xl:max-w-[100%]">
                     {cup.competition_name}
                   </Paragraph>
                 </li>
@@ -74,5 +89,3 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
     </li>
   );
 };
-
-export default HallFameCard;
