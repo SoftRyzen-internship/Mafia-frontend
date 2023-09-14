@@ -274,9 +274,9 @@ export type TextAreaT = {
 
 export interface TextAreaProps {
   textarea: TextAreaT;
-  height: number;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
+  className: string;
 }
 
 export interface InputProps {

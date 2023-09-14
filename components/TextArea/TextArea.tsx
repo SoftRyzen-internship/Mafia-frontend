@@ -5,6 +5,7 @@ import { TextAreaProps } from '@/types';
 export const TextArea: React.FC<TextAreaProps> = ({
   textarea,
   register,
+  className,
   errors,
 }) => {
   const { label, placeholder, name, options } = textarea;
@@ -25,7 +26,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
       <textarea
         className={`input-behavior mt-[4px] ${
           hasError && 'input-error-behavior'
-        } resize-none`}
+        } resize-none ${className}`}
         placeholder={placeholder}
         {...register(name, options)}
       />
