@@ -1,0 +1,38 @@
+.logo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(217, 217, 217, 0.15);
+  filter: blur(70px);
+}
+
+@media screen and (min-width: 768px) {
+  .logo::after {
+    width: 150px;
+    height: 150px;
+    top: -14px;
+    left: -24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo::after {
+    width: 200px;
+    height: 150px;
+    top: -17px;
+    left: -30px;
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .logo::after {
+    width: 200px;
+    height: 150px;
+    top: -3px;
+    left: -6px;
+  }
+}

@@ -1,9 +1,13 @@
 import '@/styles/globals.css';
 
 import React from 'react';
+import { Metadata } from 'next';
 import { Montserrat, Raleway } from 'next/font/google';
+import meta from '@/data/metadata';
 
-import data from '@/data/common.json';
+import { Header } from '@/views/Header';
+import { Footer } from '@/views/Footer';
+import { SocialsMenu } from '@/components/SocialsMenu';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -16,10 +20,8 @@ const raleway = Raleway({
   variable: '--font-raleway',
 });
 
-export const metadata = {
-  title: ` ${data.title}`,
-  description: `${data.description}`,
-};
+// Shared metadata for all pages
+export const metadata: Metadata = meta;
 
 export default function RootLayout({
   children,
@@ -29,7 +31,11 @@ export default function RootLayout({
   return (
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
+        <Header />
         {children}
+        <SocialsMenu variant="fixed" />
+        <Footer />
+        <div id="modal" />
       </body>
     </html>
   );

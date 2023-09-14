@@ -1,0 +1,9 @@
+@media screen and (max-width: 375px) {
+  .heroImgContainer {
+    display: none;
+  }
+}
+
+.heroImg {
+  border: 2px solid rgba(117, 74, 119, 0.62);
+}

@@ -1,0 +1,26 @@
+.front,
+.back {
+  backface-visibility: hidden;
+  background-color: rgba(20, 19, 24, 0.83);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card {
+  perspective: 1000px;
+}
+.card:hover .front,
+.card:focus .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back,
+.card:focus .back {
+  transform: rotateY(360deg);
+}
+
+.active .front {
+  transform: rotateY(180deg);
+}
+.active .back {
+  transform: rotateY(360deg);
+}
