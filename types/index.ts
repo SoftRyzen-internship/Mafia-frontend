@@ -405,4 +405,5 @@ export type PopUpType = 'default' | 'success' | 'error';
 export interface BtnWithFormModalProps {
   buttonsize: ButtonPrimaryVariants;
   text: string;
+  btnClassName?: string;
 }

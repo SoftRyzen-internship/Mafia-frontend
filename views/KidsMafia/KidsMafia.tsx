@@ -7,7 +7,7 @@ import { Heading } from '@/components/Heading';
 import { KidsMafiaTextList } from '@/components/KidsMafiaTextList';
 import { ButtonSecondary } from '@/components/Buttons';
 import { SkillsList } from '@/components/SkillsList';
-import { KidsMafiaBtnHolder } from '@/components/KidsMafiaBtnHolder';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
 
 import css from './KidsMafia.module.css';
 import data from '@/data/kidsMafiaMainPage.json';
@@ -73,7 +73,11 @@ export const KidsMafia: FC = () => {
           </Heading>
           <SkillsList />
         </div>
-        <KidsMafiaBtnHolder />
+        <BtnWithFormModal
+          text={data.buttonPrimaryText}
+          buttonsize="large"
+          btnClassName="md:mx-auto xl:h-12 xl:w-[301px] xxl:w-[336px]"
+        />
       </div>
     </Section>
   );
