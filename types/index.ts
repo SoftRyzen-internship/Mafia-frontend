@@ -275,7 +275,6 @@ export interface SliderProps {
   data: any;
   element: any;
   allowTouchMove?: boolean;
-  centeredSlides?: boolean;
   className?: string;
   slideClassName?: string;
 }

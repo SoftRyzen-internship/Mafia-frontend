@@ -23,7 +23,6 @@ export const Slider: React.FC<SliderProps> = ({
   data,
   element: Element,
   allowTouchMove,
-  centeredSlides = true,
   className = '',
   slideClassName = '',
 }) => {
@@ -82,7 +81,6 @@ export const Slider: React.FC<SliderProps> = ({
       loop
       speed={1000}
       spaceBetween={24}
-      centeredSlides={centeredSlides}
       allowTouchMove={allowTouchMove}
       className={swiperClass}
     >
