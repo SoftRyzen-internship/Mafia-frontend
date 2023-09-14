@@ -22,7 +22,7 @@ export const TournamentsSection: FC = async () => {
       <div className={classNames(s.section)}>
         <div className={classNames('pt-[80px]', s.hero)}>
           <div className="container pb-[78px] xl:pb-[60px]">
-            <Heading className="mb-6" shadow={title}>
+            <Heading className="mb-6 font-semibold" shadow={title}>
               {title}
             </Heading>
             <Paragraph className="text-base mdOnly:w-[288px]">{text}</Paragraph>
