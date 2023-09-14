@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import cupsData from '@/data/hallFameData.json';
@@ -10,14 +11,25 @@ import { Paragraph } from '@/components/Paragraph';
 
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
-const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
+export const HallFameCard: React.FC<HallFameCardProps> = ({
+  attributes,
+  cups,
+}) => {
+  const [isTouched, setIsTouched] = useState(false);
+
   if (!attributes) {
     return null;
   }
   const { title, description, img } = attributes;
 
   return (
-    <li className={`relative h-[460px] w-full ${s.card}`}>
+    <li
+      className={`relative h-[460px] w-full ${s.card} ${
+        isTouched ? s.active : ''
+      }`}
+      onTouchStart={() => setIsTouched(prev => !prev)}
+      // onTouchEnd={() => setIsTouched(false)}    !!!При використанні лише одна карта одночасно буде перевернута back стороною
+    >
       <div
         className={`${s.front} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] transition duration-1000 hover:shadow-lg focus:shadow-lg`}
       >
@@ -74,5 +86,3 @@ const HallFameCard: React.FC<HallFameCardProps> = ({ attributes, cups }) => {
     </li>
   );
 };
-
-export default HallFameCard;
