@@ -1,38 +1,81 @@
-/* .sectionBg {
-  background-image: image-set(
-    url(/images/home/bgKidsMob-1x.webp) type('image/webp') 1x,
-    url(/images/home/bgKidsMob-2x.webp) type('image/webp') 2x
-  );
-  background-repeat: no-repeat;
-  background-position: 0% 16%;
+.sectionBg {
+  /* position: relative; */
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container::before {
+  content: '';
+
+  width: 384px;
+  height: 400px;
+
+  position: absolute;
+  top: 70px;
+  left: -158px;
+
+  background: #141318;
+
+  border-radius: 6px;
+}
+
+@media screen and (min-width: 351px) {
+  /* .sectionBg::before {
+    top: 742px;
+  } */
+
+  .container::before {
+    left: -170px;
+  }
+}
+
+@media screen and (min-width: 378px) {
+  /* .sectionBg::before {
+    top: 718px;
+  } */
+
+  .container::before {
+    width: 550px;
+    /* top: 150px; */
+    left: -150px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .sectionBg {
-    background-image: image-set(
-      url(/images/home/bgKidsTab-1x.webp) type('image/webp') 1x,
-      url(/images/home/bgKidsTab-2x.webp) type('image/webp') 2x
-    );
-    background-position: 0% 12%;
+  /* .sectionBg::before {
+    top: 344px;
+  } */
+
+  .container::before {
+    width: 582px;
+    height: 480px;
+
+    top: 90px;
+    left: -262px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .sectionBg {
-    background-image: image-set(
-      url(/images/home/bgKidsDesk-1x.webp) type('image/webp') 1x,
-      url(/images/home/bgKidsDesk-2x.webp) type('image/webp') 2x
-    );
-    background-position: 0% 57%;
+  /* .sectionBg::before {
+    top: 340px;
+  } */
+
+  .container::before {
+    width: 735px;
+    height: 420px;
+
+    top: 100px;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .sectionBg {
-    background-image: image-set(
-      url(/images/home/bgKidsWide-1x.webp) type('image/webp') 1x,
-      url(/images/home/bgKidsWide-2x.webp) type('image/webp') 2x
-    );
-    background-position: 0% 56%;
+@media screen and (min-width: 1752px) {
+  .container::before {
+    width: 652px;
+    height: 484px;
+
+    top: 80px;
+    left: -84px;
+
+    border-radius: 0 6px 6px 0;
   }
-} */
+}

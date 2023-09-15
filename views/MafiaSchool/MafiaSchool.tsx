@@ -50,7 +50,7 @@ export const MafiaSchool: React.FC = () => {
 
         <Heading
           variant="secondary"
-          className="mb-[40px] w-[274px] 
+          className="mb-[40px] w-[274px]
           md:absolute md:right-[99px] md:top-[280px] md:mb-0 md:w-auto
           xl:right-[350px] xl:top-[272px] xxl:right-[565px]"
         >
@@ -58,7 +58,7 @@ export const MafiaSchool: React.FC = () => {
         </Heading>
 
         <LearnList
-          className="mb-[60px] md:absolute md:right-[84px] md:top-[418px] 
+          className="mb-[60px] md:absolute md:right-[84px] md:top-[418px]
             xl:right-[84px] xl:top-[416px]"
         />
 

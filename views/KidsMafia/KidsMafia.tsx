@@ -16,9 +16,9 @@ import common from '@/data/common.json';
 export const KidsMafia: FC = () => {
   return (
     <Section
-      className={`mx-auto max-w-[1920px] bg-primary-dark-200 ${css.sectionBg}`}
+      className={`relative mx-auto max-w-[1920px] bg-primary-dark-200 ${css.sectionBg}`}
     >
-      <div className="container">
+      <div className={`container relative ${css.container}`}>
         <Heading
           shadow={data.title}
           className="mb-[60px] md:mb-[100px] xl:mb-[85px] xxl:mb-[100px]"

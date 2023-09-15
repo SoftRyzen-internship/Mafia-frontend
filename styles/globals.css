@@ -245,7 +245,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1752px) {
   .common-bg {
     background-image: image-set(
       url(/images/home/home-xl.webp) 1x,
