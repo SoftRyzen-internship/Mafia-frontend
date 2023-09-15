@@ -213,3 +213,35 @@ body {
 .swiper-slide:hover {
   transform: translate3d(0, -12px, 0) !important;
 }
+
+.menu-enter {
+  opacity: 0;
+}
+
+.menu-enter .mobile {
+  transform: translateX(-100%);
+}
+.menu-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.menu-enter-active .mobile {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.menu-exit {
+  opacity: 0.5;
+}
+
+.menu-exit .mobile {
+  transform: translateX(0);
+}
+.menu-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.menu-exit-active .mobile {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}

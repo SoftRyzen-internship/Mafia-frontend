@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.12",
+    "@types/react-transition-group": "^4.4.6",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "graphql": "^16.8.0",
@@ -28,6 +29,7 @@
     "react-hook-form-persist": "^3.0.0",
     "react-markdown": "^8.0.7",
     "react-spinners": "^0.13.8",
+    "react-transition-group": "^4.4.5",
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^3.0.1",
     "swiper": "^10.2.0"
