@@ -51,15 +51,17 @@ export const getSliderBreakpointsOptions = (
 
   if (section === 'corporate') {
     return {
-      [SCREEN_MOBILE]: { slidesPerView: 1 },
-      [SCREEN_TABLET]: { slidesPerView: 4, loopedSlides: 3 },
+      [SCREEN_MOBILE]: {
+        slidesPerView: 1,
+      },
+      [SCREEN_TABLET]: {
+        slidesPerView: 'auto' as 'auto',
+      },
       [SCREEN_DESKTOP]: {
-        slidesPerView: 5,
-        loopedSlides: 3,
+        slidesPerView: 'auto' as 'auto',
       },
       [LARGE_SCREEN_DESKTOP]: {
-        slidesPerView: 4,
-        loopedSlides: 3,
+        slidesPerView: 'auto' as 'auto',
       },
     };
   }
