@@ -15,10 +15,11 @@ const Home = async () => {
   return (
     <div className="">
       <HomeHero />
-      <MafiaSchool />
-      <CorporateParties />
-      <KidsMafia />
-
+      <div className="common-bg">
+        <MafiaSchool />
+        <CorporateParties />
+        <KidsMafia />
+      </div>
       {/* <div className="container">
         <Slider
           pagination

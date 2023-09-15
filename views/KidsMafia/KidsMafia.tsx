@@ -15,7 +15,9 @@ import common from '@/data/common.json';
 
 export const KidsMafia: FC = () => {
   return (
-    <Section className={`mx-auto max-w-[1920px] ${css.sectionBg}`}>
+    <Section
+      className={`mx-auto max-w-[1920px] bg-primary-dark-200 ${css.sectionBg}`}
+    >
       <div className="container">
         <Heading
           shadow={data.title}
@@ -25,7 +27,7 @@ export const KidsMafia: FC = () => {
         </Heading>
         <div className="mb-[60px] md:flex md:flex-wrap xl:mb-[88px] xl:h-[368px] xl:flex-col xl:content-between">
           <div
-            className={`relative h-[348px] w-full overflow-hidden rounded-normal 
+            className={`relative h-[348px] w-full overflow-hidden rounded-normal
                       md:h-[396px] md:w-[288px] md:shrink-0 xl:h-[348px] xl:w-[493px]
                       xxl:w-[568px] smOnly:mb-[60px] ${css.imageBg}`}
           >
@@ -51,7 +53,7 @@ export const KidsMafia: FC = () => {
 
         <div className="mb-9 md:relative md:mb-8 xl:mb-[68px]">
           <div
-            className="relative h-[260px] w-full overflow-hidden rounded-normal 
+            className="relative h-[260px] w-full overflow-hidden rounded-normal
                       md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px]
                       xl:h-[352px] xl:w-[394px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
           >
