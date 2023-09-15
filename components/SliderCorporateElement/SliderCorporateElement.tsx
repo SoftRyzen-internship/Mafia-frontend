@@ -11,7 +11,7 @@ export const SliderCorporateElement: FC<SliderCorporateElementProps> = ({
 }) => {
   return (
     <div
-      className=" h-[402px] w-full overflow-hidden rounded-normal 
+      className=" h-[402px] overflow-hidden rounded-normal 
    "
     >
       <Image
@@ -21,7 +21,7 @@ export const SliderCorporateElement: FC<SliderCorporateElementProps> = ({
         alt={altText}
         priority
         quality={90}
-        className="h-full w-full object-cover"
+        className="h-full object-cover md:w-auto smOnly:w-full"
       />
     </div>
   );
