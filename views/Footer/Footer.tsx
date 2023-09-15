@@ -45,8 +45,7 @@ export const Footer: FC = () => {
             <FooterLinkItem
               href={data.creator.href}
               title={data.creator.title}
-              rel="noopener noreferrer nofollow"
-              target="_blank"
+              internalLink={data.creator.internalLink}
             />
           </Paragraph>
           <FooterLinksList />

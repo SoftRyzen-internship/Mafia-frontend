@@ -7,7 +7,7 @@
       "placeholder": "Валентин",
       "name": "userName",
       "options": {
-        "required": true,
+        "required": "Це поле обов’язкове",
         "pattern": {
           "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
           "message": "Невірно введене ім’я"
@@ -23,7 +23,7 @@
       "placeholder": "+380990000000",
       "name": "phoneNumber",
       "options": {
-        "required": true,
+        "required": "Це поле обов’язкове",
         "pattern": {
           "value": "^\\+[0-9]+$",
           "message": "Невірно введений номер"
@@ -40,7 +40,7 @@
     "name": "userComment",
     "options": {
       "pattern": {
-        "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ()s',.!? -]+$",
+        "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ0-9()s',.!? \n-]+$",
         "message": "Присутні недопустимі символи"
       },
       "maxLength": { "value": 500, "message": "Не більше 500 символів" }
