@@ -167,7 +167,7 @@ body {
 #swiper
   > .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal
   > .swiper-pagination-bullet {
-  opacity: 0;
+  opacity: 1;
   background-color: #737373;
   transform: scale(1);
   width: 5px;
