@@ -83,6 +83,13 @@ body {
   @apply absolute -left-[20px] -top-[2px] h-[16px] w-[16px] bg-cover bg-center bg-no-repeat;
 }
 /* Tournaments */
+.tournament-block {
+  @apply pb-20 pt-[96px];
+}
+.tournament-block:nth-child(2) {
+  @apply pt-0;
+}
+
 .tournament-block:nth-child(2n) .tournament-container {
   @apply flex-row-reverse justify-end;
 }
