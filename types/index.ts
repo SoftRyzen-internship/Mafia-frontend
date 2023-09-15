@@ -305,9 +305,10 @@ export type FormData = {
 // ---- FORM END ---
 
 export interface FooterLinkItemProps {
-  [any: string]: string;
+  // [any: string]: string;
   title: string;
   href: string;
+  internalLink: boolean;
 }
 
 export interface SliderProps {
