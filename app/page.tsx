@@ -6,7 +6,6 @@ import { KidsMafia } from '@/views/KidsMafia';
 import { Slider } from '@/components/Slider';
 import { SliderPresentersElement } from '@/components/SliderPresentersElement';
 import { getPresenters } from '@/utils/api/getPresenters';
-import { CorporateInviteGame } from '@/views/CorporateInviteGame';
 // ==========================================
 
 const Home = async () => {
@@ -16,7 +15,6 @@ const Home = async () => {
       <HomeHero />
       <CorporateParties />
       <KidsMafia />
-      <CorporateInviteGame />
 
       <div className="container">
         <Slider
