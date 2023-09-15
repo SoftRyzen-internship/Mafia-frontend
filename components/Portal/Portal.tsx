@@ -1,18 +1,14 @@
 'use client';
 
-import { useRef, useEffect, useState, MouseEvent } from 'react';
+import { Transition } from 'react-transition-group';
+
+import { useRef, useEffect, MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 
 import { IPortal } from '@/types';
 
-export const Portal = ({ onModalClose, children }: IPortal) => {
-  const ref = useRef<Element | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    ref.current = document.querySelector<HTMLElement>('#modal');
-    setMounted(true);
-  }, []);
+export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
+  const nodeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onClickEscape = (e: KeyboardEvent) => {
@@ -32,15 +28,26 @@ export const Portal = ({ onModalClose, children }: IPortal) => {
     }
   };
 
-  return mounted && ref.current
-    ? createPortal(
-        <div
-          onClick={handleBackdrop}
-          className="fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75"
-        >
-          {children}
-        </div>,
-        ref.current,
-      )
-    : null;
+  return (
+    <Transition
+      nodeRef={nodeRef}
+      in={showModal}
+      timeout={300}
+      mountOnEnter
+      unmountOnExit
+    >
+      {state =>
+        createPortal(
+          <div
+            ref={nodeRef}
+            onClick={handleBackdrop}
+            className={` fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75 alert--${state}`}
+          >
+            {children}
+          </div>,
+          document.getElementById('modal'),
+        )
+      }
+    </Transition>
+  );
 };
