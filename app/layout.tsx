@@ -33,7 +33,7 @@ export default function RootLayout({
     <html>
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         <Header />
-        {children}
+        <main className="pt-[52px] md:pt-[74px] xl:pt-[82px]">{children}</main>
         <Footer />
         <SocialsMenu variant="fixed" />
         <div id="modal" />

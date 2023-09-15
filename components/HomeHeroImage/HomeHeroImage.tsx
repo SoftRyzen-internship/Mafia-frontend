@@ -17,9 +17,9 @@ export const HomeHeroImage: React.FC<SectionImageProps> = ({ image, alt }) => {
     sizes,
     css.heroImgContainer,
     'mb-5 rounded-normal',
-    'md:mb-9',
-    'xl:absolute xl:right-[84px] xl:top-[80px] xl:mb-0',
-    'xxl:bottom-[120px] xxl:top-auto',
+    'mdOnly:mb-9',
+    'xl:absolute xl:right-[84px] xl:top-0',
+    // 'xxl:bottom-[120px] xxl:top-auto',
   );
 
   const imageStyles = classNames(

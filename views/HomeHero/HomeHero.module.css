@@ -1,23 +1,13 @@
 .hero {
   max-width: 1920px;
-  padding-top: 52px;
   background-image: image-set(
     url('/images/home/home-hero-bg-mob.webp') 1x,
     url('/images/home/home-hero-bg-mob@2x.webp') 2x
   );
 }
 
-@media screen and (min-width: 376px) {
-  .hero {
-    padding-top: 72px;
-    padding-bottom: 20px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero {
-    padding-top: 74px;
-    padding-bottom: 0;
     background-image: image-set(
       url('/images/home/home-hero-bg-tab.webp') 1x,
       url('/images/home/home-hero-bg-tab@2x.webp') 2x
@@ -27,7 +17,6 @@
 
 @media screen and (min-width: 1280px) {
   .hero {
-    padding-top: 82px;
     background-image: image-set(
       url('/images/home/home-hero-bg-desk.webp') 1x,
       url('/images/home/home-hero-bg-desk@2x.webp') 2x
@@ -37,7 +26,6 @@
 
 @media screen and (min-width: 1752px) {
   .hero {
-    padding-top: 99px;
     background-image: image-set(
       url('/images/home/home-hero-bg-desk-lg.webp') 1x,
       url('/images/home/home-hero-bg-desk-lg@2x.webp') 2x

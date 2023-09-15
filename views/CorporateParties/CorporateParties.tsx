@@ -63,6 +63,7 @@ export const CorporateParties = async () => {
             section="presenters"
             element={SliderPresentersElement}
             data={presentersData}
+            slideClassName="!h-auto"
           />
         ) : (
           <Fallback />

@@ -35,7 +35,7 @@
     );
   }
   .bg_img::before {
-    top: 728px;
+    top: 744px;
   }
 }
 
@@ -47,6 +47,12 @@
     );
   }
   .bg_img::before {
-    top: 714px;
+    top: 771px;
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .bg_img::before {
+    top: 739px;
   }
 }

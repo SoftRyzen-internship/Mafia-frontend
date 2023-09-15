@@ -13,7 +13,7 @@ import { KidsMafia } from '@/views/KidsMafia';
 const Home = async () => {
   // const presentersData = await getPresenters();
   return (
-    <>
+    <div className="">
       <HomeHero />
       <MafiaSchool />
       <CorporateParties />
@@ -27,7 +27,7 @@ const Home = async () => {
           data={presentersData}
         />
       </div> */}
-    </>
+    </div>
   );
 };
 
