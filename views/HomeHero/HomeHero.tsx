@@ -11,7 +11,7 @@ import data from '@/data/homeHero.json';
 import css from './HomeHero.module.css';
 
 export const HomeHero: React.FC = () => {
-  const { title, description, image, subtitle, button } = data;
+  const { title, description, image, subtitle, button, imgAltText } = data;
 
   const sectionStyles = classNames(
     'mx-auto bg-no-repeat bg-top bg-cover py-[40px] sm:py-[60px] md:py-[80px] xxl:py-[120px]',
@@ -39,7 +39,7 @@ export const HomeHero: React.FC = () => {
           {description}
         </Paragraph>
 
-        <HomeHeroImage image={image} alt={title} />
+        <HomeHeroImage image={image} alt={imgAltText} />
 
         <Heading tag="h2" variant="tertiary" className={subtitleStyles}>
           {subtitle}

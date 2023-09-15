@@ -36,11 +36,13 @@ export const CorporateParties = async () => {
                     md:h-[490px] md:w-[288px] xl:h-[459px] xl:w-[596px] xxl:w-[716px]"
           >
             <Image
-              className="object-cover object-center"
+              className="h-full w-full object-cover object-center xl:h-auto xl:-translate-y-[264px] xl:object-top xxl:-translate-y-[396px]"
               src={image.src}
               alt={image.alt}
-              fill
+              width={272}
+              height={315}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              priority
             />
           </div>
           <div className="xl:w-[390px] xxl:w-[420px] smOnly:h-[482px] mdOnly:flex-1">
@@ -61,7 +63,7 @@ export const CorporateParties = async () => {
             section="presenters"
             element={SliderPresentersElement}
             data={presentersData}
-            slideClassName="!h-auto"
+            slideClassName="!h-auto mediaHover:hover:translate transform transition duration-300 ease-out mediaHover:hover:cursor-pointer"
           />
         ) : (
           <Fallback />

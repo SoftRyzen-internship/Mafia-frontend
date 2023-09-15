@@ -10,7 +10,7 @@
     { "title": "Турніри", "href": "/tournaments" },
     { "title": "Корпоративи", "href": "/corporate-parties" },
     { "title": "Дитяча мафія", "href": "/mafia-kids" },
-    { "title": "Зал слави", "href": "/fame-hall" }
+    { "title": "Зал слави", "href": "/hall-fame" }
   ],
   "contacts": {
     "title": "Контакти",

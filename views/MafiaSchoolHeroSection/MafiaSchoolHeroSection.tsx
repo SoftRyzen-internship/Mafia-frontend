@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Heading } from '@/components/Heading/Heading';
-import { Section } from '@/components/Section/Section';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { MafiaSchoolHeroData } from '@/types/index';
 import s from '@/views/MafiaSchoolHeroSection/MafiaSchoolHeroSection.module.css';
@@ -11,15 +10,15 @@ const typedData: MafiaSchoolHeroData = data as MafiaSchoolHeroData;
 
 export const MafiaSchoolHeroSection = () => {
   return (
-    <Section className={` ${s.mafiaSchoolHero}`}>
-      <div className="container">
+    <section className={s.mafiaSchoolHero}>
+      <div className="container py-[80px]">
         <Heading
           tag="h1"
           variant="main"
-          className="mb-[42px] mt-[62px] text-[32px] font-extrabold text-white-light md:mb-[32px] md:mt-[52px] md:text-[40px] md:leading-[56px] xl:mb-[35px] xl:mt-[41px] xl:text-[52px] xl:leading-[80px]"
+          className="mb-[42px] text-[32px] font-extrabold text-white-light md:mb-[32px] md:text-[40px] md:leading-[56px] xl:mb-[35px] xl:text-[52px] xl:leading-[80px]"
           shadow={typedData.heading.content}
         >
-          {typedData.heading.content} 2
+          {typedData.heading.content}
         </Heading>
 
         <Paragraph className="mb-[78px] max-w-[272px] text-base font-normal md:max-w-[288px] xl:mb-[76px] xl:max-w-[624px] ">
@@ -65,6 +64,6 @@ export const MafiaSchoolHeroSection = () => {
           </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
