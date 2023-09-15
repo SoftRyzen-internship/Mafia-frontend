@@ -4,8 +4,8 @@
 const CorporateParties = () => {
   return (
     <div>
-      {/* <CorporateHero />
-      <CorporateInviteGame /> */}
+      {/* <CorporateHero /> */}
+      {/* <CorporateInviteGame /> */}
     </div>
   );
 };
