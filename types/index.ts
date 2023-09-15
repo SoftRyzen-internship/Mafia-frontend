@@ -16,7 +16,12 @@ export interface LogoProps {
 
 type HeadingTag = 'h1' | 'h2' | 'h3';
 
-type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
+type HeadingVariant =
+  | 'main'
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'privacy-policy';
 
 export interface HeadingElementProps {
   className?: string;
@@ -464,6 +469,16 @@ export interface SkillsListProps {
 export interface SectionImageProps {
   image: string;
   alt: string;
+}
+
+export interface IPrivacyPolicy {
+  privacyPolicy: {
+    data: {
+      attributes: {
+        text: string;
+      };
+    };
+  };
 }
 
 export type PopUpType = 'default' | 'success' | 'error';
