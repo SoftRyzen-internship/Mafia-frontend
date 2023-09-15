@@ -10,9 +10,7 @@ export const CorporateInviteGame = () => {
   const { primary_title, image } = data;
 
   return (
-    <section
-      className={`${s.bg_img}  pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
-    >
+    <section className={`${s.bg_img}`}>
       <div
         className={`${s.bg_img} ${s.container} container relative pb-[112px] pt-[80px] md:pb-[112px] md:pt-[52px]`}
       >
