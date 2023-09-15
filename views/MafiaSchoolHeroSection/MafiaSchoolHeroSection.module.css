@@ -5,6 +5,7 @@
   background-image: url(/images/kidsMafia/bgmafiaschoolmob.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 @media (min-device-pixel-ratio: 2),
   (-webkit-min-device-pixel-ratio: 2),
@@ -18,7 +19,7 @@
 @media screen and (min-width: 768px) {
   .mafiaSchoolHero {
     background-image: url(/images/kidsMafia/bgmafiaschooltab.webp);
-    background-size: contain;
+    background-size: cover;
   }
 }
 @media screen and (min-width: 768px),
