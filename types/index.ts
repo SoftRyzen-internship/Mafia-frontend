@@ -333,6 +333,7 @@ export interface SliderSchoolElementProps extends SliderElementProps {
 }
 
 export interface SliderCorporateElementProps extends SliderElementProps {
+  imageUrl: string;
   altText: string;
 }
 
