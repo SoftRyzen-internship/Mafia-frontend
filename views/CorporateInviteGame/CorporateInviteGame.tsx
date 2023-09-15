@@ -4,16 +4,18 @@ import { Heading } from '@/components/Heading';
 import { FormWithPopUp } from '@/components/FormWithPopUp';
 
 import data from '@/data/corporateInviteGame.json';
-import s from '@/views/PlayInvitationSection/PlayInvitationSection.module.css';
+import s from '@/views/CorporateInviteGame/CorporateInviteGame.module.css';
 
-export const PlayInvitationSection = () => {
+export const CorporateInviteGame = () => {
   const { primary_title, image } = data;
 
   return (
     <section
-      className={`${s.bg_img} pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
+      className={`${s.bg_img}  pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
     >
-      <div className="container pb-[32px] pt-[80px] md:pb-[112px] md:pt-[52px] ">
+      <div
+        className={`${s.bg_img} ${s.container} container relative pb-[112px] pt-[80px] md:pb-[112px] md:pt-[52px]`}
+      >
         <Heading
           tag="h2"
           variant="main"
@@ -44,7 +46,7 @@ export const PlayInvitationSection = () => {
             >
               {primary_title}
             </Heading>
-            <div className="xl:w-[466px] smOnly:h-[500px] mdOnly:flex-1">
+            <div className=" xl:w-[466px] smOnly:h-[500px] mdOnly:flex-1">
               <FormWithPopUp />
             </div>
           </div>
