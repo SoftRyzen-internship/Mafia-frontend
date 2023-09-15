@@ -88,7 +88,7 @@ export const Slider: React.FC<SliderProps> = ({
         return (
           <SwiperSlide
             key={idx}
-            className={`mediaHover:hover:translate transform overflow-hidden rounded-normal transition duration-300 ease-out mediaHover:hover:cursor-pointer ${slideClassName}`}
+            className={`overflow-hidden rounded-normal ${slideClassName}`}
           >
             <Component {...cardInfo} />
           </SwiperSlide>

@@ -75,6 +75,7 @@ export const MafiaSchool: React.FC = () => {
           pagination
           element={SliderSchoolElement}
           data={swiperData}
+          slideClassName="mediaHover:hover:translate transform transition duration-300 ease-out mediaHover:hover:cursor-pointer"
         />
       </div>
     </Section>
