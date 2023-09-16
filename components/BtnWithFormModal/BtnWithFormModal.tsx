@@ -35,7 +35,6 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
         {text}
       </ButtonPrimary>
 
-      {/* {showModal ? ( */}
       <Portal onModalClose={handleToggeModal} showModal={showModal}>
         <ModalSendForm onModalClose={handleToggeModal}>
           {popUpType === 'default' ? (
@@ -48,7 +47,6 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
           {popUpType === 'error' ? <ErrorWindow /> : null}
         </ModalSendForm>
       </Portal>
-      {/* ) : null} */}
     </>
   );
 };

@@ -2,7 +2,7 @@
 
 import { Transition } from 'react-transition-group';
 
-import { useRef, useEffect, MouseEvent } from 'react';
+import { useRef, MouseEvent, KeyboardEvent } from 'react';
 import { createPortal } from 'react-dom';
 
 import { IPortal } from '@/types';
@@ -10,20 +10,14 @@ import { IPortal } from '@/types';
 export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
   const nodeRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const onClickEscape = (e: KeyboardEvent) => {
-      if (e.code === 'Escape') {
-        onModalClose();
-      }
-    };
-    document.addEventListener('keydown', onClickEscape);
-    return () => {
-      document.removeEventListener('keydown', onClickEscape);
-    };
-  }, [onModalClose]);
-
   const handleBackdrop = (event: MouseEvent) => {
     if (event.target === event.currentTarget) {
+      onModalClose();
+    }
+  };
+
+  const handleEsc = (event: KeyboardEvent) => {
+    if (event.code === 'Escape') {
       onModalClose();
     }
   };
@@ -36,18 +30,21 @@ export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
       mountOnEnter
       unmountOnExit
     >
-      {state =>
-        createPortal(
+      {state => {
+        nodeRef.current?.focus();
+        return createPortal(
           <div
+            tabIndex={0}
+            onKeyDown={handleEsc}
             ref={nodeRef}
             onClick={handleBackdrop}
-            className={` fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75 alert--${state}`}
+            className={` fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75 modal--${state}`}
           >
             {children}
           </div>,
-          document.getElementById('modal'),
-        )
-      }
+          document.getElementById('modal')!,
+        );
+      }}
     </Transition>
   );
 };
