@@ -36,7 +36,7 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
       </ButtonPrimary>
 
       <Portal onModalClose={handleToggeModal} showModal={showModal}>
-        <ModalSendForm onModalClose={handleToggeModal}>
+        <ModalSendForm onModalClose={() => setShowModal(prev => !prev)}>
           {popUpType === 'default' ? (
             <Form
               setPopUpType={setPopUpType}
