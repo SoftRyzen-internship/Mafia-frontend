@@ -25,6 +25,11 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
     document.body.classList.toggle('overflow-hidden');
   };
 
+  const handleScroll = () => {
+    setShowModal(prev => !prev);
+    document.body.classList.toggle('overflow-hidden');
+  };
+
   return (
     <>
       <ButtonPrimary
@@ -36,7 +41,7 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
       </ButtonPrimary>
 
       <Portal onModalClose={handleToggeModal} showModal={showModal}>
-        <ModalSendForm onModalClose={() => setShowModal(prev => !prev)}>
+        <ModalSendForm onModalClose={handleScroll}>
           {popUpType === 'default' ? (
             <Form
               setPopUpType={setPopUpType}
