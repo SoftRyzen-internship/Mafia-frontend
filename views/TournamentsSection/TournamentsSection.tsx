@@ -18,7 +18,7 @@ export const TournamentsSection: FC = async () => {
   const tournaments = await getTournaments();
 
   return (
-    <section className="pb-0 pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]">
+    <section className="pb-0">
       <div className={classNames(s.section)}>
         <div className={classNames('pt-[80px]', s.hero)}>
           <div className="container pb-[78px] xl:pb-[60px]">
