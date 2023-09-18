@@ -20,9 +20,10 @@ export const Fallback: React.FC<FallbackProps> = ({
   const { fallbackText } = data;
 
   const wrapClasses = classNames(
-    'flex h-[152px] flex-col items-center justify-center rounded-normal bg-body w-full',
+    'flex h-[152px] flex-col items-center justify-center rounded-normal bg-body  smOnly:bg-none w-full',
     {
-      'gap-[30px] h-[462px]': variant === 'default',
+      'gap-[30px] h-[462px] smOnly:backdrop-blur-sm smOnly:bg-body/60 mx-auto max-w-[1216px]':
+        variant === 'default',
       [css.bg_image]: variant === 'default',
       'gap-[6px] h-[152px] md:w-[236px] xl:w-[300px] xxl:w-[418px]':
         variant === 'small',

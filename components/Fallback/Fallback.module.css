@@ -1,10 +1,12 @@
-.bg_image {
-  background-image: image-set(
-    url(/images/common/bg-fallback.webp) 1x,
-    url(/images/common/bg-fallback@x2.webp) 2x
-  );
+@media (min-width: 768px) {
+  .bg_image {
+    background-image: image-set(
+      url(/images/common/bg-fallback.webp) 1x,
+      url(/images/common/bg-fallback@x2.webp) 2x
+    );
 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
