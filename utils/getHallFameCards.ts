@@ -13,7 +13,7 @@ export async function getHallFameCards(): Promise<HallFameCardProps[]> {
     );
     return data.flipCards.data;
   } catch (error) {
-    console.error('Error fetching Hall of Fame cards:', error); //TO-DO обробити помилку коли зявиться картинка-заглушка
+    console.error(error.message);
     throw error;
   }
 }

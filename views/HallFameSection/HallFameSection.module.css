@@ -10,7 +10,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.bgfallback {
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+}
 @media screen and (min-width: 768px) {
   .hallFameListContainer {
     background-image: image-set(
