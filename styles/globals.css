@@ -214,3 +214,43 @@ body {
 .swiper-slide:hover {
   transform: translate3d(0, -12px, 0) !important;
 }
+
+.common-bg {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-image: image-set(
+    url(/images/home/home-sm.webp) 1x,
+    url(/images/home/home-sm-2x.webp) 2x
+  );
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-md.webp) 1x,
+      url(/images/home/home-md-2x.webp) 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-l.webp) 1x,
+      url(/images/home/home-l-2x.webp) 1x
+    );
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-xl.webp) 1x,
+      url(/images/home/home-xl-2x.webp) 1x
+    );
+  }
+}
