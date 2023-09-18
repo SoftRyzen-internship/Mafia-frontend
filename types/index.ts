@@ -336,6 +336,7 @@ export interface SliderSchoolElementProps extends SliderElementProps {
 export interface SliderCorporateElementProps extends SliderElementProps {
   imageUrl: string;
   altText: string;
+  priority?: boolean;
 }
 
 export interface SliderPresentersElementImageType {
@@ -457,6 +458,7 @@ export interface ITournamentsData {
 
 export interface TournamentBlockProps {
   tournament: ITournament;
+  priorityImg: boolean;
 }
 
 export interface LoaderProps {
