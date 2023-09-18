@@ -12,6 +12,6 @@ export const fetchPricing = async (): Promise<PricesData> => {
     const result = data.prices.data;
     return result;
   } catch (error) {
-    console.log(error);
+    return [];
   }
 };

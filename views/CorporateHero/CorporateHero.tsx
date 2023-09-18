@@ -15,7 +15,7 @@ export const CorporateHero: FC = () => {
   const { swiperData } = sliderDataCorp;
 
   return (
-    <Section className={classNames('relative ', s.sectionBg)}>
+    <Section className={classNames('relative bg-transparent', s.sectionBg)}>
       <div className="container">
         <Heading
           shadow={title}

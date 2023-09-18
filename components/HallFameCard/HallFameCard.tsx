@@ -28,7 +28,9 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
         isTouched ? s.active : ''
       }`}
       onTouchStart={() => setIsTouched(prev => !prev)}
-      // onTouchEnd={() => setIsTouched(false)}    !!!При використанні лише одна карта одночасно буде перевернута back стороною
+      // onTouchEnd={() => setIsTouched(false)}
+      // !!!При використанні лише одна карта одночасно буде перевернута back стороною
+      tabIndex={0}
     >
       <div
         className={`${s.front} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] transition duration-1000 hover:shadow-lg focus:shadow-lg`}
@@ -75,7 +77,11 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
                   className="flex flex-col items-center px-[5px] text-center  md:text-base"
                 >
                   {Icon && (
-                    <Icon className="mb-[24px] h-10 w-10 xl:mb-[16px] xxl:mb-[15px]" />
+                    <Icon
+                      className="mb-[24px] h-10 w-10 xl:mb-[16px] xxl:mb-[15px]"
+                      width={10}
+                      height={10}
+                    />
                   )}
                   <Paragraph className="overflow-wrap max-w-[70px] break-words text-[12px] md:max-w-[100px] md:text-[16px] xl:max-w-[100%]">
                     {cup.competition_name}

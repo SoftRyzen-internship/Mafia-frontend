@@ -16,7 +16,7 @@ export const NavigationRow: FC<NavigationRowProps> = ({
   const currentPath = usePathname();
   const NavigationRowClasses = classNames('flex', {
     'flex-col gap-7 xl:hidden': position === 'mobile-menu',
-    'ml-16 gap-20 xxl:gap-40 notXl:hidden': position === 'header',
+    'gap-20 notXl:hidden': position === 'header',
     'flex-col gap-6 md:gap-5': position === 'footer',
   });
 

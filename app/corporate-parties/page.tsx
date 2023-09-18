@@ -1,12 +1,16 @@
-// import { CorporateHero } from '@/views/CorporateHero';
-// import { CorporateInviteGame } from '@/views/CorporateInviteGame';
+import { CorporateHero } from '@/views/CorporateHero';
+import { CorporateInviteGame } from '@/views/CorporateInviteGame';
+import { CorporatePresenters } from '@/views/CorporatePresenters';
+import { Pricing } from '@/views/Pricing';
 
 const CorporateParties = () => {
   return (
-    <div>
-      {/* <CorporateHero /> */}
-      {/* <CorporateInviteGame /> */}
-    </div>
+    <>
+      <CorporateHero />
+      <CorporatePresenters />
+      <Pricing variant="corporate" />
+      <CorporateInviteGame />
+    </>
   );
 };
 
