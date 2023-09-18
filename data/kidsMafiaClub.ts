@@ -6,18 +6,18 @@ import img4 from '@/public/images/kidsMafia/kids-mafia-club-4@2x.webp';
 export const kidsMafiaGallery = [
   {
     src: img1,
-    alt: 'card-1',
+    alt: 'дівчинка грає в мафію за столом',
   },
   {
     src: img2,
-    alt: 'card-2',
+    alt: 'діти грають в мафію за столом, показують жест пеликий палець уверх',
   },
   {
     src: img3,
-    alt: 'card-3',
+    alt: 'діти грають за столом у мафію, дівчинці показують картку',
   },
   {
     src: img4,
-    alt: 'card-4',
+    alt: 'хлопчик сидить за столом, грає в мафію',
   },
 ];
