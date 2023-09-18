@@ -34,9 +34,9 @@ export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
         nodeRef.current?.focus();
         return createPortal(
           <div
+            ref={nodeRef}
             tabIndex={0}
             onKeyDown={handleEsc}
-            ref={nodeRef}
             onClick={handleBackdrop}
             className={` fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75 modal--${state}`}
           >
