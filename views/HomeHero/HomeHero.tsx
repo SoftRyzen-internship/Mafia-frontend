@@ -33,8 +33,8 @@ export const HomeHero: React.FC = () => {
         <Paragraph
           className="mb-[26px] text-lg font-light leading-[28px]
             md:mb-9 md:w-[332px] md:text-xl
-            xl:mb-[192px] xl:w-[600px] xl:text-2xl xl:leading-8
-            xxl:mb-[334px] xxl:w-[608px]"
+            xl:mb-[192px] xl:w-[608px] xl:text-2xl xl:leading-8
+            xxl:mb-[334px]"
         >
           {description}
         </Paragraph>

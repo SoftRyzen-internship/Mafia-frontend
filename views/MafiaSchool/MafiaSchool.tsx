@@ -58,8 +58,8 @@ export const MafiaSchool: React.FC = () => {
         </Heading>
 
         <LearnList
-          className="mb-[60px] md:absolute md:right-[84px] md:top-[418px]
-            xl:right-[84px] xl:top-[416px]"
+          className="mb-[60px] md:absolute md:right-[84px] md:top-[418px] 
+            xl:right-8 xl:top-[416px]"
         />
 
         <Paragraph className="mb-6 md:w-[280px] xl:w-[597px]">
