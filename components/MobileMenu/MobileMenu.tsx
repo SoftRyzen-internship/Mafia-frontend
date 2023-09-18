@@ -1,6 +1,7 @@
 'use client';
+import { CSSTransition } from 'react-transition-group';
 
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, useEffect, MouseEvent, useRef } from 'react';
 import classNames from 'classnames';
 
 import { IconBtn } from '../IconBtn';
@@ -14,6 +15,7 @@ import css from './MobileMenu.module.css';
 
 export const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const nodeRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -46,12 +48,19 @@ export const MobileMenu = () => {
     <div className="xl:hidden">
       <MobileMenuBtn onClick={handleMenuToggle} />
 
-      {showMenu ? (
+      <CSSTransition
+        in={showMenu}
+        timeout={300}
+        classNames="menu"
+        unmountOnExit
+        nodeRef={nodeRef}
+      >
         <div
           onClick={handleOverlayClick}
+          ref={nodeRef}
           className="fixed left-0 top-0  h-[100vh] w-[100vw] bg-[#171718C4]"
         >
-          <nav className={menuClasses}>
+          <nav className={`mobile ${menuClasses}`}>
             <div
               className="flex items-center justify-between 
             border-b border-gray-light px-[24px] pb-[6px] pt-[5px] 
@@ -78,7 +87,7 @@ export const MobileMenu = () => {
             </div>
           </nav>
         </div>
-      ) : null}
+      </CSSTransition>
     </div>
   );
 };

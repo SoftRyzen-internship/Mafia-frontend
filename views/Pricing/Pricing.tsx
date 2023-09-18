@@ -23,6 +23,7 @@ export const Pricing: React.FC<PricingProps> = async ({
       [css.sectionCorporate]: variant === 'corporate',
     },
   );
+
   return (
     <section className={sectionStyles}>
       <div className="container">

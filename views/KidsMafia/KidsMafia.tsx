@@ -37,7 +37,6 @@ export const KidsMafia: FC = () => {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
               className="object-cover object-center"
-              priority
             />
           </div>
 
@@ -55,7 +54,7 @@ export const KidsMafia: FC = () => {
           <div
             className="relative h-[260px] w-full overflow-hidden rounded-normal
                       md:absolute md:right-0 md:top-0 md:h-[246px] md:w-[236px]
-                      xl:h-[352px] xl:w-[394px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
+                      xl:h-[352px] xl:w-[493px] xxl:right-[148px] xxl:w-[568px] smOnly:mb-[60px]"
           >
             <Image
               src={data.img2.src}
@@ -63,7 +62,6 @@ export const KidsMafia: FC = () => {
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
               className="object-cover object-center"
-              priority
             />
           </div>
 

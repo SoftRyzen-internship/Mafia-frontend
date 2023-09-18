@@ -178,6 +178,7 @@ export interface IPortal {
   children: ReactNode;
   onModalClose: () => void;
   className?: string;
+  showModal?: boolean;
 }
 
 export interface ScheduleProps {

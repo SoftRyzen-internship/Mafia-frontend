@@ -21,8 +21,8 @@ export const Heading: FC<HeadingComponentProps> = ({
         variant === 'primary',
       'text-[20px] font-semibold leading-[28px] xl:text-[24px] xl:leading-[32px]':
         variant === 'secondary',
-      'text-[28px] font-medium leading-[28px]': variant === 'tertiary',
-      'text-[28px] font-semibold leading-[36px] md:text-[40px] md:leading-[56px]  xl:text-[42px] xl:leading-[52px]':
+      'text-[20px] font-medium leading-[28px]': variant === 'tertiary',
+      'text-[28px] font-semibold leading-[36px] md:text-[40px] md:leading-[56px] xl:text-[42px] xl:leading-[52px]':
         variant === 'privacy-policy',
       [css.shadow]: shadow !== '',
     },
