@@ -10,8 +10,8 @@ const typedData: MafiaSchoolHeroData = data as MafiaSchoolHeroData;
 
 export const MafiaSchoolHeroSection = () => {
   return (
-    <section className={`bg-primary-dark-200, ${s.section}`}>
-      <div className="container py-[80px]">
+    <section className={`bg-primary-dark-200 ${s.section}`}>
+      <div className="container py-[80px] ">
         <Heading
           tag="h1"
           variant="main"

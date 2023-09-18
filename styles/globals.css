@@ -261,28 +261,35 @@ body {
   position: relative;
 
   background-image: image-set(
-    url(/images/kidsMafia/bg-kids-mafia-club-sm.webp) type('image/webp') 1x,
-    url(/images/kidsMafia/bg-kids-mafia-club-sm@2x.webp) type('image/webp') 2x
+    url(/images/kidsMafia/bg-kids-mafia-club-xs.webp) type('image/webp') 1x,
+    url(/images/kidsMafia/bg-kids-mafia-club-xs@2x.webp) type('image/webp') 2x
   );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 375px) {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-sm.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-sm@2x.webp) type('image/webp') 2x
+    );
+  }
+
+  @media screen and (min-width: 768px) {
     background-image: image-set(
       url(/images/kidsMafia/bg-kids-mafia-club-md.webp) type('image/webp') 1x,
       url(/images/kidsMafia/bg-kids-mafia-club-md@2x.webp) type('image/webp') 2x
     );
   }
 
-  @media (min-width: 1280px) {
+  @media screen and (min-width: 1280px) {
     background-image: image-set(
       url(/images/kidsMafia/bg-kids-mafia-club-l.webp) type('image/webp') 1x,
       url(/images/kidsMafia/bg-kids-mafia-club-l@2x.webp) type('image/webp') 2x
     );
   }
 
-  @media (min-width: 1752px) {
+  @media screen and (min-width: 1752px) {
     background-image: image-set(
       url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
       url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
