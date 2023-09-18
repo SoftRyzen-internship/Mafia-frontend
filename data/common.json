@@ -10,7 +10,7 @@
     { "title": "Турніри", "href": "/tournaments" },
     { "title": "Корпоративи", "href": "/corporate-parties" },
     { "title": "Дитяча мафія", "href": "/mafia-kids" },
-    { "title": "Зал слави", "href": "/fame-hall" }
+    { "title": "Зал слави", "href": "/hall-fame" }
   ],
   "contacts": {
     "title": "Контакти",
@@ -41,5 +41,6 @@
   "onFormSubmitNotify": {
     "onSuccess": "Заявку успішно надіслано! Наш менеджер звʼяжеться з Вами найближчим часом!",
     "onError": "Щось пішло не так. Спробуйте пізніше!"
-  }
+  },
+  "mobileMenuBtnAriaText": "Зображення кпопки мобільного меню"
 }

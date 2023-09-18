@@ -36,9 +36,7 @@ export const HallFameSection: React.FC = async () => {
     const shuffledData = shuffleArray([...hallFameData, customCardData]);
 
     return (
-      <section
-        className={`${s.hallFameListContainer} pt-[53px] md:pt-[75px] xl:pt-[82px] xxl:pt-[98px]`}
-      >
+      <section className={s.hallFameListContainer}>
         <div className="container py-[80px]">
           <Heading
             tag="h1"
