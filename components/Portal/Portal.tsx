@@ -9,7 +9,6 @@ import { IPortal } from '@/types';
 
 export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
   const nodeRef = useRef<HTMLDivElement | null>(null);
-  const focusedDiv = useRef<HTMLDivElement | null>(null);
 
   const handleBackdrop = (event: MouseEvent) => {
     if (event.target === event.currentTarget) {
@@ -32,21 +31,16 @@ export const Portal = ({ onModalClose, children, showModal }: IPortal) => {
       unmountOnExit
     >
       {state => {
-        focusedDiv.current?.focus();
+        nodeRef.current?.focus();
         return createPortal(
           <div
             ref={nodeRef}
+            tabIndex={0}
+            onKeyDown={handleEsc}
+            onClick={handleBackdrop}
             className={` fixed left-0 top-0 z-20 h-[100%] w-[100%] overflow-auto bg-black-dark/75 modal--${state}`}
           >
-            <div
-              tabIndex={0}
-              ref={focusedDiv}
-              onKeyDown={handleEsc}
-              onClick={handleBackdrop}
-              className={` h-full w-full wrapper--${state}`}
-            >
-              {children}
-            </div>
+            {children}
           </div>,
           document.getElementById('modal')!,
         );
