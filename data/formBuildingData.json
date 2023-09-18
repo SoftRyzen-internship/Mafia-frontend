@@ -40,7 +40,7 @@
     "name": "userComment",
     "options": {
       "pattern": {
-        "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ0-9()s',.!? -]+$",
+        "value": "^[A-Za-zА-Яа-яЇїІіЄєҐґ0-9()s',.!? \n-]+$",
         "message": "Присутні недопустимі символи"
       },
       "maxLength": { "value": 500, "message": "Не більше 500 символів" }

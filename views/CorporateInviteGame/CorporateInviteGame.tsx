@@ -12,11 +12,11 @@ export const CorporateInviteGame = () => {
   return (
     <section className={`${s.bg_img}`}>
       <div
-        className={`${s.bg_img} ${s.container} container relative pb-[112px] pt-[80px] md:pb-[112px] md:pt-[52px]`}
+        className={`${s.bgcontainer} container  relative pb-[112px] pt-[80px] md:pb-[112px] md:pt-[52px]`}
       >
         <Heading
           tag="h2"
-          variant="main"
+          variant="primary"
           shadow={primary_title}
           className="mb-[44px] text-start md:hidden smOnly:w-[280px]"
         >
@@ -35,16 +35,16 @@ export const CorporateInviteGame = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
-          <div className="order-3 text-center md:order-2 xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
+          <div className="z-0 order-3 md:order-2 xl:w-[466px] smOnly:h-[482px] mdOnly:flex-1">
             <Heading
               tag="h2"
-              variant="main"
+              variant="primary"
               shadow={primary_title}
-              className="hidden text-start md:mb-[100px] md:block xl:mb-[30px] smOnly:w-[280px]"
+              className="hidden text-start md:mb-[55px] md:block xl:mb-[30px] smOnly:w-[280px]"
             >
               {primary_title}
             </Heading>
-            <div className=" xl:w-[466px] smOnly:h-[500px] mdOnly:flex-1">
+            <div className="md:w-[288px] xl:w-[466px] smOnly:h-[500px] mdOnly:flex-1">
               <FormWithPopUp />
             </div>
           </div>

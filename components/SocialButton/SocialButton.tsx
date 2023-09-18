@@ -17,7 +17,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
       'w-8 h-8 text-body bg-primary-light-1000 rounded-normal':
         variant !== 'fixed',
     },
-    'flex items-center justify-center',
+    'flex items-center justify-center transition-colors duration-300',
     'hover:text-primary-light-900 active:text-primary-light-600',
     'focus:text-primary-light-500 focus:outline-none',
     className,

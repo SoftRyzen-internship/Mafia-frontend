@@ -69,7 +69,8 @@ body {
   @apply block w-full rounded-normal bg-white/5 px-[16px] py-[12px] text-[16px] italic leading-[1.5] text-white-light placeholder-primary-dark-700/40 shadow-input outline-none transition-all duration-300 hover:shadow-inputHover hover:outline-1 hover:outline-primary-light-400 focus:shadow-inputFocus focus:outline-1 focus:outline-primary-light-600;
 }
 
-.input-error-behavior {
+.input-error-behavior,
+.input-error-behavior:focus {
   @apply shadow-inputError outline-notify-error;
 }
 
@@ -174,7 +175,7 @@ body {
 #swiper
   > .swiper-pagination.swiper-pagination-bullets-dynamic.swiper-pagination-bullets.swiper-pagination-horizontal
   > .swiper-pagination-bullet {
-  opacity: 0;
+  opacity: 1;
   background-color: #737373;
   transform: scale(1);
   width: 5px;
@@ -212,4 +213,44 @@ body {
 
 .swiper-slide:hover {
   transform: translate3d(0, -12px, 0) !important;
+}
+
+.common-bg {
+  margin: 0 auto;
+  max-width: 1920px;
+  background-image: image-set(
+    url(/images/home/home-sm.webp) 1x,
+    url(/images/home/home-sm-2x.webp) 2x
+  );
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-md.webp) 1x,
+      url(/images/home/home-md-2x.webp) 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-l.webp) 1x,
+      url(/images/home/home-l-2x.webp) 1x
+    );
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .common-bg {
+    background-image: image-set(
+      url(/images/home/home-xl.webp) 1x,
+      url(/images/home/home-xl-2x.webp) 1x
+    );
+  }
 }
