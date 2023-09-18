@@ -2,7 +2,7 @@
   /* position: relative; */
   max-width: 1920px;
   margin: 0 auto;
-  background-image: url(/images/kidsMafia/bgmafiaschoolmob.webp);
+  /* background-image: url(/images/kidsMafia/bgmafiaschoolmob.webp); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -12,13 +12,13 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschoolmob@2x.webp);
+    /* background-image: url(/images/kidsMafia/bgmafiaschoolmob@2x.webp); */
   }
 }
 
 @media screen and (min-width: 768px) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschooltab.webp);
+    /* background-image: url(/images/kidsMafia/bgmafiaschooltab.webp); */
     background-size: cover;
   }
 }
@@ -28,13 +28,13 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschooltab@2x.webp);
+    /* background-image: url(/images/kidsMafia/bgmafiaschooltab@2x.webp); */
   }
 }
 
 @media screen and (min-width: 1280px) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxl.webp);
+    /* background-image: url(/images/kidsMafia/bgkidsmafiaheroxl.webp); */
     background-size: cover;
   }
 }
@@ -44,13 +44,13 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxl@2x.webp);
+    /* background-image: url(/images/kidsMafia/bgkidsmafiaheroxl@2x.webp); */
   }
 }
 
 @media screen and (min-width: 1920px) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl.webp);
+    /* background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl.webp); */
     background-size: cover;
   }
 }
@@ -60,6 +60,6 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp);
+    /* background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp); */
   }
 }

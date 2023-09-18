@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import classNames from 'classnames';
 import { Heading } from '@/components/Heading/Heading';
 import { Paragraph } from '@/components/Paragraph/Paragraph';
 import { MafiaSchoolHeroData } from '@/types/index';
@@ -10,7 +11,7 @@ const typedData: MafiaSchoolHeroData = data as MafiaSchoolHeroData;
 
 export const MafiaSchoolHeroSection = () => {
   return (
-    <section className={s.mafiaSchoolHero}>
+    <section className={classNames('bg-primary-dark-200', s.section)}>
       <div className="container py-[80px]">
         <Heading
           tag="h1"

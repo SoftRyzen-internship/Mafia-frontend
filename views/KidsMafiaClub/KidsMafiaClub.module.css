@@ -2,35 +2,35 @@
   max-width: 1920px;
   margin: 0 auto;
 
-  background-image: image-set(
-    url(/images/kidsMafia/bg-kids-mafia-club-mob.webp) type('image/webp') 1x,
-    url(/images/kidsMafia/bg-kids-mafia-club-mob@2x.webp) type('image/webp') 2x
+  /* background-image: image-set(
+    url(/images/kidsMafia/bg-kids-mafia-club-sm.webp) type('image/webp') 1x,
+    url(/images/kidsMafia/bg-kids-mafia-club-sm_2x.webp) type('image/webp') 2x
   );
   background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   @media (min-width: 768px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-tab.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-tab@2x.webp) type('image/webp')
+    /* background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-md.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-md_2x.webp) type('image/webp')
         2x
-    );
+    ); */
   }
 
   @media (min-width: 1280px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
-    );
+    /* background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-l.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-l_2x.webp) type('image/webp') 2x
+    ); */
   }
 
   @media (min-width: 1752px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
+    /* background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-xl_2x.webp) type('image/webp')
         2x
-    );
+    ); */
   }
 }
 
