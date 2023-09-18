@@ -29,14 +29,8 @@
 .front::after {
   content: '';
 
-  /* для 320px по макету */
   width: 36px;
   height: 33px;
-
-  /* для 376px+ по макету*/
-  /* width: 54px;
-  height: 49px;  */
-  /* чекаю уточнень від дизайнера стосовно розміру, який беремо для моб */
 
   position: absolute;
   top: 0;
