@@ -11,6 +11,6 @@ export async function getTournaments(): Promise<ITournamentItem[]> {
     const data: ITournamentsData = await request(BASE_URL, GET_TOURNAMENTS);
     return data.tournaments.data;
   } catch (error) {
-    throw Error(error);
+    throw new Error(error);
   }
 }
