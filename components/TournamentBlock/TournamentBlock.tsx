@@ -8,7 +8,10 @@ import { generateTeamText } from '@/utils/helpers/generateTeamText';
 
 import { TournamentBlockProps } from '@/types';
 
-export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
+export const TournamentBlock: FC<TournamentBlockProps> = ({
+  tournament,
+  priorityImg,
+}) => {
   const { title, type, playersInTeam, description, image } = tournament;
   const { url, alternativeText } = image.data.attributes;
 
@@ -39,7 +42,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({ tournament }) => {
           <Image
             src={url}
             alt={alternativeText || title}
-            priority
+            priority={!priorityImg}
             height={288}
             width={272}
             className="h-full min-w-full object-contain  smOnly:h-[288px]"
