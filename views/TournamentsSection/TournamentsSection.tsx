@@ -50,7 +50,7 @@ export const TournamentsSection: FC = async () => {
           ))}
         {!tournaments && (
           <div className="px-[1.5rem] pb-20 md:px-[5.25rem]">
-            <Fallback className="mx-auto max-w-[1216px] smOnly:!bg-none" />
+            <Fallback />
           </div>
         )}
       </div>
