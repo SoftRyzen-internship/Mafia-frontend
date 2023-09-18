@@ -35,20 +35,18 @@ export const BtnWithFormModal: FC<BtnWithFormModalProps> = ({
         {text}
       </ButtonPrimary>
 
-      {showModal ? (
-        <Portal onModalClose={handleToggeModal}>
-          <ModalSendForm onModalClose={handleToggeModal}>
-            {popUpType === 'default' ? (
-              <Form
-                setPopUpType={setPopUpType}
-                classes="md:w-[406px] xl-[460px]"
-              />
-            ) : null}
-            {popUpType === 'success' ? <SuccessWindow /> : null}
-            {popUpType === 'error' ? <ErrorWindow /> : null}
-          </ModalSendForm>
-        </Portal>
-      ) : null}
+      <Portal onModalClose={handleToggeModal} showModal={showModal}>
+        <ModalSendForm onModalClose={() => setShowModal(prev => !prev)}>
+          {popUpType === 'default' ? (
+            <Form
+              setPopUpType={setPopUpType}
+              classes="md:w-[406px] xl-[460px]"
+            />
+          ) : null}
+          {popUpType === 'success' ? <SuccessWindow /> : null}
+          {popUpType === 'error' ? <ErrorWindow /> : null}
+        </ModalSendForm>
+      </Portal>
     </>
   );
 };
