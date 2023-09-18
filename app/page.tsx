@@ -4,14 +4,14 @@ import { CorporateParties } from '@/views/CorporateParties';
 import { KidsMafia } from '@/views/KidsMafia';
 
 const Home = () => (
-    <>
-      <HomeHero />
-      <div className="common-bg">
-        <MafiaSchool />
-        <CorporateParties />
-        <KidsMafia />
-      </div>
-    </>
+  <>
+    <HomeHero />
+    <div className="common-bg">
+      <MafiaSchool />
+      <CorporateParties />
+      <KidsMafia />
+    </div>
+  </>
 );
 
 export default Home;

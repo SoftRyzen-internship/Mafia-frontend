@@ -27,7 +27,7 @@ export const MafiaSchool: React.FC = () => {
 
   const sectionStyles = classNames(
     css.schoolSection,
-    'py-[80px] mx-auto relative bg-no-repeat bg-top bg-cover',
+    'py-[80px] mx-auto relative bg-no-repeat bg-top bg-cover bg-grad_1200',
   );
 
   const containerStyles = classNames('container relative', css.container);

@@ -65,6 +65,8 @@ module.exports = {
           'linear-gradient(270deg, #ff057c 0%, #8d0b93 50%, rgba(50, 21, 117, 0) 100%);',
         grad_1100:
           'linear-gradient(90deg, rgba(255, 5, 124, 0.13) 0%, rgba(141, 11, 147, 0.13) 50%, rgba(50, 21, 117, 0.13) 100%)',
+        grad_1200:
+          'linear-gradient(to bottom, transparent, rgba(22, 20, 28, 0.4))',
       },
       fontFamily: {
         montserrat: ['var(--font-montserrat)'],

@@ -15,11 +15,6 @@
   );
 }
 
-.schoolSection {
-  position: relative;
-  background: linear-gradient(to bottom, transparent, rgba(22, 20, 28, 0.4));
-}
-
 .container::before {
   content: '';
 
