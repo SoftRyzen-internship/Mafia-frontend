@@ -1,11 +1,3 @@
-.schoolSection {
-  max-width: 1920px;
-  background-image: image-set(
-    url('/images/home/home-school-bg-mob.webp') 1x,
-    url('/images/home/home-school-bg-mob@2x.webp') 2x
-  );
-}
-
 .schoolSection::before {
   content: '';
 
@@ -60,13 +52,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .schoolSection {
-    background-image: image-set(
-      url('/images/home/home-school-bg-tab.webp') 1x,
-      url('/images/home/home-school-bg-tab@2x.webp') 2x
-    );
-  }
-
   .schoolSection::before {
     top: 344px;
   }
@@ -81,13 +66,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .schoolSection {
-    background-image: image-set(
-      url('/images/home/home-school-bg-desk.webp') 1x,
-      url('/images/home/home-school-bg-desk@2x.webp') 2x
-    );
-  }
-
   .schoolSection::before {
     top: 340px;
   }
@@ -101,13 +79,6 @@
 }
 
 @media screen and (min-width: 1752px) {
-  .schoolSection {
-    background-image: image-set(
-      url('/images/home/home-school-bg-desk-lg.webp') 1x,
-      url('/images/home/home-school-bg-desk-lg@2x.webp') 2x
-    );
-  }
-
   .container::before {
     width: 652px;
     height: 484px;
