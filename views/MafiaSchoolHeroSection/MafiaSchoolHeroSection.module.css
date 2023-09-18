@@ -63,3 +63,20 @@
     /* background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp); */
   }
 }
+
+.section::before {
+  content: '';
+
+  height: 60px;
+  width: 100%;
+
+  position: absolute;
+  top: 484px;
+  left: 0;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
+  );
+}
