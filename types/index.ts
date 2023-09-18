@@ -456,6 +456,7 @@ export interface ITournamentsData {
 
 export interface TournamentBlockProps {
   tournament: ITournament;
+  priorityImg: boolean;
 }
 
 export interface LoaderProps {
