@@ -19,7 +19,7 @@ export const CorporateParties = async () => {
   const presentersData = await getPresenters();
 
   return (
-    <Section className={css.bg_img}>
+    <Section className={css.sectionBg}>
       <div className="container">
         <Heading
           shadow={primary_title}
@@ -28,11 +28,11 @@ export const CorporateParties = async () => {
           {primary_title}
         </Heading>
         <div
-          className="mb-[78px] flex flex-col gap-[60px] 
+          className="mb-[78px] flex flex-col gap-[60px]
                     md:flex-row md:gap-[24px] xl:gap-[127px] xxl:gap-[320px]"
         >
           <div
-            className="relative h-[315px] w-full overflow-hidden rounded-normal 
+            className="relative h-[315px] w-full overflow-hidden rounded-normal
                     md:h-[490px] md:w-[288px] xl:h-[459px] xl:w-[596px] xxl:w-[716px]"
           >
             <Image

@@ -1,16 +1,19 @@
 .hero {
   max-width: 1920px;
   background-image: image-set(
-    url('/images/home/home-hero-bg-mob.webp') 1x,
-    url('/images/home/home-hero-bg-mob@2x.webp') 2x
+    url('/images/home/home-hero-sm.webp') 1x,
+    url('/images/home/home-hero-sm_2x.webp') 2x
   );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     background-image: image-set(
-      url('/images/home/home-hero-bg-tab.webp') 1x,
-      url('/images/home/home-hero-bg-tab@2x.webp') 2x
+      url('/images/home/home-hero-md.webp') 1x,
+      url('/images/home/home-hero-md_2x.webp') 2x
     );
   }
 }
@@ -18,8 +21,8 @@
 @media screen and (min-width: 1280px) {
   .hero {
     background-image: image-set(
-      url('/images/home/home-hero-bg-desk.webp') 1x,
-      url('/images/home/home-hero-bg-desk@2x.webp') 2x
+      url('/images/home/home-hero-l.webp') 1x,
+      url('/images/home/home-hero-l_2x.webp') 2x
     );
   }
 }
@@ -27,8 +30,8 @@
 @media screen and (min-width: 1752px) {
   .hero {
     background-image: image-set(
-      url('/images/home/home-hero-bg-desk-lg.webp') 1x,
-      url('/images/home/home-hero-bg-desk-lg@2x.webp') 2x
+      url('/images/home/home-hero-xl.webp') 1x,
+      url('/images/home/home-hero-xl_2x.webp') 2x
     );
   }
 }
