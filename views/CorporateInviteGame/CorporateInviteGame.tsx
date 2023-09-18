@@ -11,10 +11,8 @@ export const CorporateInviteGame = () => {
   const { primary_title, image } = data;
 
   return (
-    <Section className={`${s.bg_img} pb-[112px]`}>
-      <div
-        className={`${s.bgcontainer} container relative md:pb-[112px] md:pt-[52px]`}
-      >
+    <Section className={`${s.bg_img} bg-primary-dark-200 pb-[112px]`}>
+      <div className={`${s.bgcontainer} container relative`}>
         <Heading
           tag="h2"
           variant="primary"

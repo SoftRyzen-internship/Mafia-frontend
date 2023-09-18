@@ -14,7 +14,7 @@ export const CorporatePresenters = async () => {
   const presentersData = await getPresenters();
 
   return (
-    <Section className={css.section_decor}>
+    <Section className={`${css.section_decor} bg-primary-dark-200`}>
       <div className="container">
         <Heading
           tag="h3"
