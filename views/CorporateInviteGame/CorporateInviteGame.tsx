@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
 import { FormWithPopUp } from '@/components/FormWithPopUp';
 
@@ -10,9 +11,9 @@ export const CorporateInviteGame = () => {
   const { primary_title, image } = data;
 
   return (
-    <section className={`${s.bg_img}`}>
+    <Section className={`${s.bg_img} pb-[112px]`}>
       <div
-        className={`${s.bgcontainer} container  relative pb-[112px] pt-[80px] md:pb-[112px] md:pt-[52px]`}
+        className={`${s.bgcontainer} container relative md:pb-[112px] md:pt-[52px]`}
       >
         <Heading
           tag="h2"
@@ -50,6 +51,6 @@ export const CorporateInviteGame = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
