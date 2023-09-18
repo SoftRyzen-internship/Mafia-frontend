@@ -6,9 +6,11 @@ import { KidsMafia } from '@/views/KidsMafia';
 const Home = () => (
   <>
     <HomeHero />
-    <MafiaSchool />
-    <CorporateParties />
-    <KidsMafia />
+    <div className="common-bg">
+      <MafiaSchool />
+      <CorporateParties />
+      <KidsMafia />
+    </div>
   </>
 );
 
