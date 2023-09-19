@@ -35,7 +35,7 @@ export const MafiaSchool: React.FC = () => {
   return (
     <Section className={sectionStyles}>
       <div className={containerStyles}>
-        <Heading variant="primary" shadow={title} className="mb-6">
+        <Heading variant="primary" shadow_prop={title} className="mb-6">
           {title}
         </Heading>
 
