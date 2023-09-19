@@ -12,7 +12,7 @@ export const CorporateInviteGame = () => {
 
   return (
     <Section className={`${s.bg_img} bg-primary-dark-200 pb-[112px]`}>
-      <div className={`${s.bgcontainer} container relative`}>
+      <div className={`${s.bgcontainer} container`}>
         <Heading
           tag="h2"
           variant="primary"
