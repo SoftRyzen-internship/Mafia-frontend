@@ -26,10 +26,10 @@ export const SliderPresentersElement: React.FC<
       <SliderImage
         src={cardInfo.attributes.img.data.attributes.url}
         alt={cardInfo.attributes.name}
-        className="mb-5 aspect-[0.86] 
-        md:mb-6 md:aspect-[0.92] md:w-full
-        xl:mb-9 xl:aspect-[0.97] xl:w-[325px]
-        xxl:aspect-[1.04] xxl:w-full"
+        className="mb-5 aspect-[86/100] 
+        md:mb-6 md:aspect-[92/100] md:w-full
+        xl:mb-9 xl:aspect-[97/100] xl:w-[325px]
+        xxl:aspect-[104/100] xxl:w-full"
         imageClassName="h-max md:object-top md:-mt-5 xxl:mt-0"
       />
       <p className="mb-3 text-xl font-medium text-white-light md:mb-5 xl:mb-6">
