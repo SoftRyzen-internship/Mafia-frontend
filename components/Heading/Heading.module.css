@@ -8,7 +8,6 @@
   z-index: -1;
   top: -20px;
   left: 0;
-  width: 150%;
 
   font-size: 32px;
   font-weight: 800;
@@ -27,9 +26,9 @@
 
 @media screen and (min-width: 768px) {
   .shadow::after {
-    top: -36px;
+    top: -31px;
 
-    font-size: 40px;
+    font-size: 31px;
     line-height: 56px;
   }
 }
@@ -38,7 +37,7 @@
   .shadow::after {
     top: -44px;
 
-    font-size: 52px;
+    font-size: 50px;
     line-height: 80px;
   }
 }
