@@ -2,28 +2,16 @@
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  background-image: image-set(
-    url('/images/corporate/bginvitegamemob.webp') 1x,
-    url('/images/corporate/bginvitegamemob@2x.webp') 2x
-  );
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.bgcontainer {
-  position: relative;
 }
 
 .bgcontainer::before {
   content: '';
-
-  position: absolute;
-  top: 215px;
-  right: 0;
-
   width: 100%;
   height: 763px;
+
+  position: absolute;
+  top: 331px;
+  left: 0px;
 
   background: #040404;
 
@@ -35,42 +23,39 @@
   border-radius: 6px;
 }
 
-@media screen and (min-width: 768px) {
-  .bg_img {
-    background-image: image-set(
-      url('/images/corporate/bginvitegametab.webp') 1x,
-      url('/images/corporate/bginvitegametab@2x.webp') 2x
-    );
-  }
-  .bgcontainer::before {
-    top: 76px;
+.heading_shadow.shadow::after {
+  font-size: 50px;
+}
 
-    width: 448px;
+@media screen and (min-width: 768px) {
+  .bgcontainer::before {
+    content: '';
+    position: absolute;
+    width: 532px;
     height: 554px;
+    top: 130px;
+    left: 269px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .bg_img {
-    background-image: image-set(
-      url('/images/corporate/bginvitegamexl.webp') 1x,
-      url('/images/corporate/bginvitegamexl@2x.webp') 2x
-    );
-  }
   .bgcontainer::before {
+    content: '';
+    position: absolute;
     width: 1009px;
     height: 526px;
+    top: 125px;
+    left: 319px;
   }
 }
 
-@media screen and (min-width: 1752px) {
-  .bg_img {
-    background-image: image-set(
-      url('/images/corporate/bginvitegamexxl.webp') 1x,
-      url('/images/corporate/bginvitegamexxl@2x.webp') 2x
-    );
-  }
+@media screen and (min-width: 1920px) {
   .bgcontainer::before {
+    content: '';
+    position: absolute;
     width: 1308px;
+    height: 526px;
+    top: 125px;
+    left: 528px;
   }
 }

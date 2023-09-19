@@ -1,65 +1,34 @@
-.mafiaSchoolHero {
-  /* position: relative; */
-  max-width: 1920px;
-  margin: 0 auto;
-  background-image: url(/images/kidsMafia/bgmafiaschoolmob.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
+.section {
+  position: relative;
 }
-@media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschoolmob@2x.webp);
-  }
+
+.section::before {
+  content: '';
+
+  height: 64px;
+  width: 100%;
+
+  position: absolute;
+  top: 484px;
+  left: 0;
+
+  z-index: -1;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
+  );
 }
 
 @media screen and (min-width: 768px) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschooltab.webp);
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 768px),
-  (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgmafiaschooltab@2x.webp);
+  .section::before {
+    top: 470px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxl.webp);
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 1280px),
-  (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxl@2x.webp);
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl.webp);
-    background-size: cover;
-  }
-}
-@media screen and (min-width: 1920px),
-  (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .mafiaSchoolHero {
-    background-image: url(/images/kidsMafia/bgkidsmafiaheroxxl@2x.webp);
+  .section::before {
+    top: 378px;
   }
 }

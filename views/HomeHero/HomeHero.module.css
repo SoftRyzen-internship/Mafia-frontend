@@ -1,19 +1,28 @@
 .hero {
   max-width: 1920px;
   background-image: image-set(
-    url('/images/home/home-hero-sm.webp') 1x,
-    url('/images/home/home-hero-sm_2x.webp') 2x
+    url('/images/home/home-hero-xs.webp') 1x,
+    url('/images/home/home-hero-xs@2x.webp') 2x
   );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media screen and (min-width: 375px) {
+  .hero {
+    background-image: image-set(
+      url('/images/home/home-hero-sm.webp') 1x,
+      url('/images/home/home-hero-sm@2x.webp') 2x
+    );
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     background-image: image-set(
       url('/images/home/home-hero-md.webp') 1x,
-      url('/images/home/home-hero-md_2x.webp') 2x
+      url('/images/home/home-hero-md@2x.webp') 2x
     );
   }
 }
@@ -22,7 +31,7 @@
   .hero {
     background-image: image-set(
       url('/images/home/home-hero-l.webp') 1x,
-      url('/images/home/home-hero-l_2x.webp') 2x
+      url('/images/home/home-hero-l@2x.webp') 2x
     );
   }
 }
@@ -31,7 +40,7 @@
   .hero {
     background-image: image-set(
       url('/images/home/home-hero-xl.webp') 1x,
-      url('/images/home/home-hero-xl_2x.webp') 2x
+      url('/images/home/home-hero-xl@2x.webp') 2x
     );
   }
 }
