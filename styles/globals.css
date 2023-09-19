@@ -182,11 +182,11 @@ body {
   height: 5px;
 }
 
-#swiper:has(.alias) .swiper-pagination {
+.swiper-pagination.school-section {
   bottom: -10px !important;
 }
 
-#swiper:has(#presenters) .swiper-pagination {
+.swiper-pagination.presenters-section {
   position: static;
   transform: translateX(0%) !important;
   margin: 40px auto 0 auto;
