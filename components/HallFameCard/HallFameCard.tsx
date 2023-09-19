@@ -28,8 +28,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
         isTouched ? s.active : ''
       }`}
       onTouchStart={() => setIsTouched(prev => !prev)}
-      // onTouchEnd={() => setIsTouched(false)}
-      // !!!При використанні лише одна карта одночасно буде перевернута back стороною
+      onTouchEnd={() => setIsTouched(false)}
       tabIndex={0}
     >
       <div
