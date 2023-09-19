@@ -1,10 +1,9 @@
 import classNames from 'classnames';
-
 import React, { FC } from 'react';
 import Link from 'next/link';
 
-import LogoImg from '@/public/images/common/logoNew.svg';
 import { LogoProps } from '@/types';
+import logoIconsMap from '@/data/logoIconsMap';
 
 export const Logo: FC<LogoProps> = ({
   href = '/',
@@ -19,16 +18,16 @@ export const Logo: FC<LogoProps> = ({
       position === 'footer',
     ' h-[42px] w-[57px] xl:hidden': position === 'mobile-menu',
   });
+
+  const LogoComponent = logoIconsMap[position];
+
   return (
     <Link
       href={href}
-      className={` ${logoClasses}  ${className}`}
+      className={`${logoClasses} ${className}`}
       aria-label="Посилання із логотипом компанії"
     >
-      <LogoImg
-        aria-label="Зображення із логотипом компанії"
-        onClick={onClick}
-      />
+      <LogoComponent id={`logo-${position}`} onClick={onClick} />
     </Link>
   );
 };
