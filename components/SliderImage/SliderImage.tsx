@@ -21,7 +21,6 @@ export const SliderImage: React.FC<SliderImageProps> = ({
         height={290}
         alt={alt}
         quality={90}
-        priority
       />
     </div>
   );
