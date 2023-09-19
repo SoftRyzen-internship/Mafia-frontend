@@ -44,7 +44,7 @@ export const CorporateInviteGame = () => {
             >
               {primary_title}
             </Heading>
-            <div className="md:w-[288px] xl:w-[466px] smOnly:h-[500px] mdOnly:flex-1">
+            <div className="md:w-[288px] xl:w-[493px] smOnly:h-[500px] mdOnly:flex-1">
               <FormWithPopUp />
             </div>
           </div>
