@@ -1,0 +1,73 @@
+/* kids mafia bg */
+
+/* .sectionKids {
+  max-width: 1920px;
+  background-image: image-set(
+    url('/images/kidsMafia/kids-mafia-pricing-bg-mob.webp') 1x,
+    url('/images/kidsMafia/kids-mafia-pricing-bg-mob@2x.webp') 2x
+  );
+} */
+
+/* @media screen and (min-width: 768px) {
+  .sectionKids {
+    background-image: image-set(
+      url('/images/kidsMafia/kids-mafia-pricing-bg-tab.webp') 1x,
+      url('/images/kidsMafia/kids-mafia-pricing-bg-tab@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionKids {
+    background-image: image-set(
+      url('/images/kidsMafia/kids-mafia-pricing-bg-desk.webp') 1x,
+      url('/images/kidsMafia/kids-mafia-pricing-bg-desk@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .sectionKids {
+    background-image: image-set(
+      url('/images/kidsMafia/kids-mafia-pricing-bg-desk-lg.webp') 1x,
+      url('/images/kidsMafia/kids-mafia-pricing-bg-desk-lg@2x.webp') 2x
+    );
+  }
+} */
+
+/* corporate bg */
+
+/* .sectionCorporate {
+  max-width: 1920px;
+  background-image: image-set(
+    url('/images/corporate/corp-pricing-bg-mob.webp') 1x,
+    url('/images/corporate/corp-pricing-bg-mob@2x.webp') 2x
+  );
+}
+
+@media screen and (min-width: 768px) {
+  .sectionCorporate {
+    background-image: image-set(
+      url('/images/corporate/corp-pricing-bg-tab.webp') 1x,
+      url('/images/corporate/corp-pricing-bg-tab@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sectionCorporate {
+    background-image: image-set(
+      url('/images/corporate/corp-pricing-bg-desk.webp') 1x,
+      url('/images/corporate/corp-pricing-bg-desk@2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .sectionCorporate {
+    background-image: image-set(
+      url('/images/corporate/corp-pricing-bg-desk-lg.webp') 1x,
+      url('/images/corporate/corp-pricing-bg-desk-lg@2x.webp') 2x
+    );
+  }
+} */
