@@ -392,12 +392,6 @@ export interface PresentersDataType {
   };
 }
 
-type PricingPlacementOptions = 'kids-mafia' | 'corporate';
-
-export interface PricingProps {
-  variant: PricingPlacementOptions;
-}
-
 export type PriceRateInfo = {
   rateType: string;
   amount: number;

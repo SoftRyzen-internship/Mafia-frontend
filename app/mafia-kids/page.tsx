@@ -6,7 +6,7 @@ const MafiaKids = () => {
   return (
     <div className="common-bg-kids">
       <MafiaSchoolHeroSection />
-      <Pricing variant="kids-mafia" />
+      <Pricing />
       <KidsMafiaClub />
     </div>
   );

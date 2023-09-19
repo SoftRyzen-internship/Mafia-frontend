@@ -1,32 +1,16 @@
-import classNames from 'classnames';
-
 import { fetchPricing } from '@/utils/api/fetchPricing';
 
 import { Heading } from '@/components/Heading';
 import { PriceCard } from '@/components/PriceCard';
 import { Fallback } from '@/components/Fallback';
 
-import { PricingProps } from '@/types';
-
 import data from '@/data/pricingSectionData.json';
 
-import css from './Pricing.module.css';
-
-export const Pricing: React.FC<PricingProps> = async ({
-  variant = 'corporate',
-}) => {
+export const Pricing: React.FC = async () => {
   const pricesInfo = await fetchPricing();
 
-  const sectionStyles = classNames(
-    'py-[80px] mx-auto bg-no-repeat bg-top bg-cover',
-    {
-      [css.sectionKids]: variant === 'kids-mafia',
-      [css.sectionCorporate]: variant === 'corporate',
-    },
-  );
-
   return (
-    <section className={sectionStyles}>
+    <section className="mx-auto bg-cover bg-top bg-no-repeat py-[80px]">
       <div className="container">
         <Heading variant="primary" shadow={data.title} className="mb-[60px]">
           {data.title}

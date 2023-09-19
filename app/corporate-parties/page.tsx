@@ -8,7 +8,7 @@ const CorporateParties = () => {
     <>
       <CorporateHero />
       <CorporatePresenters />
-      <Pricing variant="corporate" />
+      <Pricing />
       <CorporateInviteGame />
     </>
   );
