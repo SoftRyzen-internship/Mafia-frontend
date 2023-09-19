@@ -7,7 +7,7 @@
 .sectionBg::before {
   content: '';
   position: absolute;
-  top: 1093px;
+  top: 1094px;
   left: 0;
   background: linear-gradient(
     270deg,
@@ -20,18 +20,6 @@
 
 @media screen and (min-width: 768px) {
   .sectionBg::before {
-    top: 744px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .sectionBg::before {
-    top: 771px;
-  }
-}
-
-@media screen and (min-width: 1752px) {
-  .sectionBg::before {
-    top: 744px;
+    top: 743px;
   }
 }
