@@ -13,7 +13,7 @@ export const KidsMafiaClub: FC = () => {
   return (
     <section
       className={classNames(
-        'py-20 md:pb-[68px] md:pt-[88px] xxl:py-20',
+        'bg-primary-dark-200 py-20 md:pb-[68px] md:pt-[88px] xxl:py-20',
         s.section,
       )}
     >
@@ -31,7 +31,12 @@ export const KidsMafiaClub: FC = () => {
               key={index}
               className={classNames('boxShadow-sm', s.galleryCard)}
             >
-              <Image src={src} alt={alt} className="h-full object-cover" />
+              <Image
+                src={src}
+                alt={alt}
+                priority
+                className="h-full object-cover"
+              />
             </div>
           ))}
         </div>

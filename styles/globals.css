@@ -301,3 +301,91 @@ body {
     );
   }
 }
+
+.common-bg-kids {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  background-image: image-set(
+    url(/images/kidsMafia/bg-kids-mafia-club-xs.webp) type('image/webp') 1x,
+    url(/images/kidsMafia/bg-kids-mafia-club-xs@2x.webp) type('image/webp') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 375px) {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-sm.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-sm@2x.webp) type('image/webp') 2x
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-md.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-md@2x.webp) type('image/webp') 2x
+    );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-l.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-l@2x.webp) type('image/webp') 2x
+    );
+  }
+
+  @media screen and (min-width: 1752px) {
+    background-image: image-set(
+      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
+      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
+    );
+  }
+}
+
+.common-bg-corporate {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  background-image: image-set(
+    url(/images/corporate/bg-corporate-parties-xs.webp) type('image/webp') 1x,
+    url(/images/corporate/bg-corporate-parties-xs@2x.webp) type('image/webp') 2x
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 375px) {
+    background-image: image-set(
+      url(/images/corporate/bg-corporate-parties-sm.webp) type('image/webp') 1x,
+      url(/images/corporate/bg-corporate-parties-sm@2x.webp) type('image/webp')
+        2x
+    );
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: image-set(
+      url(/images/corporate/bg-corporate-parties-md.webp) type('image/webp') 1x,
+      url(/images/corporate/bg-corporate-parties-md@2x.webp) type('image/webp')
+        2x
+    );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: image-set(
+      url(/images/corporate/bg-corporate-parties-l.webp) type('image/webp') 1x,
+      url(/images/corporate/bg-corporate-parties-l@2x.webp) type('image/webp')
+        2x
+    );
+  }
+
+  @media screen and (min-width: 1752px) {
+    background-image: image-set(
+      url(/images/corporate/bg-corporate-parties-xl.webp) type('image/webp') 1x,
+      url(/images/corporate/bg-corporate-parties-xl@2x.webp) type('image/webp')
+        2x
+    );
+  }
+}
