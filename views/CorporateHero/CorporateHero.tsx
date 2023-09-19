@@ -18,6 +18,7 @@ export const CorporateHero: FC = () => {
     <Section className={classNames('relative bg-transparent', s.sectionBg)}>
       <div className="container">
         <Heading
+          tag="h1"
           shadow={title}
           variant="primary"
           className="mb-6  font-semibold"
