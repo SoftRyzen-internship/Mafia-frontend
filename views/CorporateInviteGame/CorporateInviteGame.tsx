@@ -27,10 +27,11 @@ export const CorporateInviteGame = () => {
                      md:order-1 md:mb-0 md:h-[518px] md:w-[288px] xl:h-[570px] xl:w-[493px] xxl:w-[716px]"
           >
             <Image
-              className="object-cover"
+              className="h-[315px] object-cover object-left md:h-[518px] md:object-center xl:h-[570px] xl:object-left"
               src={image.src}
               alt={image.alt}
-              fill
+              width={716}
+              height={570}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
