@@ -5,12 +5,12 @@ import { Pricing } from '@/views/Pricing';
 
 const CorporateParties = () => {
   return (
-    <>
+    <div className="common-bg-corporate">
       <CorporateHero />
       <CorporatePresenters />
-      <Pricing variant="corporate" />
+      <Pricing />
       <CorporateInviteGame />
-    </>
+    </div>
   );
 };
 

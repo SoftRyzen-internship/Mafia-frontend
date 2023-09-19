@@ -1,5 +1,4 @@
 .sectionBg {
-  /* position: relative; */
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -20,20 +19,12 @@
 }
 
 @media screen and (min-width: 351px) {
-  /* .sectionBg::before {
-    top: 742px;
-  } */
-
   .container::before {
     left: -170px;
   }
 }
 
 @media screen and (min-width: 378px) {
-  /* .sectionBg::before {
-    top: 718px;
-  } */
-
   .container::before {
     width: 550px;
     /* top: 150px; */
@@ -42,10 +33,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* .sectionBg::before {
-    top: 344px;
-  } */
-
   .container::before {
     width: 582px;
     height: 480px;
@@ -56,10 +43,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  /* .sectionBg::before {
-    top: 340px;
-  } */
-
   .container::before {
     width: 735px;
     height: 420px;

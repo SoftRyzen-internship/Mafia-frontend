@@ -16,7 +16,7 @@ export const CorporateInviteGame = () => {
         <Heading
           tag="h2"
           variant="primary"
-          shadow={primary_title}
+          shadow_prop={primary_title}
           className="mb-[44px] text-start md:hidden smOnly:w-[280px]"
         >
           {primary_title}
@@ -38,7 +38,7 @@ export const CorporateInviteGame = () => {
             <Heading
               tag="h2"
               variant="primary"
-              shadow={primary_title}
+              shadow_prop={primary_title}
               className="hidden text-start md:mb-[55px] md:block xl:mb-[30px] smOnly:w-[280px]"
             >
               {primary_title}

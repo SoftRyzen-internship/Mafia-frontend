@@ -42,7 +42,7 @@ export const HallFameSection: React.FC = async () => {
             tag="h1"
             variant="main"
             className="mb-[60px] text-[28px] font-semibold leading-9 md:text-[32px] xl:text-[42px] xl:leading-[52px]"
-            shadow={hallFameHeading.heading.main}
+            shadow_prop={hallFameHeading.heading.main}
           >
             {hallFameHeading.heading.main}
           </Heading>

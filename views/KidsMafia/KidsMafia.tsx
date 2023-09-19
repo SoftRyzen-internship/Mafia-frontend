@@ -20,7 +20,7 @@ export const KidsMafia: FC = () => {
     >
       <div className={`container relative ${css.container}`}>
         <Heading
-          shadow={data.title}
+          shadow_prop={data.title}
           className="mb-[60px] md:mb-[100px] xl:mb-[85px] xxl:mb-[100px]"
         >
           {data.title}

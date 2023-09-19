@@ -10,13 +10,13 @@ const typedData: MafiaSchoolHeroData = data as MafiaSchoolHeroData;
 
 export const MafiaSchoolHeroSection = () => {
   return (
-    <section className={s.mafiaSchoolHero}>
-      <div className="container py-[80px]">
+    <section className={`bg-primary-dark-200 ${s.section}`}>
+      <div className="container py-[80px] ">
         <Heading
           tag="h1"
           variant="main"
           className="mb-[42px] text-[32px] font-extrabold text-white-light md:mb-[32px] md:text-[40px] md:leading-[56px] xl:mb-[35px] xl:text-[52px] xl:leading-[80px]"
-          shadow={typedData.heading.content}
+          shadow_prop={typedData.heading.content}
         >
           {typedData.heading.content}
         </Heading>
@@ -28,7 +28,7 @@ export const MafiaSchoolHeroSection = () => {
         <Heading
           tag="h2"
           variant="secondary"
-          className="mb-[78px] text-lg font-bold md:ml-[52%] md:font-semibold xl:ml-[51%]"
+          className={`mb-[78px] text-lg font-bold md:ml-[52%] md:font-semibold xl:ml-[51%]`}
         >
           {typedData.subtitle.content}
         </Heading>

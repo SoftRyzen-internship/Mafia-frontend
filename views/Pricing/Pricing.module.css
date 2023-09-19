@@ -1,14 +1,14 @@
 /* kids mafia bg */
 
-.sectionKids {
+/* .sectionKids {
   max-width: 1920px;
   background-image: image-set(
     url('/images/kidsMafia/kids-mafia-pricing-bg-mob.webp') 1x,
     url('/images/kidsMafia/kids-mafia-pricing-bg-mob@2x.webp') 2x
   );
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .sectionKids {
     background-image: image-set(
       url('/images/kidsMafia/kids-mafia-pricing-bg-tab.webp') 1x,
@@ -33,11 +33,11 @@
       url('/images/kidsMafia/kids-mafia-pricing-bg-desk-lg@2x.webp') 2x
     );
   }
-}
+} */
 
 /* corporate bg */
 
-.sectionCorporate {
+/* .sectionCorporate {
   max-width: 1920px;
   background-image: image-set(
     url('/images/corporate/corp-pricing-bg-mob.webp') 1x,
@@ -70,4 +70,4 @@
       url('/images/corporate/corp-pricing-bg-desk-lg@2x.webp') 2x
     );
   }
-}
+} */
