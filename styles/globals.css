@@ -70,7 +70,7 @@ text-size-adjust: 100%; */
 }
 
 .input-behavior {
-  @apply block w-full rounded-normal bg-white/5 px-[16px] py-[12px] text-[16px] italic leading-[1.5] text-white-light placeholder-primary-dark-700/40 shadow-input outline-none transition-all duration-300 hover:shadow-inputHover hover:outline-1 hover:outline-primary-light-400 focus:shadow-inputFocus focus:outline-1 focus:outline-primary-light-600;
+  @apply block w-full rounded-normal bg-primary-dark-250 px-[16px] py-[12px] text-[16px] italic leading-[1.5] text-white-light placeholder-primary-dark-700/40 shadow-input outline-none transition-all duration-300 hover:shadow-inputHover hover:outline-1 hover:outline-primary-light-400 focus:shadow-inputFocus focus:outline-1 focus:outline-primary-light-600;
 }
 
 .input-error-behavior,
