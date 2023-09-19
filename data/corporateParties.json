@@ -3,27 +3,32 @@
     {
       "id": 1,
       "altText": "Люди сидять за червоним столом та грають у Мафію, на столі знаходяться таблички з номерами гравців та інше ігрове приладдя",
-      "imageUrl": "/images/corporate/image-1.jpg"
+      "imageUrl": "/images/corporate/image-1.jpg",
+      "priority": true
     },
     {
       "id": 2,
       "altText": "Люди сидять за столом під час гри у Мафію. Усі, окрім ведучого, мають на очах пов'язки з ігровим псевдонімом",
-      "imageUrl": "/images/corporate/image-2.jpg"
+      "imageUrl": "/images/corporate/image-2.jpg",
+      "priority": true
     },
     {
       "id": 3,
       "altText": "Декілька гравців у Мафію спілкуються за ігровим столом",
-      "imageUrl": "/images/corporate/image-3.jpg"
+      "imageUrl": "/images/corporate/image-3.jpg",
+      "priority": true
     },
     {
       "id": 4,
       "altText": "Ведучий перемішує ігрову колоду карт на фоні таблиці з результатами гри",
-      "imageUrl": "/images/corporate/image-4.jpg"
+      "imageUrl": "/images/corporate/image-4.jpg",
+      "priority": true
     },
     {
       "id": 5,
       "altText": "Дві учасниці гри в Мафію стоять, тримаючи у руках келихи з напоями",
-      "imageUrl": "/images/corporate/image-5.jpg"
+      "imageUrl": "/images/corporate/image-5.jpg",
+      "priority": true
     },
     {
       "id": 6,

@@ -8,7 +8,6 @@ import meta from '@/data/metadata';
 import { Header } from '@/views/Header';
 import { Footer } from '@/views/Footer';
 import { SocialsMenu } from '@/components/SocialsMenu';
-import { Toaster } from 'react-hot-toast';
 
 const montserrat = Montserrat({
   subsets: ['cyrillic', 'latin'],
@@ -37,7 +36,6 @@ export default function RootLayout({
         <Footer />
         <SocialsMenu variant="fixed" />
         <div id="modal" />
-        <Toaster position="top-right" reverseOrder={true} />
       </body>
     </html>
   );

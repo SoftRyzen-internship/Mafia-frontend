@@ -178,6 +178,7 @@ export interface IPortal {
   children: ReactNode;
   onModalClose: () => void;
   className?: string;
+  showModal?: boolean;
 }
 
 export interface ScheduleProps {
@@ -336,6 +337,7 @@ export interface SliderSchoolElementProps extends SliderElementProps {
 export interface SliderCorporateElementProps extends SliderElementProps {
   imageUrl: string;
   altText: string;
+  priority?: boolean;
 }
 
 export interface SliderPresentersElementImageType {
@@ -457,6 +459,7 @@ export interface ITournamentsData {
 
 export interface TournamentBlockProps {
   tournament: ITournament;
+  priorityImg: boolean;
 }
 
 export interface LoaderProps {

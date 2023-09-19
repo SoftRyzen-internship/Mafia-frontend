@@ -4,6 +4,7 @@ import { fetchPricing } from '@/utils/api/fetchPricing';
 
 import { Heading } from '@/components/Heading';
 import { PriceCard } from '@/components/PriceCard';
+import { Fallback } from '@/components/Fallback';
 
 import { PricingProps } from '@/types';
 
@@ -23,6 +24,7 @@ export const Pricing: React.FC<PricingProps> = async ({
       [css.sectionCorporate]: variant === 'corporate',
     },
   );
+
   return (
     <section className={sectionStyles}>
       <div className="container">
@@ -30,12 +32,16 @@ export const Pricing: React.FC<PricingProps> = async ({
           {data.title}
         </Heading>
 
-        <ul className="flex flex-wrap justify-center gap-6">
-          {pricesInfo &&
-            pricesInfo.map(info => (
-              <PriceCard key={info.id} rate={info.attributes} />
-            ))}
-        </ul>
+        {pricesInfo && pricesInfo?.length > 0 ? (
+          <ul className="flex flex-wrap justify-center gap-6">
+            {pricesInfo &&
+              pricesInfo.map(info => (
+                <PriceCard key={info.id} rate={info.attributes} />
+              ))}
+          </ul>
+        ) : (
+          <Fallback />
+        )}
       </div>
     </section>
   );

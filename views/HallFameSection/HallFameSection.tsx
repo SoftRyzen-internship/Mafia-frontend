@@ -9,16 +9,14 @@ import { HallFameCardProps, HallFameCustomCardProps } from '@/types/index';
 import { HallFameCard } from '@/components/HallFameCard';
 import { HallFameCustomCard } from '@/components/HallFameCustomCard';
 import { Heading } from '@/components/Heading/Heading';
+import { Fallback } from '@/components/Fallback';
 
 import s from '@/views/HallFameSection/HallFameSection.module.css';
 
 const isHallFameCardProps = (
   data: HallFameCardProps | HallFameCustomCardProps | undefined,
-): data is HallFameCardProps => {
-  return data
-    ? 'id' in data && 'attributes' in data && 'cups' in data.attributes
-    : false;
-};
+): data is HallFameCardProps =>
+  data != null && 'attributes' in data && data.attributes?.cups !== undefined;
 
 const shuffleArray = (
   array: (HallFameCardProps | HallFameCustomCardProps | undefined)[],
@@ -32,7 +30,9 @@ const shuffleArray = (
 
 export const HallFameSection: React.FC = async () => {
   try {
-    const hallFameData = await getHallFameCards();
+    const hallFameData: (HallFameCardProps | undefined)[] =
+      await getHallFameCards();
+
     const shuffledData = shuffleArray([...hallFameData, customCardData]);
 
     return (
@@ -55,23 +55,25 @@ export const HallFameSection: React.FC = async () => {
                 return (
                   <HallFameCard
                     key={id}
-                    id={data.id}
-                    attributes={data.attributes}
-                    cups={data.attributes.cups}
+                    id={data?.id}
+                    attributes={data?.attributes}
+                    cups={data?.attributes?.cups}
                   />
                 );
               }
 
-              return null;
+              return (
+                <li key={id} className={`relative h-[460px] w-full`}>
+                  <Fallback variant="default" className={s.bgfallback} />
+                </li>
+              );
             })}
           </ul>
         </div>
       </section>
     );
   } catch (error) {
-    console.error('Error fetching data in component:', error);
-    // TO-DO обробити помилку коли зявиться картинка-заглушка
-    // Наприклад, повернути запасний компонент або повідомлення про помилку тут
-    return null;
+    console.error(error.message);
+    return <Fallback variant="default" className={s.bgfallback} />;
   }
 };

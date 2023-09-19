@@ -215,6 +215,53 @@ body {
   transform: translate3d(0, -12px, 0) !important;
 }
 
+.menu-enter {
+  opacity: 0;
+}
+
+.menu-enter .mobile {
+  transform: translateX(-100%);
+}
+.menu-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.menu-enter-active .mobile {
+  transform: translateX(0);
+  transition: transform 300ms;
+}
+.menu-exit {
+  opacity: 1;
+}
+
+.menu-exit .mobile {
+  transform: translateX(0);
+}
+.menu-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.menu-exit-active .mobile {
+  transform: translateX(-100%);
+  transition: transform 300ms;
+}
+
+.modal--entering {
+  opacity: 0;
+}
+.modal--entered {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.modal--exiting {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.modal--exited {
+  opacity: 0;
+}
+
 .common-bg {
   margin: 0 auto;
   max-width: 1920px;

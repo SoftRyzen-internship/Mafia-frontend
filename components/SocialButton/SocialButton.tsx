@@ -26,7 +26,7 @@ export const SocialButton: React.FC<SocialButtonProps> = ({
   return (
     <a
       href={link}
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
       target="_blank"
       className={socialButtonStyles}
       aria-label={aria_label}
