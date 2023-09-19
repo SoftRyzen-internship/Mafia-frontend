@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
-import { ClubKidsMafiaCard } from '../ClubKidsMafiaCard';
-import { ButtonPrimary } from '../Buttons';
-import { Heading } from '../Heading';
+import { Heading } from '@/components/Heading';
+import { ClubKidsMafiaCard } from '@/components/ClubKidsMafiaCard';
+import { BtnWithFormModal } from '@/components/BtnWithFormModal';
+
 import { KidsMafiaConditionsProps } from '@/types';
 
-export const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
+export const KidsMafiaConditions: React.FC<KidsMafiaConditionsProps> = ({
   conditions,
   btn,
 }) => {
@@ -29,7 +29,11 @@ export const KidsMafiaConditions: FC<KidsMafiaConditionsProps> = ({
           />
         ))}
       </div>
-      <ButtonPrimary className="m-auto smOnly:w-full">{btn}</ButtonPrimary>
+      <BtnWithFormModal
+        btnClassName="m-auto smOnly:w-full"
+        buttonsize="medium"
+        text={btn}
+      />
     </div>
   );
 };
