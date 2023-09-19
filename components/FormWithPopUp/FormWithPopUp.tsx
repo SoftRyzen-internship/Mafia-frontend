@@ -16,32 +16,26 @@ export const FormWithPopUp = () => {
   const handleToggeModal = () => {
     setShowModal(prev => !prev);
     document.body.classList.toggle('overflow-hidden');
+    setPopUpType('default');
   };
 
   useEffect(() => {
-    const checkPopUpType = (popUpType: PopUpType) => {
-      switch (popUpType) {
-        case 'success':
-          return handleToggeModal();
-        case 'error':
-          return handleToggeModal();
-      }
-    };
-
-    checkPopUpType(popUpType);
+    if (popUpType !== 'default') {
+      setShowModal(prev => !prev);
+      document.body.classList.toggle('overflow-hidden');
+    }
   }, [popUpType]);
 
   return (
     <>
       <Form setPopUpType={setPopUpType} />
-      {showModal ? (
-        <Portal onModalClose={handleToggeModal}>
-          <ModalSendForm onModalClose={handleToggeModal}>
-            {popUpType === 'success' ? <SuccessWindow /> : null}
-            {popUpType === 'error' ? <ErrorWindow /> : null}
-          </ModalSendForm>
-        </Portal>
-      ) : null}
+
+      <Portal onModalClose={handleToggeModal} showModal={showModal}>
+        <ModalSendForm onModalClose={handleToggeModal}>
+          {popUpType === 'success' ? <SuccessWindow /> : null}
+          {popUpType === 'error' ? <ErrorWindow /> : null}
+        </ModalSendForm>
+      </Portal>
     </>
   );
 };

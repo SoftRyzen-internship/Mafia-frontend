@@ -16,6 +16,7 @@ export const CorporateHero: FC = () => {
       <div className="container">
         <Heading
           shadow_prop={title}
+          tag="h1"
           variant="primary"
           className="mb-6  font-semibold"
         >

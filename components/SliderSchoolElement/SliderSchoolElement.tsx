@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { SliderSchoolElementProps } from '@/types';
 import { SliderImage } from '../SliderImage';
@@ -8,6 +8,14 @@ import { SliderImage } from '../SliderImage';
 export const SliderSchoolElement: React.FC<
   SliderSchoolElementProps
 > = cardInfo => {
+  useEffect(() => {
+    const aliasElement = document.querySelector('.alias');
+    const swiperElement = aliasElement?.closest('#swiper');
+    const pagination = swiperElement?.querySelector('.swiper-pagination');
+
+    pagination?.classList.add('school-section');
+  }, []);
+
   return (
     <>
       <SliderImage src={cardInfo.imageUrl} alt={cardInfo.name} />

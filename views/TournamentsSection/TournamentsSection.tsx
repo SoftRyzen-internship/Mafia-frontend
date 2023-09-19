@@ -1,5 +1,3 @@
-import React, { FC } from 'react';
-
 import classNames from 'classnames';
 
 import { Heading } from '@/components/Heading';
@@ -14,7 +12,7 @@ import { ITournamentItem } from '@/types';
 
 import s from './TournamentsSection.module.css';
 
-export const TournamentsSection: FC = async () => {
+export const TournamentsSection: React.FC = async () => {
   const { title, text } = data;
   let tournaments: ITournamentItem[] | null;
 
@@ -25,7 +23,7 @@ export const TournamentsSection: FC = async () => {
   }
 
   return (
-    <section className=" pb-0 ">
+    <section className="pb-0">
       <div className={classNames('bg-primary-dark-200', s.section)}>
         <div
           className={classNames(
@@ -45,7 +43,7 @@ export const TournamentsSection: FC = async () => {
             <TournamentBlock
               key={tournament.id}
               tournament={tournament.attributes}
-              priorityImg={!!index}
+              priorityImg={index === 0}
             />
           ))}
         {!tournaments && (
