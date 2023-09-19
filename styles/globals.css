@@ -4,6 +4,10 @@
 
 body {
   @apply bg-body font-raleway text-base font-normal text-white-light;
+  /* -webkit-text-size-adjust: 100%;
+-moz-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+text-size-adjust: 100%; */
 }
 
 .visually-hidden {

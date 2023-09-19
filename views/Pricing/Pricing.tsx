@@ -12,7 +12,11 @@ export const Pricing: React.FC = async () => {
   return (
     <section className="mx-auto bg-cover bg-top bg-no-repeat py-[80px]">
       <div className="container">
-        <Heading variant="primary" shadow={data.title} className="mb-[60px]">
+        <Heading
+          variant="primary"
+          shadow_prop={data.title}
+          className="mb-[60px]"
+        >
           {data.title}
         </Heading>
 

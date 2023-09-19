@@ -18,7 +18,7 @@ export const KidsMafiaClub: FC = () => {
       )}
     >
       <div className="container">
-        <Heading shadow={title} className="mb-6 smOnly:min-h-[72px]">
+        <Heading shadow_prop={title} className="mb-6 smOnly:min-h-[72px]">
           {title}
         </Heading>
         <Paragraph className="mb-[156px] sm:max-w-[288px] md:mb-[150px] xl:mb-[117px] xl:max-w-[624px] smOnly:min-h-[288px]">

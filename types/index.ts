@@ -25,7 +25,7 @@ type HeadingVariant =
 
 export interface HeadingElementProps {
   className?: string;
-  shadow?: string;
+  shadow_prop?: string;
   rest?: HTMLAttributes<HTMLHeadingElement>;
 }
 
