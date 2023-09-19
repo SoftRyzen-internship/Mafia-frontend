@@ -28,7 +28,11 @@ export const Pricing: React.FC<PricingProps> = async ({
   return (
     <section className={sectionStyles}>
       <div className="container">
-        <Heading variant="primary" shadow={data.title} className="mb-[60px]">
+        <Heading
+          variant="primary"
+          shadow_prop={data.title}
+          className="mb-[60px]"
+        >
           {data.title}
         </Heading>
 

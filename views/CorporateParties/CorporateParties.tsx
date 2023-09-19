@@ -22,7 +22,7 @@ export const CorporateParties = async () => {
     <Section className={css.sectionBg}>
       <div className="container">
         <Heading
-          shadow={primary_title}
+          shadow_prop={primary_title}
           className="mb-[24px] md:mb-[60px] smOnly:w-[280px]"
         >
           {primary_title}

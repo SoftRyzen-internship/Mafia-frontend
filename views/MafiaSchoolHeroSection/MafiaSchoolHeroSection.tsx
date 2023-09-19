@@ -16,7 +16,7 @@ export const MafiaSchoolHeroSection = () => {
           tag="h1"
           variant="main"
           className="mb-[42px] text-[32px] font-extrabold text-white-light md:mb-[32px] md:text-[40px] md:leading-[56px] xl:mb-[35px] xl:text-[52px] xl:leading-[80px]"
-          shadow={typedData.heading.content}
+          shadow_prop={typedData.heading.content}
         >
           {typedData.heading.content}
         </Heading>
