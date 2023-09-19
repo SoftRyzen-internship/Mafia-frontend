@@ -3,6 +3,7 @@ import React, { FC } from 'react';
 import Link from 'next/link';
 
 import { LogoProps } from '@/types';
+import data from '@/data/common.json';
 import logoIconsMap from '@/data/logoIconsMap';
 
 export const Logo: FC<LogoProps> = ({
@@ -19,15 +20,15 @@ export const Logo: FC<LogoProps> = ({
     ' h-[42px] w-[57px] xl:hidden': position === 'mobile-menu',
   });
 
-  const LogoComponent = logoIconsMap[position];
+  const LogoIcon = logoIconsMap[position];
 
   return (
     <Link
       href={href}
       className={`${logoClasses} ${className}`}
-      aria-label="Посилання із логотипом компанії"
+      aria-label={data.logoAriaLabel}
     >
-      <LogoComponent id={`logo-${position}`} onClick={onClick} />
+      <LogoIcon id={`logo-${position}`} onClick={onClick} />
     </Link>
   );
 };
