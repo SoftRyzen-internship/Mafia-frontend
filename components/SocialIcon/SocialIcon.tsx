@@ -21,10 +21,10 @@ export const SocialIcon: React.FC<SocialIconProps> = ({
 
   const iconStyles = classNames(
     {
-      'w-[26px] h-[26px]': variant !== 'fixed',
+      'w-[28px] h-[28px]': variant !== 'fixed',
     },
     className,
   );
 
-  return <Icon className={iconStyles} width={32} height={32} />;
+  return <Icon className={iconStyles} width={28} height={28} />;
 };

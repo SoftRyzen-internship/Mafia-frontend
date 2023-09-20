@@ -10,24 +10,24 @@
   },
   "images": {
     "main": {
-      "src": "/images/kidsMafia/mainhero.webp",
+      "src": "/images/kidsMafia/mainhero.jpg",
       "alt": "Діти сидять за столом та грають у гру Мафія"
     },
     "grid": [
       {
-        "src": "/images/kidsMafia/hero2.webp",
+        "src": "/images/kidsMafia/hero2.jpg",
         "alt": "Хлопчик посміхається"
       },
       {
-        "src": "/images/kidsMafia/hero3.webp",
+        "src": "/images/kidsMafia/hero3.jpg",
         "alt": "Хлопчик показує жестом що все добре"
       },
       {
-        "src": "/images/kidsMafia/hero4.webp",
+        "src": "/images/kidsMafia/hero4.jpg",
         "alt": "Дівчинка показує карту"
       },
       {
-        "src": "/images/kidsMafia/hero5.webp",
+        "src": "/images/kidsMafia/hero5.jpg",
         "alt": "Діти закрили очі та грають у мафію"
       }
     ]
