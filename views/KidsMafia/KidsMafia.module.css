@@ -27,7 +27,6 @@
 @media screen and (min-width: 378px) {
   .container::before {
     width: 550px;
-    /* top: 150px; */
     left: -150px;
   }
 }
