@@ -3,7 +3,7 @@
 }
 
 .shadow::after {
-  content: attr(shadow);
+  content: attr(data-shadow_prop);
   position: absolute;
   z-index: -1;
   top: -20px;
