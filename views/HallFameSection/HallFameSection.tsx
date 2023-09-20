@@ -31,7 +31,6 @@ export const HallFameSection: React.FC = async () => {
         <div className="container py-[80px]">
           <Heading
             tag="h1"
-            variant="main"
             className="mb-[60px] text-[28px] font-semibold leading-9 md:text-[32px] xl:text-[42px] xl:leading-[52px]"
             shadow_prop={hallFameHeading.heading.main}
           >
