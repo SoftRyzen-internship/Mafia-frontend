@@ -254,12 +254,6 @@ the `Slider` to extend beyond the `container`.
 | `className`      | `undefined` | add any custom styles of `.swiper` element                            |
 | `slideClassName` | `undefined` | add any custom styles of `.swiper-slide` element                      |
 
-- ### Pricing
-
-| Prop      | Type        | Description                                        |
-| --------- | ----------- | -------------------------------------------------- |
-| `variant` | `corporate` | choose page placement: `corporate` or `kids-mafia` |
-
 - ### Form
 
 | Prop           | Type          | Description                                           |
