@@ -1,7 +1,7 @@
-import img1 from '@/public/images/kidsMafia/kids-mafia-club-1@2x.webp';
-import img2 from '@/public/images/kidsMafia/kids-mafia-club-2@2x.webp';
-import img3 from '@/public/images/kidsMafia/kids-mafia-club-3@2x.webp';
-import img4 from '@/public/images/kidsMafia/kids-mafia-club-4@2x.webp';
+import img1 from '@/public/images/kidsMafia/kids-mafia-club-1.jpg';
+import img2 from '@/public/images/kidsMafia/kids-mafia-club-2.jpg';
+import img3 from '@/public/images/kidsMafia/kids-mafia-club-3.jpg';
+import img4 from '@/public/images/kidsMafia/kids-mafia-club-4.jpg';
 
 export const kidsMafiaGallery = [
   {
