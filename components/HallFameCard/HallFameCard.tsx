@@ -44,7 +44,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
     <li
       className={classNames('relative h-[460px] w-full', s.card, cardClass)}
       onClick={onClickCard}
-         tabIndex={0}
+      tabIndex={0}
     >
       <div
         className={`${s.front} absolute left-0 top-0 flex h-[460px] w-full flex-col items-start justify-evenly rounded-[6px] transition duration-1000 hover:shadow-lg focus:shadow-lg`}
