@@ -1,35 +1,49 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-
+import classNames from 'classnames';
+import { Paragraph } from '@/components/Paragraph';
+import { useWindowWidth } from '@/hooks';
 import hallFameData from '@/data/hallFameData.json';
 import iconsMap from '@/data/hallFameCardIconMap';
 
 import { HallFameCardProps } from '@/types/index';
-
-import { Paragraph } from '@/components/Paragraph';
 
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
 export const HallFameCard: React.FC<HallFameCardProps> = ({
   attributes,
   cups,
+  id,
+  idActive,
+  setIdActive,
 }) => {
-  const [isTouched, setIsTouched] = useState(false);
+  const { isScreenDesktop, isLargeScreenDesktop } = useWindowWidth();
 
   if (!attributes) {
     return null;
   }
   const { title, description, img } = attributes;
 
+  const onClickCard = () => {
+    if (isScreenDesktop || isLargeScreenDesktop) return;
+
+    if (id === idActive) {
+      setIdActive(null);
+    } else {
+      setIdActive(id);
+    }
+  };
+
+  const cardClass = classNames({
+    [s.active]: id === idActive,
+    '': id != idActive,
+  });
+
   return (
     <li
-      className={`relative h-[460px] w-full ${s.card} ${
-        isTouched ? s.active : ''
-      }`}
-      onTouchStart={() => setIsTouched(prev => !prev)}
-      // onTouchEnd={() => setIsTouched(false)}
-      // !!!При використанні лише одна карта одночасно буде перевернута back стороною
+      className={classNames('relative h-[460px] w-full', s.card, cardClass)}
+      onClick={onClickCard}
       tabIndex={0}
     >
       <div
