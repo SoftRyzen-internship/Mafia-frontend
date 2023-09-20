@@ -41,7 +41,6 @@ export const MafiaSchoolHeroSection = () => {
               className="h-full w-full rounded-md object-cover md:h-[344px] xl:h-[476px] xxl:h-[584px]"
               fill
               sizes="(max-width: 768px) 100vw, 288px"
-              priority={true}
             />
           </div>
 
