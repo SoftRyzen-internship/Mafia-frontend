@@ -30,6 +30,7 @@ export const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
     'outline-without flex items-center justify-center gap-2 rounded-md bg-grad_100 px-3 font-semibold text-white-light',
     'hover:bg-grad_200 focus:border-[2px] focus:border-primary-light-500 active:border-none active:bg-grad_300',
     'active:text-primary-light-900 disabled:bg-gray-dark disabled:bg-none disabled:text-gray-medium',
+    'transition-all duration-300',
     className,
   );
 
