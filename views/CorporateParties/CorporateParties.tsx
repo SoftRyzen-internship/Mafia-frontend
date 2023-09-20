@@ -22,7 +22,7 @@ export const CorporateParties = async () => {
     <Section className={css.sectionBg}>
       <div className="container">
         <Heading
-          shadow={primary_title}
+          shadow_prop={primary_title}
           className="mb-[24px] md:mb-[60px] smOnly:w-[280px]"
         >
           {primary_title}
@@ -44,7 +44,7 @@ export const CorporateParties = async () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           </div>
-          <div className="xl:w-[390px] xxl:w-[420px] smOnly:h-[482px] mdOnly:flex-1">
+          <div className="xl:w-[406px] xxl:w-[420px] smOnly:h-[482px] mdOnly:flex-1">
             <FormWithPopUp />
           </div>
         </div>

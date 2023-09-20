@@ -10,7 +10,7 @@ export const Heading: FC<HeadingComponentProps> = ({
   variant = 'primary',
   children,
   className = '',
-  shadow = '',
+  shadow_prop = '',
   ...rest
 }) => {
   const headingClass = classnames(
@@ -24,14 +24,14 @@ export const Heading: FC<HeadingComponentProps> = ({
       'text-[20px] font-medium leading-[28px]': variant === 'tertiary',
       'text-[28px] font-semibold leading-[36px] md:text-[40px] md:leading-[56px] xl:text-[42px] xl:leading-[52px]':
         variant === 'privacy-policy',
-      [css.shadow]: shadow !== '',
+      [css.shadow]: shadow_prop !== '',
     },
     className,
   );
 
   const getHeadingProps = () => {
     const props: HeadingElementProps = { className: headingClass, ...rest };
-    if (shadow) props.shadow = shadow;
+    if (shadow_prop) props.shadow_prop = shadow_prop;
     return props;
   };
 

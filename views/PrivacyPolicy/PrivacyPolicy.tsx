@@ -14,7 +14,7 @@ export const PrivacyPolicy = () => {
       className={`${css.bg_img}  pt-[134px] md:pt-[156px] xl:pt-[163px] xxl:pt-[179px]`}
     >
       <div className="container">
-        <Heading variant="privacy-policy" className="mb-[60px] " tag="h1">
+        <Heading variant="privacy-policy" className="mb-[60px] " tag="h2">
           {title}
         </Heading>
 

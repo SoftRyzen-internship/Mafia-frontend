@@ -59,7 +59,6 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
             className="h-full w-full rounded-md object-cover"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            priority={true}
           />
         </div>
       </div>
@@ -78,17 +77,17 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
           ))}
         </div>
 
-        <div className="mx-auto my-0 ">
-          <h3 className="mb-2 text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
+        <div className="my-0  ">
+          <h3 className="mb-2  text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
             {hallFameData.cupstitle}
           </h3>
-          <ul className="flex list-none flex-row text-sm font-semibold md:text-base xl:p-10">
+          <ul className="grid grid-cols-3 gap-x-4 text-sm font-semibold md:text-base">
             {cups?.map((cup, index) => {
               const Icon = iconsMap[cup.place_number];
               return (
                 <li
                   key={index}
-                  className="flex flex-col items-center px-[5px] text-center  md:text-base"
+                  className="flex flex-col items-center px-[5px] text-center md:text-base"
                 >
                   {Icon && (
                     <Icon
@@ -97,7 +96,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
                       height={10}
                     />
                   )}
-                  <Paragraph className="overflow-wrap max-w-[70px] break-words text-[12px] md:max-w-[100px] md:text-[16px] xl:max-w-[100%]">
+                  <Paragraph className="overflow-wrap max-w-[100%] break-words text-[12px] md:text-[16px] ">
                     {cup.competition_name}
                   </Paragraph>
                 </li>

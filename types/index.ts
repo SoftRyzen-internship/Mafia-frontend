@@ -25,7 +25,7 @@ type HeadingVariant =
 
 export interface HeadingElementProps {
   className?: string;
-  shadow?: string;
+  shadow_prop?: string;
   rest?: HTMLAttributes<HTMLHeadingElement>;
 }
 
@@ -395,12 +395,6 @@ export interface PresentersDataType {
   presenters: {
     data: PresenterItemProps[];
   };
-}
-
-type PricingPlacementOptions = 'kids-mafia' | 'corporate';
-
-export interface PricingProps {
-  variant: PricingPlacementOptions;
 }
 
 export type PriceRateInfo = {

@@ -24,7 +24,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({
       <div className="tournament-container container md:flex md:items-center md:gap-6">
         <div className="w-full xl:w-[516px] smOnly:mb-[60px]">
           <Heading
-            tag="h3"
+            tag="h2"
             variant="secondary"
             className="tournament-block-title mb-[34px] xl:mb-8"
           >
@@ -42,7 +42,7 @@ export const TournamentBlock: FC<TournamentBlockProps> = ({
           <Image
             src={url}
             alt={alternativeText || title}
-            priority={!priorityImg}
+            priority={priorityImg}
             height={288}
             width={272}
             className="h-full min-w-full object-contain  smOnly:h-[288px]"
