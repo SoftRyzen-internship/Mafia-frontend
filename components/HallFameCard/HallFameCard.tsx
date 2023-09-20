@@ -82,7 +82,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
             {hallFameData.cupstitle}
           </h3>
 
-          <ul className="grid grid-cols-3 gap-x-4 px-1 text-sm font-semibold md:text-base">
+          <ul className="grid grid-cols-3 gap-x-4 px-3 text-sm font-semibold md:text-base xl:px-[23px] xxl:px-8">
             {cups?.map((cup, index) => {
               const Icon = iconsMap[cup.place_number];
               return (
