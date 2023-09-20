@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { Paragraph } from '@/components/Paragraph';
@@ -20,12 +20,7 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
 }) => {
   const { isScreenDesktop, isLargeScreenDesktop } = useWindowWidth();
 
-  if (!attributes) {
-    return null;
-  }
-  const { title, description, img } = attributes;
-
-  const onClickCard = () => {
+  const onClickCard = useCallback(() => {
     if (isScreenDesktop || isLargeScreenDesktop) return;
 
     if (id === idActive) {
@@ -33,7 +28,12 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
     } else {
       setIdActive(id);
     }
-  };
+  }, [id, idActive, isScreenDesktop, isLargeScreenDesktop, setIdActive]);
+
+  if (!attributes) {
+    return null;
+  }
+  const { title, description, img } = attributes;
 
   const cardClass = classNames({
     [s.active]: id === idActive,
