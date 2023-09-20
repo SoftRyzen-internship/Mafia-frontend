@@ -29,6 +29,7 @@
     ],
     "description": "Клуб спортивної мафії у місті Одеса",
     "type": "website",
+    "locale": "uk_UA",
     "title": "Mafia Club Odessa",
     "url": "https://mafia-odesa.vercel.app/"
   }

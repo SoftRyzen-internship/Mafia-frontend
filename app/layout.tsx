@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="uk">
       <body className={`${montserrat.variable} ${raleway.variable}`}>
         <Header />
         <main className="pt-[52px] md:pt-[74px] xl:pt-[82px]">{children}</main>
