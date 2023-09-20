@@ -17,7 +17,7 @@ export const CorporatePresenters = async () => {
     <Section className={`${css.section_decor} bg-primary-dark-200`}>
       <div className="container">
         <Heading
-          tag="h3"
+          tag="h2"
           variant="secondary"
           className="relative mb-[78px] mt-[18px]"
         >

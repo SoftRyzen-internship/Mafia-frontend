@@ -62,12 +62,12 @@ export const Form: React.FC<FormProps> = ({
   };
 
   return (
-    <div className={`min-h-[390px]  ${classes && classes}`}>
+    <div className={`min-h-[498px] xl:min-h-[478px] ${classes && classes}`}>
       {isLoading && (
         <Loader
           size={40}
           color="#8D0B93"
-          className="h-full min-h-[390px] w-full"
+          className="h-full min-h-[498px] w-full xl:min-h-[478px]"
         />
       )}
 

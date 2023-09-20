@@ -1,46 +1,59 @@
 .section {
   max-width: 1920px;
   margin: 0 auto;
+  position: relative;
+}
 
-  background-image: image-set(
-    url(/images/kidsMafia/bg-kids-mafia-club-mob.webp) type('image/webp') 1x,
-    url(/images/kidsMafia/bg-kids-mafia-club-mob@2x.webp) type('image/webp') 2x
+.section::before {
+  content: '';
+
+  height: 64px;
+  width: 100%;
+
+  position: absolute;
+  top: 1555px;
+  left: 0;
+
+  z-index: -1;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
   );
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  @media (min-width: 768px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-tab.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-tab@2x.webp) type('image/webp')
-        2x
-    );
-  }
-
-  @media (min-width: 1280px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-xl@2x.webp) type('image/webp') 2x
-    );
-  }
-
-  @media (min-width: 1752px) {
-    background-image: image-set(
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl.webp) type('image/webp') 1x,
-      url(/images/kidsMafia/bg-kids-mafia-club-2xl@2x.webp) type('image/webp')
-        2x
-    );
-  }
 }
 
 .galleryCard {
-  flex-basis: calc((100% - 24px) / 2);
-  @apply h-[180px] overflow-hidden rounded-md md:h-[198px] xl:h-[407px] xxl:h-[490px];
+  position: relative;
+  height: fit-content;
+  width: calc((100% - 24px) / 2);
+}
 
-  @media (min-width: 768px) {
-    flex-basis: calc((100% - 3 * 24px) / 4);
-  }
+.galleryCard::before,
+.galleryCard::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 156px;
+  height: 6px;
+  z-index: -1;
+  transform-origin: top center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 5, 124, 0.25) 0%,
+    rgba(141, 11, 147, 0.25) 50%,
+    rgba(50, 21, 117, 0) 100%
+  );
+}
+
+.galleryCard::before {
+  top: -50%;
+  transform: translate(calc(-50% - 3px), 16px) rotate(-90deg);
+}
+
+.galleryCard::after {
+  bottom: -50%;
+  transform: translate(calc(-50% + 3px), -16px) rotate(90deg);
 }
 
 .galleryCard:nth-child(1) {
@@ -53,4 +66,49 @@
 
 .galleryCard:nth-child(4) {
   @apply md:mt-[156px] xl:mt-[279px] smOnly:mt-[136px];
+}
+
+@media screen and (min-width: 768px) {
+  .section::before {
+    top: 1072px;
+  }
+
+  .galleryCard {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .galleryCard::before {
+    transform: translate(calc(-50% - 3px), 26px) rotate(-90deg);
+  }
+
+  .galleryCard::after {
+    transform: translate(calc(-50% + 3px), -26px) rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section::before {
+    top: 1176px;
+  }
+
+  .galleryCard::before {
+    transform: translate(calc(-50% - 3px), 135px) rotate(-90deg);
+  }
+
+  .galleryCard::after {
+    transform: translate(calc(-50% + 3px), -135px) rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 1752px) {
+  .section::before {
+    top: 1286px;
+  }
+
+  .galleryCard::before {
+    transform: translate(calc(-50% - 3px), 179px) rotate(-90deg);
+  }
+  .galleryCard::after {
+    transform: translate(calc(-50% + 3px), -179px) rotate(90deg);
+  }
 }

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import classNames from 'classnames';
 import { Section } from '@/components/Section';
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
@@ -8,17 +7,16 @@ import { SliderCorporateElement } from '@/components/SliderCorporateElement';
 import data from '@/data/corporateHero.json';
 import sliderDataCorp from '@/data/corporateParties.json';
 
-import s from './CorporateHero.module.css';
-
 export const CorporateHero: FC = () => {
   const { title, text } = data;
   const { swiperData } = sliderDataCorp;
 
   return (
-    <Section className={classNames('relative bg-transparent', s.sectionBg)}>
+    <Section className="bg-transparent' relative">
       <div className="container">
         <Heading
-          shadow={title}
+          shadow_prop={title}
+          tag="h1"
           variant="primary"
           className="mb-6  font-semibold"
         >
