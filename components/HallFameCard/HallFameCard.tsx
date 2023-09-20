@@ -1,34 +1,49 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useCallback } from 'react';
 import Image from 'next/image';
-
+import classNames from 'classnames';
+import { Paragraph } from '@/components/Paragraph';
+import { useWindowWidth } from '@/hooks';
 import hallFameData from '@/data/hallFameData.json';
 import iconsMap from '@/data/hallFameCardIconMap';
 
 import { HallFameCardProps } from '@/types/index';
-
-import { Paragraph } from '@/components/Paragraph';
 
 import s from '@/components/HallFameCard/HallFameCard.module.css';
 
 export const HallFameCard: React.FC<HallFameCardProps> = ({
   attributes,
   cups,
+  id,
+  idActive,
+  setIdActive,
 }) => {
-  const [isTouched, setIsTouched] = useState(false);
+  const { isScreenDesktop, isLargeScreenDesktop } = useWindowWidth();
+
+  const onClickCard = useCallback(() => {
+    if (isScreenDesktop || isLargeScreenDesktop) return;
+
+    if (id === idActive) {
+      setIdActive(null);
+    } else {
+      setIdActive(id);
+    }
+  }, [id, idActive, isScreenDesktop, isLargeScreenDesktop, setIdActive]);
 
   if (!attributes) {
     return null;
   }
   const { title, description, img } = attributes;
 
+  const cardClass = classNames({
+    [s.active]: id === idActive,
+    '': id != idActive,
+  });
+
   return (
     <li
-      className={`relative h-[460px] w-full ${s.card} ${
-        isTouched ? s.active : ''
-      }`}
-      onTouchStart={() => setIsTouched(prev => !prev)}
-      onTouchEnd={() => setIsTouched(false)}
+      className={classNames('relative h-[460px] w-full', s.card, cardClass)}
+      onClick={onClickCard}
       tabIndex={0}
     >
       <div
@@ -66,7 +81,8 @@ export const HallFameCard: React.FC<HallFameCardProps> = ({
           <h3 className="mb-2  text-center text-lg font-semibold xl:mb-[12px] xxl:mb-[11px]">
             {hallFameData.cupstitle}
           </h3>
-          <ul className="grid grid-cols-3 gap-x-4 text-sm font-semibold md:text-base">
+
+          <ul className="grid grid-cols-3 gap-x-4 px-1 text-sm font-semibold md:text-base">
             {cups?.map((cup, index) => {
               const Icon = iconsMap[cup.place_number];
               return (

@@ -1,14 +1,15 @@
-import React, { FC } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { KidsMafiaConditions } from '@/components/KidsMafiaConditions';
+
 import { Heading } from '@/components/Heading';
 import { Paragraph } from '@/components/Paragraph';
-import data from '@/data/kidsMafia.json';
+import { KidsMafiaConditions } from '@/components/KidsMafiaConditions';
+
 import { kidsMafiaGallery } from '@/data/kidsMafiaClub';
+import data from '@/data/kidsMafia.json';
 import s from './KidsMafiaClub.module.css';
 
-export const KidsMafiaClub: FC = () => {
+export const KidsMafiaClub: React.FC = () => {
   const { title, text, buttons, conditions } = data.kidsMafiaClub;
   return (
     <section
@@ -25,21 +26,25 @@ export const KidsMafiaClub: FC = () => {
           {text}
         </Paragraph>
 
-        <div className="mb-[174px] flex flex-wrap gap-x-6 xl:mb-[105px] xxl:mb-[142px]">
+        <ul className="mb-[174px] flex flex-wrap gap-x-6 xl:mb-[105px] xxl:mb-[142px]">
           {kidsMafiaGallery.map(({ src, alt }, index) => (
-            <div
-              key={index}
-              className={classNames('boxShadow-sm', s.galleryCard)}
-            >
-              <Image
-                src={src}
-                alt={alt}
-                priority
-                className="h-full object-cover"
-              />
-            </div>
+            <li key={index} className={s.galleryCard}>
+              <div
+                className="boxShadow-sm mx-auto h-[180px] w-[124px] 
+                          md:h-[198px] md:w-full xl:h-[407px] xxl:h-[490px] "
+              >
+                <Image
+                  width={420}
+                  height={490}
+                  src={src}
+                  alt={alt}
+                  className="h-full rounded-normal object-cover"
+                />
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
+
         <KidsMafiaConditions
           conditions={conditions}
           btn={buttons.btnOpenForm}

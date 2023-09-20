@@ -10,14 +10,14 @@
   perspective: 1000px;
   outline: none;
 }
-.card:hover .front,
+/* .card:hover .front,
 .card:focus .front {
   transform: rotateY(180deg);
 }
 .card:hover .back,
 .card:focus .back {
   transform: rotateY(360deg);
-}
+} */
 
 .active .front {
   transform: rotateY(180deg);
@@ -81,5 +81,14 @@
 @media screen and (min-width: 1280px) {
   .back::after {
     display: none;
+  }
+
+  .card:hover .front,
+  .card:focus .front {
+    transform: rotateY(180deg);
+  }
+  .card:hover .back,
+  .card:focus .back {
+    transform: rotateY(360deg);
   }
 }

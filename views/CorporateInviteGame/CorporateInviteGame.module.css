@@ -1,17 +1,16 @@
-.bg_img {
+.bgcontainer {
   position: relative;
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 .bgcontainer::before {
   content: '';
-  width: 100%;
-  height: 763px;
 
   position: absolute;
-  top: 331px;
-  left: 0px;
+  top: 215px;
+  right: 0;
+
+  width: 100%;
+  height: 763px;
 
   background: #040404;
 
@@ -23,39 +22,24 @@
   border-radius: 6px;
 }
 
-.heading_shadow.shadow::after {
-  font-size: 50px;
-}
-
 @media screen and (min-width: 768px) {
   .bgcontainer::before {
-    content: '';
-    position: absolute;
-    width: 532px;
+    top: 76px;
+
+    width: 448px;
     height: 554px;
-    top: 130px;
-    left: 269px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .bgcontainer::before {
-    content: '';
-    position: absolute;
     width: 1009px;
     height: 526px;
-    top: 125px;
-    left: 319px;
   }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1752px) {
   .bgcontainer::before {
-    content: '';
-    position: absolute;
     width: 1308px;
-    height: 526px;
-    top: 125px;
-    left: 528px;
   }
 }

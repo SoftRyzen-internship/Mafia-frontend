@@ -4,14 +4,29 @@
   position: relative;
 }
 
-.galleryCard {
-  flex-basis: calc((100% - 24px) / 2);
-  position: relative;
-  @apply h-[180px] rounded-md md:h-[198px] xl:h-[407px] xxl:h-[490px];
+.section::before {
+  content: '';
 
-  @media (min-width: 768px) {
-    flex-basis: calc((100% - 3 * 24px) / 4);
-  }
+  height: 64px;
+  width: 100%;
+
+  position: absolute;
+  top: 1555px;
+  left: 0;
+
+  z-index: -1;
+
+  background: linear-gradient(
+    270deg,
+    rgba(22, 20, 28, 0) -1.47%,
+    #16141c 95.63%
+  );
+}
+
+.galleryCard {
+  position: relative;
+  height: fit-content;
+  width: calc((100% - 24px) / 2);
 }
 
 .galleryCard::before,
@@ -53,28 +68,13 @@
   @apply md:mt-[156px] xl:mt-[279px] smOnly:mt-[136px];
 }
 
-.section::before {
-  content: '';
-
-  height: 64px;
-  width: 100%;
-
-  position: absolute;
-  top: 1555px;
-  left: 0;
-
-  z-index: -1;
-
-  background: linear-gradient(
-    270deg,
-    rgba(22, 20, 28, 0) -1.47%,
-    #16141c 95.63%
-  );
-}
-
 @media screen and (min-width: 768px) {
   .section::before {
     top: 1072px;
+  }
+
+  .galleryCard {
+    width: calc((100% - 3 * 24px) / 4);
   }
 
   .galleryCard::before {
@@ -101,6 +101,10 @@
 }
 
 @media screen and (min-width: 1752px) {
+  .section::before {
+    top: 1286px;
+  }
+
   .galleryCard::before {
     transform: translate(calc(-50% - 3px), 179px) rotate(-90deg);
   }

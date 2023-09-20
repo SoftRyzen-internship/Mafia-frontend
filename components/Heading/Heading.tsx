@@ -31,7 +31,7 @@ export const Heading: FC<HeadingComponentProps> = ({
 
   const getHeadingProps = () => {
     const props: HeadingElementProps = { className: headingClass, ...rest };
-    if (shadow_prop) props.shadow_prop = shadow_prop;
+    if (shadow_prop) props['data-shadow_prop'] = shadow_prop;
     return props;
   };
 
