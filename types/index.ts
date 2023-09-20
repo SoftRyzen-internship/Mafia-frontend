@@ -247,9 +247,11 @@ export interface HallFameAttributes {
 }
 
 export interface HallFameCardProps {
-  id: number;
+  id: string;
   attributes: HallFameAttributes;
   cups: HallFameCup[];
+  idActive: string | null;
+  setIdActive: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 export interface HallFameCustomCardProps {
@@ -259,6 +261,9 @@ export interface HallFameCustomCardProps {
   alt?: string;
 }
 
+export interface HallFameListProps {
+  shuffledData: (HallFameCardProps | HallFameCustomCardProps | undefined)[];
+}
 // ---- FORM START ---
 
 export type InputT = {
