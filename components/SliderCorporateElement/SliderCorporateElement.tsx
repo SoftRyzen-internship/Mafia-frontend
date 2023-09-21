@@ -3,8 +3,9 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 
+import { shimmer } from '@/utils/helpers/shimmer';
+import { getBase64 } from '@/utils/helpers/getBase64';
 import { SliderCorporateElementProps } from '@/types';
-import common from '@/data/common.json';
 
 export const SliderCorporateElement: FC<SliderCorporateElementProps> = ({
   imageUrl,
@@ -18,7 +19,9 @@ export const SliderCorporateElement: FC<SliderCorporateElementProps> = ({
         src={imageUrl}
         alt={altText}
         placeholder="blur"
-        blurDataURL={common.placeholderBlur}
+        blurDataURL={`data:image/svg+xml;base64,${getBase64(
+          shimmer(700, 475),
+        )}`}
         className="h-full object-cover md:w-auto smOnly:w-full"
       />
     </div>
