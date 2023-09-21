@@ -33,7 +33,7 @@ export const CorporateHero: FC = () => {
         element={SliderCorporateElement}
         allowTouchMove={false}
         className="!w-[100vw] !max-w-[1920px]"
-        slideClassName=" md:!w-auto"
+        slideClassName="corporate-hero md:!w-auto"
       />
     </Section>
   );
