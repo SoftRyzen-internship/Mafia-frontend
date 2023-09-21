@@ -23,12 +23,12 @@
 
 @media screen and (min-width: 768px) {
   .section::before {
-    top: 470px;
+    top: 450px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .section::before {
-    top: 378px;
+    top: 348px;
   }
 }
