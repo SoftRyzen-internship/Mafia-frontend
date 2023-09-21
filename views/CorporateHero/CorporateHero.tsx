@@ -32,7 +32,7 @@ export const CorporateHero: FC = () => {
         autoplay={true}
         element={SliderCorporateElement}
         allowTouchMove={false}
-        className="!w-[100vw] !max-w-[1920px]"
+        className="!w-full !max-w-[1920px]"
         slideClassName=" md:!w-auto"
       />
     </Section>
