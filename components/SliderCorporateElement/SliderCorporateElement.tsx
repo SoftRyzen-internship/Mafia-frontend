@@ -4,24 +4,21 @@ import React, { FC } from 'react';
 import Image from 'next/image';
 
 import { SliderCorporateElementProps } from '@/types';
+import common from '@/data/common.json';
 
 export const SliderCorporateElement: FC<SliderCorporateElementProps> = ({
   imageUrl,
   altText,
-  priority = false,
 }) => {
   return (
-    <div
-      className=" h-[402px] overflow-hidden rounded-normal 
-   "
-    >
+    <div className=" h-[402px] overflow-hidden rounded-normal">
       <Image
         width={270}
         height={402}
         src={imageUrl}
         alt={altText}
-        priority={priority}
-        quality={90}
+        placeholder="blur"
+        blurDataURL={common.placeholderBlur}
         className="h-full object-cover md:w-auto smOnly:w-full"
       />
     </div>

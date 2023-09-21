@@ -215,7 +215,7 @@ text-size-adjust: 100%; */
   padding-top: 12px;
 }
 
-.swiper-slide:hover {
+.swiper-slide:not(.corporate-hero):hover {
   transform: translate3d(0, -12px, 0) !important;
 }
 
