@@ -6,13 +6,13 @@
     "keywords": "Mafia Club Odesa, клуб мафії, спортивна мафія, мафія Одеса"
   },
   "twitter": {
-    "title": "Mafia Club Odesa - поринь у світ спортивної мафії",
+    "title": "Mafia Club Odesa",
     "card": "summary_large_image",
     "images": [
       {
-        "url": "/images/common/ogp-image-small.jpg",
-        "width": 800,
-        "height": 600,
+        "url": "/images/common/ogp-image-big.jpg",
+        "width": 1200,
+        "height": 630,
         "alt": "Одеса мафія клуб"
       }
     ],
