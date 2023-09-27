@@ -62,7 +62,7 @@ export const CorporateParties = async () => {
             section="presenters"
             element={SliderPresentersElement}
             data={presentersData}
-            slideClassName="!h-auto mediaHover:hover:translate transform transition duration-300 ease-out mediaHover:hover:cursor-pointer"
+            slideClassName="!h-auto mediaHover:hover:translate transform transition duration-300 ease-out"
           />
         ) : (
           <Fallback />
